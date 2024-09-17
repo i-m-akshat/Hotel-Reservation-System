@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="HotelReservationSystem_Part1.Common.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+   <title>Basera</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Basera Hotel Booking App">
+    <meta name="author" content="Akshat Dwivedi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../Assets/Image/logo/Basera.png">
+    <link rel="stylesheet" href="../Assets/Bootstrap/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../Assets/css/index.css">
+    <link href="../Assets/FontAwesome/css/all.min.css" rel="stylesheet" />
+   <%-- <script src="../Assets/Js/index.js"></script>--%>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <div class="px-2">
+             <nav class="navbar sticky-top navbar-expand-lg" style="background-color: white">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="Default.aspx"><img src="../Assets/Image/logo/Basera.png" height="70px" width="70px" ></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Default.aspx">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="AllHotels.aspx">All Hotels</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+                    <ul class="d-flex" >
+                        <a class="btn btn-outline-dark" href="../Login.aspx">Login</a>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+             <div class="container-fluid">
+     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+     </asp:ContentPlaceHolder>
+ </div>
+            <div class="col-12 my-1">
+            <footer class="py-2">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+                </ul>
+                <div class="row pb-3 mb-3 text-justify px-3">
+                    <div class="col-md-6">
+                        <p class="text-black-50">Designed And Developed By&nbsp;<b><a
+                            class="text-black text-decoration-none"
+                            href="https://i-m-akshat.github.io/AkshatDwivedi_Portfolio/">Akshat Dwivedi</a></b></p>
+                    </div>
+                   
+                                <div class="col-md-6">
+                                    <p class="text-black-50" style="text-align: end;">© 2024 Basera, Inc</p>
+                                </div>
+                   
+
+
+                            </div>
+            </footer>
+        </div>
+        </div>
+       
+    </form>
+   
+    <script src="../Assets/FontAwesome/js/all.min.js"></script>
+     <script src="../Assets/Bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

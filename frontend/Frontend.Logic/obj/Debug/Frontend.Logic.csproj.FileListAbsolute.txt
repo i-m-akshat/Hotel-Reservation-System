@@ -1,0 +1,11 @@
+A:\asp.net Projects\HotelReservation\frontend\Frontend.Logic\bin\Debug\Frontend.Logic.dll
+A:\asp.net Projects\HotelReservation\frontend\Frontend.Logic\bin\Debug\Frontend.Logic.pdb
+A:\asp.net Projects\HotelReservation\frontend\Frontend.Logic\bin\Debug\Frontend.Models.dll
+A:\asp.net Projects\HotelReservation\frontend\Frontend.Logic\bin\Debug\Newtonsoft.Json.dll
+A:\asp.net Projects\HotelReservation\frontend\Frontend.Logic\bin\Debug\Frontend.Models.pdb
+A:\asp.net Projects\HotelReservation\frontend\Frontend.Logic\bin\Debug\Newtonsoft.Json.xml
+A:\asp.net Projects\HotelReservation\frontend\Frontend.Logic\obj\Debug\Frontend.Logic.csproj.AssemblyReference.cache
+A:\asp.net Projects\HotelReservation\frontend\Frontend.Logic\obj\Debug\Frontend.Logic.csproj.CoreCompileInputs.cache
+A:\asp.net Projects\HotelReservation\frontend\Frontend.Logic\obj\Debug\Frontend.C0167438.Up2Date
+A:\asp.net Projects\HotelReservation\frontend\Frontend.Logic\obj\Debug\Frontend.Logic.dll
+A:\asp.net Projects\HotelReservation\frontend\Frontend.Logic\obj\Debug\Frontend.Logic.pdb

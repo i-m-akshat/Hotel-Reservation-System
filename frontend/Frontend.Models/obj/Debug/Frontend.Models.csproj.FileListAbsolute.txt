@@ -1,0 +1,6 @@
+A:\asp.net Projects\HotelReservation\frontend\Frontend.Models\bin\Debug\Frontend.Models.dll
+A:\asp.net Projects\HotelReservation\frontend\Frontend.Models\bin\Debug\Frontend.Models.pdb
+A:\asp.net Projects\HotelReservation\frontend\Frontend.Models\obj\Debug\Frontend.Models.csproj.AssemblyReference.cache
+A:\asp.net Projects\HotelReservation\frontend\Frontend.Models\obj\Debug\Frontend.Models.csproj.CoreCompileInputs.cache
+A:\asp.net Projects\HotelReservation\frontend\Frontend.Models\obj\Debug\Frontend.Models.dll
+A:\asp.net Projects\HotelReservation\frontend\Frontend.Models\obj\Debug\Frontend.Models.pdb

@@ -1,0 +1,458 @@
+body {
+    height: 100%;
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #ffffff;
+    transition: ease-in-out 0.5s;
+    scrollbar-width: none;
+    /* background-color: black;
+  color:white; */
+}
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+.btn {
+    font-size: 13px;
+}
+
+.btnClick {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    transition: 0.5s ease-in-out;
+    
+}
+
+    .btnClick:hover {
+        color: red;
+        cursor: pointer !important;
+    }
+
+.textMainLoginHead {
+    font-size: 50px;
+    text-wrap: pretty;
+    padding: 30px;
+}
+
+.textSubLogin {
+    font-size: 20px;
+    text-wrap: pretty;
+    padding: 30px;
+}
+
+.textHindi {
+    font-family: "Kalam", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+}
+
+.loginBody {
+    background-image: url('../Image/loginbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SignUpBody {
+    background-image: url('../Image/dark.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .SignUpBody .SignUpGlass {
+        background: rgba(255, 249, 249, 0.15);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+.loginBody .loginGlass {
+    background: rgba(255, 249, 249, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heroSection {
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Image/86597a5ad777499a9289dfbc11a816a9.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 600px;
+}
+
+.heroImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.heroSection .heroGlass {
+    background: rgba( 255, 255, 255, 0.05 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    height: 100%;
+}
+
+.heroSection .heroText {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 20px;
+    /* background: rgba(255, 255, 255, 0.2);
+    background-size: cover;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    /* From https://css.glass */
+}
+
+.heroText .heroHead {
+    padding: 20px;
+    font-size: 50px;
+}
+
+.heroText .heroDescription {
+    padding: 20px;
+    font-size: 15px;
+}
+
+.heroText .heroBox {
+    color: white;
+    width: 100%;
+    padding: 20px;
+}
+
+
+.card {
+    background: rgba( 145, 136, 136, 0.05 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 1.5px );
+    -webkit-backdrop-filter: blur( 1.5px );
+    border-radius: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transition: 0.5s ease-in-out;
+}
+
+    .card img {
+        border-radius: 20px 0px 20px 0px;
+    }
+
+.textBox {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+footer {
+    /* background-color: black;
+    color:white; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/* .container-main{
+display: flex;
+flex-direction: row;
+height: 300px;
+}
+.container-side{
+display: flex;
+flex-direction: column;
+} */
+.main-col {
+    height: 100vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+    .main-col::-webkit-scrollbar {
+        display: none;
+    }
+
+.filter-col {
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1;
+}
+/* .main-image{
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    padding:  10px;
+} */
+.side-img {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.container-side {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.row-badge {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.row-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.offcanvas-filter {
+    display: none;
+}
+/* index.css */
+
+.row-AdminPanel {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
+
+.Admin-sidebar {
+    background-color: blue;
+    width: 300px; /* Adjust sidebar width as needed */
+    padding: 10px;
+    margin-right: 10px; /* Adjust margin between sidebar and main */
+    overflow-y: auto; /* Ensure sidebar can scroll if content exceeds height */
+    transition: width 0.5s ease-in-out;
+}
+
+    .Admin-sidebar.closed {
+        width: 0;
+        padding: 10px 0; /* Adjust padding when closed */
+        margin: 0; /* Remove margin when closed */
+    }
+
+.Admin-Main {
+    flex: 1; /* Expand to fill remaining space */
+    padding: 10px;
+    background-color: red;
+    overflow-y: auto; /* Ensure main content can scroll if needed */
+    transition: margin-left 0.5s ease-in-out;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .side-img {
+        width: 100px;
+        height: 70px;
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    .main-image {
+        padding: 20px;
+    }
+
+    .container-side {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .filter-col {
+        display: none;
+    }
+
+    .offcanvas-filter {
+        display: flex;
+    }
+
+    .container-main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title-hotel {
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+    }
+
+    .text-hotel-address {
+        font-size: 14px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .row-badge {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+        .row-badge .bd-ratings {
+            font-size: 12px;
+            flex-wrap: wrap;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .row-badge .txt-Condition {
+            font-size: 10px;
+            text-align: center;
+            flex-wrap: wrap;
+            padding: 5px;
+        }
+
+        .row-badge .txt-Rating {
+            font-size: 10px;
+            text-align: center;
+            flex-wrap: wrap;
+            padding: 5px;
+        }
+
+    .row-bottom {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .btnViewHotelDetails {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btnBookHotel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .loginBody {
+        height: 100%;
+    }
+
+    .textMainLoginHead {
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .textSubLogin {
+        font-size: 15px;
+        text-align: center;
+        margin-top: 8px;
+        padding-top: 0px;
+    }
+
+    .card {
+        font-size: 12px;
+    }
+    
+}
+/* @media  only screen and (max-width:930px) and (min-width:650px) {
+    body{
+        font-size: 15px;
+    }
+    .container-side{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }.main-image{
+        padding: 20px;
+    }
+    .container-images{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    
+    .title-hotel{
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+    }
+    .text-hotel-address{
+        font-size: 14px;
+        padding: 10px;
+       text-align: center;
+    }
+    .row-badge{
+        display: flex;
+        flex-direction: row;
+        text-align: justify;
+        
+    }
+    .row-badge .bd-ratings{
+        font-size: 10px;
+        flex-wrap: wrap;
+        padding: none;
+    }
+    .row-badge .txt-Condition{
+        font-size: 10px;
+        flex-wrap: wrap;
+        padding: none;
+    }
+    .row-badge .txt-Rating{
+        font-size: 10px;
+        flex-wrap: wrap;
+        padding: none;
+    }
+    .contaier-hotelDetails{
+        padding: 10px;
+        
+    }
+    .contaier-hotelDetails .btn{
+        font-size: 14px;
+        padding: 5px;
+    }
+  } */
