@@ -17,7 +17,43 @@ namespace Frontend.LogicLayer.Implementations
 		//private readonly string BaserUrl = "https://localhost:7218/api/User/";
 		//private readonly string BaserUrl = "https://localhost:5211/api/User/";
 		private readonly string BaserUrl = "https://localhost:6969/api/User/";
-		public async Task<bool> Register(User _user)
+
+        public async Task<string> Login(string Userid, string password)
+        {
+			try
+			{
+				using(var httpClient=new HttpClient())
+				{
+					httpClient.BaseAddress=new Uri(BaserUrl);
+					var requestUrl = BaserUrl + "GetUser";
+					httpClient.Timeout = TimeSpan.FromMinutes(15);
+					var user = new User {
+						UserId = Userid,
+						Password = password
+					};
+					string json = JsonConvert.SerializeObject(user);
+					StringContent httpContent=new StringContent(json, Encoding.UTF8, "application/json");
+					HttpResponseMessage response = httpClient.PostAsync(requestUrl, httpContent).Result;
+					if (response.IsSuccessStatusCode)
+					{
+						string responseData = await response.Content.ReadAsStringAsync();
+						return responseData;
+					}
+					else
+					{
+						return null;
+					}
+
+                }
+			}
+			catch (Exception)
+			{
+
+				throw;
+			}
+        }
+
+        public async Task<bool> Register(User _user)
         {
 			try
 			{

@@ -15,3 +15,4 @@ A:\asp.net Projects\HotelReservation\backend\Backend.Services\obj\Debug\net8.0\B
 A:\asp.net Projects\HotelReservation\backend\Backend.Services\obj\Debug\net8.0\refint\Backend.Services.dll
 A:\asp.net Projects\HotelReservation\backend\Backend.Services\obj\Debug\net8.0\Backend.Services.pdb
 A:\asp.net Projects\HotelReservation\backend\Backend.Services\obj\Debug\net8.0\ref\Backend.Services.dll
+A:\asp.net Projects\HotelReservation\backend\Backend.Services\obj\Debug\net8.0\Backend.Services.sourcelink.json

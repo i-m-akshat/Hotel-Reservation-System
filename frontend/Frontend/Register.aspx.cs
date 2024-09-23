@@ -61,6 +61,7 @@ namespace HotelReservationSystem_Part1
             txtEmail.Text = string.Empty;
             txtPassword.Text = string.Empty;
             txtPhoneNo.Text = string.Empty;
+            
         }
     }
 }

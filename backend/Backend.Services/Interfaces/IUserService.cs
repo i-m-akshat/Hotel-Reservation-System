@@ -11,5 +11,6 @@ namespace Backend.Services.Interfaces
     {
         Task<List<User>> GetAll();
         Task<User> CreateUser(User user);
+        Task<User> GetUserByUserNameAndPassword(string UserName, string password);
     }
 }

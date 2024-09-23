@@ -30,5 +30,19 @@ namespace Backend.Controllers
             var user=await _service.CreateUser(_userDto.ToUserModelFromRegisterDTO());
             return Ok(user.ToUserDto_Common());
         }
+        
+        [Route("GetUser")]
+        [HttpPost]
+        public async Task<IActionResult> GetByUsername([FromBody] User_loginDto _userDto)
+        {
+            var User=await _service.GetUserByUserNameAndPassword(_userDto.UserID,_userDto.Password);
+            if (User == null) {
+                return BadRequest("Provided Username and password is not valid");
+            } else
+            {
+                return Ok(User.ToLoginDTO());
+            }
+            
+        }
     }
 }

@@ -45,7 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="Implementations\SecureDao.cs" />
     <Compile Include="Implementations\UserDao.cs" />
+    <Compile Include="Interfaces\ISecureDAO.cs" />
     <Compile Include="Interfaces\IUserDAO.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.8.1.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

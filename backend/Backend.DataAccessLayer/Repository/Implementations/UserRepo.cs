@@ -35,5 +35,10 @@ namespace Backend.Infrastructure.Repository.Implementations
             await _context.SaveChangesAsync();
             return user;
         }
+
+        public async Task<TblUser> GetUserByUsername(string username)
+        {
+            return await _context.TblUsers.Where(x=>x.UserId==username).FirstOrDefaultAsync();
+        }
     }
 }

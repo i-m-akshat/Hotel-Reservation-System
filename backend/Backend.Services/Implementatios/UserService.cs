@@ -14,6 +14,7 @@ namespace Backend.Services.Implementatios
     {
         private readonly IUserRepo _repo;
         private readonly ISecureService _secureService;
+        
         public UserService(IUserRepo repo, ISecureService secureService)
         {
             _repo = repo;
@@ -54,6 +55,38 @@ namespace Backend.Services.Implementatios
             tblUser.Salt = _salt;
             var res= await _repo.CreateUser(tblUser);
             return res.ToUser();
+        }
+        public async Task<User> GetUserByUserNameAndPassword(string UserName,string password)
+        {
+            try
+            {
+                
+                var user=_repo.GetUserByUsername(UserName);
+                if((user!=null) && (password != null))
+                {
+
+                    string dec_pass = _secureService.Decrypt(user.Result.Password, user.Result.Salt, user.Result.Key, user.Result.Iv);
+                    if (password == dec_pass.Replace(user.Result.Salt + "+", ""))
+                    {
+                        return user.Result.ToUser();
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+                else
+                {
+                    return null;
+                }
+                
+                
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
     }
 }

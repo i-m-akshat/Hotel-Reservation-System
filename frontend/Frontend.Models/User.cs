@@ -18,7 +18,7 @@ namespace Frontend.Models
 
         public string Address { get; set; }
 
-        public long StateId { get; set; }
+        public long? StateId { get; set; }
         public string StateName { get; set; }
 
         public long? CityId { get; set; }
@@ -26,7 +26,7 @@ namespace Frontend.Models
         public long? CountryId { get; set; }
         public string CountryName { get; set; }
 
-        public byte[] Image { get; set; }
+        //public byte[] Image { get; set; }
 
         public string EmailId { get; set; }
 
