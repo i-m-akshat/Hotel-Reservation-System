@@ -9,3 +9,4 @@ A:\asp.net Projects\HotelReservation\backend\Backend.Models\obj\Debug\net8.0\Bac
 A:\asp.net Projects\HotelReservation\backend\Backend.Models\obj\Debug\net8.0\refint\Backend.Models.dll
 A:\asp.net Projects\HotelReservation\backend\Backend.Models\obj\Debug\net8.0\Backend.Models.pdb
 A:\asp.net Projects\HotelReservation\backend\Backend.Models\obj\Debug\net8.0\ref\Backend.Models.dll
+A:\asp.net Projects\HotelReservation\backend\Backend.Models\obj\Debug\net8.0\Backend.Models.sourcelink.json

@@ -10,5 +10,6 @@ namespace Frontend.LogicLayer.Interfaces
     public interface IUserDAO
     {
         Task<bool> Register(User _user);
+        Task<string> Login(string Userid, string password);
     }
 }

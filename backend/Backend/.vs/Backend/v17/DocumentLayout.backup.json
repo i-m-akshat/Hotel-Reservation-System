@@ -3,15 +3,41 @@
   "WorkspaceRootPath": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\mappers\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:mappers\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B127BCF7-802C-4E78-8579-754D027EC1E4}|..\\Backend.Services\\Backend.Services.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.services\\implementatios\\secureservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B127BCF7-802C-4E78-8579-754D027EC1E4}|..\\Backend.Services\\Backend.Services.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.services\\implementatios\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6209928B-6B21-45CA-9E32-6A6A6C725BE0}|..\\Backend.DataAccessLayer\\Backend.DataAccessLayer.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.dataaccesslayer\\repository\\implementations\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6209928B-6B21-45CA-9E32-6A6A6C725BE0}|..\\Backend.DataAccessLayer\\Backend.DataAccessLayer.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.dataaccesslayer\\context\\dbcontext\\baserahotelreservationsystemcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6209928B-6B21-45CA-9E32-6A6A6C725BE0}|..\\Backend.DataAccessLayer\\Backend.DataAccessLayer.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.dataaccesslayer\\repository\\implementations\\userrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6209928B-6B21-45CA-9E32-6A6A6C725BE0}|..\\Backend.DataAccessLayer\\Backend.DataAccessLayer.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.dataaccesslayer\\repository\\interfaces\\iuserrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\mappers\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:mappers\\usermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B127BCF7-802C-4E78-8579-754D027EC1E4}|..\\Backend.Services\\Backend.Services.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\dto\\user\\user_dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:dto\\user\\user_dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B127BCF7-802C-4E78-8579-754D027EC1E4}|..\\Backend.Services\\Backend.Services.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.services\\mapper\\tblusertousermapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -24,9 +50,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\backend.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:backend.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6209928B-6B21-45CA-9E32-6A6A6C725BE0}|..\\Backend.DataAccessLayer\\Backend.DataAccessLayer.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.dataaccesslayer\\context\\dbcontext\\baserahotelreservationsystemcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B127BCF7-802C-4E78-8579-754D027EC1E4}|..\\Backend.Services\\Backend.Services.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.services\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -45,7 +68,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -57,54 +80,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Implementatios\\UserService.cs",
+              "RelativeDocumentMoniker": "..\\Backend.Services\\Implementatios\\UserService.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Implementatios\\UserService.cs",
+              "RelativeToolTip": "..\\Backend.Services\\Implementatios\\UserService.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAvwEMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T20:10:13.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "UserMapper.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Mappers\\UserMapper.cs",
               "RelativeDocumentMoniker": "Mappers\\UserMapper.cs",
               "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Mappers\\UserMapper.cs",
               "RelativeToolTip": "Mappers\\UserMapper.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-17T08:42:05.738Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "UserController.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\UserController.cs",
               "RelativeDocumentMoniker": "Controllers\\UserController.cs",
               "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\UserController.cs",
               "RelativeToolTip": "Controllers\\UserController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-17T08:34:39.543Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-17T08:29:04.672Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAvwCcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T08:26:57.504Z",
               "EditorCaption": ""
             },
             {
@@ -115,27 +125,128 @@
               "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\UserRepo.cs",
               "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Implementations\\UserRepo.cs",
               "RelativeToolTip": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\UserRepo.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAvwCkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-17T08:25:30.609Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
+              "Title": "TblUserToUserMapper.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Mapper\\TblUserToUserMapper.cs",
+              "RelativeDocumentMoniker": "..\\Backend.Services\\Mapper\\TblUserToUserMapper.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Mapper\\TblUserToUserMapper.cs",
+              "RelativeToolTip": "..\\Backend.Services\\Mapper\\TblUserToUserMapper.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T08:44:04.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "BaseraHotelReservationSystemContext.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Context\\DBContext\\BaseraHotelReservationSystemContext.cs",
               "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Context\\DBContext\\BaseraHotelReservationSystemContext.cs",
               "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Context\\DBContext\\BaseraHotelReservationSystemContext.cs",
               "RelativeToolTip": "..\\Backend.DataAccessLayer\\Context\\DBContext\\BaseraHotelReservationSystemContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAvwD8AAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-17T08:23:24.437Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SecureService.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Implementatios\\SecureService.cs",
+              "RelativeDocumentMoniker": "..\\Backend.Services\\Implementatios\\SecureService.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Implementatios\\SecureService.cs",
+              "RelativeToolTip": "..\\Backend.Services\\Implementatios\\SecureService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAvwEoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T20:10:11.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "User_DTO.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\DTO\\User\\User_DTO.cs",
+              "RelativeDocumentMoniker": "DTO\\User\\User_DTO.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\DTO\\User\\User_DTO.cs",
+              "RelativeToolTip": "DTO\\User\\User_DTO.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T17:52:09.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IUserRepo.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Interfaces\\IUserRepo.cs",
+              "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Repository\\Interfaces\\IUserRepo.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Interfaces\\IUserRepo.cs",
+              "RelativeToolTip": "..\\Backend.DataAccessLayer\\Repository\\Interfaces\\IUserRepo.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAIwAwAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T17:54:33.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "..\\Backend.Services\\Interfaces\\IUserService.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "..\\Backend.Services\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T17:56:43.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T17:43:42.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-17T08:29:04.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAvwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T08:26:57.504Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Class1.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Class1.cs",
               "RelativeDocumentMoniker": "..\\Backend.Services\\Class1.cs",
@@ -143,12 +254,11 @@
               "RelativeToolTip": "..\\Backend.Services\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T08:14:55.969Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T08:14:55.969Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "Class1.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Class1.cs",
               "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Class1.cs",
@@ -156,12 +266,11 @@
               "RelativeToolTip": "..\\Backend.DataAccessLayer\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T08:14:22.005Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T08:14:22.005Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "Class1.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Models\\Class1.cs",
               "RelativeDocumentMoniker": "..\\Backend.Models\\Class1.cs",
@@ -169,12 +278,11 @@
               "RelativeToolTip": "..\\Backend.Models\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T08:13:41.942Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T08:13:41.942Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "Backend.http",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Backend.http",
               "RelativeDocumentMoniker": "Backend.http",
@@ -182,8 +290,7 @@
               "RelativeToolTip": "Backend.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2024-09-17T08:01:25.636Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T08:01:25.636Z"
             }
           ]
         }

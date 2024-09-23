@@ -10,5 +10,6 @@ namespace Backend.Infrastructure.Repository.Interfaces
     {
          Task<List<TblUser>> GetAll();
         Task<TblUser> CreateUser(TblUser user);
+        Task<TblUser> GetUserByUsername(string username);   
     }
 }

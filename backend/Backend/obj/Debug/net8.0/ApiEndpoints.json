@@ -24,5 +24,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.UserController",
+    "Method": "GetByUsername",
+    "RelativePath": "api/User/GetUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "_userDto",
+        "Type": "Backend.DTO.User.User_loginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
