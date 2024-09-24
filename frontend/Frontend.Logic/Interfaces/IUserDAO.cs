@@ -11,5 +11,6 @@ namespace Frontend.LogicLayer.Interfaces
     {
         Task<bool> Register(User _user);
         Task<string> Login(string Userid, string password);
+        Task<string> GetUserByUserID(string Userid);
     }
 }

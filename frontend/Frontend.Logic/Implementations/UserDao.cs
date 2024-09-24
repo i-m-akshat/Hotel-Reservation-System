@@ -18,6 +18,11 @@ namespace Frontend.LogicLayer.Implementations
 		//private readonly string BaserUrl = "https://localhost:5211/api/User/";
 		private readonly string BaserUrl = "https://localhost:6969/api/User/";
 
+        public Task<string> GetUserByUserID(string Userid)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<string> Login(string Userid, string password)
         {
 			try

@@ -318,5 +318,6 @@
          
         </div>
     </form>
+    <script src="../Assets/chart/apexchart.js"></script>
 </body>
 </html>

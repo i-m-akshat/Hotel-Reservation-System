@@ -14,15 +14,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <%--<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">--%>
+<%--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>--%>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Space+Grotesk:wght@300..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../Assets/css/index.css">
     <link href="../Assets/FontAwesome/css/all.min.css" rel="stylesheet" />
+    
+     <%--<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>--%>
    <%-- <script src="../Assets/Js/index.js"></script>--%>
-
+    
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -65,7 +70,18 @@
                         </li>
                     </ul>
                     <ul class="d-flex" >
-                        <a class="btn btn-outline-dark" href="../Login.aspx">Login</a>
+                        <a class="btn btn-outline-dark" runat="server" visible="true" id="btn2Login" href="../Login.aspx">Login</a>
+                        <div class="dropdown" runat="server" id="DdlProfile" visible="false">
+  <a class="text-black txtHindi" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration:none;cursor:pointer;">
+    नमस्ते &nbsp;<asp:Label ID="lblUserName" runat
+        ="server" CssClass="text-black"></asp:Label>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="/Common/UserProfile.aspx">My Profile</a></li>
+    <li><a class="dropdown-item" href="/AboutUs.aspx">About Us</a></li>
+    <li><asp:LinkButton CssClass="dropdown-item" ID="btnLogout" runat="server" OnClick="btnLogout_Click">Logout</asp:LinkButton></li>
+  </ul>
+</div>
                     </ul>
                 </div>
             </div>
@@ -104,6 +120,8 @@
     </form>
    
     <script src="../Assets/FontAwesome/js/all.min.js"></script>
+    <script src="../Assets/chart/apexchart.js"></script>
      <script src="../Assets/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>
