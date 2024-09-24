@@ -31,7 +31,9 @@ namespace HotelReservationSystem_Part1
             if (txtUserName != null && txtPassword != null) { 
                 string Res=_userService.Login(txtUserName.Text.ToString().Trim(),txtPassword.Text.ToString().Trim()).Result;
                var _user = JsonConvert.DeserializeObject<User>(Res);
-                   
+                Session["UserId"] = _user.UserId;
+                Session["User_Name"] = _user.FullName;
+                Response.Redirect("/Common/UserProfile.aspx",false);
                 Response.Write("<script>alert('You have been successfully logged in.')</script>");
             }
         }

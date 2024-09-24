@@ -90,7 +90,9 @@ namespace Backend.Mappers
         {
             return new User_loginDTODetails
             {
+                
                 FullName = _user.FullName,
+                UserId=_user.UserId,
                 StateId = _user.StateId,
                 CityId = _user.CityId,
                 CountryId = _user.CountryId,

@@ -18,7 +18,25 @@ body {
 .btn {
     font-size: 13px;
 }
+.dropdown-item {
+    color: black; 
+}
 
+    .dropdown-item:focus,
+    .dropdown-item:hover {
+        background-color: black;
+        color: white; 
+    }
+
+    .dropdown-item:active {
+        background-color:black; 
+        color: white;
+    }
+.txtHindi {
+    font-family: "Kalam", cursive;
+    font-weight: 300;
+    font-style: normal;
+}
 .btnClick {
     color: white;
     text-decoration: none;

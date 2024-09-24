@@ -86,6 +86,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AboutUs.aspx" />
     <Content Include="AdminLogin.aspx" />
     <Content Include="Admin\Dashboard.aspx" />
     <Content Include="Assets\Bootstrap\css\bootstrap.css" />
@@ -96,6 +97,7 @@
     <Content Include="Assets\Bootstrap\js\bootstrap.esm.min.js" />
     <Content Include="Assets\Bootstrap\js\bootstrap.js" />
     <Content Include="Assets\Bootstrap\js\bootstrap.min.js" />
+    <Content Include="Assets\chart\apexchart.js" />
     <Content Include="Assets\css\app.css" />
     <Content Include="Assets\css\index.css" />
     <Content Include="Assets\FontAwesome\css\all.min.css" />
@@ -104,6 +106,13 @@
     <Content Include="Assets\Image\86597a5ad777499a9289dfbc11a816a9.jpeg" />
     <Content Include="Assets\Image\dark.jpg" />
     <Content Include="Assets\Image\darkSignUpbg.jpg" />
+    <Content Include="Assets\Image\AboutUS.png" />
+    <Content Include="Assets\Image\Gif\500 error.jpeg" />
+    <Content Include="Assets\Image\Gif\ConnectionError.gif" />
+    <Content Include="Assets\Image\Gif\Empty State Animation.gif" />
+    <Content Include="Assets\Image\Gif\Error Loading GIF - Error Loading Cat - Discover &amp; Share GIFs.gif" />
+    <Content Include="Assets\Image\Gif\Greetings from Japan.gif" />
+    <Content Include="Assets\Image\Gif\Oops!.gif" />
     <Content Include="Assets\Image\homestay-hotel.jpg" />
     <Content Include="Assets\Image\images %281%29.jpeg" />
     <Content Include="Assets\Image\images.jpeg" />
@@ -171,6 +180,7 @@
     </SplashScreen>
     <Content Include="Common\HotelDetails.aspx" />
     <Content Include="Common\UserProfile.aspx" />
+    <Content Include="Error404.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="packages\Microsoft.AspNet.Mvc.5.3.0\lib\net45\System.Web.Mvc.dll" />
@@ -295,6 +305,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminLogin.aspx.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -350,6 +367,13 @@
     </Compile>
     <Compile Include="Common\UserProfile.aspx.designer.cs">
       <DependentUpon>UserProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error404.aspx.cs">
+      <DependentUpon>Error404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error404.aspx.designer.cs">
+      <DependentUpon>Error404.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
