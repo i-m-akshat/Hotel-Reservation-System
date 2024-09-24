@@ -5,9 +5,6 @@ Below are the some screenshots of my most ambitious project on which m currently
 1. Frontend<br/>
 2. Backend<br/>
 
-<h2>E-R Diagram</h2>
-<img src='https://github.com/user-attachments/assets/960ccbac-2731-4f40-9628-e9605f2e071b'>
-
 <h2>Landing Page</h2>
 <h3>Hero Section</h3>
 <img src='https://github.com/user-attachments/assets/5612b49e-25b4-424c-8dba-98da0c5d22bc'/>
@@ -34,3 +31,5 @@ Below are the some screenshots of my most ambitious project on which m currently
 <img src='https://github.com/user-attachments/assets/6a705666-6bf3-40f4-9778-cdd69905f84b'/>
 <h2>Admin Dashboard </h2>
 <img src='https://github.com/user-attachments/assets/622042e8-078b-47f7-bd00-cb711bca989a'/>
+<h2>E-R Diagram</h2>
+<img src='https://github.com/user-attachments/assets/960ccbac-2731-4f40-9628-e9605f2e071b'>
