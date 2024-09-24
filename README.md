@@ -22,6 +22,10 @@ Below are the some screenshots of my most ambitious project on which m currently
 <img src='https://github.com/user-attachments/assets/39f50794-5fcd-42d3-afc1-69d3e329e379'/>
 <h3>Our Vision Section</h3>
 <img src='https://github.com/user-attachments/assets/465e3e93-3764-4fc1-897a-36414ecc74a0'/>
+<h2>Login Page</h2>
+<img src='https://github.com/user-attachments/assets/2734b20a-83ed-4a69-94f1-c95bc4403efa'/>
+<h2>Register Page</h2>
+<img src='https://github.com/user-attachments/assets/b25c3944-3fdd-453d-9dd6-7a0a123d6cd7'/>
 
 <h2>User Profile Page</h2>
 <img src='https://github.com/user-attachments/assets/6a705666-6bf3-40f4-9778-cdd69905f84b'/>
