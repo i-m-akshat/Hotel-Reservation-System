@@ -6,6 +6,7 @@ Below are the some screenshots of my most ambitious project on which m currently
 2. Backend<br/>
 
 <h2>E-R Diagram</h2>
+<img src='https://github.com/user-attachments/assets/960ccbac-2731-4f40-9628-e9605f2e071b'>
 
 <h2>Landing Page</h2>
 <h3>Hero Section</h3>
