@@ -29,3 +29,5 @@ Below are the some screenshots of my most ambitious project on which m currently
 
 <h2>User Profile Page</h2>
 <img src='https://github.com/user-attachments/assets/6a705666-6bf3-40f4-9778-cdd69905f84b'/>
+<h2>Admin Dashboard </h2>
+<img src='https://github.com/user-attachments/assets/622042e8-078b-47f7-bd00-cb711bca989a'/>
