@@ -49,13 +49,15 @@
                     <div class="card-body">
                         <div class="row justify-content-center align-items-center py-3">
                             <div class="col-md-12">
-                                <div class="row justify-content-center align-items-center">
-                                    <div class="col-md-6" style="height: 200px; width: 200px;">
-                                        <img src="../Assets/Image/logo/Basera.png" class="border-1 d-flex shadow-lg"
-                                            style="border-radius: 50%; height: 200px; width: 200px;" />
+                                <div class="d-flex flex-column">
+                                    <div class="col-md-12">
+                                       <center><img src="../Assets/Image/logo/Basera.png" class="border-1 d-flex shadow-lg"
+                                            style="border-radius: 50%; height: 200px; width: 200px;" /></center> 
                                     </div>
-                                    <div class="col-md-6">
-                                        <h4 class="text-center">Akshat Dwivedi</h4>
+                                    <div class="col-md-12 pt-5 mt-1">
+                                        <h4 class="text-center" style="text-align
+    :center
+    ">Akshat Dwivedi</h4>
                                     </div>
                                 </div>
                             </div>
@@ -67,9 +69,9 @@
                                     <h5 class="text-start" style="font-size: 16px">Email</h5>
                                 </div>
                                 <div class="col-md-6">
-                                    <p class="form-label text-end text-black-50" style="font-size: 16px">
-                                        akshatdwivedi59941@gmail.com
-                                    </p>
+                                    <asp:label CssClass="form-label text-start text-black-50" runat="server" ID="lblEmail" style="font-size: 16px">
+                                       
+                                    </asp:label>
                                 </div>
                             </div>
                             <div class="row">
@@ -77,9 +79,9 @@
                                     <h5 class="text-start" style="font-size: 16px">Phone No</h5>
                                 </div>
                                 <div class="col-md-6">
-                                    <p class="form-label text-end text-black-50" style="font-size: 16px">
-                                        9519595778
-                                    </p>
+                                    <asp:Label CssClass="form-label text-start text-black-50" ID="lblMobileNo" runat="server" style="font-size: 16px">
+                                      
+                                    </asp:Label>
                                 </div>
                             </div>
                             <div class="row">
@@ -87,7 +89,7 @@
                                     <h5 class="text-start" style="font-size: 16px">City</h5>
                                 </div>
                                 <div class="col-md-6">
-                                    <p class="form-label text-end text-black-50" style="font-size: 16px">Ayodhya</p>
+                                    <asp:Label  CssClass="form-label text-start text-black-50" ID="lblCity" runat="server" style="font-size: 16px"></asp:Label>
                                 </div>
                             </div>
                             <div class="row">
@@ -95,7 +97,7 @@
                                     <h5 class="text-start" style="font-size: 16px">State</h5>
                                 </div>
                                 <div class="col-md-6">
-                                    <p class="form-label text-end text-black-50" style="font-size: 16px">Uttar Pradesh</p>
+                                    <asp:Label ID="lblState" runat="server" class="form-label text-start text-black-50" style="font-size: 16px"></asp:Label>
                                 </div>
                             </div>
                             <div class="row">
@@ -103,7 +105,7 @@
                                     <h5 class="text-start" style="font-size: 16px">Address</h5>
                                 </div>
                                 <div class="col-md-6">
-                                    <p class="form-label text-end text-black-50" style="font-size: 16px">Parsawan Khurd, Milkipur, Ayodhya</p>
+                                    <asp:Label ID="lblAddress" runat="server" class="form-label text-start text-black-50" style="font-size: 16px"></asp:Label>
                                 </div>
                             </div>
                         </div>
@@ -156,7 +158,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mt-2">
+                            <div class="row mt-4">
                                 <div class="col-md-6">
                                     <div class="card h-100">
                                         <div class="card-body">

@@ -14,13 +14,30 @@ namespace Frontend.LogicLayer.Implementations
 {
     public class UserDao : IUserDAO
     {
-		//private readonly string BaserUrl = "https://localhost:7218/api/User/";
-		//private readonly string BaserUrl = "https://localhost:5211/api/User/";
-		private readonly string BaserUrl = "https://localhost:6969/api/User/";
+		//private readonly string BaseUrl = "https://localhost:7218/api/User/";
+		//private readonly string BaseUrl = "https://localhost:5211/api/User/";
+		//private readonly string BaseUrl = "https://localhost:6969/api/User/";
+		private readonly string BaseUrl = "http://localhost:6969/api/User/";
 
-        public Task<string> GetUserByUserID(string Userid)
+		public async Task<string> GetUserByUserID(string Userid)
         {
-            throw new NotImplementedException();
+            using(var httpClient=new HttpClient())
+			{
+				httpClient.BaseAddress = new Uri(BaseUrl);
+				var requesturl =  $"GetByUserId?userid={Userid}";
+				httpClient.Timeout = TimeSpan.FromMinutes(10);
+                StringContent content = new StringContent( "",Encoding.UTF8, "application/json");
+				HttpResponseMessage httpResponse = httpClient.GetAsync(requesturl).Result;
+				if (httpResponse.IsSuccessStatusCode)
+				{
+					string responsedata=await httpResponse.Content.ReadAsStringAsync();
+					return responsedata;
+				}
+				else
+				{
+					return null;
+				}
+            }
         }
 
         public async Task<string> Login(string Userid, string password)
@@ -29,8 +46,8 @@ namespace Frontend.LogicLayer.Implementations
 			{
 				using(var httpClient=new HttpClient())
 				{
-					httpClient.BaseAddress=new Uri(BaserUrl);
-					var requestUrl = BaserUrl + "GetUser";
+					httpClient.BaseAddress=new Uri(BaseUrl);
+					var requestUrl = BaseUrl + "GetUser";
 					httpClient.Timeout = TimeSpan.FromMinutes(15);
 					var user = new User {
 						UserId = Userid,
@@ -64,8 +81,8 @@ namespace Frontend.LogicLayer.Implementations
 			{
 				using (var httpClient = new HttpClient()) 
 				{ 
-					httpClient.BaseAddress= new Uri(BaserUrl);
-					var requestUrl = BaserUrl + "Create";
+					httpClient.BaseAddress= new Uri(BaseUrl);
+					var requestUrl = BaseUrl + "Create";
 					//httpClient.DefaultRequestHeaders.ConnectionClose = true;
 					//httpClient.DefaultRequestHeaders.Accept.Clear();
 					//               httpClient.DefaultRequestHeaders.Add("Accept", "application/json");

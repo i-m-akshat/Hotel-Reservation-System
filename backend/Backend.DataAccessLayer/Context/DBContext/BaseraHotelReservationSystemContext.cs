@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using Backend.DataAccessLayer.Context.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Backend;
+namespace Backend.DataAccessLayer.Context.DBContext;
 
 public partial class BaseraHotelReservationSystemContext : DbContext
 {
@@ -235,6 +236,10 @@ public partial class BaseraHotelReservationSystemContext : DbContext
                 .HasMaxLength(100)
                 .IsUnicode(false);
             entity.Property(e => e.StateId).HasColumnName("StateID");
+
+            entity.HasOne(d => d.State).WithMany(p => p.TblCities)
+                .HasForeignKey(d => d.StateId)
+                .HasConstraintName("FK_tbl_city_tbl_State");
         });
 
         modelBuilder.Entity<TblCountry>(entity =>
@@ -714,6 +719,10 @@ public partial class BaseraHotelReservationSystemContext : DbContext
             entity.Property(e => e.StateName)
                 .HasMaxLength(250)
                 .IsUnicode(false);
+
+            entity.HasOne(d => d.Country).WithMany(p => p.TblStates)
+                .HasForeignKey(d => d.CountryId)
+                .HasConstraintName("FK_tbl_State_tbl_Country");
         });
 
         modelBuilder.Entity<TblUser>(entity =>

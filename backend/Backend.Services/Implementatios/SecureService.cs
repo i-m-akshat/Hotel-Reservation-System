@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Backend.Services.Implementatios
 {
@@ -109,8 +110,9 @@ namespace Backend.Services.Implementatios
             { 
                 _aesAlgo.Key=Encoding.UTF8.GetBytes(key);
                 _aesAlgo.IV=Encoding.UTF8.GetBytes(iv);
+                byte[] CipherTextBytes = Convert.FromBase64String(text);
                 ICryptoTransform _decryptor= _aesAlgo.CreateDecryptor(_aesAlgo.Key,_aesAlgo.IV);
-                using(var ms=new MemoryStream())
+                using(var ms=new MemoryStream(CipherTextBytes))
                 {
                     using(var cs=new CryptoStream(ms, _decryptor, CryptoStreamMode.Read))
                     {
