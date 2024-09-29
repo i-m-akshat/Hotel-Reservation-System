@@ -44,6 +44,16 @@ namespace Backend.Controllers
             }
             
         }
-        
+        // [Route]
+        [HttpGet("GetByUserId")]
+        public async Task<IActionResult> GetByUserId([FromQuery]string userid){
+            var _user=await _service.GetUserByUserName(userid);
+            if (_user == null) {
+                return BadRequest("No User exists by this id");
+            } else
+            {
+                return Ok(_user.ToLoginDTO());
+            }
+        }
     }
 }

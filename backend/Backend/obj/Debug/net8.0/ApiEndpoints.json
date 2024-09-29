@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "Backend.Controllers.AdminController",
+    "Method": "Login",
+    "RelativePath": "api/Admin/Login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Backend.Controllers.UserController",
     "Method": "GetAll",
     "RelativePath": "api/User",
@@ -21,6 +37,22 @@
         "Name": "_userDto",
         "Type": "Backend.DTO.User.User_registerDto",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.UserController",
+    "Method": "GetByUserId",
+    "RelativePath": "api/User/GetByUserId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userid",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

@@ -7,12 +7,13 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Frontend.Logic.Implementations
 {
     public class SecureDao : ISecureDAO
     {
-        public string Decrypt(string text, string IV, string key)
+        public string Decrypt(string text, string key, string IV)
         {
             try
             {
@@ -20,8 +21,9 @@ namespace Frontend.Logic.Implementations
                 {
                     _aesAlgo.Key = Encoding.UTF8.GetBytes(key);
                     _aesAlgo.IV = Encoding.UTF8.GetBytes(IV);
-                    ICryptoTransform decryptor = _aesAlgo.CreateDecryptor();
-                    using (var ms = new MemoryStream())
+                    byte[] CipherTextBytes = Convert.FromBase64String(text);
+                    ICryptoTransform decryptor = _aesAlgo.CreateDecryptor(_aesAlgo.Key,_aesAlgo.IV);
+                    using (var ms = new MemoryStream(CipherTextBytes))
                     {
                         using (CryptoStream cs = new CryptoStream(ms, decryptor, CryptoStreamMode.Read))
                         {
@@ -40,7 +42,7 @@ namespace Frontend.Logic.Implementations
             }
         }
 
-        public string Encrypt(string text, string IV, string key)
+        public string Encrypt(string text, string key, string IV)
         {
             try
             {

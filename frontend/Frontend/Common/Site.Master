@@ -72,7 +72,7 @@
                     <ul class="d-flex" >
                         <a class="btn btn-outline-dark" runat="server" visible="true" id="btn2Login" href="../Login.aspx">Login</a>
                         <div class="dropdown" runat="server" id="DdlProfile" visible="false">
-  <a class="text-black txtHindi" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration:none;cursor:pointer;">
+  <a class="text-black" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration:none;cursor:pointer;">
     नमस्ते &nbsp;<asp:Label ID="lblUserName" runat
         ="server" CssClass="text-black"></asp:Label>
   </a>

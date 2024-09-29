@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Backend;
+namespace Backend.DataAccessLayer.Context.Models;
 
 public partial class TblRoomimage
 {

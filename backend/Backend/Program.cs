@@ -1,4 +1,7 @@
 using Backend;
+using Backend.DataAccessLayer.Context.DBContext;
+using Backend.DataAccessLayer.Repository.Implementations;
+using Backend.DataAccessLayer.Repository.Interfaces;
 using Backend.Infrastructure.Repository.Implementations;
 using Backend.Infrastructure.Repository.Interfaces;
 using Backend.Services.Implementatios;
@@ -16,10 +19,19 @@ builder.Services.AddDbContext<BaseraHotelReservationSystemContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+builder.Services.Configure<Backend.Models.AppSettings_Domain.AppSettings>(builder.Configuration.GetSection("AppSettings"));
 builder.Services.AddScoped<ISecureService, SecureService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserRepo, UserRepo>();
-
+builder.Services.AddScoped<IAdminService, AdminService>();
+builder.Services.AddScoped<IAdminRepo,AdminRepo>();
+builder.Services.AddCors(options=>{
+    options.AddPolicy("AllowSpecificOrigins",
+    builder=>{
+builder.WithOrigins("https://localhost:44395","https://localhost:44395/Common/Default.aspx").AllowAnyMethod().AllowAnyHeader().AllowCredentials();
+    });
+});
 
 
 builder.Services.AddEndpointsApiExplorer();
@@ -33,7 +45,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors("AllowSpecificOrigins");
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
