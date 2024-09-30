@@ -14,8 +14,8 @@ namespace Backend.Models.Country_Domain
 
         public string? CountryName { get; set; }
 
-        public virtual ICollection<State> States { get; set; } = new List<State>();
+        //public virtual ICollection<State> States { get; set; } = new List<State>();
 
-        public virtual ICollection<User> TblUsers { get; set; } = new List<User>();
+        //public virtual ICollection<User> TblUsers { get; set; } = new List<User>();
     }
 }

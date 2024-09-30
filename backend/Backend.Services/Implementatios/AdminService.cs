@@ -37,7 +37,15 @@ namespace Backend.Services.Implementatios
         async Task<Admin> IAdminService.GetByUserName(string username)
         {
             var admin= await _repo.GetByUserName(username);
-            return admin.ToAdmin();
+            if (admin != null)
+            {
+                return admin.ToAdmin();
+            }
+            else
+            {
+                return null;
+            }
+            
         }
     }
 }

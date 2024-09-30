@@ -9,10 +9,10 @@ namespace Backend.DataAccessLayer.Repository.Interfaces
 {
     public interface ICountryRepo
     {
-        List<TblCountry> GetAll();
-        TblCountry Get(int id);
-        void Create(TblCountry country);
-        void Update(TblCountry country);
-        void Delete(int id);    
+        Task<List<TblCountry>> GetAll();
+        Task<TblCountry> Get(int id);
+        Task<TblCountry> Create(TblCountry country);
+        Task<TblCountry>  Update(TblCountry country);
+        Task<TblCountry> Delete(int id);    
     }
 }

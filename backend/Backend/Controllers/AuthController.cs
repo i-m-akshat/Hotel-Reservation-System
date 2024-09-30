@@ -41,4 +41,4 @@ namespace Backend.Controllers
 
 
 
-//scaffold-dbcontext "Server=DESKTOP-RBREH2D\SQLEXPRESS;Database=Basera_HotelReservationSystem;Trusted_Connection=True;Trust Server Certificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir "A:\asp.net Projects\HotelReservationSystem\HotelReservationApplciation-Api\Backend.Infrastructure\Backend.Infrastructure\Context\Models" -ContextDir "A:\asp.net Projects\HotelReservationSystem\HotelReservationApplciation-Api\Backend.Infrastructure\Backend.Infrastructure\Context\DBContext"
+//scaffold-dbcontext "Server=DESKTOP-RBREH2D\SQLEXPRESS;Database=Basera_HotelReservationSystem;Trusted_Connection=True;Trust Server Certificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir "A:\asp.net Projects\HotelReservation\backend\Backend.DataAccessLayer\Context\Models" -ContextDir "A:\asp.net Projects\HotelReservation\backend\Backend.DataAccessLayer\Context\DBContext"

@@ -1,5 +1,7 @@
-﻿using Backend.DataAccessLayer.Context.Models;
+﻿using Backend.DataAccessLayer.Context.DBContext;
+using Backend.DataAccessLayer.Context.Models;
 using Backend.DataAccessLayer.Repository.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,27 +12,34 @@ namespace Backend.DataAccessLayer.Repository.Implementations
 {
     public class CountryRepo : ICountryRepo
     {
-        public void Create(TblCountry country)
+        private readonly BaseraHotelReservationSystemContext _context;
+        public CountryRepo(BaseraHotelReservationSystemContext context)
+        {
+            _context = context;
+        }
+        public async Task<TblCountry> Create(TblCountry country)
+        {
+            await _context.TblCountries.AddAsync(country);   
+            await _context.SaveChangesAsync();
+            return country;
+        }
+
+        public Task<TblCountry> Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(int id)
+        public Task<TblCountry> Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public TblCountry Get(int id)
+        public async Task<List<TblCountry>> GetAll()
         {
-            throw new NotImplementedException();
+           return await _context.TblCountries.ToListAsync();
         }
 
-        public List<TblCountry> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(TblCountry country)
+        public Task<TblCountry> Update(TblCountry country)
         {
             throw new NotImplementedException();
         }

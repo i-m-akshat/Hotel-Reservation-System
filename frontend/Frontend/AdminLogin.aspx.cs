@@ -28,7 +28,9 @@ namespace HotelReservationSystem_Part1
             if (enc_user != null) {
                 var user=_secureDAO.Decrypt(enc_user, ConfigurationManager.AppSettings["key"].ToString(), ConfigurationManager.AppSettings["iv"].ToString());
                 Admin_model _admin = JsonConvert.DeserializeObject<Admin_model>(user);
-                Response.Write($"<script>alert('Hello{_admin.FullName}')</script>");
+                Response.Write($"<script>alert('Hello {_admin.FullName}')</script>");
+                Session["AdminName"] = _admin.FullName;
+                Response.Redirect("~/Admin/Dashboard.aspx");
             }
         }
 

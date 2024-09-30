@@ -1,5 +1,7 @@
-﻿using Backend.DataAccessLayer.Context.Models;
+﻿using Backend.DataAccessLayer.Context.DBContext;
+using Backend.DataAccessLayer.Context.Models;
 using Backend.DataAccessLayer.Repository.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,27 +12,34 @@ namespace Backend.DataAccessLayer.Repository.Implementations
 {
     public class StateRepo : IStateRepo
     {
-        public void Create(TblState tblState)
+        private readonly BaseraHotelReservationSystemContext _context;
+        public StateRepo(BaseraHotelReservationSystemContext context)
+        {
+            _context = context;
+        }
+        public async Task<TblState> Create(TblState tblState)
+        {
+            await _context.TblStates.AddAsync(tblState);
+            await _context.SaveChangesAsync();
+            return tblState;
+        }
+
+        public Task<TblState> Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Delete(int id)
+        public Task<TblState> Get(int id)
         {
             throw new NotImplementedException();
         }
 
-        public TblState Get(int id)
+        public async Task<List<TblState>> GetAll()
         {
-            throw new NotImplementedException();
+            return await  _context.TblStates.ToListAsync();
         }
 
-        public List<TblState> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(TblState tblState)
+        public Task<TblState> Update(TblState tblState)
         {
             throw new NotImplementedException();
         }

@@ -130,6 +130,8 @@ A:\asp.net Projects\HotelReservationSystem\HotelReservationApplication-User\Fron
 A:\asp.net Projects\HotelReservationSystem\HotelReservationApplication-User\Frontend\bin\Frontend.Models.pdb
 A:\asp.net Projects\HotelReservationSystem\HotelReservationApplication-User\Frontend\bin\Frontend.LogicLayer.dll
 A:\asp.net Projects\HotelReservationSystem\HotelReservationApplication-User\Frontend\bin\Frontend.LogicLayer.pdb
+A:\asp.net Projects\HotelReservation\frontend\Frontend\obj\Debug\Frontend.csproj.AssemblyReference.cache
+A:\asp.net Projects\HotelReservation\frontend\Frontend\obj\Debug\Frontend.csproj.CoreCompileInputs.cache
 A:\asp.net Projects\HotelReservation\frontend\Frontend\bin\HotelReservationSystem-Part1.dll.config
 A:\asp.net Projects\HotelReservation\frontend\Frontend\bin\HotelReservationSystem-Part1.dll
 A:\asp.net Projects\HotelReservation\frontend\Frontend\bin\HotelReservationSystem-Part1.pdb
@@ -193,9 +195,6 @@ A:\asp.net Projects\HotelReservation\frontend\Frontend\bin\Newtonsoft.Json.xml
 A:\asp.net Projects\HotelReservation\frontend\Frontend\bin\System.Net.Http.Formatting.xml
 A:\asp.net Projects\HotelReservation\frontend\Frontend\bin\System.Web.Http.xml
 A:\asp.net Projects\HotelReservation\frontend\Frontend\bin\System.Web.Http.WebHost.xml
-A:\asp.net Projects\HotelReservation\frontend\Frontend\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-A:\asp.net Projects\HotelReservation\frontend\Frontend\obj\Debug\Frontend.csproj.AssemblyReference.cache
-A:\asp.net Projects\HotelReservation\frontend\Frontend\obj\Debug\Frontend.csproj.CoreCompileInputs.cache
 A:\asp.net Projects\HotelReservation\frontend\Frontend\obj\Debug\Frontend.csproj.Up2Date
 A:\asp.net Projects\HotelReservation\frontend\Frontend\obj\Debug\HotelReservationSystem-Part1.dll
 A:\asp.net Projects\HotelReservation\frontend\Frontend\obj\Debug\HotelReservationSystem-Part1.pdb

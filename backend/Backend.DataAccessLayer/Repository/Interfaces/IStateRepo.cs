@@ -9,10 +9,10 @@ namespace Backend.DataAccessLayer.Repository.Interfaces
 {
     public interface IStateRepo
     {
-        List<TblState> GetAll();
-        TblState Get(int id);
-        void Create(TblState tblState);
-        void Update(TblState tblState);
-        void Delete(int id);
+        Task<List<TblState>> GetAll();
+        Task<TblState> Get(int id);
+        Task<TblState> Create(TblState tblState);
+        Task<TblState> Update(TblState tblState);
+        Task<TblState> Delete(int id);
     }
 }
