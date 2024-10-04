@@ -11,5 +11,8 @@ namespace Frontend.Logic.Interfaces
     {
         Task<string> GetAll();
         Task<string> Create(string _country);
+        Task<string> Update(string id,string _country);
+        Task<string> Delete(string id);
+        Task<string> GetById(string id);
     }
 }

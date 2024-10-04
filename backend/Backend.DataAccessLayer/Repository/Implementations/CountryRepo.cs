@@ -24,14 +24,20 @@ namespace Backend.DataAccessLayer.Repository.Implementations
             return country;
         }
 
-        public Task<TblCountry> Delete(int id)
+        public async Task<TblCountry> Delete(long id)
         {
-            throw new NotImplementedException();
+            var tblCountry=await _context.TblCountries.FindAsync(id);
+            if (tblCountry != null) {
+                _context.TblCountries.Remove(tblCountry);
+                await _context.SaveChangesAsync();
+                return tblCountry;  
+            } else { return null; }
         }
 
-        public Task<TblCountry> Get(int id)
+        public async Task<TblCountry> Get(long id)
         {
-            throw new NotImplementedException();
+            TblCountry tblCountry =await _context.TblCountries.FindAsync(id);
+            return tblCountry;
         }
 
         public async Task<List<TblCountry>> GetAll()
@@ -39,9 +45,20 @@ namespace Backend.DataAccessLayer.Repository.Implementations
            return await _context.TblCountries.ToListAsync();
         }
 
-        public Task<TblCountry> Update(TblCountry country)
+        public async Task<TblCountry> Update(TblCountry country, long id)
         {
-            throw new NotImplementedException();
+            var tblCountry =await _context.TblCountries.FindAsync(id);
+            if (tblCountry != null)
+            {
+                tblCountry.CountryName = country.CountryName!=null?country.CountryName:tblCountry.CountryName;
+                _context.TblCountries.Update(tblCountry);
+                _context.SaveChangesAsync();
+                return tblCountry;  
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

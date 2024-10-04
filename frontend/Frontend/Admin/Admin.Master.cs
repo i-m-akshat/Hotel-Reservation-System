@@ -15,7 +15,6 @@ namespace Frontend.Admin
             if (!IsPostBack) 
             {
                 Page.DataBind();
-                ViewState["ActiveMenu"] = "Dashboard";
                 if (Session["AdminName"] == null)
                     Response.Redirect("~/Common/Default.aspx");
                 else
@@ -30,19 +29,19 @@ namespace Frontend.Admin
 
         protected void btnDashboard_ServerClick(object sender, EventArgs e)
         {
-            ViewState["ActiveMenu"] = "Dashboard";
+            
             Response.Redirect("Dashboard.aspx");
 
         }
         protected void btnSettings_ServerClick(object sender, EventArgs e)
         {
-            ViewState["ActiveMenu"] = "Settings";
+            
             Response.Redirect("Settings.aspx");
         }
 
         protected void btnHelp_ServerClick(object sender, EventArgs e)
         {
-            ViewState["ActiveMenu"] = "Help";
+            
             Response.Redirect("Help.aspx");
         }
 
@@ -50,6 +49,9 @@ namespace Frontend.Admin
         protected void btnLogout_ServerClick(object sender, EventArgs e)
         {
             Session.Abandon();
+            //string script = "localStorage.clear()";
+
+            //ScriptManager.RegisterStartupScript(this, this.GetType(), "ClearLocalStorage", script, false);
             Response.Redirect("~/Common/Default.aspx");
         }
 

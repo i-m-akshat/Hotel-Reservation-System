@@ -24,19 +24,19 @@ namespace Backend.DataAccessLayer.Repository.Implementations
             return tblState;
         }
 
-        public Task<TblState> Delete(int id)
+        public Task<TblState> Delete(long id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<TblState> Get(int id)
+        public async Task<TblState> Get(long id)
         {
-            throw new NotImplementedException();
+            return await _context.TblStates.FindAsync(id);
         }
 
         public async Task<List<TblState>> GetAll()
-        {
-            return await  _context.TblStates.ToListAsync();
+            {
+            return await  _context.TblStates.Include(x=>x.Country).ToListAsync();
         }
 
         public Task<TblState> Update(TblState tblState)

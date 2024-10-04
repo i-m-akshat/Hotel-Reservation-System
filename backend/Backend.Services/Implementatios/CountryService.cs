@@ -24,14 +24,16 @@ namespace Backend.Services.Implementatios
             return _country.toCountry();
         }
 
-        public Task<Country> Delete(int id)
+        public async Task<Country> Delete(long id)
         {
-            throw new NotImplementedException();
+           var res= await _repo.Delete(id);
+            return res.toCountry();
         }
 
-        public Task<Country> Get(int id)
+        public async Task<Country> Get(long id)
         {
-            throw new NotImplementedException();
+            var res=await _repo.Get(id);
+            return res.toCountry();
         }
 
         public async Task<List<Country>> GetAll()
@@ -40,9 +42,10 @@ namespace Backend.Services.Implementatios
             return countries.Select(x => x.toCountry()).ToList();
         }
 
-        public Task<Country> Update(Country country)
+        public async Task<Country> Update(Country country, long id)
         {
-            throw new NotImplementedException();
+            var res = await _repo.Update(country.ToTblCountry(), id);
+            return res.toCountry(); 
         }
     }
 }

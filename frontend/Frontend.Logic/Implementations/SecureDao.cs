@@ -64,7 +64,8 @@ namespace Frontend.Logic.Implementations
                                 sw.Write(text);//Writes the plain text string to the StreamWriter, which in turn writes it to the CryptoStream, where it's encrypted.
                             }
 
-                            return Convert.ToBase64String(memoryStream.ToArray());
+                            string base64String = Convert.ToBase64String(memoryStream.ToArray());
+                            return base64String.TrimEnd('=');
                         }
                     }
 

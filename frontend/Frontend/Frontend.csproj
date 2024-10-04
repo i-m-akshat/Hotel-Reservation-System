@@ -93,6 +93,7 @@
     <Content Include="Admin\Help.aspx" />
     <Content Include="Admin\Profile.aspx" />
     <Content Include="Admin\Settings.aspx" />
+    <Content Include="Admin\State.aspx" />
     <Content Include="Assets\Bootstrap\css\bootstrap.css" />
     <Content Include="Assets\Bootstrap\css\bootstrap.min.css" />
     <Content Include="Assets\Bootstrap\js\bootstrap.bundle.js" />
@@ -108,6 +109,7 @@
     <Content Include="Assets\FontAwesome\js\all.min.js" />
     <Content Include="Assets\FontAwesome\license\LICENSE.txt" />
     <Content Include="Assets\Image\86597a5ad777499a9289dfbc11a816a9.jpeg" />
+    <Content Include="Assets\Image\About Us - Animation Concept.gif" />
     <Content Include="Assets\Image\dark.jpg" />
     <Content Include="Assets\Image\darkSignUpbg.jpg" />
     <Content Include="Assets\Image\AboutUS.png" />
@@ -364,6 +366,13 @@
     </Compile>
     <Compile Include="Admin\Settings.aspx.designer.cs">
       <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\State.aspx.cs">
+      <DependentUpon>State.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\State.aspx.designer.cs">
+      <DependentUpon>State.aspx</DependentUpon>
     </Compile>
     <Compile Include="Common\AllHotels.aspx.cs">
       <DependentUpon>AllHotels.aspx</DependentUpon>

@@ -8,26 +8,25 @@
 
                     <div class="heroText">
                         <h3 class="heroHead">
-                            Welcome to the Basera
+                            Welcome to the "Basera"
                         </h3>
                         <p class="heroDescription">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s.
+                           "Welcome to Basera, your ultimate destination for seamless hotel reservations and unforgettable travel experiences."
                         </p>
                         <div class="col-md-12 mt-2d heroBox">
                             <div class="row justify-content-center align-items-center form-group">
                                 <div class="col-md-5">
-                                    <input class="form-control form-control-sm mt-1"
+                                    <input class="form-control form-control-sm mt-1 inpLocation"
                                         placeholder="Please Select the Location"></input>
                                 </div>
                                 <div class="col-md-3">
-                                    <input class="form-control form-control-sm mt-1" type="date"></input>
+                                    <input class="form-control form-control-sm mt-1 inpDate" placeholder="From Date" onblur="(this.type='')" onfocus="(this.type='date')"></input>
                                 </div>
                                 <div class="col-md-3">
-                                    <input class="form-control form-control-sm mt-1" type="date"></input>
+                                    <input class="form-control form-control-sm mt-1 inpDate" placeholder="To Date" onblur="(this.type='')" onfocus="(this.type='date')"></input>
                                 </div>
                                 <div class="col-md-1">
-                                    <button class="btn btn-outline-success btn-light mt-1" type="submit">Search</button>
+                                    <button class="btn btn-outline-dark btn-light mt-1 btnSearchHotel" type="submit">Search</button>
                                 </div>
                             </div>
                         </div>

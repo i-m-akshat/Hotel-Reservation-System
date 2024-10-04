@@ -105,24 +105,33 @@ namespace Backend.Services.Implementatios
         }
         public string Decrypt(string text,string key,string iv)
         {
-            using (var _aesAlgo = Aes.Create()) 
-            
-            { 
-                _aesAlgo.Key=Encoding.UTF8.GetBytes(key);
-                _aesAlgo.IV=Encoding.UTF8.GetBytes(iv);
-                byte[] CipherTextBytes = Convert.FromBase64String(text);
-                ICryptoTransform _decryptor= _aesAlgo.CreateDecryptor(_aesAlgo.Key,_aesAlgo.IV);
-                using(var ms=new MemoryStream(CipherTextBytes))
+            try
+            {
+                using (var _aesAlgo = Aes.Create())
+
                 {
-                    using(var cs=new CryptoStream(ms, _decryptor, CryptoStreamMode.Read))
+                    _aesAlgo.Key = Encoding.UTF8.GetBytes(key);
+                    _aesAlgo.IV = Encoding.UTF8.GetBytes(iv);
+                    byte[] CipherTextBytes = Convert.FromBase64String(text);
+                    ICryptoTransform _decryptor = _aesAlgo.CreateDecryptor(_aesAlgo.Key, _aesAlgo.IV);
+                    using (var ms = new MemoryStream(CipherTextBytes))
                     {
-                        using(var sr=new StreamReader(cs))
+                        using (var cs = new CryptoStream(ms, _decryptor, CryptoStreamMode.Read))
                         {
-                            return sr.ReadToEnd();
+                            using (var sr = new StreamReader(cs))
+                            {
+                                return sr.ReadToEnd();
+                            }
                         }
                     }
                 }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
         }
 
         #endregion

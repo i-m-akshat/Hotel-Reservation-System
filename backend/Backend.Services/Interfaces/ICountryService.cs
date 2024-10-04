@@ -11,9 +11,9 @@ namespace Backend.Services.Interfaces
     public interface ICountryService
     {
         Task<List<Country>> GetAll();
-        Task<Country> Get(int id);
+        Task<Country> Get(long id);
         Task<Country> Create(Country country);
-        Task<Country> Update(Country country);
-        Task<Country> Delete(int id);
+        Task<Country> Update(Country country, long id );
+        Task<Country> Delete(long id);
     }
 }

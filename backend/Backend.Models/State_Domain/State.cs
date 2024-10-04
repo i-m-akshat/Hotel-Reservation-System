@@ -14,7 +14,7 @@ namespace Backend.Models.State_Domain
         public long StateId { get; set; }
 
         public string? StateName { get; set; }
-
+        public string? CountryName { get; set; }    
         public long? CountryId { get; set; }
         public virtual Country? Country { get; set; }
 

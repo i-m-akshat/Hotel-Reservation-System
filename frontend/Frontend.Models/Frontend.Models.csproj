@@ -44,8 +44,10 @@
     <Compile Include="Admin.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Country_Model.cs" />
+    <Compile Include="Mappers\StateMapper.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.8.1.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="State_Model.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>

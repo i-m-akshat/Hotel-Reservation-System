@@ -45,15 +45,15 @@
 					<li class="sidebar-header">
 				Location Settings
 </li>
-					<li class="sidebar-item " ">
+					<li class="sidebar-item ">
 						<a class="sidebar-link" id="btnCountry" onclick="setActive(this.parentNode, 'Country')">
-              <i class="align-middle" data-feather="user"></i> <span class="align-middle">Country</span>
+              <i class="align-middle" data-feather="country"></i> <span class="align-middle">Country</span>
             </a>
 					</li>
 
-					<li class="sidebar-item" onclick="setActive(this)">
-						<a class="sidebar-link" href="pages-sign-in.html">
-              <i class="align-middle" data-feather="log-in"></i> <span class="align-middle">Sign In</span>
+					<li class="sidebar-item">
+						<a class="sidebar-link" id="btnState" onclick="setActive(this.parentNode, 'State')">
+              <i class="align-middle" data-feather="state"></i> <span class="align-middle">State</span>
             </a>
 					</li>
 
@@ -321,9 +321,16 @@
     </form>
     <script src="../Assets/chart/apexchart.js"></script>
 		<script type="text/javascript">
-           /* document.addEventListener("DOMContentLoaded", function () {*/
+			/* document.addEventListener("DOMContentLoaded", function () {*/
+			
 			function setActive(clickedLi, content) {
-				localStorage.setItem("activeSidebar", content);
+				if (content != null) {
+                    localStorage.clear();
+					localStorage.setItem("activeSidebar", content);
+				} else {
+                    localStorage.setItem("activeSidebar", 'Dashboard');
+				}
+				
                 // Remove active class from all items
                 const items = document.querySelectorAll(".sidebar-item");
                 items.forEach(item => {

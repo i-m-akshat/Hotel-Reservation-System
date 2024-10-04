@@ -28,6 +28,8 @@ builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IAdminRepo,AdminRepo>();
 builder.Services.AddScoped<ICountryRepo, CountryRepo>();
 builder.Services.AddScoped<ICountryService, CountryService>();
+builder.Services.AddScoped<IStateRepo, StateRepo>();
+builder.Services.AddScoped<IStateService, StateService>();
 builder.Services.AddCors(options=>{
     options.AddPolicy("AllowSpecificOrigins",
     builder=>{
