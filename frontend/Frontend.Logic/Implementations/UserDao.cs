@@ -16,8 +16,8 @@ namespace Frontend.LogicLayer.Implementations
     {
 		//private readonly string BaseUrl = "https://localhost:7218/api/User/";
 		//private readonly string BaseUrl = "https://localhost:5211/api/User/";
-		//private readonly string BaseUrl = "https://localhost:6969/api/User/";
-		private readonly string BaseUrl = "http://localhost:6969/api/User/";
+		private readonly string BaseUrl = "https://localhost:6969/api/User/";
+		//private readonly string BaseUrl = "http://localhost:6969/api/User/";
 
 		public async Task<string> GetUserByUserID(string Userid)
         {

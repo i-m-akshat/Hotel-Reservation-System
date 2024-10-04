@@ -1,5 +1,7 @@
-﻿using Backend.DataAccessLayer.Context.Models;
+﻿using Backend.DataAccessLayer.Context.DBContext;
+using Backend.DataAccessLayer.Context.Models;
 using Backend.DataAccessLayer.Repository.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,29 +12,53 @@ namespace Backend.DataAccessLayer.Repository.Implementations
 {
     public class CountryRepo : ICountryRepo
     {
-        public void Create(TblCountry country)
+        private readonly BaseraHotelReservationSystemContext _context;
+        public CountryRepo(BaseraHotelReservationSystemContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
+        }
+        public async Task<TblCountry> Create(TblCountry country)
+        {
+            await _context.TblCountries.AddAsync(country);   
+            await _context.SaveChangesAsync();
+            return country;
         }
 
-        public void Delete(int id)
+        public async Task<TblCountry> Delete(long id)
         {
-            throw new NotImplementedException();
+            var tblCountry=await _context.TblCountries.FindAsync(id);
+            if (tblCountry != null) {
+                _context.TblCountries.Remove(tblCountry);
+                await _context.SaveChangesAsync();
+                return tblCountry;  
+            } else { return null; }
         }
 
-        public TblCountry Get(int id)
+        public async Task<TblCountry> Get(long id)
         {
-            throw new NotImplementedException();
+            TblCountry tblCountry =await _context.TblCountries.FindAsync(id);
+            return tblCountry;
         }
 
-        public List<TblCountry> GetAll()
+        public async Task<List<TblCountry>> GetAll()
         {
-            throw new NotImplementedException();
+           return await _context.TblCountries.ToListAsync();
         }
 
-        public void Update(TblCountry country)
+        public async Task<TblCountry> Update(TblCountry country, long id)
         {
-            throw new NotImplementedException();
+            var tblCountry =await _context.TblCountries.FindAsync(id);
+            if (tblCountry != null)
+            {
+                tblCountry.CountryName = country.CountryName!=null?country.CountryName:tblCountry.CountryName;
+                _context.TblCountries.Update(tblCountry);
+                _context.SaveChangesAsync();
+                return tblCountry;  
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

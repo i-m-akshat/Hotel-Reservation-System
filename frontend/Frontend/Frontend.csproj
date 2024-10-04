@@ -88,7 +88,12 @@
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
     <Content Include="AdminLogin.aspx" />
+    <Content Include="Admin\Country.aspx" />
     <Content Include="Admin\Dashboard.aspx" />
+    <Content Include="Admin\Help.aspx" />
+    <Content Include="Admin\Profile.aspx" />
+    <Content Include="Admin\Settings.aspx" />
+    <Content Include="Admin\State.aspx" />
     <Content Include="Assets\Bootstrap\css\bootstrap.css" />
     <Content Include="Assets\Bootstrap\css\bootstrap.min.css" />
     <Content Include="Assets\Bootstrap\js\bootstrap.bundle.js" />
@@ -104,6 +109,7 @@
     <Content Include="Assets\FontAwesome\js\all.min.js" />
     <Content Include="Assets\FontAwesome\license\LICENSE.txt" />
     <Content Include="Assets\Image\86597a5ad777499a9289dfbc11a816a9.jpeg" />
+    <Content Include="Assets\Image\About Us - Animation Concept.gif" />
     <Content Include="Assets\Image\dark.jpg" />
     <Content Include="Assets\Image\darkSignUpbg.jpg" />
     <Content Include="Assets\Image\AboutUS.png" />
@@ -326,12 +332,47 @@
     <Compile Include="Admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Country.aspx.cs">
+      <DependentUpon>Country.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Country.aspx.designer.cs">
+      <DependentUpon>Country.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\State.aspx.cs">
+      <DependentUpon>State.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\State.aspx.designer.cs">
+      <DependentUpon>State.aspx</DependentUpon>
     </Compile>
     <Compile Include="Common\AllHotels.aspx.cs">
       <DependentUpon>AllHotels.aspx</DependentUpon>

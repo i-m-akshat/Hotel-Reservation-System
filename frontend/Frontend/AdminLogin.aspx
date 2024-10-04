@@ -3,19 +3,20 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
-    <div class="container-fluid loginBody" >
-        <div class="loginGlass">
+    <div class="container-fluid text-black-50" >
+       <%-- <div class="loginGlass">--%>
             <div class="col-md-12">
                 
-                <div class="row mx-2">
+                <div class="row mx-2 justify-content-center align-items-center">
                 
                     <div class="col-md-8">
-                        <h1 class="textMainLoginHead py-5 text-white">Basera - Where every journey feels like home</h1>
-                        <p class="text-justify text-white textSubLogin">Find the comfort of home amenities, in every city - Choose Basera.</p>
+                        <%--<h1 class="textMainLoginHead py-5 text-white">Basera - Where every journey feels like home</h1>
+                        <p class="text-justify text-white textSubLogin">Find the comfort of home amenities, in every city - Choose Basera.</p>--%>
+                        <img src="Assets/Image/About Us - Animation Concept.gif" class="img-fluid d-flex py-5" />
                     </div>
                     <div class="col-md-4">
-                        <div class="card px-2">
-                            <h3 class="text-start py-2 text-white mt-2 px-3 text-card-head">Login/SignUp</h3>
+                        <div class="card px-2" style="background-color:white">
+                            <h3 class="text-start py-2 text-black-50 mt-2 px-3 text-card-head">Admin Login</h3>
                             <div class="card-body">
                                
                                 <div class="form-floating mb-3" style="background: none;">
@@ -30,7 +31,7 @@
                                   </div>
                                   <div class="col-12 my-3 text-center">
                                     
-                                    <asp:Button CssClass="btn btn-outline-light" ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login"></asp:Button>
+                                    <asp:Button CssClass="btn btn-sm btn-outline-dark" ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login"></asp:Button>
                                   </div>
                                  <%-- <div class="col-md-12">
                                     <div class="row d-flex">
@@ -51,7 +52,7 @@
                 </div>
             </div>
           
-        </div>
+        <%--</div>--%>
     </div>
 
 </asp:Content>

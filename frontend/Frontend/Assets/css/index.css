@@ -18,8 +18,21 @@ body {
 .btn {
     font-size: 13px;
 }
+.inpLocation{
+    padding:12px;text-align:center;
+    height:30px;
+}
+.inpDate {
+    padding: 12px;
+    text-align: center;
+    height: 30px;
+}
+.btnSearchHotel {
+    text-align: center;
+    height: 30px;
+}
 .dropdown-item {
-    color: black; 
+    color: black;
 }
 
     .dropdown-item:focus,
@@ -126,7 +139,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-    height: 600px;
+    height: 100vh;
 }
 
 .heroImage {
@@ -164,9 +177,17 @@ body {
 
 .heroText .heroHead {
     padding: 20px;
-    font-size: 50px;
+    font-size: 63px;
+    transition:0.5s ease-in-out;
 }
-
+.heroHead:is(:hover){
+    /*transform:scale(1.2) ;*/
+    transform-style:preserve-3d;
+    transform-origin:center;
+    transform:scale(1.1);
+    animation:ease-in-out;
+}
+.heroHead:hover
 .heroText .heroDescription {
     padding: 20px;
     font-size: 15px;

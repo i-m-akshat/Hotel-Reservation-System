@@ -248,9 +248,7 @@ public partial class BaseraHotelReservationSystemContext : DbContext
 
             entity.ToTable("tbl_Country");
 
-            entity.Property(e => e.CountryId)
-                .ValueGeneratedNever()
-                .HasColumnName("countryId");
+            entity.Property(e => e.CountryId).HasColumnName("countryId");
             entity.Property(e => e.CountryName)
                 .HasMaxLength(500)
                 .IsUnicode(false);

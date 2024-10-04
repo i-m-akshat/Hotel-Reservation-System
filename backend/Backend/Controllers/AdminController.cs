@@ -26,8 +26,16 @@ namespace Backend.Controllers
         public async Task<IActionResult> Login( string username)
         {
             var admin=await _service.GetByUserName(username);
-            var enc_admin = _secureService.Encrypt(JsonConvert.SerializeObject(admin.ToAdminDTO()), _app.enc_key, _app.enc_iv);
-            return Ok(enc_admin);
+            if (admin != null)
+            {
+                var enc_admin = _secureService.Encrypt(JsonConvert.SerializeObject(admin.ToAdminDTO()), _app.enc_key, _app.enc_iv);
+                return Ok(enc_admin);
+            }
+            else
+            {
+                return NotFound();
+            }
+            
         }
         //[HttpPost]
         //public async Task<IActionResult> Create([FromBody] int id)
