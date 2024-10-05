@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.Mime;
@@ -17,6 +18,7 @@ namespace Frontend.Logic.Utility
             using(var httpClient=new HttpClient())
             {
                 httpClient.BaseAddress = new Uri(BaseUrl);
+                id = WebUtility.UrlEncode(id);
                 var requestUrl = RequestUrl + "?id=" + id;
                 StringContent  content = new StringContent("", Encoding.UTF8, "application/json");
               HttpResponseMessage response= httpClient.DeleteAsync(requestUrl).Result;
@@ -74,6 +76,7 @@ namespace Frontend.Logic.Utility
             using(var httpClient=new HttpClient())
             {
                 httpClient.BaseAddress = new Uri(BaseUrl);
+                id=WebUtility.UrlEncode(id);
                 var requestURL = RequestUrl+"?id="+id;
                 StringContent content = new StringContent("", Encoding.UTF8, "application/json");
                 HttpResponseMessage response = httpClient.GetAsync(requestURL).Result;
@@ -132,6 +135,7 @@ namespace Frontend.Logic.Utility
             using(var httpClient=new HttpClient())
             {
                 httpClient.BaseAddress = new Uri(BaseUrl);
+                id = WebUtility.UrlEncode(id);
                 var requestUrl=RequestUrl+ "?id=" + id;
                 Content = JsonConvert.SerializeObject(Content);
                 StringContent _content=new StringContent(Content, Encoding.UTF8,"application/json");

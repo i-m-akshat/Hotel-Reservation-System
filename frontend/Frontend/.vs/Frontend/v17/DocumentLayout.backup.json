@@ -3,44 +3,48 @@
   "WorkspaceRootPath": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{11905547-4820-40B0-B05B-FCFB0E066DE1}|..\\Frontend.Logic\\Frontend.Logic.csproj|a:\\asp.net projects\\hotelreservation\\frontend\\frontend.logic\\implementations\\securedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|a:\\asp.net projects\\hotelreservation\\frontend\\frontend\\admin\\country.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|solutionrelative:admin\\country.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11905547-4820-40B0-B05B-FCFB0E066DE1}|..\\Frontend.Logic\\Frontend.Logic.csproj|a:\\asp.net projects\\hotelreservation\\frontend\\frontend.logic\\implementations\\countrydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|solutionrelative:global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11905547-4820-40B0-B05B-FCFB0E066DE1}|..\\Frontend.Logic\\Frontend.Logic.csproj|a:\\asp.net projects\\hotelreservation\\frontend\\frontend.logic\\utility\\restutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{11905547-4820-40B0-B05B-FCFB0E066DE1}|..\\Frontend.Logic\\Frontend.Logic.csproj|a:\\asp.net projects\\hotelreservation\\frontend\\frontend.logic\\utility\\irestutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\common\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|solutionrelative:common\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\assets\\css\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|solutionrelative:assets\\css\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\common\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|solutionrelative:common\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\admin\\admin.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|solutionrelative:admin\\admin.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\admin\\admin.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|solutionrelative:admin\\admin.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11905547-4820-40B0-B05B-FCFB0E066DE1}|..\\Frontend.Logic\\Frontend.Logic.csproj|a:\\asp.net projects\\hotelreservation\\frontend\\frontend.logic\\utility\\restutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11905547-4820-40B0-B05B-FCFB0E066DE1}|..\\Frontend.Logic\\Frontend.Logic.csproj|a:\\asp.net projects\\hotelreservation\\frontend\\frontend.logic\\implementations\\countrydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|a:\\asp.net projects\\hotelreservation\\frontend\\frontend\\admin\\country.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|solutionrelative:admin\\country.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11905547-4820-40B0-B05B-FCFB0E066DE1}|..\\Frontend.Logic\\Frontend.Logic.csproj|a:\\asp.net projects\\hotelreservation\\frontend\\frontend.logic\\implementations\\securedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|solutionrelative:global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{11905547-4820-40B0-B05B-FCFB0E066DE1}|..\\Frontend.Logic\\Frontend.Logic.csproj|a:\\asp.net projects\\hotelreservation\\frontend\\frontend.logic\\utility\\irestutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\aboutus.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|solutionrelative:aboutus.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|a:\\asp.net projects\\hotelreservation\\frontend\\frontend\\aboutus.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\aboutus.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|solutionrelative:aboutus.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\admin\\admin.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|solutionrelative:admin\\admin.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{11905547-4820-40B0-B05B-FCFB0E066DE1}|..\\Frontend.Logic\\Frontend.Logic.csproj|a:\\asp.net projects\\hotelreservation\\frontend\\frontend.logic\\implementations\\statedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -66,10 +70,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\adminlogin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|solutionrelative:adminlogin.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\admin\\admin.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|solutionrelative:admin\\admin.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\admin\\state.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
@@ -200,17 +200,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "CountryDao.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend.Logic\\Implementations\\CountryDao.cs",
               "RelativeDocumentMoniker": "..\\Frontend.Logic\\Implementations\\CountryDao.cs",
               "ToolTip": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend.Logic\\Implementations\\CountryDao.cs",
               "RelativeToolTip": "..\\Frontend.Logic\\Implementations\\CountryDao.cs",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAkwH8AAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAHMAAAAAAAAAAAD4v4IAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T19:28:35.111Z",
               "IsPinned": true,
@@ -226,72 +226,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AboutUs.aspx",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\AboutUs.aspx",
-              "RelativeDocumentMoniker": "AboutUs.aspx",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\AboutUs.aspx",
-              "RelativeToolTip": "AboutUs.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-09-24T18:31:08.701Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "index.css",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Assets\\css\\index.css",
-              "RelativeDocumentMoniker": "Assets\\css\\index.css",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Assets\\css\\index.css",
-              "RelativeToolTip": "Assets\\css\\index.css",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAAALMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-09-24T17:21:19.233Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SecureDao.cs",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend.Logic\\Implementations\\SecureDao.cs",
-              "RelativeDocumentMoniker": "..\\Frontend.Logic\\Implementations\\SecureDao.cs",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend.Logic\\Implementations\\SecureDao.cs",
-              "RelativeToolTip": "..\\Frontend.Logic\\Implementations\\SecureDao.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAwwDIAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T16:58:57.654Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Global.asax.cs",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Global.asax.cs",
-              "RelativeDocumentMoniker": "Global.asax.cs",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Global.asax.cs",
-              "RelativeToolTip": "Global.asax.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAAADkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T19:09:46.844Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
               "Title": "RestUtility.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend.Logic\\Utility\\RestUtility.cs",
               "RelativeDocumentMoniker": "..\\Frontend.Logic\\Utility\\RestUtility.cs",
               "ToolTip": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend.Logic\\Utility\\RestUtility.cs",
               "RelativeToolTip": "..\\Frontend.Logic\\Utility\\RestUtility.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAwwF4AAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-04T19:32:31.302Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "IRestUtility.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend.Logic\\Utility\\IRestUtility.cs",
               "RelativeDocumentMoniker": "..\\Frontend.Logic\\Utility\\IRestUtility.cs",
@@ -299,25 +247,63 @@
               "RelativeToolTip": "..\\Frontend.Logic\\Utility\\IRestUtility.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T08:46:39.894Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-02T08:46:39.894Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Country.aspx.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Admin\\Country.aspx.cs",
               "RelativeDocumentMoniker": "Admin\\Country.aspx.cs",
               "ToolTip": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Admin\\Country.aspx.cs",
               "RelativeToolTip": "Admin\\Country.aspx.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAkwFAAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAkwFEAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T16:52:13.285Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
+              "Title": "Admin.Master.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Admin\\Admin.Master.cs",
+              "RelativeDocumentMoniker": "Admin\\Admin.Master.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Admin\\Admin.Master.cs",
+              "RelativeToolTip": "Admin\\Admin.Master.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAADgvxcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T16:31:23.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Admin.Master",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Admin\\Admin.Master",
+              "RelativeDocumentMoniker": "Admin\\Admin.Master",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Admin\\Admin.Master",
+              "RelativeToolTip": "Admin\\Admin.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-09-24T14:38:36.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "index.css",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Assets\\css\\index.css",
+              "RelativeDocumentMoniker": "Assets\\css\\index.css",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Assets\\css\\index.css",
+              "RelativeToolTip": "Assets\\css\\index.css",
+              "ViewState": "AgIAALoAAAAAAAAAAADwv8oAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-24T17:21:19.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Default.aspx",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Common\\Default.aspx",
               "RelativeDocumentMoniker": "Common\\Default.aspx",
@@ -330,19 +316,43 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Admin.Master.cs",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Admin\\Admin.Master.cs",
-              "RelativeDocumentMoniker": "Admin\\Admin.Master.cs",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Admin\\Admin.Master.cs",
-              "RelativeToolTip": "Admin\\Admin.Master.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAADgvxcAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "Global.asax.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Global.asax.cs",
+              "RelativeDocumentMoniker": "Global.asax.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Global.asax.cs",
+              "RelativeToolTip": "Global.asax.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAADcAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T16:31:23.659Z"
+              "WhenOpened": "2024-09-23T19:09:46.844Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
+              "Title": "SecureDao.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend.Logic\\Implementations\\SecureDao.cs",
+              "RelativeDocumentMoniker": "..\\Frontend.Logic\\Implementations\\SecureDao.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend.Logic\\Implementations\\SecureDao.cs",
+              "RelativeToolTip": "..\\Frontend.Logic\\Implementations\\SecureDao.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAkwE4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T16:58:57.654Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AboutUs.aspx",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\AboutUs.aspx",
+              "RelativeDocumentMoniker": "AboutUs.aspx",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\AboutUs.aspx",
+              "RelativeToolTip": "AboutUs.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-09-24T18:31:08.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "AboutUs.aspx.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\AboutUs.aspx.cs",
               "RelativeDocumentMoniker": "AboutUs.aspx.cs",
@@ -350,12 +360,11 @@
               "RelativeToolTip": "AboutUs.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T17:08:32.694Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-04T17:08:32.694Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "StateDao.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend.Logic\\Implementations\\StateDao.cs",
               "RelativeDocumentMoniker": "..\\Frontend.Logic\\Implementations\\StateDao.cs",
@@ -367,7 +376,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ICountryDAO.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend.Logic\\Interfaces\\ICountryDAO.cs",
               "RelativeDocumentMoniker": "..\\Frontend.Logic\\Interfaces\\ICountryDAO.cs",
@@ -379,7 +388,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "StateMapper.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend.Models\\Mappers\\StateMapper.cs",
               "RelativeDocumentMoniker": "..\\Frontend.Models\\Mappers\\StateMapper.cs",
@@ -391,7 +400,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Country.aspx",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Admin\\Country.aspx",
               "RelativeDocumentMoniker": "Admin\\Country.aspx",
@@ -403,7 +412,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Login.aspx.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Login.aspx.cs",
               "RelativeDocumentMoniker": "Login.aspx.cs",
@@ -415,7 +424,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "AdminLogin.aspx",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\AdminLogin.aspx",
               "RelativeDocumentMoniker": "AdminLogin.aspx",
@@ -427,19 +436,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Admin.Master",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Admin\\Admin.Master",
-              "RelativeDocumentMoniker": "Admin\\Admin.Master",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Admin\\Admin.Master",
-              "RelativeToolTip": "Admin\\Admin.Master",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-09-24T14:38:36.004Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "State.aspx.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\Admin\\State.aspx.cs",
               "RelativeDocumentMoniker": "Admin\\State.aspx.cs",

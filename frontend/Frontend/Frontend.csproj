@@ -105,6 +105,10 @@
     <Content Include="Assets\chart\apexchart.js" />
     <Content Include="Assets\css\app.css" />
     <Content Include="Assets\css\index.css" />
+    <Content Include="Assets\DataTables\datatables.css" />
+    <Content Include="Assets\DataTables\datatables.js" />
+    <Content Include="Assets\DataTables\datatables.min.css" />
+    <Content Include="Assets\DataTables\datatables.min.js" />
     <Content Include="Assets\FontAwesome\css\all.min.css" />
     <Content Include="Assets\FontAwesome\js\all.min.js" />
     <Content Include="Assets\FontAwesome\license\LICENSE.txt" />
