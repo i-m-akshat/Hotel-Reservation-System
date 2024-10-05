@@ -36,7 +36,7 @@ namespace Backend.Controllers
             if (res == null)
                 return BadRequest("Something went wrong");
             else
-                return Ok(res);
+                return Ok(_secureService.Encrypt(JsonConvert.SerializeObject(res), _app.enc_key, _app.enc_iv));
         }
         [HttpGet]
         public async Task<IActionResult> Get()
@@ -81,7 +81,7 @@ namespace Backend.Controllers
             var res = await _service.Update(country, dec_id);
             if (res != null)
             {
-                return Ok(res);
+                return Ok(_secureService.Encrypt(JsonConvert.SerializeObject(res), _app.enc_key, _app.enc_iv));
             }
             else
             {
@@ -94,7 +94,7 @@ namespace Backend.Controllers
         {
             long id_Dec = Convert.ToInt64(_secureService.Decrypt(id, _app.enc_key, _app.enc_iv));
             var res=await _service.Delete(id_Dec);
-            if (res != null) { return Ok(res); } else { return BadRequest(); }
+            if (res != null) { return Ok(_secureService.Encrypt(JsonConvert.SerializeObject(res), _app.enc_key, _app.enc_iv)); } else { return BadRequest(); }
         }
     }
 }

@@ -8,7 +8,12 @@
 
                     <div class="heroText">
                         <h3 class="heroHead">
-                            Welcome to the "Basera"
+                            Welcome to the <br />"&nbsp;<span class="key">B</span>
+  <span class="key">a</span>
+  <span class="key">s</span>
+  <span class="key">e</span>
+  <span class="key">r</span>
+  <span class="key">a</span>&nbsp;"
                         </h3>
                         <p class="heroDescription">
                            "Welcome to Basera, your ultimate destination for seamless hotel reservations and unforgettable travel experiences."

@@ -20,6 +20,8 @@
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Space+Grotesk:wght@300..700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../Assets/css/app.css" />
+	<link rel="stylesheet" href="../Assets/DataTables/datatables.min.css" />
+	<script src="../Assets/DataTables/datatables.min.js"></script>
     <script src="../Assets/Js/app.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
