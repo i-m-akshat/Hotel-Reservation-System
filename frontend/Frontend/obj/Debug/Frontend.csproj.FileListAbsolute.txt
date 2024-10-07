@@ -193,7 +193,6 @@ A:\asp.net Projects\HotelReservation\frontend\Frontend\bin\Newtonsoft.Json.xml
 A:\asp.net Projects\HotelReservation\frontend\Frontend\bin\System.Net.Http.Formatting.xml
 A:\asp.net Projects\HotelReservation\frontend\Frontend\bin\System.Web.Http.xml
 A:\asp.net Projects\HotelReservation\frontend\Frontend\bin\System.Web.Http.WebHost.xml
-A:\asp.net Projects\HotelReservation\frontend\Frontend\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 A:\asp.net Projects\HotelReservation\frontend\Frontend\obj\Debug\Frontend.csproj.AssemblyReference.cache
 A:\asp.net Projects\HotelReservation\frontend\Frontend\obj\Debug\Frontend.csproj.CoreCompileInputs.cache
 A:\asp.net Projects\HotelReservation\frontend\Frontend\obj\Debug\Frontend.csproj.Up2Date

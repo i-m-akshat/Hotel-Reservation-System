@@ -1,4 +1,6 @@
-﻿using Backend.Infrastructure.Repository.Interfaces;
+﻿using Backend.DataAccessLayer.Context.DBContext;
+using Backend.DataAccessLayer.Context.Models;
+using Backend.Infrastructure.Repository.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -34,6 +36,11 @@ namespace Backend.Infrastructure.Repository.Implementations
              await _context.TblUsers.AddAsync(user);
             await _context.SaveChangesAsync();
             return user;
+        }
+
+        public async Task<TblUser> GetUserByUsername(string username)
+        {
+            return await _context.TblUsers.Where(x=>x.UserId==username).FirstOrDefaultAsync();
         }
     }
 }

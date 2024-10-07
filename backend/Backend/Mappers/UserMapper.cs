@@ -85,5 +85,22 @@ namespace Backend.Mappers
 
             };
         }
+        //here this basically defines that we are extending the functionality and used in extension method to extend the property of a particular class
+        public static  User_loginDTODetails ToLoginDTO(this User _user)
+        {
+            return new User_loginDTODetails
+            {
+                
+                FullName = _user.FullName,
+                UserId=_user.UserId,
+                StateId = _user.StateId,
+                CityId = _user.CityId,
+                CountryId = _user.CountryId,
+                //Image = _user.Image,
+                EmailId = _user.EmailId,
+                Address = _user.Address,
+                MobileNo = _user.MobileNo
+            };
+        }
     }
 }

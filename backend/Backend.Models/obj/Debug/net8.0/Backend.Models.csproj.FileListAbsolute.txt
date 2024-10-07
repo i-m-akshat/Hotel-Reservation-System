@@ -5,6 +5,7 @@ A:\asp.net Projects\HotelReservation\backend\Backend.Models\obj\Debug\net8.0\Bac
 A:\asp.net Projects\HotelReservation\backend\Backend.Models\obj\Debug\net8.0\Backend.Models.AssemblyInfoInputs.cache
 A:\asp.net Projects\HotelReservation\backend\Backend.Models\obj\Debug\net8.0\Backend.Models.AssemblyInfo.cs
 A:\asp.net Projects\HotelReservation\backend\Backend.Models\obj\Debug\net8.0\Backend.Models.csproj.CoreCompileInputs.cache
+A:\asp.net Projects\HotelReservation\backend\Backend.Models\obj\Debug\net8.0\Backend.Models.sourcelink.json
 A:\asp.net Projects\HotelReservation\backend\Backend.Models\obj\Debug\net8.0\Backend.Models.dll
 A:\asp.net Projects\HotelReservation\backend\Backend.Models\obj\Debug\net8.0\refint\Backend.Models.dll
 A:\asp.net Projects\HotelReservation\backend\Backend.Models\obj\Debug\net8.0\Backend.Models.pdb

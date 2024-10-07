@@ -41,16 +41,18 @@
                             <div class="card-body">
                                
                                 <div class="form-floating mb-3" style="background: none;">
-                                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput">Email address</label>
+                                    <%--<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">--%>
+                                    <asp:TextBox ID="txtUserName" runat="server" CssClass="form-control" placeholder="Please Enter the Username"></asp:TextBox>
+                                    <label for="txtUsername">UserName</label>
                                   </div>
                                   <div class="form-floating">
-                                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                                    <label for="floatingPassword">Password</label>
+                                    <%--<input type="password" class="form-control" id="floatingPassword" placeholder="Password">--%>
+                                      <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Please Enter the Password"></asp:TextBox>
+                                    <label for="txtPassword">Password</label>
                                   </div>
                                   <div class="col-12 my-3 text-center">
                                     
-                                    <button class="btn btn-outline-light">Login</button>
+                                    <asp:Button CssClass="btn btn-outline-light" ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login"></asp:Button>
                                   </div>
                                   <div class="col-md-12">
                                     <div class="row d-flex">
