@@ -9,8 +9,22 @@ namespace Backend.Infrastructure.Repository.Interfaces
 {
     public interface IUserRepo
     {
-         Task<List<TblUser>> GetAll();
+        /// <summary>
+        /// To get all the users 
+        /// </summary>
+        /// <returns></returns>
+        Task<List<TblUser>> GetAll();
+        /// <summary>
+        /// To Create the user
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         Task<TblUser> CreateUser(TblUser user);
-        Task<TblUser> GetUserByUsername(string username);   
+        /// <summary>
+        /// To get the user by username
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns></returns>
+        Task<TblUser> GetUserByUsername(string username);
     }
 }

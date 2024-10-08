@@ -36,7 +36,30 @@ namespace HotelReservationSystem_Part1.Admin
 
         protected void btnAddState_Click(object sender, EventArgs e)
         {
-
+            string Message=string.Empty;
+            if (validate(out Message))
+            {
+                dynamic state = new State_Model();
+                state.StateName = txtStateName.Text.ToString();
+                state.CountryId = Convert.ToInt64(ddlCountry.SelectedItem.Value);
+                if (state != null)
+                {
+                    var enc_state = _secure.Encrypt(JsonConvert.SerializeObject(state), ConfigurationManager.AppSettings["key"],ConfigurationManager.AppSettings["iv"]);
+                    var res=_stateDao.Create(enc_state);
+                    if (res != null)
+                    {
+                        var dec_Res = _secure.Decrypt(res, ConfigurationManager.AppSettings["key"], ConfigurationManager.AppSettings["iv"]);
+                        if (dec_Res != null)
+                            Response.Write("<script>alert('Creation of state successfull)'</script>");
+                    }
+                }
+            }
+            else{
+                Response.Write($"<script>alert('{Message}')</script>");
+            }
+            BindStates();
+            BindCountries();
+            clear();
         }
         private void BindStates()
         {
@@ -59,6 +82,36 @@ namespace HotelReservationSystem_Part1.Admin
             ddlCountry.DataValueField = "CountryId";
             ddlCountry.DataBind();
             ddlCountry.Items.Insert(0, new ListItem("Please Select the Country","0"));
+            
+        }
+        private void clear()
+        {
+            txtStateName.Text = string.Empty;
+            ddlCountry.SelectedItem.Value = "0";
+        }
+
+        private bool validate(out string message)
+        {
+            string Message = string.Empty;
+            if (txtStateName.Text == null)
+            {
+                Message += "Please enter the state name ,";
+            }
+            if (ddlCountry.SelectedIndex == 0)
+            {
+                Message += "Please select the country ,";
+            }
+            if (Message != string.Empty)
+            {
+                message = Message.ToString();
+               
+                return false;
+            }
+            else
+            {
+                message = string.Empty;
+                return true;
+            }
             
         }
     }

@@ -30,7 +30,7 @@ namespace Backend.DataAccessLayer.Repository.Implementations
             throw new NotImplementedException();
         }
 
-        public void Update(TblCity city)
+        public void Update(long id, TblCity city)
         {
             throw new NotImplementedException();
         }

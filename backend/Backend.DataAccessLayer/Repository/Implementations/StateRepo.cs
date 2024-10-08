@@ -24,9 +24,11 @@ namespace Backend.DataAccessLayer.Repository.Implementations
             return tblState;
         }
 
-        public Task<TblState> Delete(long id)
+        public async Task<TblState> Delete(long id)
         {
-            throw new NotImplementedException();
+            var tblState=await _context.TblStates.FindAsync(id);
+             _context.TblStates.Remove(tblState);
+            await _context.SaveChangesAsync() ; return tblState;
         }
 
         public async Task<TblState> Get(long id)
@@ -35,13 +37,21 @@ namespace Backend.DataAccessLayer.Repository.Implementations
         }
 
         public async Task<List<TblState>> GetAll()
-            {
+        {
             return await  _context.TblStates.Include(x=>x.Country).ToListAsync();
         }
 
-        public Task<TblState> Update(TblState tblState)
+        public async Task<TblState> Update(TblState tblState, long id)
         {
-            throw new NotImplementedException();
+            var tbl_State = await _context.TblStates.FindAsync(id);
+            if (tbl_State != null) { 
+                tbl_State.StateName=tblState.StateName!=null?tblState.StateName:tbl_State.StateName;
+                tbl_State.CountryId=tblState.CountryId!=null?tblState.CountryId.Value:tbl_State.CountryId;
+                _context.TblStates.Update(tblState);
+            }
+            await _context.SaveChangesAsync();
+            return tbl_State;
+
         }
     }
     

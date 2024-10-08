@@ -45,8 +45,26 @@ namespace Backend.DataAccessLayer.Repository.Implementations
             return await _context.TblAdmins.Where(x=>x.Adminname==username).FirstOrDefaultAsync();
         }
 
-        public async Task<TblAdmin> Update(TblAdmin tblAdmin)
+        public async Task<TblAdmin> Update(long id,TblAdmin tblAdmin)
         {
+            var tbl_Admin = await _context.TblAdmins.FindAsync(id);
+            if (tbl_Admin != null)
+            {
+                tbl_Admin.AdminId=tblAdmin.AdminId!=null
+                    ?tblAdmin.AdminId : tbl_Admin.AdminId;
+                tbl_Admin.Address=tblAdmin.Address!=null?tblAdmin.Address.ToString() : tblAdmin.Address;
+                tbl_Admin.PhoneNumber=tblAdmin.PhoneNumber!=null?tblAdmin.PhoneNumber:tbl_Admin.PhoneNumber;
+                tbl_Admin.UpdatedBy=tblAdmin.UpdatedBy!=null?tblAdmin.UpdatedBy
+                    :tbl_Admin.UpdatedBy;
+                tbl_Admin.UpdatedDate = DateTime.Now;
+                tbl_Admin.Adminname = tblAdmin.Adminname != null ? tblAdmin.Adminname : tbl_Admin.Adminname;
+                tbl_Admin.FullName=tblAdmin.FullName!=null?tblAdmin.FullName : tbl_Admin.FullName;
+                tbl_Admin.CityId=tblAdmin.CityId!=null?tblAdmin.CityId:tbl_Admin.CityId;
+                tbl_Admin.StateId=tblAdmin.StateId!=null?tblAdmin.StateId:tbl_Admin.StateId;
+                tbl_Admin.CountryId=tblAdmin.CountryId!=null?tblAdmin.CountryId:tbl_Admin.CountryId;
+                tbl_Admin.EmailId=tblAdmin.EmailId!=null?tblAdmin.EmailId:tbl_Admin.EmailId;
+                tbl_Admin.Password=tblAdmin.Password!=null?tblAdmin.Password:tbl_Admin.Password;
+            }
              _context.TblAdmins.Update(tblAdmin);
             await _context.SaveChangesAsync();
             return tblAdmin;

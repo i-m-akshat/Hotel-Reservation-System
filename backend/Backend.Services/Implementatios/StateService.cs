@@ -38,14 +38,18 @@ namespace Backend.Services.Implementatios
             }
         }
 
-        public Task<State>Delete(long id)
+        public async Task<State>Delete(long id)
         {
-            throw new NotImplementedException();
+            var res=await _stateRepo.Delete(id);
+            return res.fromtblToState() ;
         }
 
-        public Task<State>Get(long id)
+        public async Task<State>Get(long id)
         {
-            throw new NotImplementedException();
+            
+                var res=await _stateRepo.Get(id);
+
+            return res.fromtblToState();
         }
 
         public async Task<List<State>> GetAll()
@@ -55,9 +59,11 @@ namespace Backend.Services.Implementatios
             return _state;
         }
 
-        public Task<State>Update(State state)
+        public async Task<State>Update(State state, long id)
         {
-            throw new NotImplementedException();
+          var res= await _stateRepo.Update(state.fromStateToTblState(), id);
+            return res.fromtblToState();
+
         }
     }
 }

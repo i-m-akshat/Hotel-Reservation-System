@@ -19,7 +19,7 @@ namespace Backend.Services.Implementatios
             throw new NotImplementedException();
         }
 
-        public Task<Admin> Update(Admin Admin)
+        public Task<Admin> Update(Admin Admin, long id)
         {
             throw new NotImplementedException();
         }
