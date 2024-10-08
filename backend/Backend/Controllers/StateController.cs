@@ -62,6 +62,75 @@ namespace Backend.Controllers
 
 
         }
-        
+        [HttpGet]
+        [Route("Get")]
+        public async Task<IActionResult> GetByID([FromQuery] string id)
+        {
+            long dec_id=Convert.ToInt64(_secureService.Decrypt(id,_app.enc_key, _app.enc_iv));
+            if (dec_id != null)
+            {
+                var res = await _stateService.Get(dec_id);
+                if(res != null)
+                {
+                    return Ok(_secureService.Encrypt(JsonConvert.SerializeObject(res.ToDtoFromState()), _app.enc_key, _app.enc_iv));
+                }
+                else
+                {
+                    return NotFound();
+                }
+            }
+            else
+            {
+                return BadRequest();
+            }
+
+        }
+
+        [HttpPut]
+        [Route("Update")]
+        public async Task<IActionResult> Update([FromQuery]string id,string state)
+        {
+            var data=_secureService.Decrypt(state,_app.enc_key,_app.enc_iv);
+            long dec_id = Convert.ToInt64(_secureService.Decrypt(state, _app.enc_key, _app.enc_iv));
+            if(dec_id!=null&&data!=null)
+            {
+                State state_model = JsonConvert.DeserializeObject<State_DTO>(data).ToStateFromDTO();
+                var res = await _stateService.Update(state_model, dec_id);
+                if (res != null)
+                {
+                    return Ok(_secureService.Encrypt(JsonConvert.SerializeObject(res.ToDtoFromState()), _app.enc_key, _app.enc_iv));
+                }
+                else
+                {
+                    return NotFound();
+                }
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
+        [HttpDelete]
+        [Route("Delete")]
+        public async Task<IActionResult> Delete([FromQuery] string id)
+        {
+            long dec_id=Convert.ToInt64(_secureService.Decrypt(id,_app.enc_key,_app.enc_iv));
+            if (dec_id != null)
+            {
+                var res = await _stateService.Delete(dec_id);
+                if (res != null) {
+                    return Ok(_secureService.Encrypt(JsonConvert.SerializeObject(res), _app.enc_key, _app.enc_iv));
+                }
+                else
+                {
+                    return NoContent();
+                }
+            }
+            else
+            {
+                return BadRequest();
+            }
+
+        }
     }
 }

@@ -58,7 +58,8 @@ namespace Frontend.Admin
                 };
                 var encCount = _secure.Encrypt(JsonConvert.SerializeObject(count), ConfigurationManager.AppSettings["key"].ToString(), ConfigurationManager.AppSettings["iv"].ToString());
                 var enc_id= _secure.Encrypt(Convert.ToString(ViewState["CountryID"]), ConfigurationManager.AppSettings["key"].ToString(), ConfigurationManager.AppSettings["iv"].ToString());
-                var res = _dao.Update(enc_id,encCount).Result;
+                //var res = _dao.Update(enc_id,encCount).Result;
+                var res = _dao.Update(enc_id, encCount).Result;
                 if (res != null)
                 {
                     Response.Write("<script>alert('Updated Successfully')</script>");

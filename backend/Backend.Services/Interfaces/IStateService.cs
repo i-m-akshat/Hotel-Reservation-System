@@ -12,7 +12,7 @@ namespace Backend.Services.Interfaces
         Task<List<State>> GetAll();
         Task<State> Get(long id);
         Task<State> Create(State state);
-        Task<State> Update(State state);
+        Task<State> Update(State state, long id);
         Task<State> Delete(long id);
     }
 }
