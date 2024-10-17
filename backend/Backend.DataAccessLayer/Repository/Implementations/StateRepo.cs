@@ -33,24 +33,39 @@ namespace Backend.DataAccessLayer.Repository.Implementations
 
         public async Task<TblState> Get(long id)
         {
-            return await _context.TblStates.FindAsync(id);
+            return await _context.TblStates.Include(x => x.Country).Where(x=>x.StateId==id).FirstOrDefaultAsync();
         }
 
         public async Task<List<TblState>> GetAll()
         {
             return await  _context.TblStates.Include(x=>x.Country).ToListAsync();
         }
-
+        //here i have commented out the update part because it was updating and adding the same row at the same time 
         public async Task<TblState> Update(TblState tblState, long id)
         {
             var tbl_State = await _context.TblStates.FindAsync(id);
-            if (tbl_State != null) { 
-                tbl_State.StateName=tblState.StateName!=null?tblState.StateName:tbl_State.StateName;
-                tbl_State.CountryId=tblState.CountryId!=null?tblState.CountryId.Value:tbl_State.CountryId;
-                _context.TblStates.Update(tblState);
+            //if (tbl_State != null) { 
+            //    tbl_State.StateName=tblState.StateName!=null?tblState.StateName:tbl_State.StateName;
+            //    tbl_State.CountryId=tblState.CountryId!=null?tblState.CountryId.Value:tbl_State.CountryId;
+            //    _context.TblStates.Update(tblState);
+            //    await _context.SaveChangesAsync(); return tbl_State;
+            //}
+            if (tbl_State != null)
+            {
+                
+                tbl_State.StateName = tblState.StateName ?? tbl_State.StateName; 
+                tbl_State.CountryId = tblState.CountryId != 0 ? tblState.CountryId : tbl_State.CountryId; 
+
+               
+                await _context.SaveChangesAsync();
+                return tbl_State; 
             }
-            await _context.SaveChangesAsync();
-            return tbl_State;
+            else
+            {
+                return null;
+            }
+            
+            
 
         }
     }

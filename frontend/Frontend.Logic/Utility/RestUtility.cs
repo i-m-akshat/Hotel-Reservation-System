@@ -8,6 +8,7 @@ using System.Net.Http.Headers;
 using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace Frontend.Logic.Utility
 {
@@ -76,7 +77,8 @@ namespace Frontend.Logic.Utility
             using(var httpClient=new HttpClient())
             {
                 httpClient.BaseAddress = new Uri(BaseUrl);
-                id=WebUtility.UrlEncode(id);
+                //id=WebUtility.UrlEncode(id);
+                id = HttpUtility.UrlEncode(id);
                 var requestURL = RequestUrl+"?id="+id;
                 StringContent content = new StringContent("", Encoding.UTF8, "application/json");
                 HttpResponseMessage response = httpClient.GetAsync(requestURL).Result;

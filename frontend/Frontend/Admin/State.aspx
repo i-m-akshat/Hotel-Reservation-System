@@ -43,6 +43,7 @@
                                     <th>Sr.No.</th>
                                     <th>State</th>
                                     <th>Country </th>
+                                     <th>Actions</th>
                                 </tr>
 
                             </thead>
@@ -56,6 +57,11 @@
         </td>
         <td><%#Eval("StateName")%></td>
         <td><%#Eval("CountryName")%></td>
+                                                  <td>
+      <asp:LinkButton runat="server" CommandArgument='<%#Eval("StateId") %>' CssClass="btn btn-sm btn-outline-dark" ID="btnView" OnClick="btnView_Click"
+          >View</asp:LinkButton>
+      <asp:LinkButton CssClass="btn btn-sm btn-outline-dark" ID="btnEdit" runat="server" OnClick="btnEdit_Click" CommandArgument='<%#Bind("StateId") %>'>Edit</asp:LinkButton>
+      <asp:LinkButton CssClass="btn btn-sm btn-outline-dark" ID="btnDelete" runat="server" OnClick="btnDelete_Click" CommandArgument='<%#Bind("StateId") %>'>Delete</asp:LinkButton></td>
     </tr>
                                     </ItemTemplate>
                                 
