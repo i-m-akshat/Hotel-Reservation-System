@@ -168,7 +168,7 @@
       {
         "Name": "state",
         "Type": "System.String",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

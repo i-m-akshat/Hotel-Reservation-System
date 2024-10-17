@@ -34,5 +34,24 @@ namespace Backend.Services.Mapper
             };
         
         }
+        public static State fromtblToState_withoutCountry(this TblState _state)
+        {
+            return new State
+            {
+                StateName = _state.StateName,
+                CountryId = _state.CountryId,
+                StateId = _state.StateId,
+                //CountryName = _state.Country.CountryName,
+            };
+
+        }
+        public static TblState toTblState_create(this State _state)
+        {
+            return new TblState
+            {
+                CountryId = _state.CountryId,
+                StateName = _state.StateName,
+            };
+        }
     }
 }

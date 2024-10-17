@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
+using System.Net;
 
 namespace Backend.Controllers
 {
@@ -49,7 +50,7 @@ namespace Backend.Controllers
         public async Task<IActionResult> Create([FromBody] string state)
         {
             var data=_secureService.Decrypt(state,_app.enc_key,_app.enc_iv);
-            State state_model = JsonConvert.DeserializeObject<State_DTO>(data).ToStateFromDTO();
+            State state_model = JsonConvert.DeserializeObject<State_DTO>(data).ToStateFromDTO_Create();
             var res=await _stateService.Create(state_model);
             if (res != null)
             {
@@ -66,7 +67,9 @@ namespace Backend.Controllers
         [Route("Get")]
         public async Task<IActionResult> GetByID([FromQuery] string id)
         {
+            //id= WebUtility.UrlDecode(id);
             long dec_id=Convert.ToInt64(_secureService.Decrypt(id,_app.enc_key, _app.enc_iv));
+          
             if (dec_id != null)
             {
                 var res = await _stateService.Get(dec_id);
@@ -88,10 +91,10 @@ namespace Backend.Controllers
 
         [HttpPut]
         [Route("Update")]
-        public async Task<IActionResult> Update([FromQuery]string id,string state)
+        public async Task<IActionResult> Update([FromQuery]string id,[FromBody]string state)
         {
             var data=_secureService.Decrypt(state,_app.enc_key,_app.enc_iv);
-            long dec_id = Convert.ToInt64(_secureService.Decrypt(state, _app.enc_key, _app.enc_iv));
+            long dec_id = Convert.ToInt64(_secureService.Decrypt(id, _app.enc_key, _app.enc_iv));
             if(dec_id!=null&&data!=null)
             {
                 State state_model = JsonConvert.DeserializeObject<State_DTO>(data).ToStateFromDTO();
