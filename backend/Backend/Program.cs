@@ -21,6 +21,7 @@ builder.Services.AddDbContext<BaseraHotelReservationSystemContext>(options =>
 });
 
 builder.Services.Configure<Backend.Models.AppSettings_Domain.AppSettings>(builder.Configuration.GetSection("AppSettings"));
+
 builder.Services.AddScoped<ISecureService, SecureService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserRepo, UserRepo>();

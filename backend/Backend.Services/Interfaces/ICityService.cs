@@ -14,15 +14,15 @@ namespace Backend.Services.Interfaces
         /// To Get all the cities 
         /// </summary>
         /// <returns></returns>
-        List<City> Get();
+        Task<List<City_Model>> Get();
         /// <summary>
         /// To Get the city by id 
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        City GetById(int id);
-        void Create(City city);
-        void Update(City city);
-        void Delete(int id);
+        Task<City_Model> GetById(long id);
+        Task<City_Model> Create(City_Model city);
+       Task<City_Model> Update(City_Model city, long id);
+        Task<City_Model> Delete(long id);
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Backend.Models.City_Domain
 {
-    public class City
+    public class City_Model
     {
         public long CityId { get; set; }
 
