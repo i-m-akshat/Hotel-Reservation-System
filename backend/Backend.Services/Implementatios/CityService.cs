@@ -1,5 +1,8 @@
-﻿using Backend.Models.City_Domain;
+﻿using Backend.DataAccessLayer.Repository.Implementations;
+using Backend.DataAccessLayer.Repository.Interfaces;
+using Backend.Models.City_Domain;
 using Backend.Services.Interfaces;
+using Backend.Services.Mapper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,29 +13,41 @@ namespace Backend.Services.Implementatios
 {
     public class CityService : ICityService
     {
-        public void Create(City city)
+        private static ICityRepo _repo;
+        public CityService(ICityRepo repo)
         {
-            throw new NotImplementedException();
+            _repo = repo;
+        }
+        public async Task<City_Model> Create(City_Model city)
+        {
+            var res=await _repo.Create(city.ToTblCity());
+            return res.ToCityModel();
+            
         }
 
-        public void Delete(int id)
+        public async Task<City_Model> Delete(long id)
         {
-            throw new NotImplementedException();
+            var res = await _repo.Delete(id);
+            return res.ToCityModel();
+
         }
 
-        public List<City> Get()
+        public async Task<List<City_Model>> Get()
         {
-            throw new NotImplementedException();
+            var res = await _repo.GetAll();
+            return res.Select(x=>x.ToCityModel()).ToList();
         }
 
-        public City GetById(int id)
+        public async Task<City_Model> GetById(long id)
         {
-            throw new NotImplementedException();
+            var res=await _repo.Get(id);
+            return res.ToCityModel();   
         }
 
-        public void Update(City city)
+        public async Task<City_Model> Update(City_Model city,long id)
         {
-            throw new NotImplementedException();
+            var res = await _repo.Update(id, city.ToTblCity());
+            return res.ToCityModel();
         }
     }
 }

@@ -36,6 +36,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,10 +47,12 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Implementations\AdminDao.cs" />
+    <Compile Include="Implementations\CityDao.cs" />
     <Compile Include="Implementations\CountryDao.cs" />
     <Compile Include="Implementations\SecureDao.cs" />
     <Compile Include="Implementations\StateDao.cs" />
     <Compile Include="Implementations\UserDao.cs" />
+    <Compile Include="Interfaces\ICityDao.cs" />
     <Compile Include="Interfaces\IAdminDAO.cs" />
     <Compile Include="Interfaces\ICountryDAO.cs" />
     <Compile Include="Interfaces\ISecureDAO.cs" />

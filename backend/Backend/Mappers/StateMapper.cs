@@ -15,6 +15,16 @@ namespace Backend.Mappers
 
             };
         }
+        public static State ToStateFromDTO_Create(this State_DTO dto)
+        {
+            return new State
+            {
+                
+                StateName = dto.statename,
+                CountryId = dto.countryid,
+
+            };
+        }
 
         public static State_DTO ToDtoFromState(this State state) {
 

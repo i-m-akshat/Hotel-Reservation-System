@@ -21,6 +21,7 @@ builder.Services.AddDbContext<BaseraHotelReservationSystemContext>(options =>
 });
 
 builder.Services.Configure<Backend.Models.AppSettings_Domain.AppSettings>(builder.Configuration.GetSection("AppSettings"));
+
 builder.Services.AddScoped<ISecureService, SecureService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IUserRepo, UserRepo>();
@@ -30,6 +31,8 @@ builder.Services.AddScoped<ICountryRepo, CountryRepo>();
 builder.Services.AddScoped<ICountryService, CountryService>();
 builder.Services.AddScoped<IStateRepo, StateRepo>();
 builder.Services.AddScoped<IStateService, StateService>();
+builder.Services.AddScoped<ICityRepo, CityRepo>();
+builder.Services.AddScoped<ICityService, CityService>();
 builder.Services.AddCors(options=>{
     options.AddPolicy("AllowSpecificOrigins",
     builder=>{

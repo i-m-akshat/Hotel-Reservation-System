@@ -88,6 +88,7 @@
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
     <Content Include="AdminLogin.aspx" />
+    <Content Include="Admin\City.aspx" />
     <Content Include="Admin\Country.aspx" />
     <Content Include="Admin\Dashboard.aspx" />
     <Content Include="Admin\Help.aspx" />
@@ -335,6 +336,13 @@
     </Compile>
     <Compile Include="Admin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\City.aspx.cs">
+      <DependentUpon>City.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\City.aspx.designer.cs">
+      <DependentUpon>City.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Country.aspx.cs">
       <DependentUpon>Country.aspx</DependentUpon>

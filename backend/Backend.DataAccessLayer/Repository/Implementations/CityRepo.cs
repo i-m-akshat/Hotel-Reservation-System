@@ -1,5 +1,7 @@
-﻿using Backend.DataAccessLayer.Context.Models;
+﻿using Backend.DataAccessLayer.Context.DBContext;
+using Backend.DataAccessLayer.Context.Models;
 using Backend.DataAccessLayer.Repository.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,29 +12,52 @@ namespace Backend.DataAccessLayer.Repository.Implementations
 {
     public class CityRepo : ICityRepo
     {
-        public void Create(TblCity city)
+        private static BaseraHotelReservationSystemContext _context;
+        public CityRepo(BaseraHotelReservationSystemContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public void Delete(int id)
+        public async Task<TblCity> Create(TblCity city)
         {
-            throw new NotImplementedException();
+            await _context.TblCities.AddAsync(city);
+            await _context.SaveChangesAsync();
+            return city;
         }
 
-        public TblCity Get(int id)
+        public async Task<TblCity> Delete(long id)
         {
-            throw new NotImplementedException();
+            var tblCity =await _context.TblCities.FindAsync(id);
+            _context.TblCities.Remove(tblCity);
+            return tblCity;
+
         }
 
-        public List<TblCity> GetAll()
+        public async Task<TblCity> Get(long id)
         {
-            throw new NotImplementedException();
+            return await _context.TblCities.FindAsync(id);
         }
 
-        public void Update(long id, TblCity city)
+        public async Task<List<TblCity>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _context.TblCities.ToListAsync();
+        }
+
+        public async Task<TblCity> Update(long id, TblCity city)
+        {
+            var tblCity = await _context.TblCities.FindAsync(id);
+            if (city != null)
+            {
+                tblCity.CityName = city.CityName != null ? city.CityName : tblCity.CityName;
+                tblCity.StateId = city.StateId != null ? city.StateId : tblCity.StateId;
+                await _context.SaveChangesAsync();
+                return city;
+            }
+            else
+            {
+                return null;
+            }
+
         }
     }
 }

@@ -249,11 +249,14 @@ public partial class BaseraHotelReservationSystemContext : DbContext
             entity.ToTable("tbl_Country");
 
             entity.Property(e => e.CountryId).HasColumnName("countryId");
+            entity.Property(e => e.CountryId)
+        .ValueGeneratedOnAdd()  // Enable auto-generation for CountryId
+        .HasColumnName("CountryId");
             entity.Property(e => e.CountryName)
                 .HasMaxLength(500)
                 .IsUnicode(false);
         });
-
+        
         modelBuilder.Entity<TblHotel>(entity =>
         {
             entity.HasKey(e => e.HotelId);
@@ -704,16 +707,37 @@ public partial class BaseraHotelReservationSystemContext : DbContext
                 .HasConstraintName("fk_updatedby");
         });
 
+        //modelBuilder.Entity<TblState>(entity =>
+        //{
+        //    entity.HasKey(e => e.StateId);
+
+        //    entity.ToTable("tbl_State");
+
+        //    entity.Property(e => e.StateId)
+        //        .ValueGeneratedNever()
+        //        .HasColumnName("StateID");
+        //    entity.Property(e => e.CountryId).HasColumnName("CountryID");
+        //    entity.Property(e => e.StateName)
+        //        .HasMaxLength(250)
+        //        .IsUnicode(false);
+
+        //    entity.HasOne(d => d.Country).WithMany(p => p.TblStates)
+        //        .HasForeignKey(d => d.CountryId)
+        //        .HasConstraintName("FK_tbl_State_tbl_Country");
+        //});
         modelBuilder.Entity<TblState>(entity =>
         {
             entity.HasKey(e => e.StateId);
 
             entity.ToTable("tbl_State");
 
+            // Enable identity insert on StateId
             entity.Property(e => e.StateId)
-                .ValueGeneratedNever()
+                .ValueGeneratedOnAdd()  // Enable auto-generation for StateId
                 .HasColumnName("StateID");
+
             entity.Property(e => e.CountryId).HasColumnName("CountryID");
+
             entity.Property(e => e.StateName)
                 .HasMaxLength(250)
                 .IsUnicode(false);

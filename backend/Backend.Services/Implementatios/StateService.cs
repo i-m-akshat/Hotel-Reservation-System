@@ -24,11 +24,11 @@ namespace Backend.Services.Implementatios
             if (state== null) throw new ArgumentNullException("state");
             else
             {
-               var res=await _stateRepo.Create(state.fromStateToTblState());
+               var res=await _stateRepo.Create(state.toTblState_create());
                 if (res != null)
                 {
 
-                    var state_mod = res.fromtblToState();
+                    var state_mod = res.fromtblToState_withoutCountry();
                     return state_mod;
                 }
                 else
@@ -41,7 +41,7 @@ namespace Backend.Services.Implementatios
         public async Task<State>Delete(long id)
         {
             var res=await _stateRepo.Delete(id);
-            return res.fromtblToState() ;
+            return res.fromtblToState_withoutCountry() ;
         }
 
         public async Task<State>Get(long id)
@@ -62,7 +62,7 @@ namespace Backend.Services.Implementatios
         public async Task<State>Update(State state, long id)
         {
           var res= await _stateRepo.Update(state.fromStateToTblState(), id);
-            return res.fromtblToState();
+            return res.fromtblToState_withoutCountry();
 
         }
     }

@@ -59,67 +59,118 @@
             </a>
 					</li>
 
-					<li class="sidebar-item" onclick="setActive(this)">
-						<a class="sidebar-link" href="pages-sign-up.html">
-              <i class="align-middle" data-feather="user-plus"></i> <span class="align-middle">Sign Up</span>
+					<li class="sidebar-item" ">
+						<a class="sidebar-link" onclick="setActive(this.parentNode, 'City')">
+              <i class="align-middle" data-feather="City"></i> <span class="align-middle">City</span>
             </a>
 					</li>
 
-					<li class="sidebar-item" onclick="setActive(this)">
-						<a class="sidebar-link" href="pages-blank.html">
+					<%--<li class="sidebar-item" ">
+						<a class="sidebar-link" >
               <i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span>
             </a>
-					</li>
+					</li>--%>
 
 					<li class="sidebar-header">
-						Tools & Components
+						Hotel Settings
 					</li>
 
-					<li class="sidebar-item" onclick="setActive(this)">
-						<a class="sidebar-link" href="ui-buttons.html">
-              <i class="align-middle" data-feather="square"></i> <span class="align-middle">Buttons</span>
+					<li class="sidebar-item" >
+						<a class="sidebar-link" >
+              <i class="align-middle" data-feather="square"></i> <span class="align-middle">Hotels</span>
             </a>
 					</li>
 
-					<li class="sidebar-item" onclick="setActive(this)">
-						<a class="sidebar-link" href="ui-forms.html">
-              <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Forms</span>
+					<li class="sidebar-item" >
+						<a class="sidebar-link" >
+              <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Hotel Images</span>
             </a>
 					</li>
 
-					<li class="sidebar-item" onclick="setActive(this)">
-						<a class="sidebar-link" href="ui-cards.html">
-              <i class="align-middle" data-feather="grid"></i> <span class="align-middle">Cards</span>
+					<li class="sidebar-item" >
+						<a class="sidebar-link" >
+              <i class="align-middle" data-feather="grid"></i> <span class="align-middle">Hotel Contact</span>
             </a>
 					</li>
-
-					<li class="sidebar-item" onclick="setActive(this)">
-						<a class="sidebar-link" href="ui-typography.html">
-              <i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Typography</span>
-            </a>
-					</li>
-
-					<li class="sidebar-item" onclick="setActive(this)">
-						<a class="sidebar-link" href="icons-feather.html">
-              <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Icons</span>
-            </a>
-					</li>
-
 					<li class="sidebar-header">
-						Plugins & Addons
-					</li>
-
-					<li class="sidebar-item">
-						<a class="sidebar-link" href="charts-chartjs.html">
-              <i class="align-middle" data-feather="bar-chart-2"></i> <span class="align-middle">Charts</span>
+				Room Settings
+</li>
+					<li class="sidebar-item" >
+						<a class="sidebar-link" >
+              <i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Room</span>
             </a>
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link" href="maps-google.html">
-              <i class="align-middle" data-feather="map"></i> <span class="align-middle">Maps</span>
+						<a class="sidebar-link" >
+              <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Room Images</span>
             </a>
 					</li>
+							<li class="sidebar-item">
+			<a class="sidebar-link" >
+  <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Room Types</span>
+</a>
+		</li>
+										<li class="sidebar-header">
+				Reservation Settings
+</li>
+					<li class="sidebar-item" >
+						<a class="sidebar-link" >
+              <i class="align-middle" data-feather="align-left"></i> <span class="align-middle">Reservations</span>
+            </a>
+					</li>
+																					<li class="sidebar-item">
+			<a class="sidebar-link" >
+  <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Reserved Rooms</span>
+</a>
+		</li>								
+					<li class="sidebar-item">
+						<a class="sidebar-link" >
+              <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Reservation Events</span>
+            </a>
+					</li>
+							<li class="sidebar-item">
+			<a class="sidebar-link" >
+  <i class="align-middle" data-feather="coffee"></i> <span class="align-middle">Reservation Status</span>
+</a>
+		</li>
+																
+					<li class="sidebar-header">
+						Roles & Access
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link">
+              <i class="align-middle" data-feather="bar-chart-2"></i> <span class="align-middle">Roles</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" >
+              <i class="align-middle" data-feather="map"></i> <span class="align-middle">Access</span>
+            </a>
+					</li>
+							<li class="sidebar-item">
+			<a class="sidebar-link" >
+  <i class="align-middle" data-feather="map"></i> <span class="align-middle">Admin</span>
+</a>
+		</li>
+										<li class="sidebar-header">
+						Profile Setting
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link">
+              <i class="align-middle" data-feather="bar-chart-2"></i> <span class="align-middle">Profile</span>
+            </a>
+					</li>
+
+					<li class="sidebar-item">
+						<a class="sidebar-link" >
+              <i class="align-middle" data-feather="map"></i> <span class="align-middle">Logout</span>
+            </a>
+					</li>
+							
 				</ul>
 
 				
@@ -271,7 +322,7 @@
               </a>
 
 							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-                <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="AdminImage" /> <asp:Label CssClass="text-dark" runat="server" ID="lblAdminName"></asp:Label>
+                <img src="../Assets/Image/Gif/Empty State Animation.gif" class="avatar img-fluid rounded me-1" alt="AdminImage" /> <asp:Label CssClass="text-dark" runat="server" ID="lblAdminName"></asp:Label>
               </a>
 							<div class="dropdown-menu dropdown-menu-end">
 								<a class="dropdown-item" runat="server" id="btnProfile" onserverclick="btnProfile_ServerClick"><i class="align-middle me-1" data-feather="user"></i> Profile</a>
@@ -323,16 +374,16 @@
     </form>
     <script src="../Assets/chart/apexchart.js"></script>
 		<script type="text/javascript">
-			/* document.addEventListener("DOMContentLoaded", function () {*/
-			
-			function setActive(clickedLi, content) {
-				if (content != null) {
+            /* document.addEventListener("DOMContentLoaded", function () {*/
+
+            function setActive(clickedLi, content) {
+                if (content != null) {
                     localStorage.clear();
-					localStorage.setItem("activeSidebar", content);
-				} else {
+                    localStorage.setItem("activeSidebar", content);
+                } else {
                     localStorage.setItem("activeSidebar", 'Dashboard');
-				}
-				
+                }
+
                 // Remove active class from all items
                 const items = document.querySelectorAll(".sidebar-item");
                 items.forEach(item => {
@@ -342,42 +393,42 @@
                 // Set active class to the clicked item
                 clickedLi.classList.add("active");
 
-				redirect(content);
-                    //const items = document.querySelectorAll(".sidebar-item");
-                    //items.forEach(item => {
+                redirect(content);
+                //const items = document.querySelectorAll(".sidebar-item");
+                //items.forEach(item => {
 
-                    //    item.classList.remove("active");
-                    //})
-                    //clickedLi.classList.add("active");
-                    //console.log(clickedLi.classList);
-                }
-			function redirect(content) {
-				window.location.href = content + ".aspx";
-				
-			}
-   //         function initializeActiveSidebar() {
-			//	const activeItem = localStorage.getItem("activeSidebar");
-			//	console.log(activeItem);
-   //             if (activeItem) {
-			//		const items = document.querySelectorAll(".sidebar-item");
-   //                 items.forEach(item => {
-			//			// Check if the item's content matches the stored active item
-			//			//console.log(item.querySelector('.sidebar-link').getAttribute('href'));
-   //   //                  if (item.querySelector('.sidebar-link').getAttribute('href') === activeItem + ".aspx") {
-			//			//	item.classList.add("active"); // Set the active class
-			//			//	console.log(item.classList);
-			//			//                  }
+                //    item.classList.remove("active");
+                //})
+                //clickedLi.classList.add("active");
+                //console.log(clickedLi.classList);
+            }
+            function redirect(content) {
+                window.location.href = content + ".aspx";
 
-   //                     const sidebarLink = item.querySelector('.sidebar-link');
-   //                     if (sidebarLink) {
-   //                         const contentName = sidebarLink.getAttribute('onclick').match(/'([^']+)'/)[1]; // Extract content name from onclick
-   //                         if (contentName === activeItem) {
-   //                             item.classList.add("active"); // Set the active class
-   //                         }
-   //                     }
-   //                 });
-   //             }
-			//}
+            }
+            //         function initializeActiveSidebar() {
+            //	const activeItem = localStorage.getItem("activeSidebar");
+            //	console.log(activeItem);
+            //             if (activeItem) {
+            //		const items = document.querySelectorAll(".sidebar-item");
+            //                 items.forEach(item => {
+            //			// Check if the item's content matches the stored active item
+            //			//console.log(item.querySelector('.sidebar-link').getAttribute('href'));
+            //   //                  if (item.querySelector('.sidebar-link').getAttribute('href') === activeItem + ".aspx") {
+            //			//	item.classList.add("active"); // Set the active class
+            //			//	console.log(item.classList);
+            //			//                  }
+
+            //                     const sidebarLink = item.querySelector('.sidebar-link');
+            //                     if (sidebarLink) {
+            //                         const contentName = sidebarLink.getAttribute('onclick').match(/'([^']+)'/)[1]; // Extract content name from onclick
+            //                         if (contentName === activeItem) {
+            //                             item.classList.add("active"); // Set the active class
+            //                         }
+            //                     }
+            //                 });
+            //             }
+            //}
             function initializeActiveSidebar() {
                 const activeItem = localStorage.getItem("activeSidebar"); // Retrieve the active item from local storage
                 if (activeItem) {
@@ -402,7 +453,7 @@
             window.onload = function () {
                 initializeActiveSidebar();
             };
-          /*  })*/
+            /*  })*/
 
         </script>
 </body>

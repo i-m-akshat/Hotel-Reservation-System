@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs" />
+    <Compile Include="City_Model.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Country_Model.cs" />
     <Compile Include="Mappers\StateMapper.cs" />

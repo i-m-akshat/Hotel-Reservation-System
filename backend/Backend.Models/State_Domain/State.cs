@@ -18,7 +18,7 @@ namespace Backend.Models.State_Domain
         public long? CountryId { get; set; }
         public virtual Country? Country { get; set; }
 
-        public virtual ICollection<City> Cities { get; set; } = new List<City>();
+        public virtual ICollection<City_Model> Cities { get; set; } = new List<City_Model>();
         public virtual ICollection<User> Users { get; set; } = new List<User>();
     }
 }

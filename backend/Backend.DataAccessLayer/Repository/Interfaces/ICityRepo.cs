@@ -13,28 +13,28 @@ namespace Backend.DataAccessLayer.Repository.Interfaces
         /// To get all the cities
         /// </summary>
         /// <returns></returns>
-        List<TblCity> GetAll();
+        Task<List<TblCity>> GetAll();
         /// <summary>
         /// to get the city by provided id 
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        TblCity Get(int id);
+        Task<TblCity> Get(long id);
         /// <summary>
         /// To create the city 
         /// </summary>
         /// <param name="city"></param>
-        void Create(TblCity city);
+        Task<TblCity> Create(TblCity city);
         /// <summary>
         /// To update the city based on the id 
         /// </summary>
         /// <param name="id"></param>
         /// <param name="city"></param>
-        void Update(long id ,TblCity city);
+        Task<TblCity> Update(long id ,TblCity city);
         /// <summary>
         /// To delete the city based on the id 
         /// </summary>
         /// <param name="id"></param>
-        void Delete(int id);
+        Task<TblCity> Delete(long id);
     }
 }

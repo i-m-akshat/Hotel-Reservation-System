@@ -65,7 +65,12 @@ namespace Frontend.Logic.Implementations
                             }
 
                             string base64String = Convert.ToBase64String(memoryStream.ToArray());
-                            return base64String.TrimEnd('=');
+                            while (base64String.Length % 4 != 0)
+                            {
+                                base64String += "=";
+                            }
+                            //base64String = base64String.Replace("+", "-");
+                            return base64String;
                         }
                     }
 
