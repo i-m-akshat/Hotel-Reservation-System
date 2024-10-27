@@ -31,6 +31,8 @@ builder.Services.AddScoped<ICountryRepo, CountryRepo>();
 builder.Services.AddScoped<ICountryService, CountryService>();
 builder.Services.AddScoped<IStateRepo, StateRepo>();
 builder.Services.AddScoped<IStateService, StateService>();
+builder.Services.AddScoped<ICityRepo, CityRepo>();
+builder.Services.AddScoped<ICityService, CityService>();
 builder.Services.AddCors(options=>{
     options.AddPolicy("AllowSpecificOrigins",
     builder=>{

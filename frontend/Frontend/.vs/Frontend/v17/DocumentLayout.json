@@ -12,7 +12,7 @@
       "AbsoluteMoniker": "D:0:0:{11905547-4820-40B0-B05B-FCFB0E066DE1}|..\\Frontend.Logic\\Frontend.Logic.csproj|a:\\asp.net projects\\hotelreservation\\frontend\\frontend.logic\\interfaces\\icountrydao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|a:\\asp.net projects\\hotelreservation\\frontend\\frontend\\admin\\city.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\admin\\city.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|solutionrelative:admin\\city.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -31,7 +31,7 @@
       "AbsoluteMoniker": "D:0:0:{0674F604-A68F-420A-935A-4CB07F2B88E8}|..\\Frontend.Models\\Frontend.Models.csproj|a:\\asp.net projects\\hotelreservation\\frontend\\frontend.models\\city_model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|a:\\asp.net projects\\hotelreservation\\frontend\\frontend\\admin\\admin.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "AbsoluteMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend\\admin\\admin.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
       "RelativeMoniker": "D:0:0:{BF6CB675-3EBF-44C7-AA5F-E096AAB312A1}|Frontend.csproj|solutionrelative:admin\\admin.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
@@ -221,7 +221,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -237,6 +237,14 @@
               "IsPinned": true
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "CityDao.cs",
@@ -244,7 +252,7 @@
               "RelativeDocumentMoniker": "..\\Frontend.Logic\\Implementations\\CityDao.cs",
               "ToolTip": "A:\\asp.net Projects\\HotelReservation\\frontend\\Frontend.Logic\\Implementations\\CityDao.cs",
               "RelativeToolTip": "..\\Frontend.Logic\\Implementations\\CityDao.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-18T17:01:20.379Z",
               "EditorCaption": ""
@@ -259,16 +267,7 @@
               "RelativeToolTip": "..\\Frontend.Logic\\Interfaces\\ICityDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T16:59:01.538Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "WhenOpened": "2024-10-18T16:59:01.538Z"
             },
             {
               "$type": "Document",
@@ -280,8 +279,7 @@
               "RelativeToolTip": "Admin\\City.aspx.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T16:00:44.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T16:00:44.261Z"
             },
             {
               "$type": "Document",
@@ -329,8 +327,7 @@
               "RelativeToolTip": "Admin\\City.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-10-17T17:41:20.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T17:41:20.096Z"
             },
             {
               "$type": "Document",
@@ -355,8 +352,7 @@
               "RelativeToolTip": "..\\Frontend.Logic\\Interfaces\\ICountryDAO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-02T05:38:30.277Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-02T05:38:30.277Z"
             },
             {
               "$type": "Document",
@@ -368,8 +364,7 @@
               "RelativeToolTip": "Admin\\State.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-10-02T05:33:28.452Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-02T05:33:28.452Z"
             },
             {
               "$type": "Document",
@@ -393,8 +388,7 @@
               "RelativeToolTip": "..\\Frontend.Models\\City_Model.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T16:38:27.119Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T16:38:27.119Z"
             },
             {
               "$type": "Document",
@@ -406,8 +400,7 @@
               "RelativeToolTip": "Admin\\Admin.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-09-24T14:38:36.004Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-24T14:38:36.004Z"
             },
             {
               "$type": "Document",

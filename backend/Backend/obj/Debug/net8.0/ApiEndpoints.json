@@ -32,6 +32,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Backend.Controllers.CityController",
+    "Method": "Get",
+    "RelativePath": "api/City/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Backend.Controllers.CountryController",
     "Method": "Get",
     "RelativePath": "api/Country",

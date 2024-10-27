@@ -21,8 +21,24 @@ namespace Backend.Services.Interfaces
         /// <param name="id"></param>
         /// <returns></returns>
         Task<City_Model> GetById(long id);
+        /// <summary>
+        /// To Create the city
+        /// </summary>
+        /// <param name="city"></param>
+        /// <returns></returns>
         Task<City_Model> Create(City_Model city);
+        /// <summary>
+        /// To Update the city
+        /// </summary>
+        /// <param name="city"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
        Task<City_Model> Update(City_Model city, long id);
+        /// <summary>
+        /// To Delete the City
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         Task<City_Model> Delete(long id);
     }
 }

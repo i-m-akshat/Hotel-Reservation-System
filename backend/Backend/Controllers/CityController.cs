@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Backend.Models.City_Domain;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Backend.DTO.City;
 namespace Backend.Controllers
 {
     [Route("api/[controller]")]
@@ -49,6 +51,71 @@ namespace Backend.Controllers
                 }
             }
         }
-            
+        [HttpGet]
+        [Route("Get")]
+        public async Task<IActionResult> Get()
+        {
+            var res = await _service.Get();
+            if (res != null)
+            {
+                return Ok(_secure.Encrypt(JsonConvert.SerializeObject(res).ToString(), _appsetting.enc_key, _appsetting.enc_iv));
+            }
+            else
+            {
+                return NoContent();
+            }
+        }
+        [HttpPut]
+        [Route("Update")]
+        public async Task<IActionResult> Update(string id,string content)
+        {
+            var dec_id = _secure.Decrypt(id, _appsetting.enc_key, _appsetting.enc_iv);
+            var dec_Content = _secure.Decrypt(content, _appsetting.enc_key, _appsetting.enc_iv);
+            var realContent = JsonConvert.DeserializeObject<City_Model>(dec_Content);
+            long id_real = Convert.ToInt64(dec_id);
+            var res = _service.Update(realContent, id_real);
+            if (res != null)
+            {
+                return Ok(_secure.Encrypt(JsonConvert.SerializeObject(res), _appsetting.enc_key, _appsetting.enc_iv));
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
+        [HttpDelete]
+        [Route("Delete")]
+        public async Task<IActionResult> Delete(string id)
+        {
+            var dec_id = _secure.Decrypt(id, _appsetting.enc_key, _appsetting.enc_iv);
+            long id_real = Convert.ToInt64(dec_id);
+            var res = _service.Delete(id_real);
+            if (res != null)
+            {
+                return Ok(_secure.Encrypt(JsonConvert.SerializeObject(res), _appsetting.enc_key, _appsetting.enc_iv));
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
+        [HttpGet]
+        [Route("Get/{id}")]
+        public async Task<IActionResult> GetById([FromRoute]string id)
+        {
+            var dec_id = _secure.Decrypt(id, _appsetting.enc_key, _appsetting.enc_iv);
+            long id_real = Convert.ToInt64(dec_id);
+            var res = _service.GetById(id_real);
+            if (res != null)
+            {
+                return Ok(_secure.Encrypt(JsonConvert.SerializeObject(res), _appsetting.enc_key, _appsetting.enc_iv));
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
+
+
     }
 }
