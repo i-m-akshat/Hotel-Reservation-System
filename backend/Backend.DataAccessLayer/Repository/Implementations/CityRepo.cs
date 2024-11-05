@@ -43,6 +43,11 @@ namespace Backend.DataAccessLayer.Repository.Implementations
             return await _context.TblCities.Include(x => x.State).ToListAsync();
         }
 
+        public async Task<List<TblCity>> GetCitiesBasedOnStateId(long id)
+        {
+            return await _context.TblCities.Include(x=>x.State).Where(x=>x.StateId==id).ToListAsync();  
+        }
+
         public async Task<TblCity> Update(long id, TblCity city)
         {
             var tblCity = await _context.TblCities.FindAsync(id);

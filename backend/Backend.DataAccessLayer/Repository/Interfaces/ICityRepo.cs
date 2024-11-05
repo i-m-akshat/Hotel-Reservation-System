@@ -36,5 +36,12 @@ namespace Backend.DataAccessLayer.Repository.Interfaces
         /// </summary>
         /// <param name="id"></param>
         Task<TblCity> Delete(long id);
+        /// <summary>
+        /// Get the cities based on stateid 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        Task<List<TblCity>> GetCitiesBasedOnStateId(long id);
+       
     }
 }
