@@ -14,7 +14,7 @@ namespace Frontend.Admin
         {
             if (!IsPostBack) 
             {
-                Page.DataBind();
+                //Page.DataBind();
                 if (Session["AdminName"] == null)
                     Response.Redirect("~/Common/Default.aspx");
                 else

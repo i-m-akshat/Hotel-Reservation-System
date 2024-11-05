@@ -1,0 +1,41 @@
+[33mafbf66b[m[33m ([m[1;36mHEAD -> [m[1;32mdev-issue[m[33m)[m HEAD@{0}: commit: 27October City backend
+[33m9aec455[m[33m ([m[1;31morigin/dev-issue[m[33m)[m HEAD@{1}: commit: City Repo and services created 19 October 2024
+[33mac861df[m HEAD@{2}: checkout: moving from dev-issue to dev-issue
+[33mac861df[m HEAD@{3}: commit: State part completed 17 October 2024
+[33mf7e760b[m HEAD@{4}: pull origin dev-issue: Fast-forward
+[33m7420be2[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{5}: rebase (finish): returning to refs/heads/dev-issue
+[33m7420be2[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{6}: rebase (start): checkout main
+[33mf7e760b[m HEAD@{7}: checkout: moving from main to dev-issue
+[33m7420be2[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{8}: pull origin main: Fast-forward
+[33mbc41991[m HEAD@{9}: checkout: moving from dev-issue to main
+[33mf7e760b[m HEAD@{10}: pull origin dev-issue: Fast-forward
+[33m7420be2[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{11}: checkout: moving from dev-issue to dev-issue
+[33m7420be2[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{12}: rebase (finish): returning to refs/heads/dev-issue
+[33m7420be2[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{13}: rebase (start): checkout origin/main
+[33m2fc996b[m[33m ([m[1;32mdev[m[33m)[m HEAD@{14}: checkout: moving from 2fc996ba1a7ed9e1543bbb1735b0c3ee739404e5 to dev-issue
+[33m2fc996b[m[33m ([m[1;32mdev[m[33m)[m HEAD@{15}: checkout: moving from dev to 2fc996b
+[33m2fc996b[m[33m ([m[1;32mdev[m[33m)[m HEAD@{16}: checkout: moving from dev to dev
+[33m2fc996b[m[33m ([m[1;32mdev[m[33m)[m HEAD@{17}: commit: State repo and services have been created 9 September 2024
+[33m80f9612[m[33m ([m[1;31morigin/dev[m[33m)[m HEAD@{18}: checkout: moving from d31871e2c73d77256f7bf7a7afa07bc2dee32790 to dev
+[33md31871e[m HEAD@{19}: commit: another comit
+[33m8fe8ac8[m HEAD@{20}: pull origin main: Fast-forward
+[33me72f5d9[m HEAD@{21}: pull origin dev: Fast-forward
+[33m80f9612[m[33m ([m[1;31morigin/dev[m[33m)[m HEAD@{22}: checkout: moving from dev to 80f9612
+[33m80f9612[m[33m ([m[1;31morigin/dev[m[33m)[m HEAD@{23}: checkout: moving from 88bd1e305a9fb5c17660336d3985e575694afb85 to dev
+[33m88bd1e3[m HEAD@{24}: commit (merge): commit morning 7 October 2024
+[33m81fb285[m HEAD@{25}: commit: Added Descriptions to the interfaces 7 oct 2024
+[33md0aa4e8[m[33m ([m[1;32mdec-issue[m[33m)[m HEAD@{26}: checkout: moving from dev to d0aa4e8
+[33m80f9612[m[33m ([m[1;31morigin/dev[m[33m)[m HEAD@{27}: commit: Fix issue where the + and other characters from encrypted base64string were getting removed on endpoints 6Oct2024
+[33m7bd4b0a[m HEAD@{28}: checkout: moving from dec-issue to dev
+[33md0aa4e8[m[33m ([m[1;32mdec-issue[m[33m)[m HEAD@{29}: checkout: moving from dec-issue to dec-issue
+[33md0aa4e8[m[33m ([m[1;32mdec-issue[m[33m)[m HEAD@{30}: commit: Fix the issue where characters like + and others were getting removed from base64 string on endpoints 6 october 2024
+[33m7bd4b0a[m HEAD@{31}: checkout: moving from dev to dec-issue
+[33m7bd4b0a[m HEAD@{32}: commit: created the rest utility 5october 2024
+[33m03e3f7c[m HEAD@{33}: commit: Creation and binding of Countries with encryption and decryption of json data while interacting with api 30 september 2024
+[33mbe98614[m HEAD@{34}: commit: Implemented encryption and decryption while passing the data from api to client side or vice versa 29 sept 2024
+[33ma254b2f[m HEAD@{35}: commit: designing and creation of UserProfile and About us pages and implementations of Session in Frontend 25 Sept 2024
+[33m639748d[m HEAD@{36}: commit: removed some unnecessary files 24 September 2024
+[33m7d46561[m HEAD@{37}: commit: Login Functionality Implemented 24 September 2024
+[33mbc41991[m HEAD@{38}: checkout: moving from main to dev
+[33mbc41991[m HEAD@{39}: Branch: renamed refs/heads/master to refs/heads/main
+[33mbc41991[m HEAD@{41}: commit (initial): FirstCommit 17 Sept 2024

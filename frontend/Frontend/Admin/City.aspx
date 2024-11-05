@@ -20,18 +20,18 @@
                                 <asp:DropDownList ID="ddlState" runat="server" CssClass="form-control" placeholder="Please select the State"></asp:DropDownList>
                                 <label for="ddlState">State</label>
                             </div>
-                            <div class="form-floating mb-3" style="background: none">
+                         <%--   <div class="form-floating mb-3" style="background: none">
                                 <asp:DropDownList ID="ddlCity" runat="server" CssClass="form-control" placeholder="Please select the city"></asp:DropDownList>
                                 <label for="ddlCity">City</label>
-                            </div>
+                            </div>--%>
 
                             <div class="form-floating mb-3" style="background: none;">
                                 <%--<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">--%>
-                                <asp:TextBox ID="txtStateName" runat="server" CssClass="form-control" placeholder="Please Enter the State Name"></asp:TextBox>
-                                <label for="txtStateName">State</label>
+                                <asp:TextBox ID="txtCityName" runat="server" CssClass="form-control" placeholder="Please Enter the City Name"></asp:TextBox>
+                                <label for="txtCityName">City</label>
                             </div>
                             <div class="d-flex justify-content-between">
-                                <asp:Button ID="btnAddState" runat="server" OnClick="btnAddState_Click" CssClass="btn btn-outline-dark" Text="Add" />
+                                <asp:Button ID="btnAddCity" runat="server" OnClick="btnAddCity_Click" CssClass="btn btn-outline-dark" Text="Add" />
                                 <asp:Button ID="btnClear" runat="server" OnClick="btnClear_Click" CssClass="btn btn-outline-dark" Text="Clear" />
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                         <h5 class="card-title mb-0">City List</h5>
                     </div>
                     <div class="card-body">
-                        <asp:Repeater ID="rptStateList" runat="server">
+                        <asp:Repeater ID="rptCityList" runat="server">
                             <HeaderTemplate>
                                 <table class="table table-responsive table-hover table-striped">
                                     <thead>

@@ -33,31 +33,22 @@ namespace HotelReservationSystem_Part1.Admin
         protected global::System.Web.UI.WebControls.DropDownList ddlState;
 
         /// <summary>
-        /// ddlCity control.
+        /// txtCityName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCity;
+        protected global::System.Web.UI.WebControls.TextBox txtCityName;
 
         /// <summary>
-        /// txtStateName control.
+        /// btnAddCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtStateName;
-
-        /// <summary>
-        /// btnAddState control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddState;
+        protected global::System.Web.UI.WebControls.Button btnAddCity;
 
         /// <summary>
         /// btnClear control.
@@ -69,12 +60,12 @@ namespace HotelReservationSystem_Part1.Admin
         protected global::System.Web.UI.WebControls.Button btnClear;
 
         /// <summary>
-        /// rptStateList control.
+        /// rptCityList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptStateList;
+        protected global::System.Web.UI.WebControls.Repeater rptCityList;
     }
 }

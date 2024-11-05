@@ -12,7 +12,8 @@ namespace Backend.Services.Mapper
             {
                 CityId = city.CityId,
                 CityName = city.CityName,  
-                StateId = city.StateId
+                StateId = city.StateId,
+                StateName=city.State.StateName.ToString()
             };
         }
         public static TblCity ToTblCity(this City_Model city)

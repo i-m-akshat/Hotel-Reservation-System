@@ -35,12 +35,12 @@ namespace Backend.DataAccessLayer.Repository.Implementations
 
         public async Task<TblCity> Get(long id)
         {
-            return await _context.TblCities.FindAsync(id);
+            return await _context.TblCities.Include(x=>x.State).Where(x=>x.CityId==id).FirstOrDefaultAsync();
         }
 
         public async Task<List<TblCity>> GetAll()
         {
-            return await _context.TblCities.ToListAsync();
+            return await _context.TblCities.Include(x => x.State).ToListAsync();
         }
 
         public async Task<TblCity> Update(long id, TblCity city)

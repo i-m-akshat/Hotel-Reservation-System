@@ -1,4 +1,5 @@
 ﻿using Frontend.Logic.Interfaces;
+using Frontend.Logic.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,29 +10,33 @@ namespace Frontend.Logic.Implementations
 {
     public class CityDao : ICityDao
     {
-        public Task<string> Create(string City)
+        private readonly ISecureDAO secureDAO = new SecureDao();
+        private readonly IRestUtility<string> _hitman = new RestUtility<string>();
+        private readonly string BaseUrl = "https://localhost:6969/api/City/";
+        public async Task<string> Create(string City)
         {
-            throw new NotImplementedException();
+            return await _hitman.PostAsync(BaseUrl, "Create", City);
         }
 
-        public Task<string> Delete(string id)
+        public async Task<string> Delete(string id)
         {
-            throw new NotImplementedException();
+            return await _hitman.DeleteAsync(BaseUrl, "Delete", id);
         }
 
-        public Task<string> Get()
+        public async Task<string> Get()
         {
-            throw new NotImplementedException();
+            return await _hitman.GetAsync(BaseUrl, "Get");
         }
 
-        public Task<string> GetByID(string id)
+        public async Task<string> GetByID(string id)
         {
-            throw new NotImplementedException();
+            return await _hitman.GetByIDAsync(BaseUrl, "Get",id);
+
         }
 
-        public Task<string> Update(string City, string id)
+        public async Task<string> Update(string City, string id)
         {
-            throw new NotImplementedException();
+            return await _hitman.PutAsync(BaseUrl, "Update",id,City);
         }
     }
 }

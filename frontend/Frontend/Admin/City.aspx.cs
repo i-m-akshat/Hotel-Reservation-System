@@ -15,9 +15,15 @@ namespace HotelReservationSystem_Part1.Admin
         private static readonly ICountryDAO _countryDao = new CountryDao();
         private static readonly IStateDAO _stateDao = new StateDao();
         private static readonly ISecureDAO _secure = new SecureDao();
+        private static readonly ICityDao _cityDao = new CityDao();  
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                BindCountry();
+                BindCity();
+                BindState();
+            }
         }
         private void BindCountry()
         {
@@ -48,13 +54,52 @@ namespace HotelReservationSystem_Part1.Admin
             var dec_res = _secure.Decrypt(res, ConfigurationManager.AppSettings["key"], ConfigurationManager.AppSettings["iv"]);
             List<State_DTO> listDTO = JsonConvert.DeserializeObject<List<State_DTO>>(dec_res);
             stateList = listDTO.Select(x => x.FromDTOToModel()).ToList();
-            rptStateList.DataSource = stateList;
-            rptStateList.DataBind();
+            stateList.Insert(0, new State_Model { StateId = 0, StateName = "Please Select the State" });
+            ddlState.DataSource = stateList;
+            ddlState.DataTextField = "StateName";
+            ddlState.DataValueField = "StateId";
+            ddlState.DataBind();
+            ddlState.SelectedIndex = 0;
         }
         private void BindCity()
+        {
+            List<City_Model> cityList = new List<City_Model>();
+            var res = _cityDao.Get().Result;
+            var dec_res = _secure.Decrypt(res, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+            if (dec_res != string.Empty)
+            {
+                cityList=JsonConvert.DeserializeObject<List<City_Model>>(dec_res);
+                if (cityList != null)
+                {
+                    rptCityList.DataSource= cityList;  
+                    rptCityList.DataBind();
+                }
+            }
+        }
+
+        protected void btnAddCity_Click(object sender, EventArgs e)
         {
 
         }
 
+        protected void btnClear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnView_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

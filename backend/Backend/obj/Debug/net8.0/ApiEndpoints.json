@@ -33,12 +33,65 @@
   },
   {
     "ContainingType": "Backend.Controllers.CityController",
+    "Method": "Delete",
+    "RelativePath": "api/City/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.CityController",
     "Method": "Get",
     "RelativePath": "api/City/Get",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.CityController",
+    "Method": "GetById",
+    "RelativePath": "api/City/Get/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.CityController",
+    "Method": "Update",
+    "RelativePath": "api/City/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "content",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
