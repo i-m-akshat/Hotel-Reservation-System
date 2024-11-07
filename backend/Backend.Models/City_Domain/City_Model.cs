@@ -1,4 +1,5 @@
 ﻿using Backend.Domain.User_Domain;
+using Backend.Models.Country_Domain;
 using Backend.Models.State_Domain;
 using System;
 using System.Collections.Generic;
@@ -13,12 +14,12 @@ namespace Backend.Models.City_Domain
         public long CityId { get; set; }
 
         public string? CityName { get; set; }
-
+        public long? CountryId { get; set; }
         public long? StateId { get; set; }
-
+        public string CountryName { get; set; }
         public string StateName { get; set; }
         public virtual State? State { get; set; }
-
+        public virtual Country? Country { get; set; }
         public virtual ICollection<User> Users { get; set; } = new List<User>();
     }
 }

@@ -230,13 +230,17 @@ public partial class BaseraHotelReservationSystemContext : DbContext
             entity.HasKey(e => e.CityId);
 
             entity.ToTable("tbl_city");
-
-            entity.Property(e => e.CityId).ValueGeneratedNever();
+            // Enable identity insert on Cityid
+            entity.Property(e => e.CityId)
+                .ValueGeneratedOnAdd()  // Enable auto-generation for CityId
+                .HasColumnName("CityId");
+            //entity.Property(e => e.CityId).ValueGeneratedNever();
             entity.Property(e => e.CityName)
                 .HasMaxLength(100)
                 .IsUnicode(false);
             entity.Property(e => e.StateId).HasColumnName("StateID");
-
+            entity.Property(e => e.CountryId).HasColumnName("CountryID");
+            entity.HasOne(d => d.Country).WithMany(p => p.TblCities).HasForeignKey(d => d.CountryId).HasConstraintName("Fk_tbl_city_tbl_country");
             entity.HasOne(d => d.State).WithMany(p => p.TblCities)
                 .HasForeignKey(d => d.StateId)
                 .HasConstraintName("FK_tbl_city_tbl_State");

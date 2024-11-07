@@ -11,18 +11,31 @@ namespace Backend.Services.Mapper
             return new City_Model
             {
                 CityId = city.CityId,
-                CityName = city.CityName,  
+                CityName = city.CityName,
                 StateId = city.StateId,
-                StateName=city.State.StateName.ToString()
+                CountryId = city.CountryId,
+                CountryName = city.Country.CountryName.ToString(),
+                StateName = city.State.StateName.ToString()
             };
         }
+        public static City_Model ToCityModel_withoutStateName(this TblCity city)
+        {
+            return new City_Model
+            {
+                CityId = city.CityId,
+                CityName = city.CityName,
+                StateId = city.StateId,
+                CountryId=city.CountryId,
+            };
+        }
+       
         public static TblCity ToTblCity(this City_Model city)
         {
             return new TblCity
             {
-                
                 CityName = city.CityName,
-                StateId = city.StateId
+                StateId = city.StateId,
+                CountryId = city.CountryId,
             };
         }
         public static City_Model ToCityModelWithState(this TblCity tblcity)
@@ -32,8 +45,10 @@ namespace Backend.Services.Mapper
                 CityId= tblcity.CityId,
                 CityName = tblcity.CityName,
                 StateId = tblcity.StateId,
-                StateName=tblcity.State.StateName
-                
+                StateName=tblcity.State.StateName,
+                CountryId = tblcity.CountryId,
+                CountryName=tblcity.Country.CountryName,
+
             };
         }
 

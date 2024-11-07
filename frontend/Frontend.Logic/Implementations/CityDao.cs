@@ -25,7 +25,7 @@ namespace Frontend.Logic.Implementations
 
         public async Task<string> Get()
         {
-            return await _hitman.GetAsync(BaseUrl, "Get");
+            return await _hitman.GetAsync(BaseUrl, "");
         }
 
         public async Task<string> GetByID(string id)

@@ -21,7 +21,7 @@ namespace Backend.Services.Implementatios
         public async Task<City_Model> Create(City_Model city)
         {
             var res=await _repo.Create(city.ToTblCity());
-            return res.ToCityModel();
+            return res.ToCityModel_withoutStateName();
             
         }
 
@@ -40,8 +40,17 @@ namespace Backend.Services.Implementatios
 
         public async Task<City_Model> GetById(long id)
         {
-            var res=await _repo.Get(id);
-            return res.ToCityModel();   
+            try
+            {
+                var res = await _repo.Get(id);
+                return res.ToCityModel_withoutStateName();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+               
         }
 
         public async Task<City_Model> Update(City_Model city,long id)

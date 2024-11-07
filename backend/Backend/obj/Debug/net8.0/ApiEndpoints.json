@@ -17,6 +17,16 @@
   },
   {
     "ContainingType": "Backend.Controllers.CityController",
+    "Method": "Get",
+    "RelativePath": "api/City",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.CityController",
     "Method": "Create",
     "RelativePath": "api/City/Create",
     "HttpMethod": "POST",
@@ -49,18 +59,8 @@
   },
   {
     "ContainingType": "Backend.Controllers.CityController",
-    "Method": "Get",
-    "RelativePath": "api/City/Get",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Backend.Controllers.CityController",
     "Method": "GetById",
-    "RelativePath": "api/City/Get/{id}",
+    "RelativePath": "api/City/Get",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -68,7 +68,7 @@
       {
         "Name": "id",
         "Type": "System.String",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

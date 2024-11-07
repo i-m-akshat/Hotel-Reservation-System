@@ -52,7 +52,7 @@ namespace Backend.Controllers
             }
         }
         [HttpGet]
-        [Route("Get")]
+        //[Route("Get")]
         public async Task<IActionResult> Get()
         {
             var res = await _service.Get();
@@ -100,20 +100,29 @@ namespace Backend.Controllers
             }
         }
         [HttpGet]
-        [Route("Get/{id}")]
-        public async Task<IActionResult> GetById([FromRoute]string id)
+        [Route("Get")]
+        public async Task<IActionResult> GetById([FromQuery]string id)
         {
-            var dec_id = _secure.Decrypt(id, _appsetting.enc_key, _appsetting.enc_iv);
-            long id_real = Convert.ToInt64(dec_id);
-            var res = _service.GetById(id_real);
-            if (res != null)
+            try
             {
-                return Ok(_secure.Encrypt(JsonConvert.SerializeObject(res), _appsetting.enc_key, _appsetting.enc_iv));
+                var dec_id = _secure.Decrypt(id, _appsetting.enc_key, _appsetting.enc_iv);
+                long id_real = Convert.ToInt64(dec_id);
+                var res = await _service.GetById(id_real);
+                if (res != null)
+                {
+                    return Ok(_secure.Encrypt(JsonConvert.SerializeObject(res), _appsetting.enc_key, _appsetting.enc_iv));
+                }
+                else
+                {
+                    return BadRequest();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return BadRequest();
+
+                throw;
             }
+            
         }
 
 

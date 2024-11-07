@@ -12,7 +12,7 @@ namespace Backend.DataAccessLayer.Repository.Implementations
 {
     public class CityRepo : ICityRepo
     {
-        private static BaseraHotelReservationSystemContext _context;
+        private readonly BaseraHotelReservationSystemContext _context;
         public CityRepo(BaseraHotelReservationSystemContext context)
         {
             _context = context;
@@ -20,9 +20,18 @@ namespace Backend.DataAccessLayer.Repository.Implementations
 
         public async Task<TblCity> Create(TblCity city)
         {
-            await _context.TblCities.AddAsync(city);
-            await _context.SaveChangesAsync();
-            return city;
+            try
+            {
+                await _context.TblCities.AddAsync(city);
+                await _context.SaveChangesAsync();
+                return city;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            
         }
 
         public async Task<TblCity> Delete(long id)
@@ -35,12 +44,22 @@ namespace Backend.DataAccessLayer.Repository.Implementations
 
         public async Task<TblCity> Get(long id)
         {
-            return await _context.TblCities.Include(x=>x.State).Where(x=>x.CityId==id).FirstOrDefaultAsync();
+            try
+            {
+                return await _context.TblCities.Where(x => x.CityId == id).Include(x => x.State).Include(x=>x.Country).FirstOrDefaultAsync();
+                //return await _context.TblCities.Where(x => x.CityId == id).FirstOrDefaultAsync();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            
         }
 
         public async Task<List<TblCity>> GetAll()
         {
-            return await _context.TblCities.Include(x => x.State).ToListAsync();
+            return await _context.TblCities.Include(x => x.State).Include(x=>x.Country).ToListAsync();
         }
 
         public async Task<List<TblCity>> GetCitiesBasedOnStateId(long id)
