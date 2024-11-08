@@ -89,7 +89,7 @@
       {
         "Name": "content",
         "Type": "System.String",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using Frontend.Models.Mappers;
-using System.Web;
 using System.Web.UI.WebControls;
 
 namespace HotelReservationSystem_Part1.Admin
@@ -103,7 +102,7 @@ namespace HotelReservationSystem_Part1.Admin
         protected void btnAddCity_Click(object sender, EventArgs e)
         {
             string Message = string.Empty;
-            if(validate(out Message))
+            if (validate(out Message))
             {
                 Response.Write($"<script>alert('{Message}')</script>");
             }
@@ -117,18 +116,38 @@ namespace HotelReservationSystem_Part1.Admin
                 };
                 string JsonCity = JsonConvert.SerializeObject(model);
                 var enc_City = _secure.Encrypt(JsonCity, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
-                var res=_cityDao.Create(enc_City).Result;
-                var dec_res = _secure.Decrypt((enc_City), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
-                City_Model modelCity=JsonConvert.DeserializeObject<City_Model>(dec_res);
-                if (modelCity != null)
+                if (btnAddCity.Text == "Update")
                 {
-                    Response.Write("<script>alert('Created Successfully')</script>");
-                    BindCity();
-                    Clear();
+                    //LinkButton btnEdit = sender as LinkButton;
+                    long Id = Convert.ToInt64(ViewState["CityID"]);
+                    var enc_id = _secure.Encrypt(Id.ToString(), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                    var res = _cityDao.Update(enc_City, enc_id).Result;
+                    var dec_res= _secure.Decrypt((res), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                    City_Model modelCity = JsonConvert.DeserializeObject<City_Model>(dec_res);
+                    if (modelCity != null)
+                    {
+                        Response.Write("<script>alert('Updated Successfully')</script>");
+                        BindCity();
+                        Clear();
+                    }
+                }
+                else
+                {
+                    var res = _cityDao.Create(enc_City).Result;
+                    var dec_res = _secure.Decrypt((res), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                    City_Model modelCity = JsonConvert.DeserializeObject<City_Model>(dec_res);
+                    if (modelCity != null)
+                    {
+                        Response.Write("<script>alert('Created Successfully')</script>");
+                        BindCity();
+                        Clear();
 
+                    }
                 }
 
             }
+           
+           
         }
         private void Clear()
         {
@@ -141,6 +160,7 @@ namespace HotelReservationSystem_Part1.Admin
             txtCityName.Enabled = true;
             ddlState.Enabled = true;
             ddlCountry.Enabled = true;
+            btnAddCity.Text = "Add";
         }
 
         protected void btnClear_Click(object sender, EventArgs e)
@@ -172,6 +192,7 @@ namespace HotelReservationSystem_Part1.Admin
         {
             LinkButton btnEdit = sender as LinkButton;
             long cityId = Convert.ToInt64(btnEdit.CommandArgument);
+            ViewState["CityID"] = cityId;
             if (cityId != null || !cityId.Equals(0))
             {
                 string _encID = _secure.Encrypt(cityId.ToString(), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
@@ -196,6 +217,10 @@ namespace HotelReservationSystem_Part1.Admin
             ddlState.Enabled = EditMode;
             ddlCountry.Enabled = EditMode;
             btnAddCity.Enabled = EditMode;
+            if (EditMode)
+            {
+                btnAddCity.Text = "Update";
+            }
             
         }
         protected void btnDelete_Click(object sender, EventArgs e)

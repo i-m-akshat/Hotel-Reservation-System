@@ -67,13 +67,13 @@ namespace Backend.Controllers
         }
         [HttpPut]
         [Route("Update")]
-        public async Task<IActionResult> Update(string id,string content)
+        public async Task<IActionResult> Update([FromQuery]string id,[FromBody]string content)
         {
             var dec_id = _secure.Decrypt(id, _appsetting.enc_key, _appsetting.enc_iv);
             var dec_Content = _secure.Decrypt(content, _appsetting.enc_key, _appsetting.enc_iv);
             var realContent = JsonConvert.DeserializeObject<City_Model>(dec_Content);
             long id_real = Convert.ToInt64(dec_id);
-            var res = _service.Update(realContent, id_real);
+            var res = await _service.Update(realContent, id_real);
             if (res != null)
             {
                 return Ok(_secure.Encrypt(JsonConvert.SerializeObject(res), _appsetting.enc_key, _appsetting.enc_iv));
@@ -85,7 +85,7 @@ namespace Backend.Controllers
         }
         [HttpDelete]
         [Route("Delete")]
-        public async Task<IActionResult> Delete(string id)
+        public async Task<IActionResult> Delete([FromQuery]string id)
         {
             var dec_id = _secure.Decrypt(id, _appsetting.enc_key, _appsetting.enc_iv);
             long id_real = Convert.ToInt64(dec_id);

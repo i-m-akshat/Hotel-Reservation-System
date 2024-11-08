@@ -69,18 +69,31 @@ namespace Backend.DataAccessLayer.Repository.Implementations
 
         public async Task<TblCity> Update(long id, TblCity city)
         {
-            var tblCity = await _context.TblCities.FindAsync(id);
-            if (city != null)
+            try
             {
-                tblCity.CityName = city.CityName != null ? city.CityName : tblCity.CityName;
-                tblCity.StateId = city.StateId != null ? city.StateId : tblCity.StateId;
-                await _context.SaveChangesAsync();
-                return city;
+                
+                var tblCity =  _context.TblCities.Find(id);
+
+                if (city != null&&tblCity!=null)
+                {
+                    tblCity.CityName = city.CityName != null ? city.CityName : tblCity.CityName;
+                    tblCity.StateId = city.StateId != null ? city.StateId : tblCity.StateId;
+                    tblCity.CountryId = city.CountryId != null ? city.CountryId : tblCity.CountryId;
+                    await _context.SaveChangesAsync();
+                    return city;
+                }
+                else
+                {
+                    return null;
+                }
+               
             }
-            else
+            catch (Exception ex)
             {
-                return null;
+
+                throw;
             }
+            
 
         }
     }

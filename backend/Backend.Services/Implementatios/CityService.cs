@@ -56,7 +56,7 @@ namespace Backend.Services.Implementatios
         public async Task<City_Model> Update(City_Model city,long id)
         {
             var res = await _repo.Update(id, city.ToTblCity());
-            return res.ToCityModel();
+            return res.ToCityModel_withoutStateName();
         }
     }
 }
