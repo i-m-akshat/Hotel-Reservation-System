@@ -25,52 +25,109 @@
     <script src="../Assets/FontAwesome/js/all.min.js"></script>
 	<script src="../Assets/DataTables/datatables.min.js"></script>
     <script src="../Assets/Js/app.js"></script>
+    <script src="../Assets/Sweetalert/sweetalert2.all.min.js"></script>
+    <script src="../Assets/Jquery/jquery-3.6.4.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
+	<script>
+		function alertSuccess(title, text, confirmButtonText) {
+			Swal.fire({
+				title: title,
+                text: text,
+                icon: "success",
+				confirmButtonColor: "#3085d6",
+				confirmButtonText: confirmButtonText
+            })
+		}
+		function alertError(title, text, confirmButtonText) {
+            Swal.fire({
+                title: title,
+                text: text,
+                icon: "error",
+                confirmButtonText: confirmButtonText
+            })
+		}
+        function alertConfirm(title, text, confirmButtonText, eventID) {
+          
+            swal.fire({
+                title: title,
+                text: text,
+                icon: "question", // Icon for the confirmation dialog
+                confirmButtonText: confirmButtonText, // Custom button text for the confirmation
+                showCancelButton: true, // Show cancel button
+                cancelButtonColor: '#d33', // Cancel button color
+            }).then((result) => {
+				if (result.isConfirmed) {
+					debugger;
+                    // Trigger the server-side event (postback) when the user clicks "Yes"
+					/*__doPostBack(eventID);*/
+					__doPostBack(eventID);
+                }
+            });
+            return false; // Prevent the form from submitting automatically
+        }
 
-    <form id="form1" runat="server">
-        <div class="wrapper">
-            <nav id="sidebar" class="sidebar js-sidebar">
+
+    </script>
+
+	<form id="form1" runat="server">
+
+		<div class="wrapper">
+
+			<nav id="sidebar" class="sidebar js-sidebar">
 			<div class="sidebar-content js-simplebar">
 				<a class="sidebar-brand" href="Dashboard.aspx">
-          <span class="align-middle">Admin Dashboard</span>
-        </a>
+
+		  <span class="align-middle">Admin Dashboard</span>
+
+		</a>
 
 				<ul class="sidebar-nav">
-					
+
+
 
 					<li class="sidebar-item" ">
 						<a class="sidebar-link" id="btnDash" onclick="setActive(this.parentNode, 'Dashboard')">
-              <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
-            </a>
+
+			  <i class="align-middle" data-feather="sliders"></i> <span class="align-middle">Dashboard</span>
+
+			</a>
 					</li>
 					<li class="sidebar-header">
 				Location Settings
 </li>
 					<li class="sidebar-item ">
 						<a class="sidebar-link" id="btnCountry" onclick="setActive(this.parentNode, 'Country')">
-              <i class="align-middle" data-feather="country"></i> <span class="align-middle">Country</span>
-            </a>
+
+			  <i class="align-middle" data-feather="country"></i> <span class="align-middle">Country</span>
+
+			</a>
 					</li>
 
 					<li class="sidebar-item">
 						<a class="sidebar-link" id="btnState" onclick="setActive(this.parentNode, 'State')">
-              <i class="align-middle" data-feather="state"></i> <span class="align-middle">State</span>
-            </a>
+
+			  <i class="align-middle" data-feather="state"></i> <span class="align-middle">State</span>
+
+			</a>
 					</li>
 
 					<li class="sidebar-item" ">
 						<a class="sidebar-link" onclick="setActive(this.parentNode, 'City')">
-              <i class="align-middle" data-feather="City"></i> <span class="align-middle">City</span>
-            </a>
+
+			  <i class="align-middle" data-feather="City"></i> <span class="align-middle">City</span>
+
+			</a>
 					</li>
 
 					<%--<li class="sidebar-item" ">
 						<a class="sidebar-link" >
-              <i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span>
-            </a>
+
+			  <i class="align-middle" data-feather="book"></i> <span class="align-middle">Blank</span>
+
+			</a>
 					</li>--%>
 
 					<li class="sidebar-header">

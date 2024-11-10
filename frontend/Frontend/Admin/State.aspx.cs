@@ -11,7 +11,7 @@ using System.Configuration;
 using System.Linq;
 using System.Web.UI.WebControls;
 
-namespace HotelReservationSystem_Part1.Admin
+namespace Frontend.Admin
 {
     public partial class State : System.Web.UI.Page
     {

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace HotelReservationSystem_Part1.Admin
+namespace Frontend.Admin
 {
     public partial class Profile : System.Web.UI.Page
     {

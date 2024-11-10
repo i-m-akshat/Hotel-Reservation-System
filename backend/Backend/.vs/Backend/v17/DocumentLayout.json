@@ -344,8 +344,7 @@
               "RelativeToolTip": "..\\Backend.DataAccessLayer\\Context\\DBContext\\BaseraHotelReservationSystemContext.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAuwBAAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T18:16:05.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T18:16:05.534Z"
             },
             {
               "$type": "Document",
@@ -355,7 +354,7 @@
               "RelativeDocumentMoniker": "..\\Backend.Services\\Implementatios\\CityService.cs",
               "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Implementatios\\CityService.cs",
               "RelativeToolTip": "..\\Backend.Services\\Implementatios\\CityService.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABsAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T08:05:36.392Z",
               "EditorCaption": ""
@@ -370,8 +369,7 @@
               "RelativeToolTip": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\CityRepo.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAuwC0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T09:23:34.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T09:23:34.572Z"
             },
             {
               "$type": "Document",
@@ -383,8 +381,7 @@
               "RelativeToolTip": "..\\Backend.Services\\Mapper\\TblCityToCityMapper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T08:08:27.114Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T08:08:27.114Z"
             },
             {
               "$type": "Document",
@@ -396,8 +393,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAuwBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T08:26:57.504Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-17T08:26:57.504Z"
             },
             {
               "$type": "Document",
@@ -409,8 +405,7 @@
               "RelativeToolTip": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\StateRepo.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAuwBAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T09:23:42.072Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T09:23:42.072Z"
             },
             {
               "$type": "Document",
@@ -458,8 +453,7 @@
               "RelativeToolTip": "Controllers\\StateController.cs",
               "ViewState": "AgIAACUAAAAAAAAAAAAAAEMAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T04:46:13.674Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T04:46:13.674Z"
             },
             {
               "$type": "Document",
@@ -543,8 +537,7 @@
               "RelativeToolTip": "..\\Backend.Services\\Implementatios\\StateService.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABoAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T08:03:07.644Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T08:03:07.644Z"
             },
             {
               "$type": "Document",

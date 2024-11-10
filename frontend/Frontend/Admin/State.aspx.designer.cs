@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HotelReservationSystem_Part1.Admin
+namespace Frontend.Admin
 {
 
 

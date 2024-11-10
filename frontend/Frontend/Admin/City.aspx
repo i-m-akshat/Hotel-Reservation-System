@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="City.aspx.cs" Inherits="HotelReservationSystem_Part1.Admin.City" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="City.aspx.cs" Inherits="Frontend.Admin.City" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -71,7 +71,9 @@
                                     <td>
                                         <asp:LinkButton runat="server" CommandArgument='<%#Eval("CityId") %>' CssClass="btn btn-sm btn-outline-dark" ID="btnView" OnClick="btnView_Click">View</asp:LinkButton>
                                         <asp:LinkButton CssClass="btn btn-sm btn-outline-dark" ID="btnEdit" runat="server" OnClick="btnEdit_Click" CommandArgument='<%#Bind("CityId") %>'>Edit</asp:LinkButton>
-                                        <asp:LinkButton CssClass="btn btn-sm btn-outline-dark" ID="btnDelete" runat="server" OnClick="btnDelete_Click" CommandArgument='<%#Bind("CityId") %>'>Delete</asp:LinkButton></td>
+                                        <asp:LinkButton CssClass="btn btn-sm btn-outline-dark" ID="btnDelete" runat="server" Text="Delete" OnClientClick="return alertConfirm('Are you sure?', 'You won\'t be able to revert this!', 'Yes, delete it!', '<%= btnDelete.UniqueID %>');" OnClick="btnDelete_Click" />
+
+
                                 </tr>
                             </ItemTemplate>
 

@@ -9,7 +9,7 @@ using System.Linq;
 using Frontend.Models.Mappers;
 using System.Web.UI.WebControls;
 
-namespace HotelReservationSystem_Part1.Admin
+namespace Frontend.Admin
 {
     public partial class City : System.Web.UI.Page
     {
@@ -225,7 +225,11 @@ namespace HotelReservationSystem_Part1.Admin
         }
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-
+            Delete();
+        }
+        public void Delete()
+        {
+            Response.Write("<script>alert('Deleted')</script>");
         }
     }
 }
