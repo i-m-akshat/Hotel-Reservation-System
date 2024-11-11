@@ -28,7 +28,7 @@ namespace Backend.Services.Implementatios
         public async Task<City_Model> Delete(long id)
         {
             var res = await _repo.Delete(id);
-            return res.ToCityModel();
+            return res.ToCityModel_withoutStateName();
 
         }
 

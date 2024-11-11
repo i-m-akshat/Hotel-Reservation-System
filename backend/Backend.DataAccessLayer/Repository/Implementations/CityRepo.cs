@@ -36,9 +36,19 @@ namespace Backend.DataAccessLayer.Repository.Implementations
 
         public async Task<TblCity> Delete(long id)
         {
-            var tblCity =await _context.TblCities.FindAsync(id);
-            _context.TblCities.Remove(tblCity);
-            return tblCity;
+            try
+            {
+                var tblCity = await _context.TblCities.FindAsync(id);
+                _context.TblCities.Remove(tblCity);
+                await _context.SaveChangesAsync();
+                return tblCity;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
 
         }
 

@@ -89,7 +89,7 @@ namespace Backend.Controllers
         {
             var dec_id = _secure.Decrypt(id, _appsetting.enc_key, _appsetting.enc_iv);
             long id_real = Convert.ToInt64(dec_id);
-            var res = _service.Delete(id_real);
+            var res = await _service.Delete(id_real);
             if (res != null)
             {
                 return Ok(_secure.Encrypt(JsonConvert.SerializeObject(res), _appsetting.enc_key, _appsetting.enc_iv));

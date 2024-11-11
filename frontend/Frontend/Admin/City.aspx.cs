@@ -8,6 +8,8 @@ using System.Configuration;
 using System.Linq;
 using Frontend.Models.Mappers;
 using System.Web.UI.WebControls;
+using System.Web.Services;
+using System.Web.UI;
 
 namespace Frontend.Admin
 {
@@ -26,7 +28,7 @@ namespace Frontend.Admin
                 BindState();
             }
         }
-        private void BindCountry()
+        public void BindCountry()
         {
             try
             {
@@ -48,7 +50,7 @@ namespace Frontend.Admin
                 throw;
             }
         }
-        private void BindState()
+        public void BindState()
         {
             List<State_Model> stateList = new List<State_Model>();
             var res = _stateDao.GetAll().Result;
@@ -62,7 +64,7 @@ namespace Frontend.Admin
             ddlState.DataBind();
             ddlState.SelectedIndex = 0;
         }
-        private void BindCity()
+        public void BindCity()
         {
             List<City_Model> cityList = new List<City_Model>();
             var res = _cityDao.Get().Result;
@@ -225,11 +227,32 @@ namespace Frontend.Admin
         }
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-            Delete();
+            LinkButton btn = (LinkButton)sender;
+            string cityId = btn.CommandArgument;
+
+            // Register the JavaScript function with the cityId as an argument
+            string script = $"alertConfirm('Are you sure?', 'You won\\'t be able to revert this!', 'Yes, delete it!', 'City.aspx/Delete', {cityId});";
+            ScriptManager.RegisterStartupScript(this, GetType(), "DeleteConfirmation", script, true);
         }
-        public void Delete()
+        [WebMethod]
+        public static bool Delete(int id )
         {
-            Response.Write("<script>alert('Deleted')</script>");
+            
+            var dec_id = _secure.Encrypt(Convert.ToString(id), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+            var res = _cityDao.Delete(dec_id).Result;
+            if (res != null)
+            {
+                City city = new City();
+                city.BindCity();
+                return true;
+                
+            }
+            else
+            {
+                City city = new City();
+                city.BindCity();
+                return false;
+            }
         }
     }
 }

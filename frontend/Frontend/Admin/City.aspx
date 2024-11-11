@@ -71,8 +71,14 @@
                                     <td>
                                         <asp:LinkButton runat="server" CommandArgument='<%#Eval("CityId") %>' CssClass="btn btn-sm btn-outline-dark" ID="btnView" OnClick="btnView_Click">View</asp:LinkButton>
                                         <asp:LinkButton CssClass="btn btn-sm btn-outline-dark" ID="btnEdit" runat="server" OnClick="btnEdit_Click" CommandArgument='<%#Bind("CityId") %>'>Edit</asp:LinkButton>
-                                        <asp:LinkButton CssClass="btn btn-sm btn-outline-dark" ID="btnDelete" runat="server" Text="Delete" OnClientClick="return alertConfirm('Are you sure?', 'You won\'t be able to revert this!', 'Yes, delete it!', '<%= btnDelete.UniqueID %>');" OnClick="btnDelete_Click" />
-
+                                        <asp:LinkButton 
+    CssClass="btn btn-sm btn-outline-dark" 
+    ID="btnDelete" 
+    runat="server" 
+    Text="Delete" 
+    CommandArgument='<%# Eval("CityId") %>' 
+    OnClick="btnDelete_Click" />
+                                        
 
                                 </tr>
                             </ItemTemplate>
