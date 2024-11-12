@@ -31,7 +31,8 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-	<script>
+	<script type="text/javascript">
+      /*  document.addEventListener("DOMContentLoaded", function () {*/
 		function alertSuccess(title, text, confirmButtonText) {
 			Swal.fire({
 				title: title,
@@ -41,6 +42,20 @@
 				confirmButtonText: confirmButtonText
             })
 		}
+			function alertSuccessWithRebind(title, text, confirmButtonText,bindMethod) {
+				debugger;
+            Swal.fire({
+                title: title,
+                text: text,
+                icon: "success",
+                confirmButtonColor: "#3085d6",
+				confirmButtonText: confirmButtonText,
+                allowOutsideClick: false 
+			}).then(() => {
+				bindMethod();
+               
+            });
+        }
 		function alertError(title, text, confirmButtonText) {
             Swal.fire({
                 title: title,
@@ -49,21 +64,26 @@
                 confirmButtonText: confirmButtonText
             })
 		}
-        function alertConfirm(title, text, confirmButtonText,  url,id) {
+        function alertError_Custom(title, text, confirmButtonText) {
+            Swal.fire({
+                title: title,
+                html: text,
+                icon: "error",
+                confirmButtonText: confirmButtonText
+            })
+        }
+		function alertConfirm(title, text, confirmButtonText, url, id,bindMethod) {
           
             swal.fire({
                 title: title,
                 text: text,
-                icon: "question", // Icon for the confirmation dialog
-                confirmButtonText: confirmButtonText, // Custom button text for the confirmation
-                showCancelButton: true, // Show cancel button
-                cancelButtonColor: '#d33', // Cancel button color
+                icon: "question", 
+                confirmButtonText: confirmButtonText, 
+                showCancelButton: true, 
+                cancelButtonColor: '#d33', 
             }).then((result) => {
 				if (result.isConfirmed) {
 					debugger;
-					
-                    // Trigger the server-side event (postback) when the user clicks "Yes"
-					/*__doPostBack(eventID);*/
 					$.ajax({
 						url: url,
 						type: "POST",
@@ -72,7 +92,8 @@
 						data: JSON.stringify({ id: id }), // Pass the ID as JSON
 						success: function (response) {
 							if (response.d == true) {
-								alertSuccess("Deleted", "Deleted Successfully", "Ok");
+								alertSuccessWithRebind("Deleted", "Deleted Successfully", "Ok", bindMethod);
+								
 							} else {
 								alertError("Oops!", "Something Went Wrong !", "Ok");
 							}
@@ -83,12 +104,12 @@
             });
             return false; // Prevent the form from submitting automatically
         }
-
+       /* });*/
 
     </script>
 
 	<form id="form1" runat="server">
-
+		    
 		<div class="wrapper">
 
 			<nav id="sidebar" class="sidebar js-sidebar">

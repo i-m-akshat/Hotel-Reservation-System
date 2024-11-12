@@ -10,6 +10,7 @@ using Frontend.Models.Mappers;
 using System.Web.UI.WebControls;
 using System.Web.Services;
 using System.Web.UI;
+using System.Web;
 
 namespace Frontend.Admin
 {
@@ -21,11 +22,15 @@ namespace Frontend.Admin
         private static readonly ICityDao _cityDao = new CityDao();  
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             if (!IsPostBack)
             {
                 BindCountry();
                 BindCity();
                 BindState();
+            }else if (IsPostBack)
+            {
+                BindCity();
             }
         }
         public void BindCountry()
@@ -74,11 +79,13 @@ namespace Frontend.Admin
                 cityList=JsonConvert.DeserializeObject<List<City_Model>>(dec_res);
                 if (cityList != null)
                 {
-                    rptCityList.DataSource= cityList;  
-                    rptCityList.DataBind();
+                    rptCityList.DataSource = cityList;
+                            rptCityList.DataBind();
+                       
                 }
             }
         }
+      
         private bool validate(out string message)
         {
             string mes = String.Empty;
@@ -106,7 +113,9 @@ namespace Frontend.Admin
             string Message = string.Empty;
             if (validate(out Message))
             {
-                Response.Write($"<script>alert('{Message}')</script>");
+                string script = $"alertError_Custom('Poora bharo yar?', '{Message}', 'Ok Bhai ! ');";
+                //Response.Write($"<script>alert('{Message}')</script>");
+                ScriptManager.RegisterStartupScript(this, GetType(), "validation", script, true);
             }
             else
             {
@@ -114,7 +123,8 @@ namespace Frontend.Admin
                 {
                     StateId = Convert.ToInt32(ddlState.SelectedItem.Value),
                     CityName = txtCityName.Text.ToString(),
-                    CountryId = Convert.ToInt32(ddlCountry.SelectedItem.Value)
+                    CountryId = Convert.ToInt32(ddlCountry.SelectedItem.Value),
+                    IsActive=true,
                 };
                 string JsonCity = JsonConvert.SerializeObject(model);
                 var enc_City = _secure.Encrypt(JsonCity, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
@@ -128,7 +138,10 @@ namespace Frontend.Admin
                     City_Model modelCity = JsonConvert.DeserializeObject<City_Model>(dec_res);
                     if (modelCity != null)
                     {
-                        Response.Write("<script>alert('Updated Successfully')</script>");
+                        //Response.Write("<script>alert('Updated Successfully')</script>");
+                        string script = $"alertSuccess('Success', 'Updated Successfully', 'Ok Bhai ! ');";
+                        //Response.Write($"<script>alert('{Message}')</script>");
+                        ScriptManager.RegisterStartupScript(this, GetType(), "Success", script, true);
                         BindCity();
                         Clear();
                     }
@@ -140,7 +153,9 @@ namespace Frontend.Admin
                     City_Model modelCity = JsonConvert.DeserializeObject<City_Model>(dec_res);
                     if (modelCity != null)
                     {
-                        Response.Write("<script>alert('Created Successfully')</script>");
+                        string script = $"alertSuccess('Success', 'Created Successfully', 'Ok Bhai ! ');";
+                        //Response.Write($"<script>alert('{Message}')</script>");
+                        ScriptManager.RegisterStartupScript(this, GetType(), "Success", script, true);
                         BindCity();
                         Clear();
 
@@ -192,6 +207,7 @@ namespace Frontend.Admin
 
         protected void btnEdit_Click(object sender, EventArgs e)
         {
+            
             LinkButton btnEdit = sender as LinkButton;
             long cityId = Convert.ToInt64(btnEdit.CommandArgument);
             ViewState["CityID"] = cityId;
@@ -206,6 +222,7 @@ namespace Frontend.Admin
                         var _decRes = _secure.Decrypt(res, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
                         var _final = JsonConvert.DeserializeObject<City_Model>(_decRes);
                         LoadData(true, _final);
+                        //pnlRPT.Update();
                     }
                 }
             }
@@ -223,36 +240,47 @@ namespace Frontend.Admin
             {
                 btnAddCity.Text = "Update";
             }
-            
+           
         }
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-            LinkButton btn = (LinkButton)sender;
-            string cityId = btn.CommandArgument;
+            LinkButton btnDelete = (LinkButton)sender;
+            string cityId = btnDelete.CommandArgument;
 
             // Register the JavaScript function with the cityId as an argument
-            string script = $"alertConfirm('Are you sure?', 'You won\\'t be able to revert this!', 'Yes, delete it!', 'City.aspx/Delete', {cityId});";
+            string script = $"alertConfirm('Are you sure?', 'You won\\'t be able to revert this!', 'Yes, delete it!', 'City.aspx/Delete', {cityId},bindCity);";
+
             ScriptManager.RegisterStartupScript(this, GetType(), "DeleteConfirmation", script, true);
+            
         }
         [WebMethod]
         public static bool Delete(int id )
         {
+            try
+            {
+                var dec_id = _secure.Encrypt(Convert.ToString(id), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                var res = _cityDao.Delete(dec_id).Result;
+                if (res != null)
+                {
+                    //City city = new City();
+                    //city.BindCity();
+                    return true;
+                    
+
+                }
+                else
+                {
+                    City city = new City();
+                    city.BindCity();
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
             
-            var dec_id = _secure.Encrypt(Convert.ToString(id), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
-            var res = _cityDao.Delete(dec_id).Result;
-            if (res != null)
-            {
-                City city = new City();
-                city.BindCity();
-                return true;
-                
-            }
-            else
-            {
-                City city = new City();
-                city.BindCity();
-                return false;
-            }
         }
     }
 }

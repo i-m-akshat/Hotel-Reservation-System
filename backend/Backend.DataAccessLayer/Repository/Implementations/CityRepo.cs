@@ -39,7 +39,11 @@ namespace Backend.DataAccessLayer.Repository.Implementations
             try
             {
                 var tblCity = await _context.TblCities.FindAsync(id);
-                _context.TblCities.Remove(tblCity);
+                //_context.TblCities.Remove(tblCity);
+                if (tblCity != null)
+                {
+                    tblCity.IsActive = false;
+                }
                 await _context.SaveChangesAsync();
                 return tblCity;
             }
@@ -56,7 +60,7 @@ namespace Backend.DataAccessLayer.Repository.Implementations
         {
             try
             {
-                return await _context.TblCities.Where(x => x.CityId == id).Include(x => x.State).Include(x=>x.Country).FirstOrDefaultAsync();
+                return await _context.TblCities.Where(x => x.CityId == id && x.IsActive == true).Include(x => x.State).Include(x=>x.Country).FirstOrDefaultAsync();
                 //return await _context.TblCities.Where(x => x.CityId == id).FirstOrDefaultAsync();
             }
             catch (Exception ex)
@@ -69,12 +73,12 @@ namespace Backend.DataAccessLayer.Repository.Implementations
 
         public async Task<List<TblCity>> GetAll()
         {
-            return await _context.TblCities.Include(x => x.State).Include(x=>x.Country).ToListAsync();
+            return await _context.TblCities.Where(x=>x.IsActive==true).Include(x => x.State).Include(x=>x.Country).ToListAsync();
         }
 
         public async Task<List<TblCity>> GetCitiesBasedOnStateId(long id)
         {
-            return await _context.TblCities.Include(x=>x.State).Where(x=>x.StateId==id).ToListAsync();  
+            return await _context.TblCities.Include(x=>x.State).Where(x=>x.StateId==id&&x.IsActive==true).ToListAsync();  
         }
 
         public async Task<TblCity> Update(long id, TblCity city)

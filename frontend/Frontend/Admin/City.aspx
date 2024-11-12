@@ -1,8 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="City.aspx.cs" Inherits="Frontend.Admin.City" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    		    
+    <script>
+        function bindCity() {
+            /*window.location.reload();*/
+           __doPostBack('<%=rptCityList.UniqueID %>', '');
+        }
+    </script>
+
     <div class="col-md-12">
         <div class="row justify-content-between align-items-stretch">
             <div class="col-md-4">
@@ -20,7 +30,7 @@
                                 <asp:DropDownList ID="ddlState" runat="server" CssClass="form-control" placeholder="Please select the State"></asp:DropDownList>
                                 <label for="ddlState">State</label>
                             </div>
-                         <%--   <div class="form-floating mb-3" style="background: none">
+                            <%--   <div class="form-floating mb-3" style="background: none">
                                 <asp:DropDownList ID="ddlCity" runat="server" CssClass="form-control" placeholder="Please select the city"></asp:DropDownList>
                                 <label for="ddlCity">City</label>
                             </div>--%>
@@ -44,52 +54,52 @@
                         <h5 class="card-title mb-0">City List</h5>
                     </div>
                     <div class="card-body">
-                        <asp:Repeater ID="rptCityList" runat="server">
-                            <HeaderTemplate>
-                                <table class="table table-responsive table-hover table-striped">
-                                    <thead>
+                   
+                                <asp:Repeater ID="rptCityList" runat="server">
+                                    <HeaderTemplate>
+                                        <table class="table table-responsive table-hover table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Sr.No.</th>
+                                                    <th>City</th>
+                                                    <th>State</th>
+                                                    <th>Is Active</th>
+                                                    <th>Actions</th>
+                                                </tr>
+
+                                            </thead>
+
+                                            <tbody>
+                                    </HeaderTemplate>
+                                    <ItemTemplate>
                                         <tr>
-                                            <th>Sr.No.</th>
-                                            <th>City</th>
-                                            <th>State</th>
-                                           
-                                            <th>Actions</th>
+                                            <td>
+                                                <%# Container.ItemIndex + 1 %>
+                                            </td>
+                                            <td><%#Eval("CityName")%></td>
+                                            <td><%#Eval("StateName")%></td>
+                                            <td><%#Eval("IsActive") %></td>
+                                            <td>
+                                                <asp:LinkButton runat="server" CommandArgument='<%#Eval("CityId") %>' CssClass="btn btn-sm btn-outline-dark" ID="btnView" OnClick="btnView_Click">View</asp:LinkButton>
+                                                <asp:LinkButton CssClass="btn btn-sm btn-outline-dark" ID="btnEdit" runat="server" OnClick="btnEdit_Click" CommandArgument='<%#Bind("CityId") %>'>Edit</asp:LinkButton>
+                                                <asp:LinkButton
+                                                    CssClass="btn btn-sm btn-outline-dark"
+                                                    ID="btnDelete"
+                                                    runat="server"
+                                                    Text="Delete"
+                                                    CommandArgument='<%# Eval("CityId") %>'
+                                                    OnClick="btnDelete_Click" />
                                         </tr>
-
-                                    </thead>
-
-                                    <tbody>
-                            </HeaderTemplate>
-                            <ItemTemplate>
-                                <tr>
-                                    <td>
-                                        <%# Container.ItemIndex + 1 %>
-                                    </td>
-                                     <td><%#Eval("CityName")%></td>
-                                    <td><%#Eval("StateName")%></td>
-                                    
-                                    <td>
-                                        <asp:LinkButton runat="server" CommandArgument='<%#Eval("CityId") %>' CssClass="btn btn-sm btn-outline-dark" ID="btnView" OnClick="btnView_Click">View</asp:LinkButton>
-                                        <asp:LinkButton CssClass="btn btn-sm btn-outline-dark" ID="btnEdit" runat="server" OnClick="btnEdit_Click" CommandArgument='<%#Bind("CityId") %>'>Edit</asp:LinkButton>
-                                        <asp:LinkButton 
-    CssClass="btn btn-sm btn-outline-dark" 
-    ID="btnDelete" 
-    runat="server" 
-    Text="Delete" 
-    CommandArgument='<%# Eval("CityId") %>' 
-    OnClick="btnDelete_Click" />
-                                        
-
-                                </tr>
-                            </ItemTemplate>
+                                    </ItemTemplate>
 
 
-                            <FooterTemplate>
-                                </tbody>
+                                    <FooterTemplate>
+                                        </tbody>
 </table>
-                            </FooterTemplate>
+                                    </FooterTemplate>
 
-                        </asp:Repeater>
+                                </asp:Repeater>
+                 
                     </div>
                 </div>
             </div>

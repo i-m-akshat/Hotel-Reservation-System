@@ -239,6 +239,7 @@ public partial class BaseraHotelReservationSystemContext : DbContext
                 .HasMaxLength(100)
                 .IsUnicode(false);
             entity.Property(e => e.StateId).HasColumnName("StateID");
+            entity.Property(e => e.IsActive).HasColumnName("IsActive");
             entity.Property(e => e.CountryId).HasColumnName("CountryID");
             entity.HasOne(d => d.Country).WithMany(p => p.TblCities).HasForeignKey(d => d.CountryId).HasConstraintName("Fk_tbl_city_tbl_country");
             entity.HasOne(d => d.State).WithMany(p => p.TblCities)

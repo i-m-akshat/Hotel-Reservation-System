@@ -18,6 +18,7 @@ namespace Backend.Models.City_Domain
         public long? StateId { get; set; }
         public string CountryName { get; set; }
         public string StateName { get; set; }
+        public bool IsActive { get; set; }
         public virtual State? State { get; set; }
         public virtual Country? Country { get; set; }
         public virtual ICollection<User> Users { get; set; } = new List<User>();

@@ -18,12 +18,18 @@ public partial class TblCity
     /// </summary>
     public long? StateId { get; set; }
     /// <summary>
+    /// denotes whether the item is active or not 
+    /// </summary>
+    public bool IsActive { get; set; }
+    /// <summary>
     /// id of the country associated with the city
     /// </summary>
     public long? CountryId { get; set; }
     /// <summary>
     /// Navigation property- This represent the relationship between TblCity and TblState and also the virtual keyword allow for lazy loading 
     /// </summary>
+    
+   
     public virtual TblState? State { get; set; }
     /// <summary>
     /// Navigation property- This represent the relationship between TblCity and TblCountry and also the virtula keyword allows for lazy loading
