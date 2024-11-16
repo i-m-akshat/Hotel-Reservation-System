@@ -328,8 +328,7 @@
               "RelativeToolTip": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\CityRepo.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAswDIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T09:23:34.572Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T09:23:34.572Z"
             },
             {
               "$type": "Document",
@@ -339,7 +338,7 @@
               "RelativeDocumentMoniker": "Controllers\\CityController.cs",
               "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\CityController.cs",
               "RelativeToolTip": "Controllers\\CityController.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAswF0AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAswBkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T04:46:26.341Z",
               "EditorCaption": ""
@@ -354,8 +353,7 @@
               "RelativeToolTip": "..\\Backend.Services\\Implementatios\\CityService.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAArwCAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T08:05:36.392Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T08:05:36.392Z"
             },
             {
               "$type": "Document",
@@ -391,8 +389,7 @@
               "RelativeToolTip": "..\\Backend.DataAccessLayer\\Context\\Models\\TblCity.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABQAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T08:01:20.171Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T08:01:20.171Z"
             },
             {
               "$type": "Document",
@@ -404,8 +401,7 @@
               "RelativeToolTip": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\AdminRepo.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAswC0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T10:21:47.163Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T10:21:47.163Z"
             },
             {
               "$type": "Document",
@@ -417,8 +413,7 @@
               "RelativeToolTip": "..\\Backend.DataAccessLayer\\Context\\DBContext\\BaseraHotelReservationSystemContext.cs",
               "ViewState": "AgIAADwAAAAAAAAAAAAAADoAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T13:20:13.212Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T13:20:13.212Z"
             },
             {
               "$type": "Document",
@@ -430,8 +425,7 @@
               "RelativeToolTip": "..\\Backend.Models\\City_Domain\\City_Model.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAuwBQAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T14:32:00.421Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T14:32:00.421Z"
             },
             {
               "$type": "Document",

@@ -50,12 +50,21 @@ body {
     font-weight: 300;
     font-style: normal;
 }
+/*.form-control {
+    background-color: transparent !important;
+}*/
+/*.infoCard{
+    border-radius:20% !important;
+    box-shadow:0px 10px 10px #ff8e8e !important;
+    background-color:white;
+    color:black;
+}*/
+
 .btnClick {
     color: white;
     text-decoration: none;
     font-weight: bolder;
     transition: 0.5s ease-in-out;
-    
 }
 
     .btnClick:hover {

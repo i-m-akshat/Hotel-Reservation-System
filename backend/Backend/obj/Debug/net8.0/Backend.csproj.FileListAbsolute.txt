@@ -148,3 +148,11 @@ A:\asp.net Projects\HotelReservation\backend\Backend\obj\Debug\net8.0\Backend.pd
 A:\asp.net Projects\HotelReservation\backend\Backend\obj\Debug\net8.0\Backend.genruntimeconfig.cache
 A:\asp.net Projects\HotelReservation\backend\Backend\obj\Debug\net8.0\ref\Backend.dll
 A:\asp.net Projects\HotelReservation\backend\Backend\obj\Debug\net8.0\Backend.MvcApplicationPartsAssemblyInfo.cs
+A:\asp.net Projects\HotelReservation\backend\Backend\bin\Debug\net8.0\System.Net.Http.Formatting.dll
+A:\asp.net Projects\HotelReservation\backend\Backend\bin\Debug\net8.0\System.Web.Http.dll
+A:\asp.net Projects\HotelReservation\backend\Backend\bin\Debug\net8.0\System.Web.Http.Owin.dll
+A:\asp.net Projects\HotelReservation\backend\Backend\bin\Debug\net8.0\Microsoft.Owin.dll
+A:\asp.net Projects\HotelReservation\backend\Backend\bin\Debug\net8.0\Microsoft.Owin.Host.HttpListener.dll
+A:\asp.net Projects\HotelReservation\backend\Backend\bin\Debug\net8.0\Microsoft.Owin.Hosting.dll
+A:\asp.net Projects\HotelReservation\backend\Backend\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+A:\asp.net Projects\HotelReservation\backend\Backend\bin\Debug\net8.0\Owin.dll

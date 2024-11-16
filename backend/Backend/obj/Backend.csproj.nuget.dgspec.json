@@ -294,6 +294,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "microsoft.aspnet.webapi.owinselfhost": {
+              "target": "Package",
+              "version": "[5.3.0, )"
             }
           },
           "imports": [

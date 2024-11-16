@@ -101,7 +101,9 @@ body {
     margin: 0;
     text-align: var(--bs-body-text-align)
 }
-
+/*p .textTopCard {
+    
+}*/
 hr {
     border: 0;
     border-top: 1px solid;
@@ -13340,12 +13342,15 @@ screen and (-ms-high-contrast:active) {
 .sidebar {
     direction: ltr;
     max-width: 260px;
-    min-width: 260px
+    min-width: 260px;
+    
 }
 
 .sidebar,
 .sidebar-content {
     background: black;
+   /* border-top-right-radius: 20px;
+    border-top-left-radius:20px;*/
     transition: margin-left .35s ease-in-out, left .35s ease-in-out, margin-right .35s ease-in-out, right .35s ease-in-out
 }
 

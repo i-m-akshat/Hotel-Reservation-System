@@ -7,8 +7,15 @@ using Backend.Infrastructure.Repository.Interfaces;
 using Backend.Services.Implementatios;
 using Backend.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+// builder.WebHost.ConfigureKestrel(options=>{
+//    options.Listen(System.Net.IPAddress.Any, 69696);
+// });
+
 
 // Add services to the container.
 
