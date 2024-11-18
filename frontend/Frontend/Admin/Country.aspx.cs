@@ -41,6 +41,7 @@ namespace Frontend.Admin
                 var count = new Frontend.Models.Country_Model
                 {
                     CountryName = txtCountryName.Text.Trim().ToString(),
+                    IsActive= true, 
                 };
                 var encCount = _secure.Encrypt(JsonConvert.SerializeObject(count), ConfigurationManager.AppSettings["key"].ToString(), ConfigurationManager.AppSettings["iv"].ToString());
                 var res = _dao.Create(encCount).Result;

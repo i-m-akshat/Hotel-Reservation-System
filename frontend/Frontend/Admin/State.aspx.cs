@@ -47,6 +47,7 @@ namespace Frontend.Admin
                     var enc_state = _secure.Encrypt(JsonConvert.SerializeObject(state), ConfigurationManager.AppSettings["key"],ConfigurationManager.AppSettings["iv"]);
                     if (btnAddState.Text == "Add")
                     {
+                        state.IsActive = true;
                         var res = _stateDao.Create(enc_state).Result;
                         if (res != null)
                         {

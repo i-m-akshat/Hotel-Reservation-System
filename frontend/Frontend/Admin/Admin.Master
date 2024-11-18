@@ -238,7 +238,7 @@
 					</li>
 
 					<li class="sidebar-item">
-						<a class="sidebar-link">
+						<a class="sidebar-link" id="btnRole" onclick="setActive(this.parentNode, 'Role')">
               <i class="align-middle" data-feather="bar-chart-2"></i> <span class="align-middle">Roles</span>
             </a>
 					</li>

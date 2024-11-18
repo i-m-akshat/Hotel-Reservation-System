@@ -565,7 +565,7 @@ public partial class BaseraHotelReservationSystemContext : DbContext
             entity.HasKey(e => e.RoleId);
 
             entity.ToTable("tbl_Role");
-
+            entity.Property(e => e.IsActive).HasColumnName("IsActive");
             entity.Property(e => e.RoleId).HasColumnName("RoleID");
             entity.Property(e => e.CreatedDate).HasColumnType("datetime");
             entity.Property(e => e.DeletedDate).HasColumnType("datetime");

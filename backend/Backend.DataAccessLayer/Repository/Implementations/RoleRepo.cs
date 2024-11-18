@@ -32,8 +32,13 @@ namespace Backend.DataAccessLayer.Repository.Implementations
             try
             {
                 var tbl=await _context.TblRoles.FindAsync(id);
-                tbl.IsActive = false;
-                await _context.SaveChangesAsync();
+                if (tbl != null)
+                {
+                    tbl.IsActive = false;
+                    tbl.DeletedDate = DateTime.Now;
+                    await _context.SaveChangesAsync();
+                }
+                
                 return tbl;
             }
             catch (Exception ex)

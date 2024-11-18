@@ -29,7 +29,8 @@ namespace Backend.Controllers
             return NoContent();
             } else
             {
-                var enc_res = _secureService.Encrypt(JsonConvert.SerializeObject(res).ToString(), _app.enc_key, _app.enc_iv);
+                var rs = JsonConvert.SerializeObject(res).ToString();
+                var enc_res = _secureService.Encrypt(rs, _app.enc_key, _app.enc_iv);
                 return Ok(enc_res);
             }
             
@@ -37,17 +38,27 @@ namespace Backend.Controllers
         [HttpGet]
         [Route("Get")]
         public async Task<IActionResult> Get([FromQuery]string id) {
-            var dec_id=_secureService.Decrypt(id ,_app.enc_key,_app.enc_iv);
-            long _id = Convert.ToInt64(dec_id);
-            var res=await _dal.GetById(_id);
-            if (res == null) {
-
-                return NotFound();
-            }
-            else
+            try
             {
-                return Ok((_secureService.Encrypt(JsonConvert.SerializeObject(res).ToString()),_app.enc_key,_app.enc_iv));
+                var dec_id = _secureService.Decrypt(id, _app.enc_key, _app.enc_iv);
+                long _id = Convert.ToInt64(dec_id);
+                var res = await _dal.GetById(_id);
+                if (res == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    var enc_res= _secureService.Encrypt(JsonConvert.SerializeObject(res).ToString(), _app.enc_key, _app.enc_iv);
+                    return Ok(enc_res);
+                }
             }
+            catch (Exception)
+            {
+
+                throw;
+            }
+           
         }
         [HttpPost]
         [Route("Create")]

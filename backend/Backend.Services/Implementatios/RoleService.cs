@@ -18,7 +18,7 @@ namespace Backend.Services.Implementatios
         }
         public async Task<Role> Create(Role _Role)
         {
-         var res=await _roleRepo.Create(_Role.ToTblRole());
+         var res=await _roleRepo.Create(_Role.ToTblRole_Create());
             return res.ToRole();
         }
 
@@ -42,7 +42,7 @@ namespace Backend.Services.Implementatios
 
         public async Task<Role> Update(Role _Role, long id)
         {
-            var res = await _roleRepo.Update(_Role.ToTblRole(), id);
+            var res = await _roleRepo.Update(_Role.ToTblRole_Update(), id);
             return res.ToRole();
         }
     }
