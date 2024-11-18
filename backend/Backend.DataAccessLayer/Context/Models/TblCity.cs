@@ -20,7 +20,7 @@ public partial class TblCity
     /// <summary>
     /// denotes whether the item is active or not 
     /// </summary>
-    public bool IsActive { get; set; }
+    public bool? IsActive { get; set; }
     /// <summary>
     /// id of the country associated with the city
     /// </summary>

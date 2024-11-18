@@ -71,7 +71,6 @@ public partial class BaseraHotelReservationSystemContext : DbContext
             entity.ToTable("tbl_Access");
 
             entity.Property(e => e.Id)
-                .ValueGeneratedNever()
                 .HasColumnName("ID");
             entity.Property(e => e.AccessProvidedDate).HasColumnType("datetime");
             entity.Property(e => e.AccessUrl)
@@ -254,6 +253,7 @@ public partial class BaseraHotelReservationSystemContext : DbContext
             entity.ToTable("tbl_Country");
 
             entity.Property(e => e.CountryId).HasColumnName("countryId");
+            entity.Property(e => e.isActive).HasColumnName("IsActive");
             entity.Property(e => e.CountryId)
         .ValueGeneratedOnAdd()  // Enable auto-generation for CountryId
         .HasColumnName("CountryId");
@@ -740,7 +740,7 @@ public partial class BaseraHotelReservationSystemContext : DbContext
             entity.Property(e => e.StateId)
                 .ValueGeneratedOnAdd()  // Enable auto-generation for StateId
                 .HasColumnName("StateID");
-
+            entity.Property(e => e.IsActive).HasColumnName("IsActive");
             entity.Property(e => e.CountryId).HasColumnName("CountryID");
 
             entity.Property(e => e.StateName)

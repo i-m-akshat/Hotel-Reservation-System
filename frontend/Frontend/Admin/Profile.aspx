@@ -20,7 +20,7 @@
                         <div class="col-12 my-2 px-2 mx-2">
     <div class="d-flex flex-column align-items-center">
         <!-- Image and Name aligned at the start -->
-        <img class="d-flex mb-2" src="../Assets/Image/Gif/Greetings from Japan.gif" height="200" width="200" style="border-radius: 50%" />
+        <img class="d-flex mb-2" src="../Assets/Image/profileImg.jpg" height="200" width="200" style="border-radius: 50%" />
         <h3 class="text-center text-white mt-2" style="font-weight: 1000;font-size:30px">Akshat Dwivedi</h3>
         <h5 class="text-start text-white mt-1" style="font-weight: 400;font-size:20px">Software Developer</h5>
 

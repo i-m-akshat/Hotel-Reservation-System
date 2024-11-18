@@ -40,6 +40,10 @@ builder.Services.AddScoped<IStateRepo, StateRepo>();
 builder.Services.AddScoped<IStateService, StateService>();
 builder.Services.AddScoped<ICityRepo, CityRepo>();
 builder.Services.AddScoped<ICityService, CityService>();
+builder.Services.AddScoped<IRoleRepo, RoleRepo>();  
+builder.Services.AddScoped<IAccessRepo, AccessRepo>();  
+builder.Services.AddScoped<IAccessService,AccessService>();
+builder.Services.AddScoped<IRoleService,RoleService>();
 builder.Services.AddCors(options=>{
     options.AddPolicy("AllowSpecificOrigins",
     builder=>{

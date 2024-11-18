@@ -20,6 +20,7 @@ namespace Backend.DataAccessLayer.Repository.Implementations
         }
         public async Task<TblCountry> Create(TblCountry country)
         {
+            country.isActive= true; 
             await _context.TblCountries.AddAsync(country);   
             await _context.SaveChangesAsync();
             return country;
@@ -29,7 +30,8 @@ namespace Backend.DataAccessLayer.Repository.Implementations
         {
             var tblCountry=await _context.TblCountries.FindAsync(id);
             if (tblCountry != null) {
-                _context.TblCountries.Remove(tblCountry);
+                //_context.TblCountries.Remove(tblCountry);
+                tblCountry.isActive= false;
                 await _context.SaveChangesAsync();
                 return tblCountry;  
             } else { return null; }

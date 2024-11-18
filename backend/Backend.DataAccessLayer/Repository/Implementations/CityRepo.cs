@@ -22,6 +22,7 @@ namespace Backend.DataAccessLayer.Repository.Implementations
         {
             try
             {
+                city.IsActive = true;
                 await _context.TblCities.AddAsync(city);
                 await _context.SaveChangesAsync();
                 return city;

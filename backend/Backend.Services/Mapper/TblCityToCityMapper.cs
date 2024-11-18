@@ -12,6 +12,7 @@ namespace Backend.Services.Mapper
             {
                 CityId = city.CityId,
                 CityName = city.CityName,
+                IsActive= (bool)city.IsActive,
                 StateId = city.StateId,
                 CountryId = city.CountryId,
                 CountryName = city.Country.CountryName.ToString(),
@@ -24,6 +25,7 @@ namespace Backend.Services.Mapper
             {
                 CityId = city.CityId,
                 CityName = city.CityName,
+                IsActive = (bool)city.IsActive,
                 StateId = city.StateId,
                 CountryId=city.CountryId,
             };
@@ -35,6 +37,7 @@ namespace Backend.Services.Mapper
             {
                 CityName = city.CityName,
                 StateId = city.StateId,
+                IsActive = city.IsActive,
                 CountryId = city.CountryId,
             };
         }
@@ -45,7 +48,8 @@ namespace Backend.Services.Mapper
                 CityId= tblcity.CityId,
                 CityName = tblcity.CityName,
                 StateId = tblcity.StateId,
-                StateName=tblcity.State.StateName,
+                IsActive = (bool)tblcity.IsActive,
+                StateName =tblcity.State.StateName,
                 CountryId = tblcity.CountryId,
                 CountryName=tblcity.Country.CountryName,
 

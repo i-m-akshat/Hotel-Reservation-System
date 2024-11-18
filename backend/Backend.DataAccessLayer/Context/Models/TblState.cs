@@ -10,6 +10,7 @@ public partial class TblState
     public string? StateName { get; set; }
 
     public long? CountryId { get; set; }
+    public bool? IsActive { get; set; }
 
     public virtual TblCountry? Country { get; set; }
 

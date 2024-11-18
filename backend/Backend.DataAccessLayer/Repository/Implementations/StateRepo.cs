@@ -19,6 +19,7 @@ namespace Backend.DataAccessLayer.Repository.Implementations
         }
         public async Task<TblState> Create(TblState tblState)
         {
+            tblState.IsActive= true;    
             await _context.TblStates.AddAsync(tblState);
             await _context.SaveChangesAsync();
             return tblState;
@@ -26,8 +27,9 @@ namespace Backend.DataAccessLayer.Repository.Implementations
 
         public async Task<TblState> Delete(long id)
         {
-            var tblState=await _context.TblStates.FindAsync(id);
-             _context.TblStates.Remove(tblState);
+            var tblState = await _context.TblStates.FindAsync(id);
+            tblState.IsActive = false;
+            //_context.TblStates.Remove(tblState);
             await _context.SaveChangesAsync() ; return tblState;
         }
 

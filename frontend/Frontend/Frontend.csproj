@@ -93,6 +93,7 @@
     <Content Include="Admin\Dashboard.aspx" />
     <Content Include="Admin\Help.aspx" />
     <Content Include="Admin\Profile.aspx" />
+    <Content Include="Admin\Role.aspx" />
     <Content Include="Admin\Settings.aspx" />
     <Content Include="Admin\State.aspx" />
     <Content Include="Assets\Bootstrap\css\bootstrap.css" />
@@ -113,6 +114,7 @@
     <Content Include="Assets\FontAwesome\css\all.min.css" />
     <Content Include="Assets\FontAwesome\js\all.min.js" />
     <Content Include="Assets\FontAwesome\license\LICENSE.txt" />
+    <Content Include="Assets\Image\profileImg.jpg" />
     <Content Include="Assets\Image\86597a5ad777499a9289dfbc11a816a9.jpeg" />
     <Content Include="Assets\Image\About Us - Animation Concept.gif" />
     <Content Include="Assets\Image\dark.jpg" />
@@ -376,6 +378,13 @@
     </Compile>
     <Compile Include="Admin\Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Role.aspx.cs">
+      <DependentUpon>Role.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Role.aspx.designer.cs">
+      <DependentUpon>Role.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Settings.aspx.cs">
       <DependentUpon>Settings.aspx</DependentUpon>
