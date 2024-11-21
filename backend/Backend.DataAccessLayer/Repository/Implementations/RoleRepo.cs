@@ -36,7 +36,8 @@ namespace Backend.DataAccessLayer.Repository.Implementations
                 {
                     tbl.IsActive = false;
                     tbl.DeletedDate = DateTime.Now;
-                    await _context.SaveChangesAsync();
+                     _context.TblRoles.Update(tbl);
+                     _context.SaveChanges();
                 }
                 
                 return tbl;
@@ -50,7 +51,7 @@ namespace Backend.DataAccessLayer.Repository.Implementations
 
         public async Task<List<TblRole>> GetAll()
         {
-            return await _context.TblRoles.ToListAsync();
+            return await _context.TblRoles.Where(x=>x.IsActive==true).ToListAsync();
         }
 
         public async Task<TblRole> GetByID(long id)

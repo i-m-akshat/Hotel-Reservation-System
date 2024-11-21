@@ -21,4 +21,8 @@
     <ProjectReference Include="..\Backend.Services\Backend.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwRoot\img\AkshatDwivediSign.png" />
+  </ItemGroup>
+
 </Project>

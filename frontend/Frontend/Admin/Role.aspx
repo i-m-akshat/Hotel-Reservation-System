@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <script>
-    function bindCity() {
+    function bindRole() {
         /*window.location.reload();*/
        __doPostBack('<%=rptRoleList.UniqueID %>', '');
     }

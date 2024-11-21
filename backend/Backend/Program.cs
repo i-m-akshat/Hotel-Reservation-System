@@ -4,6 +4,7 @@ using Backend.DataAccessLayer.Repository.Implementations;
 using Backend.DataAccessLayer.Repository.Interfaces;
 using Backend.Infrastructure.Repository.Implementations;
 using Backend.Infrastructure.Repository.Interfaces;
+using Backend.Models.Mail_Domain;
 using Backend.Services.Implementatios;
 using Backend.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
@@ -26,8 +27,29 @@ builder.Services.AddDbContext<BaseraHotelReservationSystemContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+#region Application Settings part here
+
+
 
 builder.Services.Configure<Backend.Models.AppSettings_Domain.AppSettings>(builder.Configuration.GetSection("AppSettings"));
+
+
+
+#endregion
+#region EmailConfiguration Part here 
+
+
+
+var emailConfig = builder.Configuration.GetSection("MailSettings").Get<MailSettings>();
+builder.Services.AddSingleton(emailConfig);
+
+
+
+#endregion
+
+#region Scoped Services here 
+
+
 
 builder.Services.AddScoped<ISecureService, SecureService>();
 builder.Services.AddScoped<IUserService, UserService>();
@@ -44,12 +66,23 @@ builder.Services.AddScoped<IRoleRepo, RoleRepo>();
 builder.Services.AddScoped<IAccessRepo, AccessRepo>();  
 builder.Services.AddScoped<IAccessService,AccessService>();
 builder.Services.AddScoped<IRoleService,RoleService>();
+builder.Services.AddScoped<IMailService, MailService>();
+
+
+#endregion
+
+#region Cross-Origin Resource Sharing-- Allowing the access to request coming from  https://localhost:44395 or https://localhost:44395/Common/Default.aspx , blocking other requests
+
+
 builder.Services.AddCors(options=>{
     options.AddPolicy("AllowSpecificOrigins",
     builder=>{
 builder.WithOrigins("https://localhost:44395","https://localhost:44395/Common/Default.aspx").AllowAnyMethod().AllowAnyHeader().AllowCredentials();
     });
 });
+
+
+#endregion
 
 
 builder.Services.AddEndpointsApiExplorer();
@@ -65,7 +98,7 @@ if (app.Environment.IsDevelopment())
 }
 app.UseCors("AllowSpecificOrigins");
 app.UseHttpsRedirection();
-
+app.UseStaticFiles();
 app.UseAuthorization();
 
 app.MapControllers();
