@@ -1,9 +1,4 @@
 ﻿using Backend.DataAccessLayer.Context.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Backend.DataAccessLayer.Repository.Interfaces
 {
@@ -37,6 +32,12 @@ namespace Backend.DataAccessLayer.Repository.Interfaces
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        Task<TblAdmin> Delete(int id);
+        Task<TblAdmin> Delete(long id);
+        /// <summary>
+        /// To get the admin by its id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        Task<TblAdmin> GetById(long id);
     }
 }

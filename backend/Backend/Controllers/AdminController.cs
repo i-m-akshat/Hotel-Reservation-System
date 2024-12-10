@@ -1,4 +1,5 @@
 ﻿using Backend.Mappers;
+using Backend.Models.Admin_Domain;
 using Backend.Models.AppSettings_Domain;
 using Backend.Models.Mail_Domain;
 using Backend.Services.Interfaces;
@@ -18,21 +19,21 @@ namespace Backend.Controllers
         private readonly ISecureService _secureService;
         private readonly IMailService _mail;
         private readonly AppSettings _app;
-        public AdminController(IAdminService service,ISecureService secureservice,IOptions<AppSettings> app,IMailService mail)
+        public AdminController(IAdminService service, ISecureService secureservice, IOptions<AppSettings> app, IMailService mail)
         {
             _service = service;
             _secureService = secureservice;
-            _app=app.Value;
-            _mail=mail;
+            _app = app.Value;
+            _mail = mail;
         }
         [HttpGet("Login")]
-        public async Task<IActionResult> Login( string username)
+        public async Task<IActionResult> Login(string username)
         {
-            var admin=await _service.GetByUserName(username);
+            var admin = await _service.GetByUserName(username);
             if (admin != null)
             {
                 var enc_admin = _secureService.Encrypt(JsonConvert.SerializeObject(admin.ToAdminDTO()), _app.enc_key, _app.enc_iv);
-                
+
                 var message = @"
 <!DOCTYPE html>
 <html>
@@ -110,22 +111,97 @@ namespace Backend.Controllers
                 {
                     ToMail = "akshatdwivedi59941@gmail.com",
                     Subject = string.Format("Hi ! Welcome"),
-                    Body=message,
+                    Body = message,
                 };
 
-               bool isSuccess=await _mail.SendMailAsync(mail);
+                bool isSuccess = await _mail.SendMailAsync(mail);
                 return Ok(enc_admin);
             }
             else
             {
                 return NotFound();
             }
-            
+
         }
-        //[HttpPost]
-        //public async Task<IActionResult> Create([FromBody] int id)
-        //{
-        //    return BadRequest();
-        //}
+        [HttpPost]
+        [Route("Create")]
+        public async Task<IActionResult> Create([FromBody] string data)
+        {
+            var dec_data = _secureService.Decrypt(data, _app.enc_key, _app.enc_iv);
+            var realData = JsonConvert.DeserializeObject<Admin>(dec_data);
+            var res = _service.Create(realData).Result;
+            if (res != null)
+            {
+                return Ok(_secureService.Encrypt(JsonConvert.SerializeObject(res).ToString(), _app.enc_key, _app.enc_iv));
+
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
+        [HttpDelete]
+        [Route("Delete")]
+        public async Task<IActionResult> Delete([FromQuery] string id)
+        {
+            var dec_id = _secureService.Decrypt(id, _app.enc_key, _app.enc_iv);
+            var real = Convert.ToInt64(dec_id);
+            var res = await _service.Delete(real);
+            if (res != null)
+            {
+                return Ok(_secureService.Encrypt(JsonConvert.SerializeObject(res), _app.enc_key, _app.enc_iv));
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
+        [HttpGet]
+        [Route("GetById")]
+        public async Task<IActionResult> Get([FromQuery] string id)
+        {
+            var dec_id = _secureService.Decrypt(id, _app.enc_key, _app.enc_iv);
+            var real = Convert.ToInt64(dec_id);
+            var res=await _service.GetById(real);
+            if (res != null)
+            {
+                return Ok(_secureService.Encrypt(JsonConvert.SerializeObject(res), _app.enc_key, _app.enc_iv));
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var res= await _service.GetAll();
+            if (res != null)
+            {
+                return Ok(_secureService.Encrypt(JsonConvert.SerializeObject(res), _app.enc_key, _app.enc_iv));
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
+        [HttpPut]
+        [Route("Update")]
+        public async Task<IActionResult> Update([FromBody] string content, [FromQuery] string id)
+        {
+            var dec_id = _secureService.Decrypt(id, _app.enc_key, _app.enc_iv);
+            var real_id = Convert.ToInt64(dec_id);
+            var _deccontent=_secureService.Decrypt(content,_app.enc_key,_app.enc_iv);
+            var realData = JsonConvert.DeserializeObject<Admin>(_deccontent);
+            var res = await _service.Update(realData, real_id);
+            if (res != null)
+            {
+                return Ok(_secureService.Encrypt(JsonConvert.SerializeObject(res), _app.enc_key, _app.enc_iv));
+            }
+            else
+            {
+                return BadRequest();
+            }
+        }
     }
 }

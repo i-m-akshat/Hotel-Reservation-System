@@ -39,10 +39,13 @@ namespace Backend.Models.Admin_Domain
         public DateTime? DeletedDate { get; set; }
 
         public long? CountryId { get; set; }
+        public string? CountryName { get; set; }
 
         public long? StateId { get; set; }
+        public string StateName { get; set; }
 
         public long? CityId { get; set; }
+        public string CityName { get; set; }
 
         public virtual AdminSession? CreatedbyNavigation { get; set; }
 

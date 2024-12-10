@@ -38,6 +38,12 @@ namespace Backend.Services.Interfaces
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        Task<Admin> Delete(int id);
+        Task<Admin> Delete(long id);
+        /// <summary>
+        /// To get the admin by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        Task<Admin> GetById(long id);
     }
 }

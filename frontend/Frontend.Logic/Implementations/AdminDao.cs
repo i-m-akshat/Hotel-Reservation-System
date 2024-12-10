@@ -1,4 +1,5 @@
 ﻿using Frontend.Logic.Interfaces;
+using Frontend.Logic.Utility;
 using Frontend.Models;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,65 @@ namespace Frontend.Logic.Implementations
     {
        
         private readonly string BaseUrl = "https://localhost:6969/api/Admin/";
+        private readonly static IRestUtility<string> _hitman=new RestUtility<string>(); 
+
+        public async Task<string> Create(string Admin)
+        {
+            try
+            {
+                var res = await _hitman.PostAsync(BaseUrl, "Create", Admin);
+                return res; 
+                
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
+        public async Task<string> Delete(string id)
+        {
+            try
+            {
+                var res = await _hitman.DeleteAsync(BaseUrl, "Delete", id);
+                return res;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
+        public async Task<string> Get(string id)
+        {
+            try
+            {
+                var res = await _hitman.GetByIDAsync(BaseUrl, "/GetById", id);
+                return res;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
+        public async Task<string> GetAll()
+        {
+            try
+            {
+                var res = await _hitman.GetAsync(BaseUrl, "");
+                return res;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         //public AdminDao(ISecureDAO secureDao)
         //{
         //    _secureDAO = secureDao;
@@ -36,6 +96,12 @@ namespace Frontend.Logic.Implementations
                     return null;
                 }
             }
+        }
+
+        public async Task<string> Update(string Admin, string id)
+        {
+            var res=await _hitman.PutAsync(BaseUrl, "Update",Admin, id);
+            return res;
         }
     }
 }

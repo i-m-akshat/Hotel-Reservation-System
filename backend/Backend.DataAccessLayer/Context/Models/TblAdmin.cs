@@ -40,6 +40,11 @@ public partial class TblAdmin
     public long? StateId { get; set; }
 
     public long? CityId { get; set; }
+    public virtual TblCity? City { get; set; }
+
+    public virtual TblCountry? Country { get; set; }
+
+    public virtual TblState? State { get; set; }
 
     public virtual TblAdminSession? CreatedbyNavigation { get; set; }
 

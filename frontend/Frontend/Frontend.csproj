@@ -88,6 +88,8 @@
   <ItemGroup>
     <Content Include="AboutUs.aspx" />
     <Content Include="AdminLogin.aspx" />
+    <Content Include="Admin\Access.aspx" />
+    <Content Include="Admin\Admin.aspx" />
     <Content Include="Admin\City.aspx" />
     <Content Include="Admin\Country.aspx" />
     <Content Include="Admin\Dashboard.aspx" />
@@ -336,6 +338,20 @@
     </Compile>
     <Compile Include="AdminLogin.aspx.designer.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Access.aspx.cs">
+      <DependentUpon>Access.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Access.aspx.designer.cs">
+      <DependentUpon>Access.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Admin.Master.cs">
       <DependentUpon>Admin.Master</DependentUpon>

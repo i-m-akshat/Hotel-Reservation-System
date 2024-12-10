@@ -16,22 +16,32 @@ namespace Backend.Services.Implementatios
         }
         public async Task<Admin> Create(Admin admin)
         {
-            throw new NotImplementedException();
+            var res=await _repo.Create(admin.TotblAdmin());
+            return res.ToAdmin();
         }
 
-        public Task<Admin> Update(Admin Admin, long id)
+        public async Task<Admin> GetById(long id)
         {
-            throw new NotImplementedException();
+            var res=await _repo.GetById(id);
+            return res.ToAdmin();   
         }
 
-        Task<Admin> IAdminService.Delete(int id)
+        public async Task<Admin> Update(Admin Admin, long id)
         {
-            throw new NotImplementedException();
+            var res = await _repo.Update(id, Admin.TotblAdmin());
+            return res.ToAdmin();
         }
 
-        Task<List<Admin>> IAdminService.GetAll()
+        async Task<Admin> IAdminService.Delete(long id)
         {
-            throw new NotImplementedException();
+            var res = await _repo.Delete(id);
+            return res.ToAdmin();
+        }
+
+        async Task<List<Admin>> IAdminService.GetAll()
+        {
+            var res = await _repo.GetAll();
+            return res.Select(x => x.ToAdminWithCountryAndAllNames()).ToList();
         }
 
         async Task<Admin> IAdminService.GetByUserName(string username)

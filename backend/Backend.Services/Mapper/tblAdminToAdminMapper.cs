@@ -34,5 +34,42 @@ namespace Backend.Services.Mapper
                 UpdatedDate = tblAdmin.UpdatedDate
             };
         }
+        public static TblAdmin TotblAdmin(this Admin admin)
+        {
+            return new TblAdmin
+            {
+                Adminname=admin.Adminname,
+                FullName=admin.FullName,
+                Address=admin.Address,
+                StateId=admin.StateId,
+                CountryId=admin.CountryId,
+                CityId=admin.CityId,
+                Isactive=admin.Isactive,
+                Image=admin.Image,
+                PhoneNumber=admin.PhoneNumber,
+                EmailId=admin.EmailId,
+                Password=admin.Password
+            };
+        }
+        public static Admin ToAdminWithCountryAndAllNames(this TblAdmin admin)
+        {
+            return new Admin
+            {
+                Adminname = admin.Adminname,
+                FullName = admin.FullName,
+                Address = admin.Address,
+                StateId = admin.StateId,
+                CountryId = admin.CountryId,
+                CityId = admin.CityId,
+                Isactive = admin.Isactive,
+                Image = admin.Image,
+                PhoneNumber = admin.PhoneNumber,
+                EmailId = admin.EmailId,
+                Password = admin.Password,
+                CountryName=admin.Country.CountryName,
+                StateName=admin.State.StateName,
+                CityName=admin.City.CityName,
+            };
+        }
     }
 }

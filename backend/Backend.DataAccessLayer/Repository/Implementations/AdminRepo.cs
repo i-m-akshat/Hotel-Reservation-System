@@ -26,7 +26,7 @@ namespace Backend.DataAccessLayer.Repository.Implementations
             return tblAdmin;
         }
 
-        public async Task<TblAdmin> Delete(int id)
+        public async Task<TblAdmin> Delete(long id)
         {
             var admin=await _context.TblAdmins.FindAsync(id);
             admin.Isactive = false;
@@ -37,7 +37,12 @@ namespace Backend.DataAccessLayer.Repository.Implementations
 
         public async Task<List<TblAdmin>> GetAll()
         {
-           return await _context.TblAdmins.ToListAsync();
+           return await _context.TblAdmins.Include(x=>x.Country).Include(x=>x.City).Include(x=>x.State).ToListAsync();
+        }
+
+        public async Task<TblAdmin> GetById(long id)
+        {
+           return await _context.TblAdmins.Include(x => x.Country).Include(x => x.City).Include(x => x.State).Where(x=>x.AdminId==id).FirstOrDefaultAsync();
         }
 
         public async Task<TblAdmin> GetByUserName(string username)

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessModel.cs" />
     <Compile Include="Admin.cs" />
     <Compile Include="City_Model.cs" />
     <Compile Include="Class1.cs" />
