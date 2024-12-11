@@ -6,8 +6,10 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Web;
+using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -20,6 +22,14 @@ namespace Frontend.Admin
         private static readonly IStateDAO _stateDao = new StateDao();
         private static readonly ISecureDAO _secure = new SecureDao();
         private static readonly ICityDao _cityDao = new CityDao();
+        private static readonly string[] allowedImgTypes = { ".jpg", ".jpeg", ".png" };
+        public class ErrorResponse
+        {
+            public string Type { get; set; }
+            public string Title { get; set; }
+            public int Status { get; set; }
+            public string TraceId { get; set; }
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!IsPostBack)
@@ -27,17 +37,175 @@ namespace Frontend.Admin
                 BindCountry();
                 BindState();
                 BindCity();
+                
             }
         }
+        private bool validate(out string message)
+        {
+            message = string.Empty;
+            if (txtAddress.Text == null) {
+                message += "Please enter the address";
+            }
+            if (txtAdminName.Text == null)
+            {
+                message += "Please enter the admin name";
+            }
+            if (txtEmailId.Text == null)
+            {
+                message += "Please enter the email id";
 
+            }
+            if (txtFullName.Text == null)
+            {
+                message += "please enter the full name";
+
+            }
+            if (txtMobileNo.Text == null)
+            {
+                message += "Please enter the mobile no";
+            }
+            if (!btnImgUpload.HasFile)
+            {
+                message += "please select the image in order to upload it ";
+            }
+            if (ddlCity.SelectedIndex == 0)
+            {
+                message += "please select the city";
+
+            }
+            if (ddlState.SelectedIndex == 0)
+            {
+                message += "please select the state";
+            }
+            if (ddlCountry.SelectedIndex == 0)
+            {
+                message += "please select the country";
+            }
+            if (txtMobileNo.Text == string.Empty)
+            {
+                message += "please enter the mobile no ";
+
+            }
+            if (txtEmailId.Text == string.Empty)
+            {
+                message += "Please enter the email id ";
+            }
+            if (message != string.Empty)
+            {
+                return false;
+            }
+
+            else
+            {
+                return true;
+            }
+        }
+        protected void txtName_LostFocus(object sender, EventArgs e)
+        {
+            var enc_user = _admin.Login(txtAdminName.Text).Result;
+            //var des_user = JsonConvert.DeserializeObject<ErrorResponse>(enc_user);
+           
+            if (enc_user != null&&!enc_user.Contains("Not Found"))
+            {
+                var user = _secure.Decrypt(enc_user, ConfigurationManager.AppSettings["key"].ToString(), ConfigurationManager.AppSettings["iv"].ToString());
+                Admin_model _admin = JsonConvert.DeserializeObject<Admin_model>(user);
+                if (_admin.FullName != null)
+                {
+                    
+
+                    string script= $"alertError('bro not allowed !', 'bro use any other name but not this', 'Ok Bhai ! ');";
+                    ScriptManager.RegisterStartupScript(this, GetType(), "validateAdminname", script, true);
+                    txtAdminName.Text = string.Empty;
+                    //lblAdminName_message.Text = "This name have been already taken. Please use any other name";
+                }
+
+            }
+
+        }
         protected void btnAddAdmin_Click(object sender, EventArgs e)
         {
+            string message = string.Empty;
+            if(validate(out message)){
+                if (btnAddAdmin.Text == "Add")
+                {
+                    Admin_model model = new Admin_model
+                    {
+                        Address=txtAddress.Text.Trim().ToString(),
+                        FullName=txtFullName.Text.Trim().ToString(),
+                        Adminname=txtAdminName.Text.Trim().ToString(),
+                        PhoneNumber=txtMobileNo.Text.Trim().ToString(),
+                        EmailId=txtEmailId.Text.Trim().ToString(),
+                        CityId=Convert.ToInt64(ddlCity.SelectedItem.Value),
+                        StateId= Convert.ToInt64(ddlState.SelectedItem.Value),
+                        CountryId= Convert.ToInt64(ddlCountry.SelectedItem.Value)
+                    };
+                    if (btnImgUpload.HasFile)
+                    {
+                        string FileExtension = System.IO.Path.GetExtension(btnImgUpload.FileName).ToLower();
+                        if (!allowedImgTypes.Contains(FileExtension))
+                        {
+                            string script = $"alertError_Custom('bhai image hi upload krna h !', 'sirf .png ya .jpg ya .jpeg ka hi use kro be', 'Ok Bhai ! ');";
+                            //Response.Write($"<script>alert('{Message}')</script>");
+                            ScriptManager.RegisterStartupScript(this, GetType(), "imgvalidation", script, true);
+                        }
+                        else
+                        {
+                            var res = imgToByte(btnImgUpload);
+                            if (res != null)
+                            {
+                                model.Image = res;
+                            }
+                        }
+                    }
+                    if (model != null)
+                    {
+                        string json = JsonConvert.SerializeObject(model);
+                        var enc_admin = _secure.Encrypt(json, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                        var res=_admin.Create(enc_admin).Result;
 
+                        if (res != null)
+                        {
+                            var dec_res = _secure.Decrypt((res), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                            var _Resmodel = JsonConvert.DeserializeObject<Admin_model>(dec_res);
+                            if (_Resmodel != null)
+                            {
+                                string script = $"alertSuccess('Success', 'Created Successfully', 'Ok Bhai ! ');";
+                                //Response.Write($"<script>alert('{Message}')</script>");
+                                ScriptManager.RegisterStartupScript(this, GetType(), "Success", script, true);
+                                clear();
+                            }
+                        }
+                    }
+                }
+                else if (btnAddAdmin.Text == "Update")
+                {
+
+                }
+            }
+            else if (message != string.Empty)
+            {
+                string script = $"alertError_Custom('Poora bharo yar?', '{message}', 'Ok Bhai ! ');";
+                //Response.Write($"<script>alert('{Message}')</script>");
+                ScriptManager.RegisterStartupScript(this, GetType(), "validation", script, true);
+            }
+            
         }
 
         protected void btnClear_Click(object sender, EventArgs e)
         {
             
+        }
+        /// <summary>
+        /// function to convert the uploaded image into byte[] array
+        /// </summary>
+        /// <returns></returns>
+        private byte[] imgToByte(FileUpload btnImgUpload)
+        {
+            using (var ms = new MemoryStream())
+            {
+                btnImgUpload.FileContent.CopyTo(ms);
+                return ms.ToArray();
+            }
         }
         public void BindCountry()
         {
@@ -83,7 +251,7 @@ namespace Frontend.Admin
             var dec_res = _secure.Decrypt(res, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
             if (dec_res != string.Empty)
             {
-                cityList = JsonConvert.DeserializeObject<List<City_Model>>(dec_res);]
+                cityList = JsonConvert.DeserializeObject<List<City_Model>>(dec_res);
                 cityList.Insert(0, new City_Model { CityId = 0, CityName = "Please Select the City" });
                 if (cityList != null)
                 {
@@ -103,6 +271,7 @@ namespace Frontend.Admin
             txtEmailId.Text=string.Empty;
             txtFullName.Text = string.Empty;
             txtMobileNo.Text = string.Empty;
+            img_AdminIMG.Visible = false;
             
         }
         private void LoadData(bool editable,Admin_model _model)
@@ -118,11 +287,15 @@ namespace Frontend.Admin
             txtEmailId.Enabled = editable;
             txtFullName.Enabled=editable;
             txtMobileNo.Enabled = editable;
+            btnImgUpload.Enabled = editable;
             if (editable)
             {
                 btnAddAdmin.Text = "Update";
-                
-
+                img_AdminIMG.Visible = true;
+            }
+            else
+            {
+                img_AdminIMG.Visible = false;
             }
         }
 

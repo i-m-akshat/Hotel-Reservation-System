@@ -6,7 +6,7 @@ namespace Backend.DataAccessLayer.Context.Models;
 public partial class TblAdmin
 {
     public long AdminId { get; set; }
-
+        
     public string? Adminname { get; set; }
 
     public string? FullName { get; set; }

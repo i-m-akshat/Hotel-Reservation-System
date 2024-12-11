@@ -14,18 +14,37 @@ namespace Backend.DataAccessLayer.Repository.Implementations
     public class AdminRepo : IAdminRepo
     {
         private  readonly BaseraHotelReservationSystemContext _context;
+        private readonly char[] characters = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+    'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
         public AdminRepo(BaseraHotelReservationSystemContext context)
         {
             _context = context; 
         }
         public async Task<TblAdmin> Create(TblAdmin tblAdmin)
         {
-
+            if (tblAdmin != null)
+            {
+                tblAdmin.Isactive = true;
+                tblAdmin.Password = GenPwd(tblAdmin.FullName, tblAdmin.PhoneNumber);
+            }
             await _context.TblAdmins.AddAsync(tblAdmin);
             await _context.SaveChangesAsync();
             return tblAdmin;
         }
-
+        /// <summary>
+        /// To generate random password
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        private string GenPwd(string FullName,string mobileNo)
+        {
+            string[] _arrName = FullName.Split(" ");
+            string first=_arrName[0].Substring(0, 2);
+            string second = _arrName[1].Substring(0, 2);
+            string trimmedMobile = mobileNo.Substring(0, 5);
+            string finalPass = first + second + "@" + trimmedMobile;
+            return finalPass;
+        }
         public async Task<TblAdmin> Delete(long id)
         {
             var admin=await _context.TblAdmins.FindAsync(id);

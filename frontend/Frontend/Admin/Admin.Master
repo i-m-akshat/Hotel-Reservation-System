@@ -249,7 +249,7 @@
             </a>
 					</li>
 							<li class="sidebar-item">
-			<a class="sidebar-link" >
+			<a class="sidebar-link" href="Admin.aspx" id="btnAdmin" onclick="setActive(this.parentNode, 'Admin')">
   <i class="align-middle" data-feather="map"></i> <span class="align-middle">Admin</span>
 </a>
 		</li>

@@ -8,6 +8,9 @@
             /*window.location.reload();*/
             __doPostBack('<%=rptAdminList.UniqueID %>', '');
         }
+        function OnBlur() {
+            document.getElementById('<%=lnkHidden.ClientID %>').click();
+        };
     </script>
     <div class="col-md-12">
         <div class="row justify-content-between align-items-stretch">
@@ -19,8 +22,10 @@
                     <div class="card-body">
                         <div class="col-12" style="font-size: 12px">
                             <div class="form-floating mb-3" style="background: none">
-                                <asp:TextBox ID="txtAdminName" runat="server" CssClass="form-control form-control-sm" placeholder="Please enter the admin Name "></asp:TextBox>
+                                <asp:TextBox ID="txtAdminName" runat="server" onblur="OnBlur();" CssClass="form-control form-control-sm" placeholder="Please enter the admin Name "></asp:TextBox>
                                 <label for="txtAdminName">Admin Name</label>
+                                <asp:LinkButton id="lnkHidden" runat="server" OnClick="txtName_LostFocus"></asp:LinkButton>
+                                <asp:Label ID="lblAdminName_message" runat="server" ForeColor="#ff3300"></asp:Label>
                             </div>
                             <div class="form-floating mb-3" style="background: none">
                                 <asp:TextBox ID="txtFullName" runat="server" CssClass="form-control form-control-sm" placeholder="Please enter the Full Name "></asp:TextBox>
@@ -31,7 +36,8 @@
                                 <label for="txtAddress">Address</label>
                             </div>
                              <div class="form-floating mb-3" style="background: none">
-     <asp:Image ID="img_AdminIMG" runat="server" CssClass="form-control form-control-sm" placeholder="Please choose one image" />
+                                 <asp:FileUpload ID="btnImgUpload" runat="server" CssClass="form-control form-control-sm" placeholder="Please select any image" />
+     <asp:Image ID="img_AdminIMG" runat="server" Visible="false" CssClass="form-control form-control-sm" />
      <label for="img_AdminIMG">Image</label>
  </div>
                                                         <div class="form-floating mb-3" style="background: none">

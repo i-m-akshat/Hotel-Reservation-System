@@ -80,49 +80,12 @@
   },
   {
     "ContainingType": "Backend.Controllers.AdminController",
-    "Method": "Get",
-    "RelativePath": "api/Admin",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Backend.Controllers.AdminController",
     "Method": "GetAll",
     "RelativePath": "api/Admin",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Backend.Controllers.AdminController",
-    "Method": "Update",
-    "RelativePath": "api/Admin",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "content",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "id",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
     "ReturnTypes": []
   },
   {
@@ -159,6 +122,22 @@
   },
   {
     "ContainingType": "Backend.Controllers.AdminController",
+    "Method": "Get",
+    "RelativePath": "api/Admin/GetById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.AdminController",
     "Method": "Login",
     "RelativePath": "api/Admin/Login",
     "HttpMethod": "GET",
@@ -167,6 +146,27 @@
     "Parameters": [
       {
         "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.AdminController",
+    "Method": "Update",
+    "RelativePath": "api/Admin/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "content",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
         "Type": "System.String",
         "IsRequired": false
       }
