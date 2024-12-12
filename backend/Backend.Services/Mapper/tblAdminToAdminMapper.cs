@@ -55,12 +55,13 @@ namespace Backend.Services.Mapper
         {
             return new Admin
             {
+                AdminId=admin.AdminId,
                 Adminname = admin.Adminname,
                 FullName = admin.FullName,
                 Address = admin.Address,
-                StateId = admin.StateId,
-                CountryId = admin.CountryId,
-                CityId = admin.CityId,
+                StateId = admin.StateId != null ? admin.StateId : 0,
+                CountryId = admin.CountryId!=null?admin.CountryId:0,
+                CityId = admin.CityId != null ? admin.CityId: 0,
                 Isactive = admin.Isactive,
                 Image = admin.Image,
                 PhoneNumber = admin.PhoneNumber,

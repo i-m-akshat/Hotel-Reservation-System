@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessModel.cs" />
-    <Compile Include="Admin.cs" />
+    <Compile Include="Admin_Model.cs" />
     <Compile Include="City_Model.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Country_Model.cs" />

@@ -37,7 +37,7 @@
                             </div>
                              <div class="form-floating mb-3" style="background: none">
                                  <asp:FileUpload ID="btnImgUpload" runat="server" CssClass="form-control form-control-sm" placeholder="Please select any image" />
-     <asp:Image ID="img_AdminIMG" runat="server" Visible="false" CssClass="form-control form-control-sm" />
+     <asp:Image ID="img_AdminIMG" runat="server" Visible="false" Height="250" Width="250" CssClass="form-control form-control-sm" />
      <label for="img_AdminIMG">Image</label>
  </div>
                                                         <div class="form-floating mb-3" style="background: none">
@@ -76,8 +76,8 @@
                         <h5 class="card-title mb-0">Admin List</h5>
                     </div>
                     <div class="card-body">
-
-                        <asp:Repeater ID="rptAdminList" runat="server">
+                        <div class="table-responsive">
+                                                    <asp:Repeater ID="rptAdminList" runat="server">
                             <HeaderTemplate>
                                 <table class="table table-responsive table-hover table-striped">
                                     <thead>
@@ -111,12 +111,11 @@
                                     <td><%#Eval("CityName")%></td>
                                     <td><%#Eval("StateName")%></td>
                                     <td><%#Eval("CountryName")%></td>
-                                    <td><%#Eval("IsActive") %></td>
                                     <td>
-                                        <asp:LinkButton runat="server" CommandArgument='<%#Eval("AdminId") %>' CssClass="btn btn-sm btn-outline-dark" ID="btnView" OnClick="btnView_Click">View</asp:LinkButton>
-                                        <asp:LinkButton CssClass="btn btn-sm btn-outline-dark" ID="btnEdit" runat="server" OnClick="btnEdit_Click" CommandArgument='<%#Bind("AdminId") %>'>Edit</asp:LinkButton>
+                                        <asp:LinkButton runat="server" CommandArgument='<%#Eval("AdminId") %>' CssClass="btn btn-sm btn-outline-dark my-2" ID="btnView" OnClick="btnView_Click">View</asp:LinkButton>
+                                        <asp:LinkButton CssClass="btn btn-sm btn-outline-dark my-2" ID="btnEdit" runat="server" OnClick="btnEdit_Click" CommandArgument='<%#Bind("AdminId") %>'>Edit</asp:LinkButton>
                                         <asp:LinkButton
-                                            CssClass="btn btn-sm btn-outline-dark"
+                                            CssClass="btn btn-sm btn-outline-dark my-2"
                                             ID="btnDelete"
                                             runat="server"
                                             Text="Delete"
@@ -132,6 +131,8 @@
                             </FooterTemplate>
 
                         </asp:Repeater>
+                        </div>
+                       
 
                     </div>
                 </div>

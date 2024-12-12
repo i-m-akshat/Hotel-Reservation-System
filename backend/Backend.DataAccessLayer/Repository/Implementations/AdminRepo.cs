@@ -56,7 +56,7 @@ namespace Backend.DataAccessLayer.Repository.Implementations
 
         public async Task<List<TblAdmin>> GetAll()
         {
-           return await _context.TblAdmins.Include(x=>x.Country).Include(x=>x.City).Include(x=>x.State).ToListAsync();
+           return await _context.TblAdmins.Where(x=>x.Isactive==true).Include(x => x.City).Include(x => x.State).Include(x=>x.Country).ToListAsync();
         }
 
         public async Task<TblAdmin> GetById(long id)
@@ -74,8 +74,8 @@ namespace Backend.DataAccessLayer.Repository.Implementations
             var tbl_Admin = await _context.TblAdmins.FindAsync(id);
             if (tbl_Admin != null)
             {
-                tbl_Admin.AdminId=tblAdmin.AdminId!=null
-                    ?tblAdmin.AdminId : tbl_Admin.AdminId;
+                //tbl_Admin.AdminId=tblAdmin.AdminId!=null
+                //    ?tblAdmin.AdminId : tbl_Admin.AdminId;
                 tbl_Admin.Address=tblAdmin.Address!=null?tblAdmin.Address.ToString() : tblAdmin.Address;
                 tbl_Admin.PhoneNumber=tblAdmin.PhoneNumber!=null?tblAdmin.PhoneNumber:tbl_Admin.PhoneNumber;
                 tbl_Admin.UpdatedBy=tblAdmin.UpdatedBy!=null?tblAdmin.UpdatedBy
@@ -89,7 +89,7 @@ namespace Backend.DataAccessLayer.Repository.Implementations
                 tbl_Admin.EmailId=tblAdmin.EmailId!=null?tblAdmin.EmailId:tbl_Admin.EmailId;
                 tbl_Admin.Password=tblAdmin.Password!=null?tblAdmin.Password:tbl_Admin.Password;
             }
-             _context.TblAdmins.Update(tblAdmin);
+             //_context.TblAdmins.Update(tblAdmin);
             await _context.SaveChangesAsync();
             return tblAdmin;
         }

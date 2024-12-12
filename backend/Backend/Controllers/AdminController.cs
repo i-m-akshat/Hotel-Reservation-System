@@ -157,7 +157,7 @@ namespace Backend.Controllers
             }
         }
         [HttpGet]
-        [Route("GetById")]
+        [Route("Get")]
         public async Task<IActionResult> Get([FromQuery] string id)
         {
             var dec_id = _secureService.Decrypt(id, _app.enc_key, _app.enc_iv);
@@ -189,19 +189,28 @@ namespace Backend.Controllers
         [Route("Update")]
         public async Task<IActionResult> Update([FromBody] string content, [FromQuery] string id)
         {
-            var dec_id = _secureService.Decrypt(id, _app.enc_key, _app.enc_iv);
-            var real_id = Convert.ToInt64(dec_id);
-            var _deccontent=_secureService.Decrypt(content,_app.enc_key,_app.enc_iv);
-            var realData = JsonConvert.DeserializeObject<Admin>(_deccontent);
-            var res = await _service.Update(realData, real_id);
-            if (res != null)
+            try
             {
-                return Ok(_secureService.Encrypt(JsonConvert.SerializeObject(res), _app.enc_key, _app.enc_iv));
+                var dec_id = _secureService.Decrypt(id, _app.enc_key, _app.enc_iv);
+                var real_id = Convert.ToInt64(dec_id);
+                var _deccontent = _secureService.Decrypt(content, _app.enc_key, _app.enc_iv);
+                var realData = JsonConvert.DeserializeObject<Admin>(_deccontent);
+                var res = await _service.Update(realData, real_id);
+                if (res != null)
+                {
+                    return Ok(_secureService.Encrypt(JsonConvert.SerializeObject(res), _app.enc_key, _app.enc_iv));
+                }
+                else
+                {
+                    return BadRequest();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                return BadRequest();
+
+                throw;
             }
+           
         }
     }
 }

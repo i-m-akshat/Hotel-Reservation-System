@@ -49,7 +49,7 @@ namespace Frontend.Logic.Implementations
         {
             try
             {
-                var res = await _hitman.GetByIDAsync(BaseUrl, "/GetById", id);
+                var res = await _hitman.GetByIDAsync(BaseUrl, "Get", id);
                 return res;
             }
             catch (Exception ex)
@@ -100,7 +100,7 @@ namespace Frontend.Logic.Implementations
 
         public async Task<string> Update(string Admin, string id)
         {
-            var res=await _hitman.PutAsync(BaseUrl, "Update",Admin, id);
+            var res=await _hitman.PutAsync(BaseUrl, "Update",id, Admin);
             return res;
         }
     }

@@ -12,6 +12,9 @@ using System.Web;
 using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
+using System.Drawing;
+using System.Web.Services;
 
 namespace Frontend.Admin
 {
@@ -22,7 +25,7 @@ namespace Frontend.Admin
         private static readonly IStateDAO _stateDao = new StateDao();
         private static readonly ISecureDAO _secure = new SecureDao();
         private static readonly ICityDao _cityDao = new CityDao();
-        private static readonly string[] allowedImgTypes = { ".jpg", ".jpeg", ".png" };
+        private static readonly string[] allowedImgTypes = {  ".png" };//".jpg", ".jpeg",
         public class ErrorResponse
         {
             public string Type { get; set; }
@@ -34,10 +37,15 @@ namespace Frontend.Admin
         {
             if(!IsPostBack)
             {
+                BindAdmins();
                 BindCountry();
                 BindState();
                 BindCity();
                 
+            }
+            else if (IsPostBack)
+            {
+                BindAdmins();
             }
         }
         private bool validate(out string message)
@@ -64,7 +72,7 @@ namespace Frontend.Admin
             {
                 message += "Please enter the mobile no";
             }
-            if (!btnImgUpload.HasFile)
+            if (!btnImgUpload.HasFile && ViewState["AdminID"]==null)
             {
                 message += "please select the image in order to upload it ";
             }
@@ -144,7 +152,7 @@ namespace Frontend.Admin
                         string FileExtension = System.IO.Path.GetExtension(btnImgUpload.FileName).ToLower();
                         if (!allowedImgTypes.Contains(FileExtension))
                         {
-                            string script = $"alertError_Custom('bhai image hi upload krna h !', 'sirf .png ya .jpg ya .jpeg ka hi use kro be', 'Ok Bhai ! ');";
+                            string script = $"alertError_Custom('bhai image hi upload krna h !', 'sirf .png  ka hi use kro be', 'Ok Bhai ! ');";
                             //Response.Write($"<script>alert('{Message}')</script>");
                             ScriptManager.RegisterStartupScript(this, GetType(), "imgvalidation", script, true);
                         }
@@ -179,7 +187,56 @@ namespace Frontend.Admin
                 }
                 else if (btnAddAdmin.Text == "Update")
                 {
+                    Admin_model model = new Admin_model
+                    {
+                        Address = txtAddress.Text.Trim().ToString(),
+                        FullName = txtFullName.Text.Trim().ToString(),
+                        Adminname = txtAdminName.Text.Trim().ToString(),
+                        PhoneNumber = txtMobileNo.Text.Trim().ToString(),
+                        EmailId = txtEmailId.Text.Trim().ToString(),
+                        CityId = Convert.ToInt64(ddlCity.SelectedItem.Value),
+                        StateId = Convert.ToInt64(ddlState.SelectedItem.Value),
+                        CountryId = Convert.ToInt64(ddlCountry.SelectedItem.Value)
+                    };
+                    if (btnImgUpload.HasFile)
+                    {
+                        string FileExtension = System.IO.Path.GetExtension(btnImgUpload.FileName).ToLower();
+                        if (!allowedImgTypes.Contains(FileExtension))
+                        {
+                            string script = $"alertError_Custom('bhai image hi upload krna h !', 'sirf .png  ka hi use kro be', 'Ok Bhai ! ');";
+                            //Response.Write($"<script>alert('{Message}')</script>");
+                            ScriptManager.RegisterStartupScript(this, GetType(), "imgvalidation", script, true);
+                        }
+                        else
+                        {
+                            var res = imgToByte(btnImgUpload);
+                            if (res != null)
+                            {
+                                model.Image = res;
+                            }
+                        }
+                    }
+                    if (model != null)
+                    {
+                        string json = JsonConvert.SerializeObject(model);
+                        var enc_admin = _secure.Encrypt(json, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                        long id = Convert.ToInt64(ViewState["AdminID"]);
+                        var enc_id = _secure.Encrypt(id.ToString(), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                        var res = _admin.Update(enc_admin,enc_id).Result;
 
+                        if (res != null)
+                        {
+                            var dec_res = _secure.Decrypt((res), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                            var _Resmodel = JsonConvert.DeserializeObject<Admin_model>(dec_res);
+                            if (_Resmodel != null)
+                            {
+                                string script = $"alertSuccess('Success', 'Updated Successfully', 'Ok Bhai ! ');";
+                                //Response.Write($"<script>alert('{Message}')</script>");
+                                ScriptManager.RegisterStartupScript(this, GetType(), "Success", script, true);
+                                clear();
+                            }
+                        }
+                    }
                 }
             }
             else if (message != string.Empty)
@@ -188,12 +245,13 @@ namespace Frontend.Admin
                 //Response.Write($"<script>alert('{Message}')</script>");
                 ScriptManager.RegisterStartupScript(this, GetType(), "validation", script, true);
             }
+            BindAdmins();
             
         }
 
         protected void btnClear_Click(object sender, EventArgs e)
         {
-            
+            clear();
         }
         /// <summary>
         /// function to convert the uploaded image into byte[] array
@@ -264,6 +322,21 @@ namespace Frontend.Admin
                 }
             }
         }
+        public void BindAdmins()
+        {
+            List<Admin_model> _list = new List<Admin_model>();
+            var res = _admin.GetAll().Result;
+            var dec_res = _secure.Decrypt(res, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+            if (dec_res != string.Empty)
+            {
+                var serAdmin = JsonConvert.DeserializeObject<List<Admin_model>>(dec_res);
+                if(serAdmin != null)
+                {
+                    rptAdminList.DataSource = serAdmin;
+                    rptAdminList.DataBind();
+                }
+            }
+        }
         private void clear()
         {
             txtAddress.Text = string.Empty;
@@ -272,15 +345,26 @@ namespace Frontend.Admin
             txtFullName.Text = string.Empty;
             txtMobileNo.Text = string.Empty;
             img_AdminIMG.Visible = false;
+            ddlCity.SelectedIndex = 0;
+            ddlState.SelectedIndex = 0;
+            ddlCountry.SelectedIndex = 0;
+            txtAddress.Enabled = txtAdminName.Enabled = txtEmailId.Enabled = txtFullName.Enabled = txtMobileNo.Enabled = ddlCountry.Enabled = ddlCity.Enabled = ddlState.Enabled
+                = btnImgUpload.Enabled = btnImgUpload.Visible = true;
             
         }
         private void LoadData(bool editable,Admin_model _model)
         {
+            BindCity();
+            BindCountry();
+            BindState();
             txtAddress.Text = _model.Address;
             txtAdminName.Text = _model.Adminname;
             txtEmailId.Text=_model.EmailId;
             txtFullName.Text=_model.FullName;
             txtMobileNo.Text = _model.PhoneNumber;
+            ddlCountry.SelectedIndex = Convert.ToInt32(_model.CountryId);
+            ddlCity.SelectedIndex = Convert.ToInt32(_model.CityId);
+            ddlState.SelectedIndex = Convert.ToInt32(_model.StateId);
             btnAddAdmin.Enabled = editable;
             txtAddress.Enabled=editable;
             txtAdminName.Enabled = editable;
@@ -288,29 +372,125 @@ namespace Frontend.Admin
             txtFullName.Enabled=editable;
             txtMobileNo.Enabled = editable;
             btnImgUpload.Enabled = editable;
+            ddlCity.Enabled = editable;
+            ddlCountry.Enabled = editable;
+            ddlState.Enabled = editable;
             if (editable)
             {
                 btnAddAdmin.Text = "Update";
                 img_AdminIMG.Visible = true;
+                img_AdminIMG.ImageUrl = ConvertToBase64(_model.Image);
+                btnImgUpload.Visible = true;
+                
             }
             else
             {
-                img_AdminIMG.Visible = false;
+                img_AdminIMG.Visible = true;
+                img_AdminIMG.ImageUrl = ConvertToBase64(_model.Image);
+                btnImgUpload.Visible = false;
             }
         }
 
+        /// <summary>
+        /// Convert byte array to image
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <returns></returns>
+        private System.Drawing.Image byteToImage(byte[] arr)
+        {
+            using(var ms=new MemoryStream(arr))
+            {
+                return System.Drawing.Image.FromStream(ms);
+            }
+        }
+        ///////////////////////////////////////////////////
+        private string ConvertToBase64(byte[] arr)
+        {
+            if (arr != null)
+            {
+                return "data:image/png;base64," + Convert.ToBase64String(arr);
+            }
+            else
+                return "";
+            
+        }
         protected void btnEdit_Click(object sender, EventArgs e)
         {
-
+            LinkButton btnEdit = sender as LinkButton;
+            long id = Convert.ToInt64(btnEdit.CommandArgument);
+            if (id != null || !id.Equals(0))
+            {
+                ViewState["AdminID"] = id;
+                string _encID = _secure.Encrypt(id.ToString(), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                if (_encID != string.Empty)
+                {
+                    var res = _admin.Get(_encID).Result;
+                    if (res != null)
+                    {
+                        var _decRes = _secure.Decrypt(res, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                        var _final = JsonConvert.DeserializeObject<Admin_model>(_decRes);
+                        LoadData(true, _final);
+                    }
+                }
+            }
         }
 
         protected void btnView_Click(object sender, EventArgs e)
         {
-
+            LinkButton btnView = sender as LinkButton;
+            long id = Convert.ToInt64(btnView.CommandArgument);
+            if (id != null || !id.Equals(0))
+            {
+                string _encID = _secure.Encrypt(id.ToString(), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                if (_encID != string.Empty)
+                {
+                    var res = _admin.Get(_encID).Result;
+                    if (res != null)
+                    {
+                        var _decRes = _secure.Decrypt(res, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                        var _final = JsonConvert.DeserializeObject<Admin_model>(_decRes);
+                        LoadData(false, _final);
+                    }
+                }
+            }
         }
 
         protected void btnDelete_Click(object sender, EventArgs e)
         {
+            LinkButton btnDelete = (LinkButton)sender;
+            string Id= btnDelete.CommandArgument;
+
+            // Register the JavaScript function with the cityId as an argument
+            string script = $"alertConfirm('Are you sure?', 'You won\\'t be able to revert this!', 'Yes, delete it!', 'Admin.aspx/Delete', {Id},bindAdmins);";
+
+            ScriptManager.RegisterStartupScript(this, GetType(), "DeleteConfirmation", script, true);
+        }
+
+        [WebMethod]
+        public static bool Delete(int id)
+        {
+            try
+            {
+                var dec_id = _secure.Encrypt(Convert.ToString(id), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                var res = _admin.Delete(dec_id).Result;
+                if (res != null)
+                {
+                    return true;
+
+
+                }
+                else
+                {
+                    Admin1 admin = new Admin1();
+                    admin.BindAdmins();
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
 
         }
     }
