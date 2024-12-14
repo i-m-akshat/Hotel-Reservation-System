@@ -25,6 +25,7 @@ namespace Frontend.Admin
         private static readonly IStateDAO _stateDao = new StateDao();
         private static readonly ISecureDAO _secure = new SecureDao();
         private static readonly ICityDao _cityDao = new CityDao();
+        private static readonly IRoleDAO _Roledal = new RoleDao();
         private static readonly string[] allowedImgTypes = {  ".png" };//".jpg", ".jpeg",
         public class ErrorResponse
         {
@@ -41,6 +42,7 @@ namespace Frontend.Admin
                 BindCountry();
                 BindState();
                 BindCity();
+                BindRoles();
                 
             }
             else if (IsPostBack)
@@ -48,6 +50,9 @@ namespace Frontend.Admin
                 BindAdmins();
             }
         }
+        
+
+
         private bool validate(out string message)
         {
             message = string.Empty;
@@ -98,6 +103,10 @@ namespace Frontend.Admin
             {
                 message += "Please enter the email id ";
             }
+            if (ddlRole.SelectedIndex == 0)
+            {
+                message += "Please select the roles";
+            }
             if (message != string.Empty)
             {
                 return false;
@@ -145,7 +154,8 @@ namespace Frontend.Admin
                         EmailId=txtEmailId.Text.Trim().ToString(),
                         CityId=Convert.ToInt64(ddlCity.SelectedItem.Value),
                         StateId= Convert.ToInt64(ddlState.SelectedItem.Value),
-                        CountryId= Convert.ToInt64(ddlCountry.SelectedItem.Value)
+                        CountryId= Convert.ToInt64(ddlCountry.SelectedItem.Value),
+                        RoleID=Convert.ToInt64(ddlRole.SelectedItem.Value),
                     };
                     if (btnImgUpload.HasFile)
                     {
@@ -196,7 +206,8 @@ namespace Frontend.Admin
                         EmailId = txtEmailId.Text.Trim().ToString(),
                         CityId = Convert.ToInt64(ddlCity.SelectedItem.Value),
                         StateId = Convert.ToInt64(ddlState.SelectedItem.Value),
-                        CountryId = Convert.ToInt64(ddlCountry.SelectedItem.Value)
+                        CountryId = Convert.ToInt64(ddlCountry.SelectedItem.Value),
+                        RoleID = Convert.ToInt64(ddlRole.SelectedItem.Value),
                     };
                     if (btnImgUpload.HasFile)
                     {
@@ -302,6 +313,36 @@ namespace Frontend.Admin
             ddlState.DataBind();
             ddlState.SelectedIndex = 0;
         }
+
+        private void BindRoles()
+        {
+            try
+            {
+                var res = _Roledal.getAll().Result;
+                if (res != null)
+                {
+                    var dec_res = _secure.Decrypt(res, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                    var _data = JsonConvert.DeserializeObject<List<Role_Model>>(dec_res);
+                    _data.Insert(0, new Role_Model { RoleId = 0, RoleName = "Please Select the Role" });
+                    if (_data != null)
+                    {
+                        ddlRole.DataSource = _data;
+                        ddlRole.DataTextField = "RoleName";
+                        ddlRole.DataValueField = "RoleId";
+                        ddlRole.DataBind();
+                        ddlRole.SelectedItem.Value = "0";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"{ex} is being thrown ");
+
+            }
+        }
+        /// <summary>
+        /// to bind city to dropdown
+        /// </summary>
         public void BindCity()
         {
             List<City_Model> cityList = new List<City_Model>();
@@ -322,6 +363,9 @@ namespace Frontend.Admin
                 }
             }
         }
+        /// <summary>
+        /// To bind admin data to gridview
+        /// </summary>
         public void BindAdmins()
         {
             List<Admin_model> _list = new List<Admin_model>();
@@ -337,6 +381,10 @@ namespace Frontend.Admin
                 }
             }
         }
+        /// <summary>
+        /// to clear the values 
+        /// 
+        /// </summary>
         private void clear()
         {
             txtAddress.Text = string.Empty;
@@ -349,14 +397,22 @@ namespace Frontend.Admin
             ddlState.SelectedIndex = 0;
             ddlCountry.SelectedIndex = 0;
             txtAddress.Enabled = txtAdminName.Enabled = txtEmailId.Enabled = txtFullName.Enabled = txtMobileNo.Enabled = ddlCountry.Enabled = ddlCity.Enabled = ddlState.Enabled
-                = btnImgUpload.Enabled = btnImgUpload.Visible = true;
+                = btnImgUpload.Enabled = btnImgUpload.Visible =ddlRole.Enabled= true;
+            ddlRole.SelectedIndex = 0;
             
         }
+        /// <summary>
+        /// To load the data 
+        /// </summary>
+        /// <param name="editable"></param>
+        /// <param name="_model"></param>
         private void LoadData(bool editable,Admin_model _model)
         {
-            BindCity();
-            BindCountry();
-            BindState();
+            clear();
+            //BindCity();
+            //BindCountry();
+            //BindState();
+            //BindRoles();
             txtAddress.Text = _model.Address;
             txtAdminName.Text = _model.Adminname;
             txtEmailId.Text=_model.EmailId;
@@ -365,6 +421,17 @@ namespace Frontend.Admin
             ddlCountry.SelectedIndex = Convert.ToInt32(_model.CountryId);
             ddlCity.SelectedIndex = Convert.ToInt32(_model.CityId);
             ddlState.SelectedIndex = Convert.ToInt32(_model.StateId);
+            string roleId = Convert.ToString(_model.RoleID);
+            if (ddlRole.Items.FindByValue(roleId) != null)
+            {
+                ddlRole.SelectedValue = roleId;
+            }
+            else
+            {
+                ddlRole.SelectedIndex = -1; // Clear selection or set a default
+            }
+            //ddlRole.SelectedItem.Value = Convert.ToString(_model.RoleID);
+            ddlRole.Enabled = editable;
             btnAddAdmin.Enabled = editable;
             txtAddress.Enabled=editable;
             txtAdminName.Enabled = editable;

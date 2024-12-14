@@ -17,7 +17,7 @@ namespace Backend.Models.Admin_Domain
         public bool? Isactive { get; set; }
 
         public string? Address { get; set; }
-
+        public long RoleID { get; set; }
         public byte[]? Image { get; set; }
 
         public string? PhoneNumber { get; set; }

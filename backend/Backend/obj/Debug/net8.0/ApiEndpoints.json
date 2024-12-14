@@ -123,7 +123,7 @@
   {
     "ContainingType": "Backend.Controllers.AdminController",
     "Method": "Get",
-    "RelativePath": "api/Admin/GetById",
+    "RelativePath": "api/Admin/Get",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

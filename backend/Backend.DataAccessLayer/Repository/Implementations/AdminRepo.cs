@@ -66,7 +66,16 @@ namespace Backend.DataAccessLayer.Repository.Implementations
 
         public async Task<TblAdmin> GetByUserName(string username)
         {
-            return await _context.TblAdmins.Where(x=>x.Adminname==username).FirstOrDefaultAsync();
+            try
+            {
+                return await _context.TblAdmins.Where(x => x.Adminname == username).FirstOrDefaultAsync();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            
         }
 
         public async Task<TblAdmin> Update(long id,TblAdmin tblAdmin)
@@ -88,6 +97,7 @@ namespace Backend.DataAccessLayer.Repository.Implementations
                 tbl_Admin.CountryId=tblAdmin.CountryId!=null?tblAdmin.CountryId:tbl_Admin.CountryId;
                 tbl_Admin.EmailId=tblAdmin.EmailId!=null?tblAdmin.EmailId:tbl_Admin.EmailId;
                 tbl_Admin.Password=tblAdmin.Password!=null?tblAdmin.Password:tbl_Admin.Password;
+                tbl_Admin.RoleID = tblAdmin.RoleID != null ? tblAdmin.RoleID : tbl_Admin.RoleID;
             }
              //_context.TblAdmins.Update(tblAdmin);
             await _context.SaveChangesAsync();

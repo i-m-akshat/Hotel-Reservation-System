@@ -20,6 +20,7 @@ public partial class TblAdmin
     public string? PhoneNumber { get; set; }
 
     public string? EmailId { get; set; }
+    public long? RoleID { get; set; }
 
     public string? Password { get; set; }
 

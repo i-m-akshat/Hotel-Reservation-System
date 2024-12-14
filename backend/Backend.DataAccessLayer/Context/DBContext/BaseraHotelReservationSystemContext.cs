@@ -101,6 +101,7 @@ public partial class BaseraHotelReservationSystemContext : DbContext
             entity.ToTable("tbl_Admin");
 
             entity.Property(e => e.AdminId).HasColumnName("AdminID");
+            entity.Property(e => e.RoleID).HasColumnName("RoleID");
             entity.Property(e => e.Address).HasMaxLength(500);
             entity.Property(e => e.Adminname)
                 .HasMaxLength(100)
