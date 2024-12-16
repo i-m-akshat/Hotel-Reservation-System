@@ -7,40 +7,40 @@ namespace Backend.Controllers
     [ApiController]
     public class HotelController : ControllerBase
     {
-        [HttpGet]
-        public Task<ActionResult> GetAll()
-        {
-            try
-            {
-                return null;
-            }
-            catch (Exception ex)
-            {
+        //[HttpGet]
+        //public Task<ActionResult> GetAll()
+        //{
+        //    try
+        //    {
+        //        return null;
+        //    }
+        //    catch (Exception ex)
+        //    {
 
-                throw;
-            }
+        //        throw;
+        //    }
             
-        }
-        [HttpGet]
-        public Task<IActionResult> GetAction(string id) {
+        //}
+        //[HttpGet]
+        //public Task<IActionResult> GetAction(string id) {
 
 
-            return null;
-        }
-        [HttpPost]
-        public Task<IActionResult> Create(string Content)
-        {
-            return null;
-        }
-        [HttpPut]
-        public Task<IActionResult> Update(string Content, string id) {
-            return null;
-        }
-        [HttpDelete]
-        public Task<IActionResult> Delete(string id)
-        {
-            return null;
-        }
+        //    return null;
+        //}
+        //[HttpPost]
+        //public Task<IActionResult> Create(string Content)
+        //{
+        //    return null;
+        //}
+        //[HttpPut]
+        //public Task<IActionResult> Update(string Content, string id) {
+        //    return null;
+        //}
+        //[HttpDelete]
+        //public Task<IActionResult> Delete(string id)
+        //{
+        //    return null;
+        //}
 
 
     }

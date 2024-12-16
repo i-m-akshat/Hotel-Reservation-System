@@ -94,6 +94,7 @@
     <Content Include="Admin\Country.aspx" />
     <Content Include="Admin\Dashboard.aspx" />
     <Content Include="Admin\Help.aspx" />
+    <Content Include="Admin\Hotel.aspx" />
     <Content Include="Admin\Profile.aspx" />
     <Content Include="Admin\Role.aspx" />
     <Content Include="Admin\Settings.aspx" />
@@ -387,6 +388,13 @@
     </Compile>
     <Compile Include="Admin\Help.aspx.designer.cs">
       <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Hotel.aspx.cs">
+      <DependentUpon>Hotel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Hotel.aspx.designer.cs">
+      <DependentUpon>Hotel.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>

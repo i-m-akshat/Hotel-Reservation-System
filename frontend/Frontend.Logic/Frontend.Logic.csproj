@@ -49,6 +49,7 @@
     <Compile Include="Implementations\AdminDao.cs" />
     <Compile Include="Implementations\CityDao.cs" />
     <Compile Include="Implementations\CountryDao.cs" />
+    <Compile Include="Implementations\HotelDao.cs" />
     <Compile Include="Implementations\RoleDao.cs" />
     <Compile Include="Implementations\SecureDao.cs" />
     <Compile Include="Implementations\StateDao.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Interfaces\ICityDao.cs" />
     <Compile Include="Interfaces\IAdminDAO.cs" />
     <Compile Include="Interfaces\ICountryDAO.cs" />
+    <Compile Include="Interfaces\IHotelDao.cs" />
     <Compile Include="Interfaces\IRoleDAO.cs" />
     <Compile Include="Interfaces\ISecureDAO.cs" />
     <Compile Include="Interfaces\IStateDAO.cs" />
