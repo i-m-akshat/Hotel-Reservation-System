@@ -5,7 +5,10 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Reflection;
 using System.Web;
 using System.Web.Services.Description;
 using System.Web.UI;
@@ -19,6 +22,8 @@ namespace Frontend.Admin
         private static readonly IStateDAO _stateDao = new StateDao();
         private static readonly ISecureDAO _secure = new SecureDao();
         private static readonly ICityDao _cityDao = new CityDao();
+        private static readonly IHotelDao _service=new HotelDao();
+        private static readonly string[] allowedImgTypes = { ".png" };//".jpg", ".jpeg",
         //private static readonly IHotel
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -47,7 +52,101 @@ namespace Frontend.Admin
 
         protected void btnAddAdmin_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string Message=string.Empty;
+                if(validate(out Message))
+                {
+                    string script = $"alertError_Custom('Poora bharo yar?', '{Message}', 'Ok Bhai ! ');";
+                   
+                    ScriptManager.RegisterStartupScript(this, GetType(), "validation", script, true);
+                }
+                else
+                {
+                    if (btnAddAdmin.Text == "Add")
+                    {
+                        var Hotel = new Hotel_model
+                        {
+                            Address=txtAddress.Text,
+                            HotelName=txtHotelName.Text,
+                            CityId=Convert.ToInt64(ddlCity.SelectedItem.Value),
+                            StateId= Convert.ToInt64(ddlState.SelectedItem.Value),
+                            CountryId=Convert.ToInt64(ddlCountry.SelectedItem.Value),
+                            HotelDescription=txtHotelDescription.Text,
+                            Latitude=txtLattitude.Text,
+                            Longitude=txtLongitude.Text,
+                            IsActive=true,
+                            
+                        };
+                        if (btnBannerImgUpload.HasFile)
+                        {
+                            string FileExtension = System.IO.Path.GetExtension(btnBannerImgUpload.FileName).ToLower();
+                            if (!allowedImgTypes.Contains(FileExtension))
+                            {
+                                string script = $"alertError_Custom('bhai image hi upload krna h !', 'sirf .png  ka hi use kro be', 'Ok Bhai ! ');";
+                                //Response.Write($"<script>alert('{Message}')</script>");
+                                ScriptManager.RegisterStartupScript(this, GetType(), "imgvalidation", script, true);
+                            }
+                            else
+                            {
+                                var res = imgToByte(btnBannerImgUpload);
+                                if (res != null)
+                                {
+                                    Hotel.BannerImage = res;
+                                }
+                            }
+                        }
+                        if (btnIconImgUpload.HasFile)
+                        {
+                            string FileExtension = System.IO.Path.GetExtension(btnIconImgUpload.FileName).ToLower();
+                            if (!allowedImgTypes.Contains(FileExtension))
+                            {
+                                string script = $"alertError_Custom('bhai image hi upload krna h !', 'sirf .png  ka hi use kro be', 'Ok Bhai ! ');";
+                                //Response.Write($"<script>alert('{Message}')</script>");
+                                ScriptManager.RegisterStartupScript(this, GetType(), "imgvalidation", script, true);
+                            }
+                            else
+                            {
+                                var res = imgToByte(btnIconImgUpload);
+                                if (res != null)
+                                {
+                                    Hotel.IconImage = res;
+                                }
+                            }
+                        }
+                        if (Hotel != null)
+                        {
+                            string enc_model=_secure.Encrypt(JsonConvert.SerializeObject(Hotel), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
 
+                            var res = _service.AddHotel(enc_model).Result;
+                            var dec_res= JsonConvert.DeserializeObject<Response<string>>(_secure.Decrypt(res, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]));
+                            if(dec_res.StatusCode.Equals(Enums.HttpStatusCode.Created))
+                            {
+                                string script = $"alertSuccess('Success', 'Created Successfully', 'Ok Bhai ! ');";
+                                ScriptManager.RegisterStartupScript(this, GetType(), "Success", script, true);
+                            }else if (dec_res.Equals(Enums.HttpStatusCode.BadRequest))
+                            {
+                                string script = $"alertError('Error', 'Sahi Data Bhejo Yrrr !', 'Ok Bhai ! ');";
+                                ScriptManager.RegisterStartupScript(this, GetType(), "Success", script, true);
+                            }else if (dec_res.Equals(Enums.HttpStatusCode.InternalServerError))
+                            {
+                                string script = $"alertError('Oops !', 'Something Went wrong !', 'Ok Bhai ! ');";
+                                ScriptManager.RegisterStartupScript(this, GetType(), "Success", script, true);
+                            }
+                        }
+                    }
+                    else if (btnAddAdmin.Text == "Update")
+                    {
+
+                    }
+                }
+                
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
         }
 
         protected void btnClear_Click(object sender, EventArgs e)
@@ -149,6 +248,14 @@ namespace Frontend.Admin
             else
             {
                 return true;
+            }
+        }
+        private byte[] imgToByte(FileUpload btnImgUpload)
+        {
+            using (var ms = new MemoryStream())
+            {
+                btnImgUpload.FileContent.CopyTo(ms);
+                return ms.ToArray();
             }
         }
         #endregion

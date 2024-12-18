@@ -276,6 +276,8 @@ namespace Frontend.Admin
                 return ms.ToArray();
             }
         }
+
+        #region Methods
         public void BindCountry()
         {
             try
@@ -385,11 +387,12 @@ namespace Frontend.Admin
         /// to clear the values 
         /// 
         /// </summary>
+        /// 
         private void clear()
         {
             txtAddress.Text = string.Empty;
-            txtAdminName.Text = string.Empty;   
-            txtEmailId.Text=string.Empty;
+            txtAdminName.Text = string.Empty;
+            txtEmailId.Text = string.Empty;
             txtFullName.Text = string.Empty;
             txtMobileNo.Text = string.Empty;
             img_AdminIMG.Visible = false;
@@ -397,16 +400,16 @@ namespace Frontend.Admin
             ddlState.SelectedIndex = 0;
             ddlCountry.SelectedIndex = 0;
             txtAddress.Enabled = txtAdminName.Enabled = txtEmailId.Enabled = txtFullName.Enabled = txtMobileNo.Enabled = ddlCountry.Enabled = ddlCity.Enabled = ddlState.Enabled
-                = btnImgUpload.Enabled = btnImgUpload.Visible =ddlRole.Enabled= true;
+                = btnImgUpload.Enabled = btnImgUpload.Visible = ddlRole.Enabled = true;
             ddlRole.SelectedIndex = 0;
-            
+
         }
         /// <summary>
         /// To load the data 
         /// </summary>
         /// <param name="editable"></param>
         /// <param name="_model"></param>
-        private void LoadData(bool editable,Admin_model _model)
+        private void LoadData(bool editable, Admin_model _model)
         {
             clear();
             //BindCity();
@@ -415,8 +418,8 @@ namespace Frontend.Admin
             //BindRoles();
             txtAddress.Text = _model.Address;
             txtAdminName.Text = _model.Adminname;
-            txtEmailId.Text=_model.EmailId;
-            txtFullName.Text=_model.FullName;
+            txtEmailId.Text = _model.EmailId;
+            txtFullName.Text = _model.FullName;
             txtMobileNo.Text = _model.PhoneNumber;
             ddlCountry.SelectedIndex = Convert.ToInt32(_model.CountryId);
             ddlCity.SelectedIndex = Convert.ToInt32(_model.CityId);
@@ -433,10 +436,10 @@ namespace Frontend.Admin
             //ddlRole.SelectedItem.Value = Convert.ToString(_model.RoleID);
             ddlRole.Enabled = editable;
             btnAddAdmin.Enabled = editable;
-            txtAddress.Enabled=editable;
+            txtAddress.Enabled = editable;
             txtAdminName.Enabled = editable;
             txtEmailId.Enabled = editable;
-            txtFullName.Enabled=editable;
+            txtFullName.Enabled = editable;
             txtMobileNo.Enabled = editable;
             btnImgUpload.Enabled = editable;
             ddlCity.Enabled = editable;
@@ -448,7 +451,7 @@ namespace Frontend.Admin
                 img_AdminIMG.Visible = true;
                 img_AdminIMG.ImageUrl = ConvertToBase64(_model.Image);
                 btnImgUpload.Visible = true;
-                
+
             }
             else
             {
@@ -465,7 +468,7 @@ namespace Frontend.Admin
         /// <returns></returns>
         private System.Drawing.Image byteToImage(byte[] arr)
         {
-            using(var ms=new MemoryStream(arr))
+            using (var ms = new MemoryStream(arr))
             {
                 return System.Drawing.Image.FromStream(ms);
             }
@@ -479,8 +482,10 @@ namespace Frontend.Admin
             }
             else
                 return "";
-            
+
         }
+        #endregion
+
         protected void btnEdit_Click(object sender, EventArgs e)
         {
             LinkButton btnEdit = sender as LinkButton;

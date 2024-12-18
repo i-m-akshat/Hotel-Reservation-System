@@ -67,6 +67,9 @@ builder.Services.AddScoped<IAccessRepo, AccessRepo>();
 builder.Services.AddScoped<IAccessService,AccessService>();
 builder.Services.AddScoped<IRoleService,RoleService>();
 builder.Services.AddScoped<IMailService, MailService>();
+builder.Services.AddScoped<IHotelRepo, HotelRepo>();
+builder.Services.AddScoped<IHotelService, HotelServices>();
+
 
 
 #endregion

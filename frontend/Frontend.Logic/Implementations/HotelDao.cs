@@ -15,29 +15,29 @@ namespace Frontend.Logic.Implementations
         private readonly IRestUtility<string> _hitman = new RestUtility<string>();
         private readonly string BaseUrl = "https://localhost:6969/api/Hotel/";
 
-        public Hotel_model AddHotel(string content)
+        public async Task<string> AddHotel(string content)
         {
-            throw new NotImplementedException();
+            return await _hitman.PostAsync(BaseUrl, "Create", content);
         }
 
-        public Hotel_model DeleteHotel(string id)
+        public async Task<string> DeleteHotel(string id)
         {
-            throw new NotImplementedException();
+            return await _hitman.DeleteAsync(BaseUrl, "Delete", id);
         }
 
-        public List<Hotel_model> GetAllHotel()
+        public async Task<string> GetAllHotel()
         {
-            throw new NotImplementedException();
+            return await _hitman.GetAsync(BaseUrl, "");
         }
 
-        public Hotel_model GetHotelById(string id)
-        {
-            throw new NotImplementedException();
+        public async Task<string> GetHotelById(string id)
+        {   
+            return await _hitman.GetByIDAsync(BaseUrl, "Get", id);
         }
 
-        public Hotel_model UpdateHotel(string content, string id)
+        public async Task<string> UpdateHotel(string content, string id)
         {
-            throw new NotImplementedException();
+            return await _hitman.PutAsync(BaseUrl,"Update",id,content);
         }
     }
 }

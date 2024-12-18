@@ -9,11 +9,11 @@ namespace Frontend.Logic.Interfaces
 {
     public interface IHotelDao
     {
-        Hotel_model AddHotel(string content);
-        Hotel_model UpdateHotel(string content, string id);
-        Hotel_model DeleteHotel(string id);
-        List<Hotel_model> GetAllHotel();
-        Hotel_model GetHotelById(string id);
+        Task<string> AddHotel(string content);
+        Task<string> UpdateHotel(string content, string id);
+        Task<string> DeleteHotel(string id);
+        Task<string> GetAllHotel();
+        Task<string> GetHotelById(string id);
 
     }
 }
