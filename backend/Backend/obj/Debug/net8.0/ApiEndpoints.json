@@ -344,7 +344,7 @@
   {
     "ContainingType": "Backend.Controllers.HotelController",
     "Method": "Create",
-    "RelativePath": "api/Hotel",
+    "RelativePath": "api/Hotel/Create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -359,29 +359,8 @@
   },
   {
     "ContainingType": "Backend.Controllers.HotelController",
-    "Method": "Update",
-    "RelativePath": "api/Hotel",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Content",
-        "Type": "System.String",
-        "IsRequired": true
-      },
-      {
-        "Name": "id",
-        "Type": "System.String",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Backend.Controllers.HotelController",
     "Method": "Delete",
-    "RelativePath": "api/Hotel",
+    "RelativePath": "api/Hotel/Delete",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -402,6 +381,27 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.HotelController",
+    "Method": "Update",
+    "RelativePath": "api/Hotel/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Content",
+        "Type": "System.String",
+        "IsRequired": true
+      },
       {
         "Name": "id",
         "Type": "System.String",

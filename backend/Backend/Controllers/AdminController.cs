@@ -114,7 +114,7 @@ namespace Backend.Controllers
                     Body = message,
                 };
 
-                bool isSuccess = await _mail.SendMailAsync(mail);
+                //bool isSuccess = await _mail.SendMailAsync(mail);
                 return Ok(enc_admin);
             }
             else

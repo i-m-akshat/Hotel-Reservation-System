@@ -39,4 +39,5 @@ public partial class TblCity
     /// Navigation Property- One to many relationship between tblCity and TblUser This means that a city can have multiple Users associated with it.
     /// </summary>
     public virtual ICollection<TblUser> TblUsers { get; set; } = new List<TblUser>();
+    public virtual ICollection<TblHotel> TblHotels { get; set; } = new List<TblHotel>();
 }

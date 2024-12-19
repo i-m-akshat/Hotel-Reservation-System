@@ -21,6 +21,7 @@ namespace Backend.Services.Implementatios
         {
             if (hotel != null)
             {
+                hotel.CreatedDate = DateTime.Now;
                 var res = await _repo.CreateHotel(hotel.ToTblHotel());
                 if (res != null) {
                     return res.ToHotel();
@@ -34,6 +35,7 @@ namespace Backend.Services.Implementatios
 
         public async Task<Hotel> DeleteHotel(long id)
         {
+
             var tbl=await _repo.DeleteHotel(id);
             return tbl.ToHotel();
         }
@@ -41,17 +43,18 @@ namespace Backend.Services.Implementatios
         public async Task<List<Hotel>> GetAllHotel()
         {
            var tbl=await _repo.GetAllHotels();
-            return tbl.Select(x=>x.ToHotel()).ToList();
+            return tbl.Select(x=>x.ToHotelWithInclude()).ToList();
         }
 
         public async Task<Hotel> GetHotel(long id)
         {
             var tbl = await _repo.GetHotelsByid(id);
-            return tbl.ToHotel();
+            return tbl.ToHotelWithInclude();
         }
 
         public async Task<Hotel> UpdateHotel(Hotel hotel, long id)
         {
+            hotel.UpdatedDate = DateTime.Now;
             var tbl=await _repo.UpdateHotel(hotel.ToTblHotel(), id);    
             return tbl.ToHotel();
         }

@@ -21,11 +21,11 @@
                     <div class="card-body">
                         <div class="col-12" style="font-size: 12px">
                             <div class="form-floating mb-3" style="background: none">
-                                <asp:TextBox ID="txtHotelName" runat="server" CssClass="form-control form-control-sm"></asp:TextBox>
+                                <asp:TextBox ID="txtHotelName" runat="server" CssClass="form-control form-control-sm" placeholder="Please enter the Hotel Name"></asp:TextBox>
                                 <label for="txtHotelName">Hotel Name</label>
                             </div>
                             <div class="form-floating mb-3" style="background: none">
-                               <asp:TextBox ID="txtHotelDescription" runat="server" CssClass="form-control form-control-sm" TextMode="MultiLine"></asp:TextBox>
+                               <asp:TextBox ID="txtHotelDescription" runat="server" CssClass="form-control form-control-sm" TextMode="MultiLine" placeholder="Please enter the description"></asp:TextBox>
                                 <label for="txtHotelDescription">Description</label>
                                                             </div>
                            
@@ -82,7 +82,7 @@
                         <div class="table-responsive">
                             <asp:Repeater ID="rptHotelList" runat="server">
                                 <HeaderTemplate>
-                                    <table class="table table-responsive table-hover table-striped">
+                                    <table class="table table-sm table-hover text-sm-center table-striped">
                                         <thead>
                                             <tr>
                                                 <th>Sr.No.</th>
@@ -108,7 +108,7 @@
                                         <td><%#Eval("HotelName")%></td>
                                         <td><%#Eval("Address")%></td>
                                         <td><%#Eval("Longitude")%></td>
-                                        <td><%#Eval("Lattitude")%></td>
+                                        <td><%#Eval("Latitude")%></td>
                                         <td><%#Eval("CityName")%></td>
                                         <td><%#Eval("StateName")%></td>
                                         <td><%#Eval("CountryName")%></td>

@@ -10,6 +10,7 @@ using System.Linq;
 using System.Net;
 using System.Reflection;
 using System.Web;
+using System.Web.Security;
 using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -32,12 +33,49 @@ namespace Frontend.Admin
                 BindCountry();
                 BindState();
                 BindCity();
+                BindHotels();
+            }
+            else
+            {
+                BindHotels();
             }
         }
         #region events
         protected void btnView_Click(object sender, EventArgs e)
         {
+            try
+            {
+                LinkButton btnView = sender as LinkButton;
+                long id = Convert.ToInt64(btnView.CommandArgument);
+                if (id != 0)
+                {
+                    ViewState["HotelID"] = id;
+                    var enc_id=_secure.Encrypt(id.ToString(), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                    var res = _service.GetHotelById(enc_id).Result;
+                    var serialized = JsonConvert.DeserializeObject<Response<string>>(res);
+                    if (serialized.IsSuccess && serialized.StatusCode == (int)Enums.HttpStatusCode.OK)
+                    {
+                        var dec_data = JsonConvert.DeserializeObject<Hotel_model>(_secure.Decrypt(serialized.Data, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]));
+                        if (dec_data.HotelId != null || dec_data.HotelId != 0)
+                        {
+                            LoadData(false, dec_data);
+                        }
+                    }else if(serialized.IsSuccess==false&&serialized.StatusCode==(int)Enums.HttpStatusCode.NotFound)
+                    {
+                        string script = $"alertError('Error', 'No Data Found !', 'Ok Bhai ! ');";
+                        ScriptManager.RegisterStartupScript(this, GetType(), "Error", script, true);
+                    }else if(serialized.IsSuccess==false&&serialized.StatusCode==(int)Enums.HttpStatusCode.InternalServerError)
+                    {
+                        string script = $"alertError('Error', 'Something went wrong from our side !', 'Ok Bhai ! ');";
+                        ScriptManager.RegisterStartupScript(this, GetType(), "Error500", script, true);
+                    }
+                }
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
         }
 
         protected void btnEdit_Click(object sender, EventArgs e)
@@ -119,28 +157,32 @@ namespace Frontend.Admin
                             string enc_model=_secure.Encrypt(JsonConvert.SerializeObject(Hotel), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
 
                             var res = _service.AddHotel(enc_model).Result;
-                            var dec_res= JsonConvert.DeserializeObject<Response<string>>(_secure.Decrypt(res, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]));
-                            if(dec_res.StatusCode.Equals(Enums.HttpStatusCode.Created))
+                            
+                            var dec_res= JsonConvert.DeserializeObject<Response<string>>(res);
+                            var result = _secure.Decrypt(dec_res.Data, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                            if (dec_res.StatusCode.Equals((int)Enums.HttpStatusCode.Created))
                             {
                                 string script = $"alertSuccess('Success', 'Created Successfully', 'Ok Bhai ! ');";
                                 ScriptManager.RegisterStartupScript(this, GetType(), "Success", script, true);
-                            }else if (dec_res.Equals(Enums.HttpStatusCode.BadRequest))
+                            }else if (dec_res.Equals((int)Enums.HttpStatusCode.BadRequest))
                             {
                                 string script = $"alertError('Error', 'Sahi Data Bhejo Yrrr !', 'Ok Bhai ! ');";
-                                ScriptManager.RegisterStartupScript(this, GetType(), "Success", script, true);
-                            }else if (dec_res.Equals(Enums.HttpStatusCode.InternalServerError))
+                                ScriptManager.RegisterStartupScript(this, GetType(), "Error", script, true);
+                            }else if (dec_res.Equals((int)Enums.HttpStatusCode.InternalServerError))
                             {
                                 string script = $"alertError('Oops !', 'Something Went wrong !', 'Ok Bhai ! ');";
-                                ScriptManager.RegisterStartupScript(this, GetType(), "Success", script, true);
+                                ScriptManager.RegisterStartupScript(this, GetType(), "Error1", script, true);
                             }
                         }
+                        
                     }
                     else if (btnAddAdmin.Text == "Update")
                     {
 
                     }
+                    Clear();
                 }
-                
+                BindHotels();
             }
             catch (Exception ex)
             {
@@ -151,7 +193,7 @@ namespace Frontend.Admin
 
         protected void btnClear_Click(object sender, EventArgs e)
         {
-
+            Clear();
         }
         #endregion
 
@@ -215,7 +257,39 @@ namespace Frontend.Admin
         }
         public void BindHotels()
         {
+            try
+            {
+                var res = _service.GetAllHotel().Result;
+                if (res != null)
+                {
+                    var result = JsonConvert.DeserializeObject<Response<string>>(res);
+                    if (result.IsSuccess && result.StatusCode.Equals((int)Enums.HttpStatusCode.OK))
+                    {
+                        var dec_res=_secure.Decrypt(result.Data,ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                        var serializeData = JsonConvert.DeserializeObject<List<Hotel_model>>(dec_res);
+                        if (serializeData.Count > 0)
+                        {
+                            rptHotelList.DataSource = serializeData;
+                            rptHotelList.DataBind();
+                        }
+                    }
+                    else if (result.IsSuccess == false && result.StatusCode == (int)Enums.HttpStatusCode.NotFound)
+                    {
+                        string script = $"alertError('Error', 'No Data Found !', 'Ok Bhai ! ');";
+                        ScriptManager.RegisterStartupScript(this, GetType(), "Error", script, true);
+                    }
+                    else if (result.IsSuccess == false && result.StatusCode == (int)Enums.HttpStatusCode.InternalServerError)
+                    {
+                        string script = $"alertError('Error', 'Something went wrong from our side !', 'Ok Bhai ! ');";
+                        ScriptManager.RegisterStartupScript(this, GetType(), "Error500", script, true);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
 
+                throw;
+            }
         }
 
         #endregion
@@ -234,20 +308,20 @@ namespace Frontend.Admin
                 message += "Lattitude is necessary";
             if (txtLongitude.Text == null)
                 message += "Longitude is necessary";
-            if (ViewState["HotelID"] != null)
+            if (ViewState["HotelID"] == null)
             {
-                if (btnIconImgUpload.HasFile)
+                if (!btnIconImgUpload.HasFile)
                     message += "Icon image is necessary";
-                if (btnBannerImgUpload.HasFile)
+                if (!btnBannerImgUpload.HasFile)
                     message += "Banner image is necessary";
             }
             if (message != string.Empty) {
 
-                return false;
+                return true;
             }
             else
             {
-                return true;
+                return false;
             }
         }
         private byte[] imgToByte(FileUpload btnImgUpload)
@@ -257,6 +331,101 @@ namespace Frontend.Admin
                 btnImgUpload.FileContent.CopyTo(ms);
                 return ms.ToArray();
             }
+        }
+        private string ConvertToBase64(byte[] arr)
+        {
+            if (arr != null)
+            {
+                return "data:image/png;base64," + Convert.ToBase64String(arr);
+            }
+            else
+                return "";
+
+        }
+        private void Clear()
+        {
+            BindCity();
+            BindCountry();
+            BindState();
+            BindHotels();
+            txtAddress.Text = string.Empty;
+            txtHotelDescription.Text = string.Empty;
+            txtHotelName.Text = string.Empty;
+            txtLattitude.Text = string.Empty;
+            txtLongitude.Text = string.Empty;
+            if (ViewState["HotelID"] != null)
+            {
+                img_BannerIMG.Visible = true;
+                btnBannerImgUpload.Visible = false;
+                btnIconImgUpload.Visible =false;
+                img_IconIMG.Visible = true;
+            }
+            else
+            {
+                img_BannerIMG.Visible = false;
+                btnBannerImgUpload.Visible = true;
+                btnIconImgUpload.Visible = true;
+                img_IconIMG.Visible = false;
+            }
+            ddlCity.SelectedItem.Value = "0";
+            ddlState.SelectedItem.Value = "0";
+            ddlCountry.SelectedItem.Value = "0";
+            txtAddress.Enabled = txtHotelName.Enabled = txtHotelDescription.Enabled = txtLattitude.Enabled = txtLongitude.Enabled = ddlCity.Enabled = ddlCountry.Enabled = ddlState.Enabled = btnBannerImgUpload.Visible = btnIconImgUpload.Visible =btnAddAdmin.Enabled= true;
+            img_IconIMG.Visible=img_BannerIMG.Visible = false;
+
+        }
+
+        private void LoadData(bool isEditable, Hotel_model _model)
+        {
+            txtAddress.Text = _model.Address;
+            txtHotelName.Text = _model.HotelName;
+            txtHotelDescription.Text = _model.HotelDescription;
+            txtLattitude.Text = _model.Latitude;
+            txtLongitude.Text = _model.Longitude;
+            ddlCity.Items.FindByValue(Convert.ToString(_model.CityId));
+            if (ddlCity.Items.FindByValue(Convert.ToString(_model.CityId)) != null)
+            {
+                ddlCity.SelectedValue = Convert.ToString(_model.CityId) ;
+            }
+            else
+            {
+                ddlCity.SelectedIndex = -1; // Clear selection or set a default
+            }
+            if (ddlCountry.Items.FindByValue(Convert.ToString(_model.CountryId)) != null)
+            {
+                ddlCountry.SelectedValue= Convert.ToString(_model.CountryId);
+            }
+            else
+            {
+                ddlCountry.SelectedIndex = -1;
+            }
+            if (ddlState.Items.FindByValue(Convert.ToString(_model.StateId)) != null)
+            {
+                ddlState.SelectedValue = Convert.ToString(_model.StateId);
+            }
+            else
+            {
+                ddlState.SelectedIndex = -1;
+            }
+            //ddlCity.SelectedItem.Value = Convert.ToString(_model.CityId);
+            //ddlState.SelectedItem.Value = Convert.ToString(_model.StateId);
+            //ddlCountry.SelectedItem.Value = Convert.ToString(_model.CountryId);
+            img_IconIMG.ImageUrl = ConvertToBase64(_model.IconImage);
+            img_BannerIMG.ImageUrl = ConvertToBase64(_model.BannerImage);
+            txtAddress.Enabled = txtHotelName.Enabled = txtHotelDescription.Enabled = txtLattitude.Enabled = txtLongitude.Enabled = ddlCity.Enabled = ddlCountry.Enabled = ddlState.Enabled = btnBannerImgUpload.Visible = btnIconImgUpload.Visible =  isEditable;
+            img_BannerIMG.Visible = img_IconIMG.Visible = true;
+            if (isEditable)
+            {
+                btnAddAdmin.Enabled = true;
+                btnAddAdmin.Text = "Update";
+
+            }
+            else
+            {
+                btnAddAdmin.Text = "Add";
+                btnAddAdmin.Enabled = false;
+            }
+
         }
         #endregion
     }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Backend.DataAccessLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6e8a0cb6caa3c677881d4464e91d7900321b899")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6575bd684b8c1a83920c615f16ea4e8402277de3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Backend.DataAccessLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Backend.DataAccessLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

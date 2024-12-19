@@ -276,6 +276,8 @@ public partial class BaseraHotelReservationSystemContext : DbContext
             entity.Property(e => e.BannerImage).HasColumnName("Banner_Image");
             entity.Property(e => e.CategoryId).HasColumnName("Category_Id");
             entity.Property(e => e.CityId).HasColumnName("CityID");
+            entity.Property(e => e.CountryId).HasColumnName("CountryId");
+            entity.Property(e => e.StateId).HasColumnName("StateId");
             entity.Property(e => e.CreatedDate).HasColumnType("datetime");
             entity.Property(e => e.DeletedDate).HasColumnType("datetime");
             entity.Property(e => e.HotelDescription).HasColumnName("Hotel_Description");
@@ -304,6 +306,9 @@ public partial class BaseraHotelReservationSystemContext : DbContext
             entity.HasOne(d => d.UpdatedByNavigation).WithMany(p => p.TblHotelUpdatedByNavigations)
                 .HasForeignKey(d => d.UpdatedBy)
                 .HasConstraintName("FK_tbl_Hotel_tbl_AdminSession1");
+            entity.HasOne(d => d.Country).WithMany(p => p.TblHotels).HasForeignKey(d => d.CountryId).HasConstraintName("FK_tbl_Hotel_tbl_Country");
+            entity.HasOne(d => d.State).WithMany(p => p.TblHotels).HasForeignKey(d => d.StateId).HasConstraintName("FK_tbl_Hotel_tbl_State");
+            entity.HasOne(d => d.City).WithMany(p => p.TblHotels).HasForeignKey(d => d.CityId).HasConstraintName("FK_tbl_Hotel_tbl_City");
         });
 
         modelBuilder.Entity<TblHotelcontactdetail>(entity =>

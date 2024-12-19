@@ -43,6 +43,11 @@ public partial class TblHotel
 
     public string? Latitude { get; set; }
 
+    public virtual TblCity? City { get; set; }
+
+    public virtual TblCountry? Country { get; set; }
+
+    public virtual TblState? State { get; set; }
     public virtual TblAdminSession? CreatedByNavigation { get; set; }
 
     public virtual TblAdminSession? DeletedByNavigation { get; set; }
