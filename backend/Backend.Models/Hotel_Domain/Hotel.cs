@@ -37,7 +37,7 @@ namespace Backend.Models.Hotel_Domain
 
         public DateTime? DeletedDate { get; set; }
 
-        public long? CategoryId { get; set; }
+        //public long? CategoryId { get; set; }
 
         public byte[]? IconImage { get; set; }
 

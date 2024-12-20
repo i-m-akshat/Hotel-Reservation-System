@@ -43,7 +43,7 @@ namespace Backend.Services.Implementatios
         public async Task<List<Hotel>> GetAllHotel()
         {
            var tbl=await _repo.GetAllHotels();
-            return tbl.Select(x=>x.ToHotelWithInclude()).ToList();
+            return tbl.Select(x=>x.ToHotelWithInclude_withoutImgs()).ToList();
         }
 
         public async Task<Hotel> GetHotel(long id)

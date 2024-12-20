@@ -168,7 +168,7 @@ namespace Backend.Controllers
                     return Ok(new Response<string>
                     {
                         IsSuccess = true,
-                        StatusCode = 201,
+                        StatusCode = 200,
                         StatusMessage = "Success",
                         Data = _secure.Encrypt(JsonConvert.SerializeObject(res), _appSettings.enc_key, _appSettings.enc_iv)
                     });

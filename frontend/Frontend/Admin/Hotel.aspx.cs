@@ -80,7 +80,44 @@ namespace Frontend.Admin
 
         protected void btnEdit_Click(object sender, EventArgs e)
         {
+            try
+            {
+                LinkButton btnEdit = sender as LinkButton;
+                long id = Convert.ToInt64(btnEdit.CommandArgument);
+                ViewState["HotelID"] = id;
+                if (id != null||id!=0)
+                {
+                    var enc_id = _secure.Encrypt(id.ToString(), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                    var res = _service.GetHotelById(enc_id).Result;
+                    if (res != null)
+                    {
+                        var response = JsonConvert.DeserializeObject<Response<string>>(res);
+                        if (response.IsSuccess && response.StatusCode == (int)Enums.HttpStatusCode.OK)
+                        {
+                            var dec_res=JsonConvert.DeserializeObject<Hotel_model>(_secure.Decrypt(response.Data, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]));
+                            if (dec_res.HotelId != null || dec_res.HotelId != 0)
+                            {
+                                LoadData(true, dec_res);
+                            }
+                        }
+                        else if (response.IsSuccess == false && response.StatusCode == (int)Enums.HttpStatusCode.NotFound)
+                        {
+                            string script = $"alertError('Error', 'No Data Found !', 'Ok Bhai ! ');";
+                            ScriptManager.RegisterStartupScript(this, GetType(), "Error", script, true);
+                        }
+                        else if (response.IsSuccess == false && response.StatusCode == (int)Enums.HttpStatusCode.InternalServerError)
+                        {
+                            string script = $"alertError('Error', 'Something went wrong from our side !', 'Ok Bhai ! ');";
+                            ScriptManager.RegisterStartupScript(this, GetType(), "Error500", script, true);
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
 
+                throw;
+            }
         }
 
         protected void btnDelete_Click(object sender, EventArgs e)
@@ -176,9 +213,84 @@ namespace Frontend.Admin
                         }
                         
                     }
-                    else if (btnAddAdmin.Text == "Update")
+                    else if (btnAddAdmin.Text == "Update" && ViewState["HotelID"]!=null)
                     {
+                        var hotelId = Convert.ToInt64(ViewState["HotelID"]);
 
+
+                        var Hotel = new Hotel_model
+                        {
+                            Address = txtAddress.Text,
+                            HotelName = txtHotelName.Text,
+                            CityId = Convert.ToInt64(ddlCity.SelectedItem.Value),
+                            StateId = Convert.ToInt64(ddlState.SelectedItem.Value),
+                            CountryId = Convert.ToInt64(ddlCountry.SelectedItem.Value),
+                            HotelDescription = txtHotelDescription.Text,
+                            Latitude = txtLattitude.Text,
+                            Longitude = txtLongitude.Text,
+                            IsActive = true,
+
+                        };
+                        if (btnBannerImgUpload.HasFile)
+                        {
+                            string FileExtension = System.IO.Path.GetExtension(btnBannerImgUpload.FileName).ToLower();
+                            if (!allowedImgTypes.Contains(FileExtension))
+                            {
+                                string script = $"alertError_Custom('bhai image hi upload krna h !', 'sirf .png  ka hi use kro be', 'Ok Bhai ! ');";
+                                //Response.Write($"<script>alert('{Message}')</script>");
+                                ScriptManager.RegisterStartupScript(this, GetType(), "imgvalidation", script, true);
+                            }
+                            else
+                            {
+                                var res = imgToByte(btnBannerImgUpload);
+                                if (res != null)
+                                {
+                                    Hotel.BannerImage = res;
+                                }
+                            }
+                        }
+                        if (btnIconImgUpload.HasFile)
+                        {
+                            string FileExtension = System.IO.Path.GetExtension(btnIconImgUpload.FileName).ToLower();
+                            if (!allowedImgTypes.Contains(FileExtension))
+                            {
+                                string script = $"alertError_Custom('bhai image hi upload krna h !', 'sirf .png  ka hi use kro be', 'Ok Bhai ! ');";
+                                //Response.Write($"<script>alert('{Message}')</script>");
+                                ScriptManager.RegisterStartupScript(this, GetType(), "imgvalidation", script, true);
+                            }
+                            else
+                            {
+                                var res = imgToByte(btnIconImgUpload);
+                                if (res != null)
+                                {
+                                    Hotel.IconImage = res;
+                                }
+                            }
+                        }
+                        if (Hotel != null)
+                        {
+                            string enc_model = _secure.Encrypt(JsonConvert.SerializeObject(Hotel), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                            string enc_id = _secure.Encrypt(Convert.ToString(hotelId), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                            var res = _service.UpdateHotel(enc_model,enc_id).Result;
+
+                            var dec_res = JsonConvert.DeserializeObject<Response<string>>(res);
+                            var result = _secure.Decrypt(dec_res.Data, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                            if (dec_res.StatusCode.Equals((int)Enums.HttpStatusCode.Created))
+                            {
+                                string script = $"alertSuccess('Success', 'Updated Successfully', 'Ok Bhai ! ');";
+                                ScriptManager.RegisterStartupScript(this, GetType(), "Success", script, true);
+                            }
+                            else if (dec_res.Equals((int)Enums.HttpStatusCode.BadRequest))
+                            {
+                                string script = $"alertError('Error', 'Sahi Data Bhejo Yrrr !', 'Ok Bhai ! ');";
+                                ScriptManager.RegisterStartupScript(this, GetType(), "Error", script, true);
+                            }
+                            else if (dec_res.Equals((int)Enums.HttpStatusCode.InternalServerError))
+                            {
+                                string script = $"alertError('Oops !', 'Something Went wrong !', 'Ok Bhai ! ');";
+                                ScriptManager.RegisterStartupScript(this, GetType(), "Error1", script, true);
+                            }
+                        }
                     }
                     Clear();
                 }

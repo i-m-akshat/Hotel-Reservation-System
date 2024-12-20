@@ -33,7 +33,7 @@ public partial class TblHotel
 
     public DateTime? DeletedDate { get; set; }
 
-    public long? CategoryId { get; set; }
+    //public long? CategoryId { get; set; }
 
     public byte[]? IconImage { get; set; }
 

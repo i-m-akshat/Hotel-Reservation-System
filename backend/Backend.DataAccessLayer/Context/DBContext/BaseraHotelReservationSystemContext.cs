@@ -274,7 +274,7 @@ public partial class BaseraHotelReservationSystemContext : DbContext
                 .HasMaxLength(500)
                 .IsUnicode(false);
             entity.Property(e => e.BannerImage).HasColumnName("Banner_Image");
-            entity.Property(e => e.CategoryId).HasColumnName("Category_Id");
+            //entity.Property(e => e.CategoryId).HasColumnName("Category_Id");
             entity.Property(e => e.CityId).HasColumnName("CityID");
             entity.Property(e => e.CountryId).HasColumnName("CountryId");
             entity.Property(e => e.StateId).HasColumnName("StateId");

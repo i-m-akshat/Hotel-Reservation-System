@@ -41,7 +41,29 @@ namespace Backend.DataAccessLayer.Repository.Implementations
 
         public async Task<List<TblHotel>> GetAllHotels()
         {
-            return await _context.TblHotels.AsNoTracking().Include(x => x.Country).Include(x => x.State).Include(x => x.City).Where(x=>x.IsActive==true).ToListAsync();
+            return await _context.TblHotels.AsNoTracking().Include(x => x.Country).Include(x => x.State).Include(x => x.City).Select(x=>new TblHotel
+            {
+                Address=x.Address,
+                CityId=x.CityId,
+                StateId=x.StateId,
+                CountryId=x.CountryId,
+                HotelDescription=x.HotelDescription,
+                HotelName=x.HotelName,
+                Latitude=x.Latitude,
+                Longitude=x.Longitude,
+                HotelId=x.HotelId,
+                IsActive=x.IsActive,
+                CreatedBy=x.CreatedBy,
+                CreatedDate=x.CreatedDate,
+                UpdatedBy=x.UpdatedBy,
+                UpdatedDate=x.UpdatedDate,
+                DeletedBy=x.DeletedBy,
+                DeletedDate=x.DeletedDate,
+                State=x.State,
+                City=x.City,
+                Country=x.Country
+                
+            }).Where(x=>x.IsActive==true).ToListAsync();
         }
 
         public async Task<TblHotel> GetHotelsByid(long id)
