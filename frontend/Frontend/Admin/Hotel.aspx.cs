@@ -122,7 +122,13 @@ namespace Frontend.Admin
 
         protected void btnDelete_Click(object sender, EventArgs e)
         {
+            LinkButton btnDelete = (LinkButton)sender;
+            string HotelId = btnDelete.CommandArgument;
 
+            // Register the JavaScript function with the cityId as an argument
+            string script = $"alertConfirm('Are you sure?', 'You won\\'t be able to revert this!', 'Yes, delete it!', 'Hotel.aspx/Delete', {HotelId},bindHotels);";
+
+            ScriptManager.RegisterStartupScript(this, GetType(), "DeleteConfirmation", script, true);
         }
 
         protected void btnAddAdmin_Click(object sender, EventArgs e)

@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "ManifestType": "Build",
+  "Endpoints": [
+    {
+      "Route": "img/AkshatDwivediSign.aopyq38766.png",
+      "AssetFile": "img/AkshatDwivediSign.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20757"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hsPC3TIInDTcqHeSAFDQOfuF1rHB1jnPc/R139sPRAQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 21 Nov 2024 17:31:45 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "aopyq38766"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hsPC3TIInDTcqHeSAFDQOfuF1rHB1jnPc/R139sPRAQ="
+        },
+        {
+          "Name": "label",
+          "Value": "img/AkshatDwivediSign.png"
+        }
+      ]
+    },
+    {
+      "Route": "img/AkshatDwivediSign.png",
+      "AssetFile": "img/AkshatDwivediSign.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20757"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hsPC3TIInDTcqHeSAFDQOfuF1rHB1jnPc/R139sPRAQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 21 Nov 2024 17:31:45 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hsPC3TIInDTcqHeSAFDQOfuF1rHB1jnPc/R139sPRAQ="
+        }
+      ]
+    }
+  ]
+}

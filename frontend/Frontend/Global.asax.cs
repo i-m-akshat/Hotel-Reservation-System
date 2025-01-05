@@ -29,8 +29,6 @@ namespace HotelReservationSystem_Part1
                 "AllHotels.aspx",
                 "~/Common/AllHotels.aspx");
 
-            
-            
         }
 
         protected void Session_Start(object sender, EventArgs e)

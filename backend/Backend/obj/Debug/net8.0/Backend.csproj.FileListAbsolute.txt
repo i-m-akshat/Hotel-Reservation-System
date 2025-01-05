@@ -161,3 +161,7 @@ A:\asp.net Projects\HotelReservation\backend\Backend\obj\Debug\net8.0\Backend.pd
 A:\asp.net Projects\HotelReservation\backend\Backend\obj\Debug\net8.0\Backend.genruntimeconfig.cache
 A:\asp.net Projects\HotelReservation\backend\Backend\obj\Debug\net8.0\ref\Backend.dll
 A:\asp.net Projects\HotelReservation\backend\Backend\bin\Debug\net8.0\Backend.staticwebassets.runtime.json
+A:\asp.net Projects\HotelReservation\backend\Backend\bin\Debug\net8.0\Backend.staticwebassets.endpoints.json
+A:\asp.net Projects\HotelReservation\backend\Backend\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+A:\asp.net Projects\HotelReservation\backend\Backend\obj\Debug\net8.0\staticwebassets\msbuild.Backend.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+A:\asp.net Projects\HotelReservation\backend\Backend\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

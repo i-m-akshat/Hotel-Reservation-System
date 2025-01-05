@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LPZtX8oDgcAqevQmv2fDSIf5ygnkQzOkWIOhaRzcAAw=",
+  "Hash": "tORMwGC3wCgvxleIkhPjCxQyJFxINOZzUY8h/vRL3AE=",
   "Source": "Backend",
   "BasePath": "_content/Backend",
   "Mode": "Default",
@@ -22,18 +22,104 @@
       "SourceType": "Discovered",
       "ContentRoot": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\",
       "BasePath": "_content/Backend",
-      "RelativePath": "img/AkshatDwivediSign.png",
+      "RelativePath": "img/AkshatDwivediSign#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeBehavior": "",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+      "Fingerprint": "aopyq38766",
+      "Integrity": "hsPC3TIInDTcqHeSAFDQOfuF1rHB1jnPc/R139sPRAQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\AkshatDwivediSign.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "img/AkshatDwivediSign.aopyq38766.png",
+      "AssetFile": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\img\\AkshatDwivediSign.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20757"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hsPC3TIInDTcqHeSAFDQOfuF1rHB1jnPc/R139sPRAQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 21 Nov 2024 17:31:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "aopyq38766"
+        },
+        {
+          "Name": "label",
+          "Value": "img/AkshatDwivediSign.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hsPC3TIInDTcqHeSAFDQOfuF1rHB1jnPc/R139sPRAQ="
+        }
+      ]
+    },
+    {
+      "Route": "img/AkshatDwivediSign.png",
+      "AssetFile": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\img\\AkshatDwivediSign.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20757"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hsPC3TIInDTcqHeSAFDQOfuF1rHB1jnPc/R139sPRAQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 21 Nov 2024 17:31:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hsPC3TIInDTcqHeSAFDQOfuF1rHB1jnPc/R139sPRAQ="
+        }
+      ]
     }
   ]
 }
