@@ -11,6 +11,7 @@ using System.Net;
 using System.Reflection;
 using System.Web;
 using System.Web.Security;
+using System.Web.Services;
 using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -430,8 +431,12 @@ namespace Frontend.Admin
             {
                 if (!btnIconImgUpload.HasFile)
                     message += "Icon image is necessary";
+                else if (btnIconImgUpload.HasFile && !btnIconImgUpload.FileName.EndsWith(".png"))
+                    message += "Icon image should be in png format";
                 if (!btnBannerImgUpload.HasFile)
                     message += "Banner image is necessary";
+                else if (btnBannerImgUpload.HasFile && !btnBannerImgUpload.FileName.EndsWith(".png"))
+                    message += "Banner image should be in .png format";
             }
             if (message != string.Empty) {
 
@@ -542,6 +547,35 @@ namespace Frontend.Admin
             {
                 btnAddAdmin.Text = "Add";
                 btnAddAdmin.Enabled = false;
+            }
+
+        }
+
+        [WebMethod]
+        public static bool Delete(int id)
+        {
+            try
+            {
+                var enc_id = _secure.Encrypt(Convert.ToString(id), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                var res =_service.DeleteHotel(enc_id).Result;
+                if (res != null)
+                {
+
+                    return true;
+
+
+                }
+                else
+                {
+                    Hotel hotel = new Hotel();
+                    hotel.BindHotels();
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
             }
 
         }

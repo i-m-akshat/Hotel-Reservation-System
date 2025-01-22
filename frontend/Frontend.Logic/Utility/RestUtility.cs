@@ -28,7 +28,7 @@ namespace Frontend.Logic.Utility
                     var res= await response.Content.ReadAsStringAsync();
                     if (typeof(T) == typeof(string))
                     {
-                        return (T)(object)res;
+                        return (T)(object)res; //This is necessary because generics don't allow direct casting to an unknown type T.
                     }
                     else
                     {

@@ -1,6 +1,30 @@
 {
   "Files": [
     {
+      "Id": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\ExceptionLogs\\ExceptionLog_2025-01-23_00-28-13",
+      "PackagePath": "staticwebassets\\ExceptionLogs"
+    },
+    {
+      "Id": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-23-32",
+      "PackagePath": "staticwebassets\\RequestLogs"
+    },
+    {
+      "Id": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-24-57",
+      "PackagePath": "staticwebassets\\RequestLogs"
+    },
+    {
+      "Id": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-39-50",
+      "PackagePath": "staticwebassets\\RequestLogs"
+    },
+    {
+      "Id": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-42-47",
+      "PackagePath": "staticwebassets\\RequestLogs"
+    },
+    {
+      "Id": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-45-23",
+      "PackagePath": "staticwebassets\\RequestLogs"
+    },
+    {
       "Id": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\img\\AkshatDwivediSign.png",
       "PackagePath": "staticwebassets\\img\\AkshatDwivediSign.png"
     },

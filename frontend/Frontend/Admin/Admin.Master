@@ -23,10 +23,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Assets/css/app.css" />
-	<link rel="stylesheet" href="../Assets/DataTables/datatables.min.css" />
+	<%--<link rel="stylesheet" href="../Assets/DataTables/datatables.min.css" />--%>
     <link href="../Assets/FontAwesome/css/all.min.css" rel="stylesheet" />
     <script src="../Assets/FontAwesome/js/all.min.js"></script>
-	<script src="../Assets/DataTables/datatables.min.js"></script>
+	<%--<script src="../Assets/DataTables/datatables.min.js"></script>--%>
     <script src="../Assets/Js/app.js"></script>
     <script src="../Assets/Sweetalert/sweetalert2.all.min.js"></script>
     <script src="../Assets/Jquery/jquery-3.6.4.min.js"></script>
@@ -180,7 +180,7 @@
 					</li>
 
 					<li class="sidebar-item" >
-						<a class="sidebar-link" >
+						<a class="sidebar-link"  href="HotelImage.aspx" id="btnHotelImg" onclick="setActive(this.parentNode,'Hotel Image')">
               <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Hotel Images</span>
             </a>
 					</li>

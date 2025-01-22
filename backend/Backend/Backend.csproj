@@ -25,4 +25,9 @@
     <None Include="wwwRoot\img\AkshatDwivediSign.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\ExceptionLogs\" />
+    <Folder Include="wwwroot\RequestLogs\" />
+  </ItemGroup>
+
 </Project>

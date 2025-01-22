@@ -32,6 +32,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -95,6 +96,8 @@
     <Content Include="Admin\Dashboard.aspx" />
     <Content Include="Admin\Help.aspx" />
     <Content Include="Admin\Hotel.aspx" />
+    <Content Include="Admin\HotelContact.aspx" />
+    <Content Include="Admin\HotelImage.aspx" />
     <Content Include="Admin\Profile.aspx" />
     <Content Include="Admin\Role.aspx" />
     <Content Include="Admin\Settings.aspx" />
@@ -396,6 +399,20 @@
     <Compile Include="Admin\Hotel.aspx.designer.cs">
       <DependentUpon>Hotel.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\HotelContact.aspx.cs">
+      <DependentUpon>HotelContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HotelContact.aspx.designer.cs">
+      <DependentUpon>HotelContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\HotelImage.aspx.cs">
+      <DependentUpon>HotelImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\HotelImage.aspx.designer.cs">
+      <DependentUpon>HotelImage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -584,6 +601,13 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

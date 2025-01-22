@@ -1,4 +1,5 @@
 using Backend;
+using Backend.CustomMiddlewares;
 using Backend.DataAccessLayer.Context.DBContext;
 using Backend.DataAccessLayer.Repository.Implementations;
 using Backend.DataAccessLayer.Repository.Interfaces;
@@ -47,7 +48,8 @@ builder.Services.AddSingleton(emailConfig);
 
 
 #endregion
-
+builder.Services.AddTransient<GlobalExceptionHandler>();
+builder.Services.AddTransient<CustomLoggerForRequests>();
 #region Scoped Services here 
 
 
@@ -73,6 +75,7 @@ builder.Services.AddScoped<IHotelService, HotelServices>();
 
 
 
+
 #endregion
 
 #region Cross-Origin Resource Sharing-- Allowing the access to request coming from  https://localhost:44395 or https://localhost:44395/Common/Default.aspx , blocking other requests
@@ -91,9 +94,7 @@ builder.WithOrigins("https://localhost:44395","https://localhost:44395/Common/De
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
 var app = builder.Build();
-
 //Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -103,8 +104,10 @@ if (app.Environment.IsDevelopment())
 app.UseCors("AllowSpecificOrigins");
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.HandleException();
+
 app.UseAuthorization();
 
 app.MapControllers();
-
+app.UseCustomLogger();
 app.Run();

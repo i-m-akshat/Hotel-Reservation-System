@@ -23,7 +23,7 @@ namespace Backend.Controllers
         public StateController(ISecureService secure,IStateService service,IOptions<AppSettings> app)
         {
             _secureService = secure;
-            _stateService = service;
+            _stateService = service; 
             _app = app.Value;
         }
         [HttpGet]

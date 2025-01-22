@@ -3,6 +3,498 @@
   "ManifestType": "Build",
   "Endpoints": [
     {
+      "Route": "ExceptionLogs/ExceptionLog_2025-01-23_00-28-13",
+      "AssetFile": "ExceptionLogs/ExceptionLog_2025-01-23_00-28-13",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2669"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TI188g82KntG1KwwE9EGHrHaj50J1QYPXRRZ8+KdNx0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 18:58:13 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-TI188g82KntG1KwwE9EGHrHaj50J1QYPXRRZ8+KdNx0="
+        }
+      ]
+    },
+    {
+      "Route": "ExceptionLogs/ExceptionLog_2025-01-23_00-28-13.8xmdw62rgo",
+      "AssetFile": "ExceptionLogs/ExceptionLog_2025-01-23_00-28-13",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2669"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"TI188g82KntG1KwwE9EGHrHaj50J1QYPXRRZ8+KdNx0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 18:58:13 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8xmdw62rgo"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-TI188g82KntG1KwwE9EGHrHaj50J1QYPXRRZ8+KdNx0="
+        },
+        {
+          "Name": "label",
+          "Value": "ExceptionLogs/ExceptionLog_2025-01-23_00-28-13"
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-23-32",
+      "AssetFile": "RequestLogs/RequestLog2025-01-23_00-23-32",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "692"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/4ZcGlwqA/by71imcFN44wqt/hdVKsAFwL13al1ztKY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 18:53:38 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/4ZcGlwqA/by71imcFN44wqt/hdVKsAFwL13al1ztKY="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-23-32.l7bxykheow",
+      "AssetFile": "RequestLogs/RequestLog2025-01-23_00-23-32",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "692"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/4ZcGlwqA/by71imcFN44wqt/hdVKsAFwL13al1ztKY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 18:53:38 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "l7bxykheow"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/4ZcGlwqA/by71imcFN44wqt/hdVKsAFwL13al1ztKY="
+        },
+        {
+          "Name": "label",
+          "Value": "RequestLogs/RequestLog2025-01-23_00-23-32"
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-24-57",
+      "AssetFile": "RequestLogs/RequestLog2025-01-23_00-24-57",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"K0nwkVYfzaBrH/LGxp+XF5dzOoINMQV+ML6UoZVGNTo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 18:54:57 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-K0nwkVYfzaBrH/LGxp+XF5dzOoINMQV+ML6UoZVGNTo="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-24-57.vr4837istu",
+      "AssetFile": "RequestLogs/RequestLog2025-01-23_00-24-57",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"K0nwkVYfzaBrH/LGxp+XF5dzOoINMQV+ML6UoZVGNTo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 18:54:57 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vr4837istu"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-K0nwkVYfzaBrH/LGxp+XF5dzOoINMQV+ML6UoZVGNTo="
+        },
+        {
+          "Name": "label",
+          "Value": "RequestLogs/RequestLog2025-01-23_00-24-57"
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-39-50",
+      "AssetFile": "RequestLogs/RequestLog2025-01-23_00-39-50",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EN6aJFAEiEfGcASGR3n01c7t4LWWanSfYZWUm5//sFI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:12:35 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EN6aJFAEiEfGcASGR3n01c7t4LWWanSfYZWUm5//sFI="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-39-50.w0tkudmfmt",
+      "AssetFile": "RequestLogs/RequestLog2025-01-23_00-39-50",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EN6aJFAEiEfGcASGR3n01c7t4LWWanSfYZWUm5//sFI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:12:35 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w0tkudmfmt"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EN6aJFAEiEfGcASGR3n01c7t4LWWanSfYZWUm5//sFI="
+        },
+        {
+          "Name": "label",
+          "Value": "RequestLogs/RequestLog2025-01-23_00-39-50"
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-42-47",
+      "AssetFile": "RequestLogs/RequestLog2025-01-23_00-42-47",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "722"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fjCG1nD9ublCtNGl5BQhtbzY0OKxo5wWbebgNX9BNIw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:15:01 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-fjCG1nD9ublCtNGl5BQhtbzY0OKxo5wWbebgNX9BNIw="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-42-47.i3oqkkdsb4",
+      "AssetFile": "RequestLogs/RequestLog2025-01-23_00-42-47",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "722"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"fjCG1nD9ublCtNGl5BQhtbzY0OKxo5wWbebgNX9BNIw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:15:01 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i3oqkkdsb4"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-fjCG1nD9ublCtNGl5BQhtbzY0OKxo5wWbebgNX9BNIw="
+        },
+        {
+          "Name": "label",
+          "Value": "RequestLogs/RequestLog2025-01-23_00-42-47"
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-45-23",
+      "AssetFile": "RequestLogs/RequestLog2025-01-23_00-45-23",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4JNmJUDgx2wMZEfm196242CGAy3PW6nqL5DmSM1WZP8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:15:23 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4JNmJUDgx2wMZEfm196242CGAy3PW6nqL5DmSM1WZP8="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-45-23.g8v7mt5p5l",
+      "AssetFile": "RequestLogs/RequestLog2025-01-23_00-45-23",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4JNmJUDgx2wMZEfm196242CGAy3PW6nqL5DmSM1WZP8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:15:23 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g8v7mt5p5l"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4JNmJUDgx2wMZEfm196242CGAy3PW6nqL5DmSM1WZP8="
+        },
+        {
+          "Name": "label",
+          "Value": "RequestLogs/RequestLog2025-01-23_00-45-23"
+        }
+      ]
+    },
+    {
       "Route": "img/AkshatDwivediSign.aopyq38766.png",
       "AssetFile": "img/AkshatDwivediSign.png",
       "Selectors": [],
