@@ -211,8 +211,7 @@
               "RelativeToolTip": "wwwRoot\\RequestLogs\\RequestLog2025-01-23_00-23-32",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-22T18:53:45.267Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-22T18:53:45.267Z"
             },
             {
               "$type": "Document",
@@ -222,7 +221,7 @@
               "RelativeDocumentMoniker": "CustomMiddlewares\\CustomLoggerForRequests.cs",
               "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\CustomMiddlewares\\CustomLoggerForRequests.cs",
               "RelativeToolTip": "CustomMiddlewares\\CustomLoggerForRequests.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAiwDQAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAiwDAAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-22T17:58:45.122Z",
               "EditorCaption": ""
@@ -237,8 +236,7 @@
               "RelativeToolTip": "..\\Backend.Services\\Implementatios\\MailService.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAiwBMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T16:52:33.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T16:52:33.051Z"
             },
             {
               "$type": "Document",
@@ -250,8 +248,7 @@
               "RelativeToolTip": "Controllers\\AdminController.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAiwBsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T17:15:27.349Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T17:15:27.349Z"
             },
             {
               "$type": "Document",
@@ -263,8 +260,7 @@
               "RelativeToolTip": "Controllers\\CityController.cs",
               "ViewState": "AgIAAFAAAAAAAAAAAAAAABYAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T14:32:04.813Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T14:32:04.813Z"
             },
             {
               "$type": "Document",
@@ -276,8 +272,7 @@
               "RelativeToolTip": "CustomMiddlewares\\GlobalExceptionHandler.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAiwA8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T06:37:44.527Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-21T06:37:44.527Z"
             },
             {
               "$type": "Document",
@@ -289,8 +284,7 @@
               "RelativeToolTip": "wwwRoot\\RequestLogs\\RequestLog2025-01-23_00-42-47",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-22T19:12:53.773Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-22T19:12:53.773Z"
             },
             {
               "$type": "Document",
@@ -302,8 +296,7 @@
               "RelativeToolTip": "wwwRoot\\RequestLogs\\RequestLog2025-01-23_00-39-50",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-22T19:10:00.16Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-22T19:10:00.16Z"
             },
             {
               "$type": "Document",
@@ -315,8 +308,7 @@
               "RelativeToolTip": "wwwRoot\\RequestLogs\\RequestLog2025-01-23_00-24-57",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-22T18:55:06.953Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-22T18:55:06.953Z"
             },
             {
               "$type": "Document",
@@ -328,8 +320,7 @@
               "RelativeToolTip": "..\\Backend.Services\\Implementatios\\AdminService.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAiwA8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T17:48:38.494Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T17:48:38.494Z"
             },
             {
               "$type": "Document",
@@ -341,8 +332,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAF8AAAAAAAAAAAAiwG8AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T16:44:17.67Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T16:44:17.67Z"
             },
             {
               "$type": "Document",
@@ -354,8 +344,7 @@
               "RelativeToolTip": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\AdminRepo.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAADgvxUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T18:13:35.54Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T18:13:35.54Z"
             },
             {
               "$type": "Document",
@@ -367,8 +356,7 @@
               "RelativeToolTip": "Controllers\\StateController.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAABwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-06T07:43:53.27Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-06T07:43:53.27Z"
             },
             {
               "$type": "Document",
@@ -380,8 +368,7 @@
               "RelativeToolTip": "..\\Backend.DataAccessLayer\\Context\\DBContext\\BaseraHotelReservationSystemContext.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAiwBAAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T18:45:40.806Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-19T18:45:40.806Z"
             },
             {
               "$type": "Document",

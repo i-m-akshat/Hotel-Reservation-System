@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ggQsm3+24fb3hXD/lNQ7/3Evt8tJw7v1aOIg+tGi+IY=",
+  "Hash": "pXq0fQIv1iJMe/du8H8aREl2T78MQv6YlZqWNooTLuE=",
   "Source": "Backend",
   "BasePath": "_content/Backend",
   "Mode": "Default",
@@ -162,6 +162,174 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\RequestLogs\\RequestLog2025-01-23_00-45-23"
+    },
+    {
+      "Identity": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-49-55",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "RequestLogs/RequestLog2025-01-23_00-49-55#[.{fingerprint}]?",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gzs1x35hz7",
+      "Integrity": "/IXrSkzntNJEksEZw0znTigrxupqfFDf1ty2wQG/CYY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\RequestLogs\\RequestLog2025-01-23_00-49-55"
+    },
+    {
+      "Identity": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-50-12",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "RequestLogs/RequestLog2025-01-23_00-50-12#[.{fingerprint}]?",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "t9k03j1ixo",
+      "Integrity": "X/pn79711kXmqZ7CK7DUwoKpGzJa3SNnuIA5k/XydwI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\RequestLogs\\RequestLog2025-01-23_00-50-12"
+    },
+    {
+      "Identity": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-50-19",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "RequestLogs/RequestLog2025-01-23_00-50-19#[.{fingerprint}]?",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "add2zv3yla",
+      "Integrity": "Lj/r5G+cJsYkRys/ZfVDt2olMGOdKvzbO0DJ34MHFeQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\RequestLogs\\RequestLog2025-01-23_00-50-19"
+    },
+    {
+      "Identity": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-50-41",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "RequestLogs/RequestLog2025-01-23_00-50-41#[.{fingerprint}]?",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "04inq0ovn5",
+      "Integrity": "cFUJxIbNPjpLKX26WalxReSHAXToNOu0wQoNILzpDM4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\RequestLogs\\RequestLog2025-01-23_00-50-41"
+    },
+    {
+      "Identity": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-51-25",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "RequestLogs/RequestLog2025-01-23_00-51-25#[.{fingerprint}]?",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "efzppk982w",
+      "Integrity": "Zmd8S5Ianda0txDTl78V6bx29kTpcX/cHEVs61CBTnA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\RequestLogs\\RequestLog2025-01-23_00-51-25"
+    },
+    {
+      "Identity": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-52-06",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "RequestLogs/RequestLog2025-01-23_00-52-06#[.{fingerprint}]?",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4awuuggqnb",
+      "Integrity": "FGNId8q/FxHZ5EghLQQLrNKqpgjmmq/A8GdRfRzmNxo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\RequestLogs\\RequestLog2025-01-23_00-52-06"
+    },
+    {
+      "Identity": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-52-26",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "RequestLogs/RequestLog2025-01-23_00-52-26#[.{fingerprint}]?",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "c1g49g5w5e",
+      "Integrity": "MGPUICiJOgIg2DnKxqO9RCe5hrOom/0JgUWZHwHIgbw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\RequestLogs\\RequestLog2025-01-23_00-52-26"
+    },
+    {
+      "Identity": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-52-29",
+      "SourceId": "Backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\",
+      "BasePath": "_content/Backend",
+      "RelativePath": "RequestLogs/RequestLog2025-01-23_00-52-29#[.{fingerprint}]?",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "mjdogtoyoo",
+      "Integrity": "kv61ZU3cTb9lzCYIkMv+wKzDAV51+LI7nJTZnoSwx5Q=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\RequestLogs\\RequestLog2025-01-23_00-52-29"
     }
   ],
   "Endpoints": [
@@ -736,6 +904,662 @@
         {
           "Name": "integrity",
           "Value": "sha256-4JNmJUDgx2wMZEfm196242CGAy3PW6nqL5DmSM1WZP8="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-49-55",
+      "AssetFile": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-49-55",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "726"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/IXrSkzntNJEksEZw0znTigrxupqfFDf1ty2wQG/CYY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:19:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-/IXrSkzntNJEksEZw0znTigrxupqfFDf1ty2wQG/CYY="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-49-55.gzs1x35hz7",
+      "AssetFile": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-49-55",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "726"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"/IXrSkzntNJEksEZw0znTigrxupqfFDf1ty2wQG/CYY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:19:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gzs1x35hz7"
+        },
+        {
+          "Name": "label",
+          "Value": "RequestLogs/RequestLog2025-01-23_00-49-55"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-/IXrSkzntNJEksEZw0znTigrxupqfFDf1ty2wQG/CYY="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-50-12",
+      "AssetFile": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-50-12",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X/pn79711kXmqZ7CK7DUwoKpGzJa3SNnuIA5k/XydwI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:20:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-X/pn79711kXmqZ7CK7DUwoKpGzJa3SNnuIA5k/XydwI="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-50-12.t9k03j1ixo",
+      "AssetFile": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-50-12",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"X/pn79711kXmqZ7CK7DUwoKpGzJa3SNnuIA5k/XydwI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:20:12 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "t9k03j1ixo"
+        },
+        {
+          "Name": "label",
+          "Value": "RequestLogs/RequestLog2025-01-23_00-50-12"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-X/pn79711kXmqZ7CK7DUwoKpGzJa3SNnuIA5k/XydwI="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-50-19",
+      "AssetFile": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-50-19",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1445"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Lj/r5G+cJsYkRys/ZfVDt2olMGOdKvzbO0DJ34MHFeQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:20:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Lj/r5G+cJsYkRys/ZfVDt2olMGOdKvzbO0DJ34MHFeQ="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-50-19.add2zv3yla",
+      "AssetFile": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-50-19",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1445"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Lj/r5G+cJsYkRys/ZfVDt2olMGOdKvzbO0DJ34MHFeQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:20:19 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "add2zv3yla"
+        },
+        {
+          "Name": "label",
+          "Value": "RequestLogs/RequestLog2025-01-23_00-50-19"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Lj/r5G+cJsYkRys/ZfVDt2olMGOdKvzbO0DJ34MHFeQ="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-50-41",
+      "AssetFile": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-50-41",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2891"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cFUJxIbNPjpLKX26WalxReSHAXToNOu0wQoNILzpDM4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:20:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cFUJxIbNPjpLKX26WalxReSHAXToNOu0wQoNILzpDM4="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-50-41.04inq0ovn5",
+      "AssetFile": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-50-41",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2891"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cFUJxIbNPjpLKX26WalxReSHAXToNOu0wQoNILzpDM4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:20:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "04inq0ovn5"
+        },
+        {
+          "Name": "label",
+          "Value": "RequestLogs/RequestLog2025-01-23_00-50-41"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cFUJxIbNPjpLKX26WalxReSHAXToNOu0wQoNILzpDM4="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-51-25",
+      "AssetFile": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-51-25",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "726"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Zmd8S5Ianda0txDTl78V6bx29kTpcX/cHEVs61CBTnA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:21:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Zmd8S5Ianda0txDTl78V6bx29kTpcX/cHEVs61CBTnA="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-51-25.efzppk982w",
+      "AssetFile": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-51-25",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "726"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Zmd8S5Ianda0txDTl78V6bx29kTpcX/cHEVs61CBTnA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:21:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "efzppk982w"
+        },
+        {
+          "Name": "label",
+          "Value": "RequestLogs/RequestLog2025-01-23_00-51-25"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Zmd8S5Ianda0txDTl78V6bx29kTpcX/cHEVs61CBTnA="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-52-06",
+      "AssetFile": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-52-06",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "726"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FGNId8q/FxHZ5EghLQQLrNKqpgjmmq/A8GdRfRzmNxo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:22:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-FGNId8q/FxHZ5EghLQQLrNKqpgjmmq/A8GdRfRzmNxo="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-52-06.4awuuggqnb",
+      "AssetFile": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-52-06",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "726"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"FGNId8q/FxHZ5EghLQQLrNKqpgjmmq/A8GdRfRzmNxo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:22:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4awuuggqnb"
+        },
+        {
+          "Name": "label",
+          "Value": "RequestLogs/RequestLog2025-01-23_00-52-06"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-FGNId8q/FxHZ5EghLQQLrNKqpgjmmq/A8GdRfRzmNxo="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-52-26",
+      "AssetFile": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-52-26",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MGPUICiJOgIg2DnKxqO9RCe5hrOom/0JgUWZHwHIgbw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:22:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MGPUICiJOgIg2DnKxqO9RCe5hrOom/0JgUWZHwHIgbw="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-52-26.c1g49g5w5e",
+      "AssetFile": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-52-26",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5782"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MGPUICiJOgIg2DnKxqO9RCe5hrOom/0JgUWZHwHIgbw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:22:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "c1g49g5w5e"
+        },
+        {
+          "Name": "label",
+          "Value": "RequestLogs/RequestLog2025-01-23_00-52-26"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MGPUICiJOgIg2DnKxqO9RCe5hrOom/0JgUWZHwHIgbw="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-52-29",
+      "AssetFile": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-52-29",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "723"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kv61ZU3cTb9lzCYIkMv+wKzDAV51+LI7nJTZnoSwx5Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:22:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kv61ZU3cTb9lzCYIkMv+wKzDAV51+LI7nJTZnoSwx5Q="
+        }
+      ]
+    },
+    {
+      "Route": "RequestLogs/RequestLog2025-01-23_00-52-29.mjdogtoyoo",
+      "AssetFile": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwroot\\RequestLogs\\RequestLog2025-01-23_00-52-29",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "723"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/octet-stream"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kv61ZU3cTb9lzCYIkMv+wKzDAV51+LI7nJTZnoSwx5Q=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 22 Jan 2025 19:22:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "mjdogtoyoo"
+        },
+        {
+          "Name": "label",
+          "Value": "RequestLogs/RequestLog2025-01-23_00-52-29"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kv61ZU3cTb9lzCYIkMv+wKzDAV51+LI7nJTZnoSwx5Q="
         }
       ]
     }
