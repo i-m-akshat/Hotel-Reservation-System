@@ -180,7 +180,7 @@
 					</li>
 
 					<li class="sidebar-item" >
-						<a class="sidebar-link"  href="HotelImage.aspx" id="btnHotelImg" onclick="setActive(this.parentNode,'Hotel Image')">
+						<a class="sidebar-link"  href="HotelImage.aspx" id="btnHotelImg" onclick="setActive(this.parentNode,'HotelImage')">
               <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Hotel Images</span>
             </a>
 					</li>

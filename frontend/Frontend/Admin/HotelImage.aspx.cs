@@ -28,5 +28,10 @@ namespace Frontend.Admin
         {
 
         }
+
+        protected void btnView_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

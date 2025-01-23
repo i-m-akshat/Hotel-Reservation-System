@@ -1,5 +1,11 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Backend.Models;
+using Backend.Models.AppSettings_Domain;
+using Backend.Models.Hotel_Domain;
+using Backend.Services.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
 
 namespace Backend.Controllers
 {
@@ -7,65 +13,233 @@ namespace Backend.Controllers
     [ApiController]
     public class HotelImageController : ControllerBase
     {
+        private readonly IHotelImageService _service; 
+        private readonly ISecureService _secure;
+        private readonly AppSettings _appSettings;
+        public HotelImageController(IHotelImageService service, ISecureService secure, IOptions<AppSettings> appSettings)
+        {
+            _service = service;
+            _secure = secure;
+            _appSettings = appSettings.Value;
+
+        }
         [HttpPost]
-        public IActionResult Create([FromBody] string body)
+        [Route("Create")]
+        public async Task<IActionResult> Create([FromBody] string body)
         {
             try
             {
-                return null;
+                var dec_data = _secure.Decrypt(body, _appSettings.enc_key, _appSettings.enc_iv);
+                if (dec_data != null)
+                {
+                    var data = JsonConvert.DeserializeObject<HotelImage>(dec_data);
+                    var res=await _service.CreateHotelImage(data);
+                    if (res != null) {
+                        return Ok(new Response<string>
+                        {
+                            IsSuccess = true,
+                            StatusCode = 201,
+                            StatusMessage = "Success",
+                            Data = _secure.Encrypt(JsonConvert.SerializeObject(res), _appSettings.enc_key, _appSettings.enc_iv)
+                        });
+                    }
+                    else
+                    {
+                        return BadRequest(new Response<string>
+                        {
+                            IsSuccess = false,
+                            StatusCode = 400,
+                            StatusMessage = "Bad Request"
+                        });
+                    }
+
+                }
+                else
+                {
+                    return BadRequest(new Response<string>
+                    {
+                        IsSuccess = false,
+                        StatusCode = 400,
+                        StatusMessage = "Bad Request"
+                    });
+                }
             }
             catch (Exception ex)
             {
-                throw;
+                return StatusCode(500, new Response<string>
+                {
+                    StatusCode = 500,
+                    IsSuccess = false,
+                    StatusMessage = "An error occurred while processing your request"
+                });
             }
           
         }
         [HttpGet]
-        public IActionResult GetAll()
+        [Route("")]
+        public async Task<IActionResult> GetAll()
         {
             try
             {
-                return null;
+                var res =await _service.GetAll();
+                if (res != null)
+                {
+                    return Ok(new Response<string>
+                    {
+                        IsSuccess = true,
+                        StatusCode = 200,
+                        StatusMessage = "Success",
+                        Data = _secure.Encrypt(JsonConvert.SerializeObject(res), _appSettings.enc_key, _appSettings.enc_iv)
+                    });
+                }
+                else
+                {
+                    return BadRequest(new Response<string>
+                    {
+                        IsSuccess = false,
+                        StatusCode = 400,
+                        StatusMessage = "Bad Request"
+                    });
+                }
             }
             catch (Exception ex)
             {
-                throw;
+                return StatusCode(500, new Response<string>
+                {
+                    StatusCode = 500,
+                    IsSuccess = false,
+                    StatusMessage = "An error occurred while processing your request"
+                });
             }
         }
         [HttpGet]
-        public IActionResult GetById([FromQuery] string id)
+        [Route("Get")]
+        public async Task<IActionResult> GetById([FromQuery] string id)
         {
             try
             {
-                return null;
+                long dec_id = Convert.ToInt64(_secure.Decrypt(id, _appSettings.enc_key, _appSettings.enc_iv));
+                var res = await _service.GetHotelImage(dec_id);
+                if (res != null)
+                {
+                    return Ok(new Response<string>
+                    {
+                        IsSuccess = true,
+                        StatusCode = 200,
+                        Data = _secure.Encrypt(JsonConvert.SerializeObject(res), _appSettings.enc_key, _appSettings.enc_iv),
+                        StatusMessage = "OK"
+                    });
+                }
+                else
+                {
+                    return NotFound(new Response<string>
+                    {
+                        IsSuccess = false,
+                        StatusCode = 404,
+                        StatusMessage = "Not Found !"
+                    });
+                }
             }
             catch (Exception ex)
             {
-                throw;
+                return StatusCode(500, new Response<string>
+                {
+                    StatusCode = 500,
+                    IsSuccess = false,
+                    StatusMessage = "An error occurred while processing your request"
+                });
             }
         }
         [HttpGet]
-        public IActionResult GetByHotelId(string hotelId) 
+        [Route("GetByHotelID")]
+        public async Task<IActionResult> GetByHotelId(string hotelId) 
         {
             try
             {
-                return null;
+                long dec_Hotelid = Convert.ToInt64(_secure.Decrypt(hotelId, _appSettings.enc_key, _appSettings.enc_iv));
+                var res = await _service.GetHotelImagesByHotelId(dec_Hotelid);
+                if (res != null)
+                {
+
+                    return Ok(new Response<string>
+                    {
+                        IsSuccess = true,
+                        StatusCode = 200,
+                        Data = _secure.Encrypt(JsonConvert.SerializeObject(res), _appSettings.enc_key, _appSettings.enc_iv),
+                        StatusMessage = "OK"
+                    });
+                }
+                else
+                {
+                    return NotFound(new Response<string>
+                    {
+                        IsSuccess = false,
+                        StatusCode = 404,
+                        StatusMessage = "Not Found !"
+                    });
+                }
             }
             catch (Exception ex)
             {
-                throw;
+                return StatusCode(500, new Response<string>
+                {
+                    StatusCode = 500,
+                    IsSuccess = false,
+                    StatusMessage = "An error occurred while processing your request"
+                });
             }
         }
         [HttpPut]
-        public IActionResult Update([FromQuery]string id, [FromBody] string image)
+        [Route("Update")]
+        public async Task<IActionResult> Update([FromQuery]string id, [FromBody] string image)
         {
             try
             {
-                return null;
+                var dec_id = Convert.ToInt64(_secure.Decrypt(id, _appSettings.enc_key, _appSettings.enc_iv));
+                var body = _secure.Decrypt(image, _appSettings.enc_key, _appSettings.enc_iv);
+                if (dec_id != null && body != null)
+                {
+                    var hotelImg = JsonConvert.DeserializeObject<HotelImage>(body);
+                    var res = await _service.UpdateHotelImage(dec_id, hotelImg);
+                    if (res != null)
+                    {
+                        return Ok(new Response<string>
+                        {
+                            IsSuccess = true,
+                            StatusCode = 200,
+                            StatusMessage = "Success",
+                            Data = _secure.Encrypt(JsonConvert.SerializeObject(res), _appSettings.enc_key, _appSettings.enc_iv)
+                        });
+                    }
+                    else
+                    {
+                        return BadRequest(new Response<string>
+                        {
+                            IsSuccess = false,
+                            StatusCode = 400,
+                            StatusMessage = "Bad Request"
+                        });
+                    }
+                }
+                else
+                {
+                    return BadRequest(new Response<string>
+                    {
+                        IsSuccess = false,
+                        StatusCode = 400,
+                        StatusMessage = "Bad Request"
+                    });
+                }
+                
             }
             catch (Exception ex)
             {
-                throw;
+                return StatusCode(500, new Response<string>
+                {
+                    StatusCode = 500,
+                    IsSuccess = false,
+                    StatusMessage = "An error occurred while processing your request"
+                });
             }
         }
     }

@@ -72,6 +72,8 @@ builder.Services.AddScoped<IRoleService,RoleService>();
 builder.Services.AddScoped<IMailService, MailService>();
 builder.Services.AddScoped<IHotelRepo, HotelRepo>();
 builder.Services.AddScoped<IHotelService, HotelServices>();
+builder.Services.AddScoped <IHotelImageService,HotelImageService>();
+builder.Services.AddScoped<IHotelImageRepo, HotelImageRepo>();
 
 
 
