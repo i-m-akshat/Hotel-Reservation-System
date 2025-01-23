@@ -122,9 +122,18 @@ namespace Backend.DataAccessLayer.Repository.Implementations
                 var tbl = await _context.TblHotelimages.Where(x => x.HotelImageId == id).Include(x => x.Hotel).FirstOrDefaultAsync();
                 if (tbl != null)
                 {
-                    tbl.Updateddate= DateTime.Now;
-                    tbl.HotelId = tblHotelImage.HotelId != null?tblHotelImage.HotelId:tbl.HotelId;
-                    tbl.ImageName = tblHotelImage.ImageName!=null?tblHotelImage.ImageName:tbl.ImageName;
+                    tbl.Updateddate = DateTime.Now;
+                    tbl.HotelId = tblHotelImage.HotelId != null ? tblHotelImage.HotelId : tbl.HotelId;
+                    tbl.ImageName = tblHotelImage.ImageName != null ? tblHotelImage.ImageName : tbl.ImageName;
+                    tbl.Image = tblHotelImage.Image != null ? tblHotelImage.Image : tbl.Image;
+                    tbl.ContentType = tblHotelImage.ContentType != null ? tblHotelImage.ContentType : tbl.ContentType;
+                    //tbl.Updatedby = tblHotelImage.Updatedby != null ? tblHotelImage.Updatedby : tbl.Updatedby;
+                    await _context.SaveChangesAsync();
+                    return tbl;
+                }
+                else
+                {
+                    return null;
                 }
             }
             catch (Exception ex)

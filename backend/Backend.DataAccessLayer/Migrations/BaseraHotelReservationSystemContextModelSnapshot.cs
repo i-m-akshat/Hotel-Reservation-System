@@ -512,10 +512,10 @@ namespace Backend.DataAccessLayer.Migrations
                         .HasColumnType("nvarchar(200)")
                         .HasColumnName("image_name");
 
-                    b.Property<string>("ImageUrl")
+                    b.Property<string>("Image")
                         .HasMaxLength(600)
-                        .HasColumnType("nvarchar(600)")
-                        .HasColumnName("image_url");
+                        .HasColumnType(" varbinary(MAX)")
+                        .HasColumnName("image");
 
                     b.Property<bool?>("Isactive")
                         .HasColumnType("bit")

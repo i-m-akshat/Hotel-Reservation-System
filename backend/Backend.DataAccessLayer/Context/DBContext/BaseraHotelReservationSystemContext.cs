@@ -379,9 +379,9 @@ public partial class BaseraHotelReservationSystemContext : DbContext
             entity.Property(e => e.ImageName)
                 .HasMaxLength(200)
                 .HasColumnName("image_name");
-            entity.Property(e => e.ImageUrl)
+            entity.Property(e => e.Image)
                 .HasMaxLength(600)
-                .HasColumnName("image_url");
+                .HasColumnName("image");
             entity.Property(e => e.Isactive).HasColumnName("isactive");
             entity.Property(e => e.Updatedby).HasColumnName("updatedby");
             entity.Property(e => e.Updateddate)

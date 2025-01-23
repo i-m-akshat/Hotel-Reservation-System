@@ -11,7 +11,7 @@ public partial class TblHotelimage
 
     public string? ImageName { get; set; }
 
-    public string? ImageUrl { get; set; }
+    public byte[]? Image { get; set; }
 
     public string? ContentType { get; set; }
 
