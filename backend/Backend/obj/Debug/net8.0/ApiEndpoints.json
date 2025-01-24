@@ -438,6 +438,22 @@
   },
   {
     "ContainingType": "Backend.Controllers.HotelImageController",
+    "Method": "Delete",
+    "RelativePath": "api/HotelImage/Delete",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.HotelImageController",
     "Method": "GetById",
     "RelativePath": "api/HotelImage/Get",
     "HttpMethod": "GET",

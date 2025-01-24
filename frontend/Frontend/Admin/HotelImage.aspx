@@ -23,7 +23,7 @@
                                 <label for="ddlHotel">Hotel</label>
                             </div>
                             <div class="form-floating mb-3" style="background: none">
-                                <asp:FileUpload ID="btnUploadImages" runat="server" CssClass="form-control form-control-sm" placeholder="Please select any image" />
+                                <asp:FileUpload ID="btnUploadImages" AllowMultiple="true"  runat="server" CssClass="form-control form-control-sm" placeholder="Please select any image" />
                                <label for="img_BannerIMG">Images</label>
                                 <asp:Repeater ID="rptImagelist" runat="server">
                                     <ItemTemplate>

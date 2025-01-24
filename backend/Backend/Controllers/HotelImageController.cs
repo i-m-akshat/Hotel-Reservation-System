@@ -242,5 +242,56 @@ namespace Backend.Controllers
                 });
             }
         }
+        [Route("Delete")]
+        [HttpDelete]
+        public async Task<IActionResult> Delete([FromQuery] string id)
+        {
+            try
+            {
+                var dec_id= Convert.ToInt64(_secure.Decrypt(id, _appSettings.enc_key, _appSettings.enc_iv));
+                if (dec_id != null)
+                {
+                    var res = await _service.DeleteHotelImage(dec_id);
+                    if (res != null)
+                    {
+                        return Ok(new Response<string>
+                        {
+                            IsSuccess = true,
+                            StatusCode = 200,
+                            StatusMessage = "Success",
+                            Data = _secure.Encrypt(JsonConvert.SerializeObject(res), _appSettings.enc_key, _appSettings.enc_iv)
+                        });
+                    }
+                    else
+                    {
+                        return BadRequest(new Response<string>
+                        {
+                            IsSuccess = false,
+                            StatusCode = 400,
+                            StatusMessage = "Bad Request"
+                        });
+                    }
+                }
+                else
+                {
+                    return BadRequest(new Response<string>
+                    {
+                        IsSuccess = false,
+                        StatusCode = 400,
+                        StatusMessage = "Bad Request"
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(500, new Response<string>
+                {
+                    StatusCode = 500,
+                    IsSuccess = false,
+                    StatusMessage = "An error occurred while processing your request"
+                });
+            }
+        }
     }
 }

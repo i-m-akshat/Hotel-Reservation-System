@@ -396,5 +396,77 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\RequestLogs\RequestLog2025-01-23_02-08-46'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\RequestLogs\RequestLog2025-01-23_22-00-07'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend</BasePath>
+      <RelativePath>RequestLogs/RequestLog2025-01-23_22-00-07</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>yec9ssboor</Fingerprint>
+      <Integrity>5hxSLgPksB/oAPc4Z7nD+bBynJleCbhCJQApFQctzm4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\RequestLogs\RequestLog2025-01-23_22-00-07'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\RequestLogs\RequestLog2025-01-23_22-02-54'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend</BasePath>
+      <RelativePath>RequestLogs/RequestLog2025-01-23_22-02-54</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>o7sj2cocxu</Fingerprint>
+      <Integrity>lIce2d8Nlw86sfgiEGzj6Dzew8iwsY6wjdov+/Kczy0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\RequestLogs\RequestLog2025-01-23_22-02-54'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\RequestLogs\RequestLog2025-01-23_22-05-39'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend</BasePath>
+      <RelativePath>RequestLogs/RequestLog2025-01-23_22-05-39</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>uabvrbjot0</Fingerprint>
+      <Integrity>9oEwzpNkCUVgYFI3DGJk7H2hegfawBqPKwhRPlvWDSw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\RequestLogs\RequestLog2025-01-23_22-05-39'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\RequestLogs\RequestLog2025-01-24_22-39-41'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Backend</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Backend</BasePath>
+      <RelativePath>RequestLogs/RequestLog2025-01-24_22-39-41</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>qsoa9hw484</Fingerprint>
+      <Integrity>9tY5G81a3tz4RQrrcVSyTjcf8gKg5C1YMatHKUh/LBg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\RequestLogs\RequestLog2025-01-24_22-39-41'))</OriginalItemSpec>
+    </StaticWebAsset>
   </ItemGroup>
 </Project>
