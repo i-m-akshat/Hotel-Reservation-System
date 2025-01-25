@@ -9,9 +9,10 @@ namespace Backend.Models.Hotel_Domain
 {
     public class HotelImage
     {
-        public int HotelImageId { get; set; }
+        public long HotelImageId { get; set; }
 
         public long? HotelId { get; set; }
+        public string HotelName { get; set; }
 
         public string? ImageName { get; set; }
 

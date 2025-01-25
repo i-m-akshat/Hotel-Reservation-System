@@ -32,7 +32,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Models\\Backend.Models.csproj": {
+                "projectPath": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Models\\Backend.Models.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

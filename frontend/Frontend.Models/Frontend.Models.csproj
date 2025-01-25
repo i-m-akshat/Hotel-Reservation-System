@@ -47,6 +47,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Country_Model.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="HotelImage_model.cs" />
     <Compile Include="Hotel_model.cs" />
     <Compile Include="Mappers\StateMapper.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.8.1.AssemblyAttributes.cs" />

@@ -76,7 +76,7 @@
             })
         }
 		function alertConfirm(title, text, confirmButtonText, url, id,bindMethod) {
-          
+         
             swal.fire({
                 title: title,
                 text: text,

@@ -5,7 +5,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <script>
         function bindHotelImages() {
-            
             __doPostBack('<%=rptHotelImageList.UniqueID %>', '');
         }
     </script>
@@ -24,14 +23,14 @@
                             </div>
                             <div class="form-floating mb-3" style="background: none">
                                 <asp:FileUpload ID="btnUploadImages" AllowMultiple="true"  runat="server" CssClass="form-control form-control-sm" placeholder="Please select any image" />
-                               <label for="img_BannerIMG">Images</label>
-                                <asp:Repeater ID="rptImagelist" runat="server">
+                               <label for="img_BannerIMG" class="mb-4">Image</label>
+                               <%-- <asp:Repeater ID="rptImagelist" runat="server">
                                     <ItemTemplate>
                                          <asp:Image ID="img_HotelIMG" runat="server" Visible="false" Height="250" Width="250" CssClass="form-control form-control-sm" />
                                     </ItemTemplate>
-                                </asp:Repeater>
-                               
-                                
+                                </asp:Repeater>--%>
+                                <asp:Image ID="img_HotelIMG" runat="server" Visible="false" Height="250" Width="250" CssClass="form-control form-control-sm mt-5" ImageAlign="AbsBottom" />
+                                <%--<asp:PlaceHolder ID="pnl_Images" runat="server"></asp:PlaceHolder>--%>
                             </div>
 
 
@@ -58,6 +57,7 @@
                                             <tr>
                                                 <th>Sr.No.</th>
                                                 <th>Hotel Name</th>
+                                                <th>Hotel Image Name</th>
                                                 <th>Actions</th>
                                             </tr>
 
@@ -71,9 +71,10 @@
                                             <%# Container.ItemIndex + 1 %>
                                         </td>
                                         <td><%#Eval("HotelName")%></td>
+                                        <td><%#Eval("ImageName")%></td>
                                         <td>
                                             <asp:LinkButton runat="server" CommandArgument='<%#Eval("HotelImageId") %>' CssClass="btn btn-sm btn-outline-dark my-2" ID="btnView" OnClick="btnView_Click">View</asp:LinkButton>
-                                            <asp:LinkButton CssClass="btn btn-sm btn-outline-dark my-2" ID="btnEdit" runat="server" OnClick="btnEdit_Click" CommandArgument='<%#Bind("HotelId") %>'>Edit</asp:LinkButton>
+                                            <asp:LinkButton CssClass="btn btn-sm btn-outline-dark my-2" ID="btnEdit" runat="server" OnClick="btnEdit_Click" CommandArgument='<%#Bind("HotelImageId") %>'>Edit</asp:LinkButton>
                                             <asp:LinkButton
                                                 CssClass="btn btn-sm btn-outline-dark my-2"
                                                 ID="btnDelete"

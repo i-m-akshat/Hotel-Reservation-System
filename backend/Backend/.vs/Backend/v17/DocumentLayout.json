@@ -7,24 +7,10 @@
       "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:controllers\\hotelimagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\controllers\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:controllers\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6209928B-6B21-45CA-9E32-6A6A6C725BE0}|..\\Backend.DataAccessLayer\\Backend.DataAccessLayer.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.dataaccesslayer\\repository\\implementations\\hotelimagerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B127BCF7-802C-4E78-8579-754D027EC1E4}|..\\Backend.Services\\Backend.Services.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.services\\mapper\\hotelimagemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B127BCF7-802C-4E78-8579-754D027EC1E4}|..\\Backend.Services\\Backend.Services.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.services\\implementatios\\hotelimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6209928B-6B21-45CA-9E32-6A6A6C725BE0}|..\\Backend.DataAccessLayer\\Backend.DataAccessLayer.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.dataaccesslayer\\repository\\interfaces\\ihotelimagerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6209928B-6B21-45CA-9E32-6A6A6C725BE0}|..\\Backend.DataAccessLayer\\Backend.DataAccessLayer.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.dataaccesslayer\\context\\models\\tblhotelimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BFFCC5E3-884E-4D2E-BD84-32AF287E5C62}|..\\Backend.Models\\Backend.Models.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.models\\hotel_domain\\hotelimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -33,13 +19,57 @@
       "AbsoluteMoniker": "D:0:0:{6209928B-6B21-45CA-9E32-6A6A6C725BE0}|..\\Backend.DataAccessLayer\\Backend.DataAccessLayer.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.dataaccesslayer\\context\\dbcontext\\baserahotelreservationsystemcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B127BCF7-802C-4E78-8579-754D027EC1E4}|..\\Backend.Services\\Backend.Services.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.services\\implementatios\\hotelimageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\controllers\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:controllers\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B127BCF7-802C-4E78-8579-754D027EC1E4}|..\\Backend.Services\\Backend.Services.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.services\\mapper\\hotelimagemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B127BCF7-802C-4E78-8579-754D027EC1E4}|..\\Backend.Services\\Backend.Services.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.services\\implementatios\\hotelservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFFCC5E3-884E-4D2E-BD84-32AF287E5C62}|..\\Backend.Models\\Backend.Models.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.models\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6209928B-6B21-45CA-9E32-6A6A6C725BE0}|..\\Backend.DataAccessLayer\\Backend.DataAccessLayer.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.dataaccesslayer\\repository\\implementations\\countryrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\custommiddlewares\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:custommiddlewares\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\custommiddlewares\\customloggerforrequests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:custommiddlewares\\customloggerforrequests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6209928B-6B21-45CA-9E32-6A6A6C725BE0}|..\\Backend.DataAccessLayer\\Backend.DataAccessLayer.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.dataaccesslayer\\repository\\implementations\\hotelrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B127BCF7-802C-4E78-8579-754D027EC1E4}|..\\Backend.Services\\Backend.Services.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.services\\mapper\\hotelmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFFCC5E3-884E-4D2E-BD84-32AF287E5C62}|..\\Backend.Models\\Backend.Models.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.models\\hotel_domain\\hotelcontactdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6209928B-6B21-45CA-9E32-6A6A6C725BE0}|..\\Backend.DataAccessLayer\\Backend.DataAccessLayer.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.dataaccesslayer\\repository\\interfaces\\ihotelimagerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B127BCF7-802C-4E78-8579-754D027EC1E4}|..\\Backend.Services\\Backend.Services.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.services\\interfaces\\icityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6209928B-6B21-45CA-9E32-6A6A6C725BE0}|..\\Backend.DataAccessLayer\\Backend.DataAccessLayer.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.dataaccesslayer\\migrations\\baserahotelreservationsystemcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6209928B-6B21-45CA-9E32-6A6A6C725BE0}|..\\Backend.DataAccessLayer\\Backend.DataAccessLayer.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.dataaccesslayer\\context\\models\\tblhotelimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6209928B-6B21-45CA-9E32-6A6A6C725BE0}|..\\Backend.DataAccessLayer\\Backend.DataAccessLayer.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.dataaccesslayer\\context\\models\\tblhotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -51,37 +81,11 @@
       "AbsoluteMoniker": "D:0:0:{6209928B-6B21-45CA-9E32-6A6A6C725BE0}|..\\Backend.DataAccessLayer\\Backend.DataAccessLayer.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.dataaccesslayer\\repository\\implementations\\adminrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6209928B-6B21-45CA-9E32-6A6A6C725BE0}|..\\Backend.DataAccessLayer\\Backend.DataAccessLayer.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.dataaccesslayer\\repository\\implementations\\countryrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6209928B-6B21-45CA-9E32-6A6A6C725BE0}|..\\Backend.DataAccessLayer\\Backend.DataAccessLayer.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.dataaccesslayer\\repository\\implementations\\hotelrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6209928B-6B21-45CA-9E32-6A6A6C725BE0}|..\\Backend.DataAccessLayer\\Backend.DataAccessLayer.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.dataaccesslayer\\repository\\interfaces\\ihotelrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\custommiddlewares\\customloggerforrequests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:custommiddlewares\\customloggerforrequests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\custommiddlewares\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:custommiddlewares\\globalexceptionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\wwwroot\\requestlogs\\requestlog2025-01-23_00-42-47||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:wwwroot\\requestlogs\\requestlog2025-01-23_00-42-47||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\wwwroot\\requestlogs\\requestlog2025-01-23_00-39-50||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:wwwroot\\requestlogs\\requestlog2025-01-23_00-39-50||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\wwwroot\\requestlogs\\requestlog2025-01-23_00-24-57||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:wwwroot\\requestlogs\\requestlog2025-01-23_00-24-57||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\wwwroot\\requestlogs\\requestlog2025-01-23_00-23-32||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:wwwroot\\requestlogs\\requestlog2025-01-23_00-23-32||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\controllers\\statecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -102,12 +106,6 @@
       "AbsoluteMoniker": "D:0:0:{B127BCF7-802C-4E78-8579-754D027EC1E4}|..\\Backend.Services\\Backend.Services.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.services\\implementatios\\adminservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFFCC5E3-884E-4D2E-BD84-32AF287E5C62}|..\\Backend.Models\\Backend.Models.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.models\\response.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B127BCF7-802C-4E78-8579-754D027EC1E4}|..\\Backend.Services\\Backend.Services.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.services\\implementatios\\hotelservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:controllers\\countrycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -117,9 +115,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B127BCF7-802C-4E78-8579-754D027EC1E4}|..\\Backend.Services\\Backend.Services.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.services\\mapper\\hotelmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BFFCC5E3-884E-4D2E-BD84-32AF287E5C62}|..\\Backend.Models\\Backend.Models.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.models\\hotel_domain\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -141,10 +136,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{B127BCF7-802C-4E78-8579-754D027EC1E4}|..\\Backend.Services\\Backend.Services.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.services\\mapper\\accessmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40555F0E-7E96-43A1-8AA1-D4304382B73A}|Backend.csproj|solutionrelative:controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B127BCF7-802C-4E78-8579-754D027EC1E4}|..\\Backend.Services\\Backend.Services.csproj|a:\\asp.net projects\\hotelreservation\\backend\\backend.services\\interfaces\\ihotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -212,7 +203,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -224,19 +215,215 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
+              "Title": "BaseraHotelReservationSystemContext.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Context\\DBContext\\BaseraHotelReservationSystemContext.cs",
+              "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Context\\DBContext\\BaseraHotelReservationSystemContext.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Context\\DBContext\\BaseraHotelReservationSystemContext.cs",
+              "RelativeToolTip": "..\\Backend.DataAccessLayer\\Context\\DBContext\\BaseraHotelReservationSystemContext.cs",
+              "ViewState": "AgIAAGMBAAAAAAAAAAAgwHIBAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T18:45:40.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TblHotelimage.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Context\\Models\\TblHotelimage.cs",
+              "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Context\\Models\\TblHotelimage.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Context\\Models\\TblHotelimage.cs",
+              "RelativeToolTip": "..\\Backend.DataAccessLayer\\Context\\Models\\TblHotelimage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T20:43:01.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "HotelImage.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Models\\Hotel_Domain\\HotelImage.cs",
               "RelativeDocumentMoniker": "..\\Backend.Models\\Hotel_Domain\\HotelImage.cs",
               "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Models\\Hotel_Domain\\HotelImage.cs",
               "RelativeToolTip": "..\\Backend.Models\\Hotel_Domain\\HotelImage.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T08:37:36.417Z"
+              "WhenOpened": "2025-01-23T08:37:36.417Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HotelServices.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Implementatios\\HotelServices.cs",
+              "RelativeDocumentMoniker": "..\\Backend.Services\\Implementatios\\HotelServices.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Implementatios\\HotelServices.cs",
+              "RelativeToolTip": "..\\Backend.Services\\Implementatios\\HotelServices.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAnwC0AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T16:43:06.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HotelImageRepo.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Implementations\\HotelImageRepo.cs",
+              "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\HotelImageRepo.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Implementations\\HotelImageRepo.cs",
+              "RelativeToolTip": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\HotelImageRepo.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAgwEwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T20:42:29.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HotelImageController.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\HotelImageController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HotelImageController.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\HotelImageController.cs",
+              "RelativeToolTip": "Controllers\\HotelImageController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T18:00:46.925Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\RoleController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RoleController.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "Controllers\\RoleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T13:15:32.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HotelImageService.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Implementatios\\HotelImageService.cs",
+              "RelativeDocumentMoniker": "..\\Backend.Services\\Implementatios\\HotelImageService.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Implementatios\\HotelImageService.cs",
+              "RelativeToolTip": "..\\Backend.Services\\Implementatios\\HotelImageService.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwCQAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T08:51:50.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HotelController.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\HotelController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HotelController.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\HotelController.cs",
+              "RelativeToolTip": "Controllers\\HotelController.cs",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAgwK4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T19:01:47.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CountryRepo.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Implementations\\CountryRepo.cs",
+              "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\CountryRepo.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Implementations\\CountryRepo.cs",
+              "RelativeToolTip": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\CountryRepo.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAgwCoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T18:37:54.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HotelImageMapper.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Mapper\\HotelImageMapper.cs",
+              "RelativeDocumentMoniker": "..\\Backend.Services\\Mapper\\HotelImageMapper.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Mapper\\HotelImageMapper.cs",
+              "RelativeToolTip": "..\\Backend.Services\\Mapper\\HotelImageMapper.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAwwD8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T08:53:46.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Response.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Models\\Response.cs",
+              "RelativeDocumentMoniker": "..\\Backend.Models\\Response.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Models\\Response.cs",
+              "RelativeToolTip": "..\\Backend.Models\\Response.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAgwA0AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T17:15:57.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GlobalExceptionHandler.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\CustomMiddlewares\\GlobalExceptionHandler.cs",
+              "RelativeDocumentMoniker": "CustomMiddlewares\\GlobalExceptionHandler.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\CustomMiddlewares\\GlobalExceptionHandler.cs",
+              "RelativeToolTip": "CustomMiddlewares\\GlobalExceptionHandler.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAAACMAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T06:37:44.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CustomLoggerForRequests.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\CustomMiddlewares\\CustomLoggerForRequests.cs",
+              "RelativeDocumentMoniker": "CustomMiddlewares\\CustomLoggerForRequests.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\CustomMiddlewares\\CustomLoggerForRequests.cs",
+              "RelativeToolTip": "CustomMiddlewares\\CustomLoggerForRequests.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAgwGkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T17:58:45.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "HotelMapper.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Mapper\\HotelMapper.cs",
+              "RelativeDocumentMoniker": "..\\Backend.Services\\Mapper\\HotelMapper.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Mapper\\HotelMapper.cs",
+              "RelativeToolTip": "..\\Backend.Services\\Mapper\\HotelMapper.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAgwDwAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T16:45:08.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "HotelRepo.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Implementations\\HotelRepo.cs",
+              "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\HotelRepo.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Implementations\\HotelRepo.cs",
+              "RelativeToolTip": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\HotelRepo.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAnwCsAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T19:07:37.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
               "Title": "IHotelImageRepo.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Interfaces\\IHotelImageRepo.cs",
               "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Repository\\Interfaces\\IHotelImageRepo.cs",
@@ -248,56 +435,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HotelImageRepo.cs",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Implementations\\HotelImageRepo.cs",
-              "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\HotelImageRepo.cs",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Implementations\\HotelImageRepo.cs",
-              "RelativeToolTip": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\HotelImageRepo.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAAAHIAAAANAAAAAAAAAA==",
+              "DocumentIndex": 16,
+              "Title": "HotelContactDetails.cs",
+              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Models\\Hotel_Domain\\HotelContactDetails.cs",
+              "RelativeDocumentMoniker": "..\\Backend.Models\\Hotel_Domain\\HotelContactDetails.cs",
+              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Models\\Hotel_Domain\\HotelContactDetails.cs",
+              "RelativeToolTip": "..\\Backend.Models\\Hotel_Domain\\HotelContactDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T20:42:29.002Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HotelImageController.cs",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\HotelImageController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HotelImageController.cs",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\HotelImageController.cs",
-              "RelativeToolTip": "Controllers\\HotelImageController.cs",
-              "ViewState": "AgIAAN8AAAAAAAAAAAAgwOsAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T18:00:46.925Z",
+              "WhenOpened": "2025-01-25T02:44:39.449Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HotelController.cs",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\HotelController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HotelController.cs",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\HotelController.cs",
-              "RelativeToolTip": "Controllers\\HotelController.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAAAL0AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T19:01:47.011Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HotelImageMapper.cs",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Mapper\\HotelImageMapper.cs",
-              "RelativeDocumentMoniker": "..\\Backend.Services\\Mapper\\HotelImageMapper.cs",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Mapper\\HotelImageMapper.cs",
-              "RelativeToolTip": "..\\Backend.Services\\Mapper\\HotelImageMapper.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAwwCMAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T08:53:46.059Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 17,
               "Title": "Program.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -309,19 +460,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HotelImageService.cs",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Implementatios\\HotelImageService.cs",
-              "RelativeDocumentMoniker": "..\\Backend.Services\\Implementatios\\HotelImageService.cs",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Implementatios\\HotelImageService.cs",
-              "RelativeToolTip": "..\\Backend.Services\\Implementatios\\HotelImageService.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAACIAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T08:51:50.827Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 19,
               "Title": "ICityService.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Interfaces\\ICityService.cs",
               "RelativeDocumentMoniker": "..\\Backend.Services\\Interfaces\\ICityService.cs",
@@ -333,7 +472,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 23,
               "Title": "AdminRepo.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Implementations\\AdminRepo.cs",
               "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\AdminRepo.cs",
@@ -345,43 +484,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BaseraHotelReservationSystemContext.cs",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Context\\DBContext\\BaseraHotelReservationSystemContext.cs",
-              "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Context\\DBContext\\BaseraHotelReservationSystemContext.cs",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Context\\DBContext\\BaseraHotelReservationSystemContext.cs",
-              "RelativeToolTip": "..\\Backend.DataAccessLayer\\Context\\DBContext\\BaseraHotelReservationSystemContext.cs",
-              "ViewState": "AgIAAHIBAAAAAAAAAAAgwHsBAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T18:45:40.806Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "HotelRepo.cs",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Implementations\\HotelRepo.cs",
-              "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\HotelRepo.cs",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Implementations\\HotelRepo.cs",
-              "RelativeToolTip": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\HotelRepo.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAnwA8AAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T19:07:37.101Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "TblHotelimage.cs",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Context\\Models\\TblHotelimage.cs",
-              "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Context\\Models\\TblHotelimage.cs",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Context\\Models\\TblHotelimage.cs",
-              "RelativeToolTip": "..\\Backend.DataAccessLayer\\Context\\Models\\TblHotelimage.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T20:43:01.254Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 21,
               "Title": "TblHotel.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Context\\Models\\TblHotel.cs",
               "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Context\\Models\\TblHotel.cs",
@@ -393,7 +496,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 20,
               "Title": "BaseraHotelReservationSystemContextModelSnapshot.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Migrations\\BaseraHotelReservationSystemContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Migrations\\BaseraHotelReservationSystemContextModelSnapshot.cs",
@@ -405,19 +508,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CountryRepo.cs",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Implementations\\CountryRepo.cs",
-              "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\CountryRepo.cs",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Implementations\\CountryRepo.cs",
-              "RelativeToolTip": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\CountryRepo.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACoAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T18:37:54.457Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 22,
               "Title": "CityRepo.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Implementations\\CityRepo.cs",
               "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\CityRepo.cs",
@@ -429,7 +520,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "IHotelRepo.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Interfaces\\IHotelRepo.cs",
               "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Repository\\Interfaces\\IHotelRepo.cs",
@@ -441,19 +532,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "CustomLoggerForRequests.cs",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\CustomMiddlewares\\CustomLoggerForRequests.cs",
-              "RelativeDocumentMoniker": "CustomMiddlewares\\CustomLoggerForRequests.cs",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\CustomMiddlewares\\CustomLoggerForRequests.cs",
-              "RelativeToolTip": "CustomMiddlewares\\CustomLoggerForRequests.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAiwDAAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T17:58:45.122Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "CityController.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\CityController.cs",
               "RelativeDocumentMoniker": "Controllers\\CityController.cs",
@@ -465,7 +544,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "AdminController.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
@@ -477,19 +556,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "GlobalExceptionHandler.cs",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\CustomMiddlewares\\GlobalExceptionHandler.cs",
-              "RelativeDocumentMoniker": "CustomMiddlewares\\GlobalExceptionHandler.cs",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\CustomMiddlewares\\GlobalExceptionHandler.cs",
-              "RelativeToolTip": "CustomMiddlewares\\GlobalExceptionHandler.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAiwA8AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T06:37:44.527Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "MailService.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Implementatios\\MailService.cs",
               "RelativeDocumentMoniker": "..\\Backend.Services\\Implementatios\\MailService.cs",
@@ -501,19 +568,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "RequestLog2025-01-23_00-23-32",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwRoot\\RequestLogs\\RequestLog2025-01-23_00-23-32",
-              "RelativeDocumentMoniker": "wwwRoot\\RequestLogs\\RequestLog2025-01-23_00-23-32",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwRoot\\RequestLogs\\RequestLog2025-01-23_00-23-32",
-              "RelativeToolTip": "wwwRoot\\RequestLogs\\RequestLog2025-01-23_00-23-32",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-22T18:53:45.267Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "RequestLog2025-01-23_00-42-47",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwRoot\\RequestLogs\\RequestLog2025-01-23_00-42-47",
               "RelativeDocumentMoniker": "wwwRoot\\RequestLogs\\RequestLog2025-01-23_00-42-47",
@@ -525,31 +580,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "RequestLog2025-01-23_00-39-50",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwRoot\\RequestLogs\\RequestLog2025-01-23_00-39-50",
-              "RelativeDocumentMoniker": "wwwRoot\\RequestLogs\\RequestLog2025-01-23_00-39-50",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwRoot\\RequestLogs\\RequestLog2025-01-23_00-39-50",
-              "RelativeToolTip": "wwwRoot\\RequestLogs\\RequestLog2025-01-23_00-39-50",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-22T19:10:00.16Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "RequestLog2025-01-23_00-24-57",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwRoot\\RequestLogs\\RequestLog2025-01-23_00-24-57",
-              "RelativeDocumentMoniker": "wwwRoot\\RequestLogs\\RequestLog2025-01-23_00-24-57",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\wwwRoot\\RequestLogs\\RequestLog2025-01-23_00-24-57",
-              "RelativeToolTip": "wwwRoot\\RequestLogs\\RequestLog2025-01-23_00-24-57",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-22T18:55:06.953Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "AdminService.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Implementatios\\AdminService.cs",
               "RelativeDocumentMoniker": "..\\Backend.Services\\Implementatios\\AdminService.cs",
@@ -561,7 +592,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "StateController.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\StateController.cs",
               "RelativeDocumentMoniker": "Controllers\\StateController.cs",
@@ -570,18 +601,6 @@
               "ViewState": "AgIAABUAAAAAAAAAAAAAABwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-06T07:43:53.27Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "HotelServices.cs",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Implementatios\\HotelServices.cs",
-              "RelativeDocumentMoniker": "..\\Backend.Services\\Implementatios\\HotelServices.cs",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Implementatios\\HotelServices.cs",
-              "RelativeToolTip": "..\\Backend.Services\\Implementatios\\HotelServices.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAnwCwAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T16:43:06.735Z"
             },
             {
               "$type": "Document",
@@ -597,19 +616,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "Response.cs",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Models\\Response.cs",
-              "RelativeDocumentMoniker": "..\\Backend.Models\\Response.cs",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Models\\Response.cs",
-              "RelativeToolTip": "..\\Backend.Models\\Response.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-18T17:15:57.229Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 35,
               "Title": "TblCity.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Context\\Models\\TblCity.cs",
               "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Context\\Models\\TblCity.cs",
@@ -621,7 +628,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 37,
               "Title": "TblCountry.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Context\\Models\\TblCountry.cs",
               "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Context\\Models\\TblCountry.cs",
@@ -633,7 +640,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 36,
               "Title": "TblState.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Context\\Models\\TblState.cs",
               "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Context\\Models\\TblState.cs",
@@ -669,7 +676,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 40,
               "Title": "AccessMapper.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Mapper\\AccessMapper.cs",
               "RelativeDocumentMoniker": "..\\Backend.Services\\Mapper\\AccessMapper.cs",
@@ -681,7 +688,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 43,
               "Title": "CityService.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Implementatios\\CityService.cs",
               "RelativeDocumentMoniker": "..\\Backend.Services\\Implementatios\\CityService.cs",
@@ -693,19 +700,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "HotelMapper.cs",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Mapper\\HotelMapper.cs",
-              "RelativeDocumentMoniker": "..\\Backend.Services\\Mapper\\HotelMapper.cs",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Mapper\\HotelMapper.cs",
-              "RelativeToolTip": "..\\Backend.Services\\Mapper\\HotelMapper.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAawDwAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T16:45:08.014Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 41,
               "Title": "IHotelService.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Interfaces\\IHotelService.cs",
               "RelativeDocumentMoniker": "..\\Backend.Services\\Interfaces\\IHotelService.cs",
@@ -717,7 +712,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 34,
               "Title": "Hotel.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Models\\Hotel_Domain\\Hotel.cs",
               "RelativeDocumentMoniker": "..\\Backend.Models\\Hotel_Domain\\Hotel.cs",
@@ -729,7 +724,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 46,
               "Title": "Admin.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Models\\Admin_Domain\\Admin.cs",
               "RelativeDocumentMoniker": "..\\Backend.Models\\Admin_Domain\\Admin.cs",
@@ -741,7 +736,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 50,
               "Title": "Access.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Models\\Admin_Domain\\Access.cs",
               "RelativeDocumentMoniker": "..\\Backend.Models\\Admin_Domain\\Access.cs",
@@ -753,7 +748,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 51,
               "Title": "TblAccess.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Context\\Models\\TblAccess.cs",
               "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Context\\Models\\TblAccess.cs",
@@ -765,7 +760,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 47,
               "Title": "AccessRepo.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Implementations\\AccessRepo.cs",
               "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\AccessRepo.cs",
@@ -777,7 +772,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 52,
               "Title": "IAccessRepo.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Interfaces\\IAccessRepo.cs",
               "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Repository\\Interfaces\\IAccessRepo.cs",
@@ -789,7 +784,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 42,
               "Title": "AccessService.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Implementatios\\AccessService.cs",
               "RelativeDocumentMoniker": "..\\Backend.Services\\Implementatios\\AccessService.cs",
@@ -801,7 +796,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 49,
               "Title": "AccessController.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\AccessController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccessController.cs",
@@ -813,7 +808,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 48,
               "Title": "IAdminService.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Interfaces\\IAdminService.cs",
               "RelativeDocumentMoniker": "..\\Backend.Services\\Interfaces\\IAdminService.cs",
@@ -825,7 +820,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 53,
               "Title": "TblUser.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Context\\Models\\TblUser.cs",
               "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Context\\Models\\TblUser.cs",
@@ -837,7 +832,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 38,
               "Title": "TblAdmin.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Context\\Models\\TblAdmin.cs",
               "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Context\\Models\\TblAdmin.cs",
@@ -849,7 +844,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 39,
               "Title": "tblAdminToAdminMapper.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Mapper\\tblAdminToAdminMapper.cs",
               "RelativeDocumentMoniker": "..\\Backend.Services\\Mapper\\tblAdminToAdminMapper.cs",
@@ -861,7 +856,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 44,
               "Title": "IAdminRepo.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Interfaces\\IAdminRepo.cs",
               "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Repository\\Interfaces\\IAdminRepo.cs",
@@ -873,7 +868,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 54,
               "Title": "IMailService.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Interfaces\\IMailService.cs",
               "RelativeDocumentMoniker": "..\\Backend.Services\\Interfaces\\IMailService.cs",
@@ -885,19 +880,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "RoleController.cs",
-              "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\RoleController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RoleController.cs",
-              "ToolTip": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend\\Controllers\\RoleController.cs",
-              "RelativeToolTip": "Controllers\\RoleController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T13:15:32.127Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 45,
               "Title": "RoleMapper.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Mapper\\RoleMapper.cs",
               "RelativeDocumentMoniker": "..\\Backend.Services\\Mapper\\RoleMapper.cs",
@@ -909,7 +892,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 59,
               "Title": "Role.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Models\\Admin_Domain\\Role.cs",
               "RelativeDocumentMoniker": "..\\Backend.Models\\Admin_Domain\\Role.cs",
@@ -921,7 +904,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 58,
               "Title": "IRoleService.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Interfaces\\IRoleService.cs",
               "RelativeDocumentMoniker": "..\\Backend.Services\\Interfaces\\IRoleService.cs",
@@ -933,7 +916,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 56,
               "Title": "RoleService.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.Services\\Implementatios\\RoleService.cs",
               "RelativeDocumentMoniker": "..\\Backend.Services\\Implementatios\\RoleService.cs",
@@ -945,7 +928,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 57,
               "Title": "TblRole.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Context\\Models\\TblRole.cs",
               "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Context\\Models\\TblRole.cs",
@@ -957,7 +940,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 55,
               "Title": "RoleRepo.cs",
               "DocumentMoniker": "A:\\asp.net Projects\\HotelReservation\\backend\\Backend.DataAccessLayer\\Repository\\Implementations\\RoleRepo.cs",
               "RelativeDocumentMoniker": "..\\Backend.DataAccessLayer\\Repository\\Implementations\\RoleRepo.cs",

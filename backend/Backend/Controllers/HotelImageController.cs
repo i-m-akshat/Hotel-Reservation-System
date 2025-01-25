@@ -13,7 +13,7 @@ namespace Backend.Controllers
     [ApiController]
     public class HotelImageController : ControllerBase
     {
-        private readonly IHotelImageService _service; 
+        private readonly IHotelImageService _service;
         private readonly ISecureService _secure;
         private readonly AppSettings _appSettings;
         public HotelImageController(IHotelImageService service, ISecureService secure, IOptions<AppSettings> appSettings)
@@ -33,8 +33,9 @@ namespace Backend.Controllers
                 if (dec_data != null)
                 {
                     var data = JsonConvert.DeserializeObject<HotelImage>(dec_data);
-                    var res=await _service.CreateHotelImage(data);
-                    if (res != null) {
+                    var res = await _service.CreateHotelImage(data);
+                    if (res != null)
+                    {
                         return Ok(new Response<string>
                         {
                             IsSuccess = true,
@@ -73,7 +74,7 @@ namespace Backend.Controllers
                     StatusMessage = "An error occurred while processing your request"
                 });
             }
-          
+
         }
         [HttpGet]
         [Route("")]
@@ -81,7 +82,7 @@ namespace Backend.Controllers
         {
             try
             {
-                var res =await _service.GetAll();
+                var res = await _service.GetAll();
                 if (res != null)
                 {
                     return Ok(new Response<string>
@@ -152,7 +153,7 @@ namespace Backend.Controllers
         }
         [HttpGet]
         [Route("GetByHotelID")]
-        public async Task<IActionResult> GetByHotelId(string hotelId) 
+        public async Task<IActionResult> GetByHotelId(string hotelId)
         {
             try
             {
@@ -191,7 +192,7 @@ namespace Backend.Controllers
         }
         [HttpPut]
         [Route("Update")]
-        public async Task<IActionResult> Update([FromQuery]string id, [FromBody] string image)
+        public async Task<IActionResult> Update([FromQuery] string id, [FromBody] string image)
         {
             try
             {
@@ -230,7 +231,7 @@ namespace Backend.Controllers
                         StatusMessage = "Bad Request"
                     });
                 }
-                
+
             }
             catch (Exception ex)
             {
@@ -248,7 +249,7 @@ namespace Backend.Controllers
         {
             try
             {
-                var dec_id= Convert.ToInt64(_secure.Decrypt(id, _appSettings.enc_key, _appSettings.enc_iv));
+                var dec_id = Convert.ToInt64(_secure.Decrypt(id, _appSettings.enc_key, _appSettings.enc_iv));
                 if (dec_id != null)
                 {
                     var res = await _service.DeleteHotelImage(dec_id);

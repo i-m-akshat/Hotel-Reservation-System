@@ -5,7 +5,7 @@ namespace Backend.DataAccessLayer.Context.Models;
 
 public partial class TblHotelimage
 {
-    public int HotelImageId { get; set; }
+    public long HotelImageId { get; set; }
 
     public long? HotelId { get; set; }
 

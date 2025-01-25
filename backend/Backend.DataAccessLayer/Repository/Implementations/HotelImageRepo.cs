@@ -17,6 +17,19 @@ namespace Backend.DataAccessLayer.Repository.Implementations
         {
             _context = context;
         }
+        public class HotelImageDTO
+        {
+            public long HotelImageId { get; set; }
+
+            public long? HotelId { get; set; }
+            public string HotelName { get; set; }
+
+            public string? ImageName { get; set; }
+
+            public string? ContentType { get; set; }
+
+            public bool? Isactive { get; set; }
+        }
         public async Task<TblHotelimage> AddHotelImage(TblHotelimage tblHotelImage)
         {
             try
@@ -62,13 +75,80 @@ namespace Backend.DataAccessLayer.Repository.Implementations
         {
             try
             {
-                var tbl = await _context.TblHotelimages.Include(x => x.Hotel).ToListAsync();
-                if (tbl != null)
+                //var tbl = await _context.TblHotelimages.AsNoTracking().Select(x=>new TblHotelimage
+                //{
+                //    ContentType=x.ContentType,
+                //    HotelId=x.HotelId,
+                //    //Image=x.Image,
+                //    ImageName=x.ImageName,
+                //    Isactive=x.Isactive,
+                //    Hotel=x.Hotel,
+
+
+                //}).Where(x => x.Isactive == true).ToListAsync();
+                //var tbl = await _context.TblHotelimages.FromSqlInterpolated($"select * from ActiveHotelImages").AsNoTracking()
+                //    .ToListAsync();
+                //var tbl = await _context.TblHotelimages.FromSqlInterpolated($"select * from ActiveHotelImages").Include(x=>x.Hotel).AsNoTracking().ToListAsync();
+                //var tbl = await _context.Set<HotelImage>().FromSqlRaw(@"select * from ActiveHotelImages").ToListAsync();
+                //var tbl_final = tbl.Select(x=>new TblHotelimage
+                //{
+                //    HotelId = x.HotelId,
+                //    Hotel =
+                //{
+                //    HotelId = x.HotelId.Value,
+                //    HotelName = x.HotelName,
+                //},
+                //    HotelImageId = x.HotelImageId,
+                //    ContentType = x.ContentType,
+
+                //    Isactive = x.Isactive,
+                //    ImageName = x.ImageName,
+                //}).ToList();
+                //if (tbl_final != null)
+                //{
+                //    return tbl_final;
+                //}
+                //else
+                //    return null;
+                
+                var tbl = await _context.Database
+                    .SqlQueryRaw<HotelImageDTO>(@"SELECT 
+                     a.hotel_image_id AS HotelImageId, 
+                     a.hotel_id AS HotelId, 
+                     a.image_name AS ImageName, 
+                     a.content_type AS ContentType, 
+                     a.isactive AS Isactive, 
+                     b.HotelName AS HotelName
+                 FROM 
+                     ActiveHotelImages a 
+                 INNER JOIN 
+                     Basera_HotelReservationSystem..tbl_Hotel b ON a.hotel_id = b.HotelID")
+                    .ToListAsync();
+
+               
+                var tbl_final = tbl.Select(x => new TblHotelimage
                 {
-                    return tbl;
+                    HotelId = x.HotelId,
+                    Hotel = new TblHotel
+                    {
+                        HotelId = x.HotelId.Value,
+                        HotelName = x.HotelName,
+                    },
+                    HotelImageId = x.HotelImageId,
+                    ContentType = x.ContentType,
+                    Isactive = x.Isactive,
+                    ImageName = x.ImageName,
+                }).ToList();
+
+                
+                if (tbl_final.Any())
+                {
+                    return tbl_final;
                 }
                 else
+                {
                     return null;
+                }
             }
             catch (Exception ex)
             {
@@ -81,7 +161,7 @@ namespace Backend.DataAccessLayer.Repository.Implementations
         {
             try
             {
-                var tbl = await _context.TblHotelimages.Where(x => x.HotelImageId == id).FirstOrDefaultAsync();
+                var tbl = await _context.TblHotelimages.Where(x => x.HotelImageId == id).Include(x=>x.Hotel).FirstOrDefaultAsync();
                 if (tbl != null)
                 {
                     return tbl;

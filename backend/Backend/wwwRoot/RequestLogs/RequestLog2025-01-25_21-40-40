@@ -1,0 +1,14 @@
+-------------------Log_25-01-2025 16:10:40-------------------
+-------------------Request Part-------------------
+Request Path:/api/HotelImage
+Request Method:GET
+Request Headers:Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestHeaders
+Request Body:Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpRequestStream
+Request Host:localhost:6969
+Request ContentType:
+-------------------------- -----------------------
+-------------------Response Part-------------------
+Response status:200
+Response Headers:Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseHeaders
+Response Body:Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream
+Response ContentType:

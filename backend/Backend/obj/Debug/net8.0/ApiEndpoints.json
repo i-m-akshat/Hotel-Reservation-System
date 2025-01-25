@@ -440,7 +440,7 @@
     "ContainingType": "Backend.Controllers.HotelImageController",
     "Method": "Delete",
     "RelativePath": "api/HotelImage/Delete",
-    "HttpMethod": "",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [

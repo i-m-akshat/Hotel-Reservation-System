@@ -764,6 +764,27 @@
         }
       }
     },
+    "/api/HotelImage/Delete": {
+      "delete": {
+        "tags": [
+          "HotelImage"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Role": {
       "get": {
         "tags": [

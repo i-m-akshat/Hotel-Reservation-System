@@ -33,13 +33,13 @@ namespace Frontend.Admin
         protected global::System.Web.UI.WebControls.FileUpload btnUploadImages;
 
         /// <summary>
-        /// rptImagelist control.
+        /// img_HotelIMG control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptImagelist;
+        protected global::System.Web.UI.WebControls.Image img_HotelIMG;
 
         /// <summary>
         /// btnAddHotelImage control.

@@ -282,7 +282,7 @@ namespace Frontend.Admin
 
                             var dec_res = JsonConvert.DeserializeObject<Response<string>>(res);
                             var result = _secure.Decrypt(dec_res.Data, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
-                            if (dec_res.StatusCode.Equals((int)Enums.HttpStatusCode.Created))
+                            if (dec_res.StatusCode.Equals((int)Enums.HttpStatusCode.OK))
                             {
                                 string script = $"alertSuccess('Success', 'Updated Successfully', 'Ok Bhai ! ');";
                                 ScriptManager.RegisterStartupScript(this, GetType(), "Success", script, true);

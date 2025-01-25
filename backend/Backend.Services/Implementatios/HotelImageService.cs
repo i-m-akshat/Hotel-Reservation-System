@@ -34,7 +34,7 @@ namespace Backend.Services.Implementatios
             {
                 var tbl = await _repo.DeleteHotelImage(imageId);
                 if (tbl != null) {
-               return tbl.ToHotelImage() ;
+               return tbl.ToHotelImage_ExcludingHotel() ;
 
                 }
                 else
@@ -101,7 +101,7 @@ namespace Backend.Services.Implementatios
             try
             {
                 var tbl = await _repo.UpdateHotelImage(imageId, hotelImage.ToTblHotelImage());
-                return tbl.ToHotelImage() ; 
+                return tbl.ToHotelImage_ExcludingHotel() ; 
             }
             catch (Exception ex)
             {
