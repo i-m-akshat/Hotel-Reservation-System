@@ -40,7 +40,7 @@ namespace Backend.DataAccessLayer.Repository.Implementations
 
         public async Task<List<TblState>> GetAll()
         {
-            return await  _context.TblStates.Include(x=>x.Country).ToListAsync();
+            return await  _context.TblStates.Include(x=>x.Country).Where(x=>x.IsActive==true).ToListAsync();
         }
         //here i have commented out the update part because it was updating and adding the same row at the same time 
         public async Task<TblState> Update(TblState tblState, long id)

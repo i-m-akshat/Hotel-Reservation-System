@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Web;
+using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Frontend.Logic.Implementations;
@@ -19,12 +20,20 @@ namespace Frontend.Admin
         private static readonly ISecureDAO _secure=new SecureDao(); 
         protected void Page_Load(object sender, EventArgs e)
         {
-            BindData();
+            if (!IsPostBack)
+            {
+                BindData();
+            }
+            else if (IsPostBack)
+            {
+                BindData();
+            }
+                
         }
-
         protected void btnClear_Click(object sender, EventArgs e)
         {
             txtCountryName.Text = string.Empty;
+            btnAddCountry.Text = "Add";
         }
         private void BindData()
         {
@@ -118,6 +127,41 @@ namespace Frontend.Admin
         }
         protected void btnDelete_Click(object sender, EventArgs e)
         {
+            LinkButton btnDelete = (LinkButton)sender;
+            string countryId = btnDelete.CommandArgument;
+
+            // Register the JavaScript function with the cityId as an argument
+            string script = $"alertConfirm('Are you sure?', 'You won\\'t be able to revert this!', 'Yes, delete it!', 'Country.aspx/Delete', {countryId},bindCountry);";
+
+            ScriptManager.RegisterStartupScript(this, GetType(), "DeleteConfirmation", script, true);
+        }
+        [WebMethod]
+        public static bool Delete(int id)
+        {
+            try
+            {
+                var dec_id = _secure.Encrypt(Convert.ToString(id), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                var res = _dao.Delete(dec_id).Result;
+                if (res != null)
+                {
+                    //City city = new City();
+                    //city.BindCity();
+                    return true;
+
+
+                }
+                else
+                {
+                    Country country= new Country();
+                    country.BindData();
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
 
         }
     }

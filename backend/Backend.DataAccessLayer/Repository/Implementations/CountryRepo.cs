@@ -45,7 +45,7 @@ namespace Backend.DataAccessLayer.Repository.Implementations
 
         public async Task<List<TblCountry>> GetAll()
         {
-           return await _context.TblCountries.ToListAsync();
+           return await _context.TblCountries.Where(x=>x.isActive==true).ToListAsync();
         }
 
         public async Task<TblCountry> Update(TblCountry country, long id)

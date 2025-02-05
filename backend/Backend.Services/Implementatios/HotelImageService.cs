@@ -18,7 +18,7 @@ namespace Backend.Services.Implementatios
             try
             {
                 var tbl = await _repo.AddHotelImage(hotelImage.ToTblHotelImage());
-                return tbl.ToHotelImage();
+                return tbl.ToHotelImage_ExcludingHotel();
 
             }
             catch (Exception ex)
@@ -53,8 +53,9 @@ namespace Backend.Services.Implementatios
         {
             try
             {
+             
                 var list = await _repo.GetAllImages();
-                if (list != null)
+                if (list != null)   
                 {
                     return list.Select(x => x.ToHotelImage()).ToList();
                 }

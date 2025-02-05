@@ -22,14 +22,23 @@ namespace Backend.DataAccessLayer.Repository.Implementations
         }
         public async Task<TblAdmin> Create(TblAdmin tblAdmin)
         {
-            if (tblAdmin != null)
+            try
             {
-                tblAdmin.Isactive = true;
-                tblAdmin.Password = GenPwd(tblAdmin.FullName, tblAdmin.PhoneNumber);
+                if (tblAdmin != null)
+                {
+                    tblAdmin.Isactive = true;
+                    tblAdmin.Password = GenPwd(tblAdmin.FullName, tblAdmin.PhoneNumber);
+                }
+                await _context.TblAdmins.AddAsync(tblAdmin);
+                await _context.SaveChangesAsync();
+                return tblAdmin;
             }
-            await _context.TblAdmins.AddAsync(tblAdmin);
-            await _context.SaveChangesAsync();
-            return tblAdmin;
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            
         }
         /// <summary>
         /// To generate random password
@@ -38,12 +47,30 @@ namespace Backend.DataAccessLayer.Repository.Implementations
         /// <returns></returns>
         private string GenPwd(string FullName,string mobileNo)
         {
-            string[] _arrName = FullName.Split(" ");
-            string first=_arrName[0].Substring(0, 2);
-            string second = _arrName[1].Substring(0, 2);
-            string trimmedMobile = mobileNo.Substring(0, 5);
-            string finalPass = first + second + "@" + trimmedMobile;
-            return finalPass;
+            try
+            {
+                string[] _arrName = FullName.Split(" ");
+                string second=string.Empty;
+                string first=string.Empty;
+                if (_arrName.Length > 1)
+                {
+                    second = _arrName[1].Substring(0, 2);
+                }
+                else
+                {
+                     second = "null";
+                }
+                first = _arrName[0].Substring(0, 2);
+                string trimmedMobile = mobileNo.Substring(0, 5);
+                string finalPass = first + second + "@" + trimmedMobile;
+                return finalPass;
+            }
+            catch (Exception EX)
+            {
+
+                throw;
+            }
+           
         }
         public async Task<TblAdmin> Delete(long id)
         {

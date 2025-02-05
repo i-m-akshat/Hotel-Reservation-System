@@ -3,6 +3,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script>
+    function bindCountry() {
+        /*window.location.reload();*/
+       __doPostBack('<%=rptTblCountry.UniqueID %>', '');
+    }
+    </script>
     <div class="row">
         <div class="col-12">
             <div class="row justify-content-center align-items-stretch">

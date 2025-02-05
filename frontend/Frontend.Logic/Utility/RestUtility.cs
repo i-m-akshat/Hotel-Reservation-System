@@ -101,7 +101,35 @@ namespace Frontend.Logic.Utility
                 }
             }
         }
-
+        public async Task<T> GetAsync_Count(string BaseUrl, string RequestUrl, string count)
+        {
+            using (var httpClient = new HttpClient())
+            {
+                httpClient.BaseAddress = new Uri(BaseUrl);
+                //id=WebUtility.UrlEncode(id);
+                count = HttpUtility.UrlEncode(count);
+                var requestURL = RequestUrl + "?count=" +count;
+                StringContent content = new StringContent("", Encoding.UTF8, "application/json");
+                HttpResponseMessage response = httpClient.GetAsync(requestURL).Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    var res = await response.Content.ReadAsStringAsync();
+                    if (typeof(T) == typeof(string))
+                    {
+                        return (T)(object)(res);
+                    }
+                    else
+                    {
+                        T obj = JsonConvert.DeserializeObject<T>(res);
+                        return (T)(obj);
+                    }
+                }
+                else
+                {
+                    throw new Exception($"Error:{response.StatusCode}-result:{response.ReasonPhrase}");
+                }
+            }
+        }
         public  async Task<T> PostAsync(string BaseUrl, string RequestUrl, string Content)
         {
             using (var httpClient = new HttpClient())

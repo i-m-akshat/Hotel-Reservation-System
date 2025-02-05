@@ -27,9 +27,16 @@ namespace Frontend.Admin
             if (!IsPostBack)
             {
                 LoadAllHotels();
-
             }
-            BindHotelImages();
+            if (ViewState["currentPageIndex"] != null)
+            {
+                BindHotelImages(Convert.ToInt32(ViewState["currentPageIndex"]));
+            }
+            else
+            {
+                BindHotelImages();
+            }
+            
         }
         protected void btnEdit_Click(object sender, EventArgs e)
         {
@@ -338,6 +345,7 @@ namespace Frontend.Admin
                 btnUploadImages.Enabled = true;
                 img_HotelIMG.Enabled = true;
                 btnAddHotelImage.Enabled = true;
+                btnUploadImages.Visible = true;
                 ddlHotel.Enabled = true;
                 btnAddHotelImage.Text = "Update";
             }
@@ -374,22 +382,46 @@ namespace Frontend.Admin
                 return "";
             }
         }
-        private void BindHotelImages()
-        {
+        private void BindHotelImages(int count =0)
+            {
             try
             {
-                var res = _service.GetAllHotelImages().Result;
-                var des_res = JsonConvert.DeserializeObject<Response<string>>(res);
+                string _encCount = _secure.Encrypt(count.ToString(), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                var res = _service.GetHotelImages_Count(_encCount).Result;
+                var des_res = JsonConvert.DeserializeObject<ResponseGet<string>>(res);
                 if (des_res.IsSuccess == true)
                 {
+                    ViewState["currentPageIndex"] = des_res.CurrentPageIndex;
+                    ViewState["TotalPages"] = des_res.TotalPages;
+                    //if (des_res.CurrentPageIndex == 0)
+                    //{
+                    //    btnPrev.Enabled = false;
+                    //    btnPrev.Visible = false;
+                    //}
+                    //else
+                    //{
+                    //    btnPrev.Enabled = true;
+                    //    btnPrev.Enabled = true;
+                    //}
+                    btnPrev.Enabled = !(des_res.CurrentPageIndex == 0);
+                    btnPrev.Visible = !(des_res.CurrentPageIndex == 0);
+                    btnNext.Enabled=!(des_res.CurrentPageIndex == (des_res.TotalPages-1));
+                    btnNext.Visible = !(des_res.CurrentPageIndex == (des_res.TotalPages - 1));
+                    //if (des_res.CurrentPageIndex==des_res.TotalPages) {
+                    //    btnNext.Enabled = false;
+                    //    btnNext.Visible = false;
+                    //}
                     var dec_res = _secure.Decrypt(des_res.Data, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
                     var deserializedData = JsonConvert.DeserializeObject<List<HotelImage_ModelWithoutDates>>(dec_res);
                     if (deserializedData.Count > 0)
                     {
                         rptHotelImageList.DataSource = deserializedData;
                         rptHotelImageList.DataBind();
+                        
                     }
                 }
+                
+                
             }
             catch (Exception ex)
             {
@@ -400,11 +432,12 @@ namespace Frontend.Admin
         private void clear()
         {
             LoadAllHotels();
-            BindHotelImages();
+            BindHotelImages(0);
             ddlHotel.SelectedIndex = -1;
             if (btnUploadImages.HasFiles)
             {
-                btnUploadImages.PostedFiles.Clear();
+                btnUploadImages.Dispose();
+                //btnUploadImages.PostedFiles.Clear();
             }
             btnUploadImages.Enabled = true;
             img_HotelIMG.Enabled = false;
@@ -435,7 +468,7 @@ namespace Frontend.Admin
                 else
                 {
                     HotelImage hotelImage = new HotelImage();
-                    hotelImage.BindHotelImages();
+                    hotelImage.BindHotelImages(0);
                     return false;
                 }
             }
@@ -480,5 +513,50 @@ namespace Frontend.Admin
             }
         }
         #endregion
+
+        protected void btnPrev_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //string count = "";
+
+                if (ViewState["currentPageIndex"] != null)
+                {
+                    int c = Convert.ToInt32(ViewState["currentPageIndex"]);
+                    c -= 1;
+                    BindHotelImages(c);
+                }
+
+                
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
+        protected void btnNext_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //string count = "";
+
+                if (ViewState["currentPageIndex"] != null)
+                {
+
+                    int c = Convert.ToInt32(ViewState["currentPageIndex"]) + 1;
+                    //count = _secure.Encrypt(c.ToString(), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                    BindHotelImages(c);
+                }
+
+                
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
     }
 }

@@ -62,6 +62,18 @@ namespace Frontend.Logic.Implementations
                 throw;
             }
         }
+        public async Task<string> GetHotelImages_Count(string count)
+        {
+            try
+            {
+                return await _hitman.GetAsync_Count(baseUrl, "", count);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
 
         public async Task<string> GetHotelImageById(string id)
         {

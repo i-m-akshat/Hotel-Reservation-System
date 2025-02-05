@@ -111,7 +111,7 @@
     <Content Include="Assets\Bootstrap\js\bootstrap.js" />
     <Content Include="Assets\Bootstrap\js\bootstrap.min.js" />
     <Content Include="Assets\chart\apexchart.js" />
-    <Content Include="Assets\css\app.css" />
+    <Content Include="Assets\css\custom.css" />
     <Content Include="Assets\css\index.css" />
     <Content Include="Assets\DataTables\datatables.css" />
     <Content Include="Assets\DataTables\datatables.js" />
@@ -149,7 +149,6 @@
     <Content Include="Assets\Image\wave %281%29.svg" />
     <Content Include="Assets\Image\wave.svg" />
     <Content Include="Assets\Jquery\jquery-3.6.4.min.js" />
-    <Content Include="Assets\Js\app.js" />
     <Content Include="Assets\Js\index.js" />
     <Content Include="Assets\Sweetalert\sweetalert2.all.min.js" />
     <Content Include="bin\HotelReservationSystem-Part1.dll" />

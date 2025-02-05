@@ -165,6 +165,7 @@ namespace Frontend.Admin
                             string script = $"alertError_Custom('bhai image hi upload krna h !', 'sirf .png  ka hi use kro be', 'Ok Bhai ! ');";
                             //Response.Write($"<script>alert('{Message}')</script>");
                             ScriptManager.RegisterStartupScript(this, GetType(), "imgvalidation", script, true);
+                            return;
                         }
                         else
                         {
@@ -402,6 +403,8 @@ namespace Frontend.Admin
             txtAddress.Enabled = txtAdminName.Enabled = txtEmailId.Enabled = txtFullName.Enabled = txtMobileNo.Enabled = ddlCountry.Enabled = ddlCity.Enabled = ddlState.Enabled
                 = btnImgUpload.Enabled = btnImgUpload.Visible = ddlRole.Enabled = true;
             ddlRole.SelectedIndex = 0;
+            btnAddAdmin.Text = "Add";
+            btnAddAdmin.Enabled = true;
 
         }
         /// <summary>

@@ -78,19 +78,37 @@ namespace Backend.Controllers
         }
         [HttpGet]
         [Route("")]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] string count="")
         {
             try
             {
+                int dec_count = 0;
+                int TotalPages = 0;
+                int totalPageSize = 5;
+                if (count != "")
+                {
+                     dec_count = Convert.ToInt32(_secure.Decrypt(count, _appSettings.enc_key, _appSettings.enc_iv));
+                }
                 var res = await _service.GetAll();
+                
                 if (res != null)
                 {
-                    return Ok(new Response<string>
+                    double totalCount = res.Count();
+                    if (totalCount > 0)
+                    {
+                         TotalPages = Convert.ToInt32(Math.Ceiling((totalCount / totalPageSize)));
+                        int skipCount = ((TotalPages + dec_count) - (TotalPages)) * totalPageSize;
+                        res =res.Skip(skipCount).Take(totalPageSize).ToList();
+                    }
+                    return Ok(new ResponseGet<string>
                     {
                         IsSuccess = true,
                         StatusCode = 200,
                         StatusMessage = "Success",
-                        Data = _secure.Encrypt(JsonConvert.SerializeObject(res), _appSettings.enc_key, _appSettings.enc_iv)
+                        Data = _secure.Encrypt(JsonConvert.SerializeObject(res), _appSettings.enc_key, _appSettings.enc_iv),
+                        CurrentPageIndex=dec_count,
+                        TotalPages=TotalPages,
+                        PageSize=totalPageSize,
                     });
                 }
                 else

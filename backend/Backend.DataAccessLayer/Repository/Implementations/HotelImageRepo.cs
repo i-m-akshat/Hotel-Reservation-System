@@ -139,10 +139,13 @@ namespace Backend.DataAccessLayer.Repository.Implementations
                     Isactive = x.Isactive,
                     ImageName = x.ImageName,
                 }).ToList();
-
-                
-                if (tbl_final.Any())
+                //.Skip(count).Take(5).ToList()
+                //int pageSize = 5;
+                if (tbl_final.Any()) 
                 {
+                    //int totalCount=tbl_final.Count();
+                    //var totalPages = Convert.ToInt32(Math.Ceiling((double)(totalCount / pageSize)));
+                    //return tbl_final.OrderBy(x => x.HotelImageId).Skip((count - 1) * pageSize).Take(pageSize).ToList();
                     return tbl_final;
                 }
                 else

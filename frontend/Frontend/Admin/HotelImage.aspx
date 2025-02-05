@@ -89,9 +89,13 @@
                                 <footertemplate>
                                     </tbody>
 </table>
+                                  
+                                    
                                 </footertemplate>
 
                             </asp:Repeater>
+                              <asp:LinkButton ID="btnPrev" OnClick="btnPrev_Click" runat="server" CssClass="btn btn-sm btn-secondary" Text="Prev"></asp:LinkButton>
+  <asp:LinkButton ID="btnNext" OnClick="btnNext_Click" runat="server" CssClass="btn btn-sm btn-secondary" Text="Next"></asp:LinkButton>
                         </div>
 
 

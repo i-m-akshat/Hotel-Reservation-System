@@ -1,6 +1,6 @@
 @Backend_HostAddress = https://localhost:6969
 
-GET {{Backend_HostAddress}}/weatherforecast/
+GET {{Backend_HostAddress}}/basera/
 Accept: application/json
 
 ###

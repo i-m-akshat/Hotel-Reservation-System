@@ -9,6 +9,8 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Web.Services;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace Frontend.Admin
@@ -23,6 +25,10 @@ namespace Frontend.Admin
             if (!IsPostBack)
             {
                 BindCountries();
+                BindStates();
+            }
+            else if(IsPostBack)
+            {
                 BindStates();
             }
         }
@@ -155,17 +161,22 @@ namespace Frontend.Admin
             LinkButton btnDelete = sender as LinkButton;
             long Stateid = Convert.ToInt64(btnDelete.CommandArgument.ToString());
 
-            string stateID = _secure.Encrypt(Convert.ToString(Stateid), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
-            var res = _stateDao.Delete(stateID).Result;
-            if (res!= null)
-            {
-                string dec_state = _secure.Decrypt(res, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
-                State_Model _state = JsonConvert.DeserializeObject<State_Model>(dec_state);
-                if (_state != null)
-                {
-                    Response.Write($"<script>alert('{_state.StateName} deleted Successfully')</script>");
-                }
-            }
+            //string stateID = _secure.Encrypt(Convert.ToString(Stateid), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+            //var res = _stateDao.Delete(stateID).Result;
+            //if (res!= null)
+            //{
+            //    string dec_state = _secure.Decrypt(res, ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+            //    State_Model _state = JsonConvert.DeserializeObject<State_Model>(dec_state);
+            //    if (_state != null)
+            //    {
+            //        Response.Write($"<script>alert('{_state.StateName} deleted Successfully')</script>");
+            //    }
+            //}
+
+            // Register the JavaScript function with the cityId as an argument
+            string script = $"alertConfirm('Are you sure?', 'You won\\'t be able to revert this!', 'Yes, delete it!', 'State.aspx/Delete', {Stateid},bindState);";
+
+            ScriptManager.RegisterStartupScript(this, GetType(), "DeleteConfirmation", script, true);
             EnableDisable(true);
             BindStates();
             BindCountries();
@@ -196,6 +207,35 @@ namespace Frontend.Admin
             {
                 btnAddState.Text = "Update";
             }
+        }
+        [WebMethod]
+        public static bool Delete(int id)
+        {
+            try
+            {
+                var dec_id = _secure.Encrypt(Convert.ToString(id), ConfigurationManager.AppSettings["iv"], ConfigurationManager.AppSettings["key"]);
+                var res = _stateDao.Delete(dec_id).Result;
+                if (res != null)
+                {
+                    //City city = new City();
+                    //city.BindCity();
+                    return true;
+
+
+                }
+                else
+                {
+                    State state = new State();
+                    state.BindStates();
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
         }
     }
 }

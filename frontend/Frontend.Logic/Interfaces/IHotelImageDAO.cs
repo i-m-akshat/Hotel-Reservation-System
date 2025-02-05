@@ -14,5 +14,6 @@ namespace Frontend.Logic.Interfaces
         Task<string> GetAllHotelImages();
         Task<string> GetHotelImageById(string id);
         Task<string> GetHotelImageByHotelID(string hotelID);
+        Task<string> GetHotelImages_Count(string count);
     }
 }

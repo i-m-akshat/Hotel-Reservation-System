@@ -147,6 +147,7 @@ namespace Frontend.Admin
                 {
                     if (btnAddAdmin.Text == "Add")
                     {
+                        
                         var Hotel = new Hotel_model
                         {
                             Address=txtAddress.Text,
@@ -168,6 +169,7 @@ namespace Frontend.Admin
                                 string script = $"alertError_Custom('bhai image hi upload krna h !', 'sirf .png  ka hi use kro be', 'Ok Bhai ! ');";
                                 //Response.Write($"<script>alert('{Message}')</script>");
                                 ScriptManager.RegisterStartupScript(this, GetType(), "imgvalidation", script, true);
+                                return;
                             }
                             else
                             {
@@ -186,6 +188,7 @@ namespace Frontend.Admin
                                 string script = $"alertError_Custom('bhai image hi upload krna h !', 'sirf .png  ka hi use kro be', 'Ok Bhai ! ');";
                                 //Response.Write($"<script>alert('{Message}')</script>");
                                 ScriptManager.RegisterStartupScript(this, GetType(), "imgvalidation", script, true);
+                                return;
                             }
                             else
                             {
@@ -245,7 +248,7 @@ namespace Frontend.Admin
                             {
                                 string script = $"alertError_Custom('bhai image hi upload krna h !', 'sirf .png  ka hi use kro be', 'Ok Bhai ! ');";
                                 //Response.Write($"<script>alert('{Message}')</script>");
-                                ScriptManager.RegisterStartupScript(this, GetType(), "imgvalidation", script, true);
+                                ScriptManager.RegisterStartupScript(this, GetType(), "imgvalidation", script, true);return;
                             }
                             else
                             {
@@ -263,7 +266,7 @@ namespace Frontend.Admin
                             {
                                 string script = $"alertError_Custom('bhai image hi upload krna h !', 'sirf .png  ka hi use kro be', 'Ok Bhai ! ');";
                                 //Response.Write($"<script>alert('{Message}')</script>");
-                                ScriptManager.RegisterStartupScript(this, GetType(), "imgvalidation", script, true);
+                                ScriptManager.RegisterStartupScript(this, GetType(), "imgvalidation", script, true);return ;
                             }
                             else
                             {
