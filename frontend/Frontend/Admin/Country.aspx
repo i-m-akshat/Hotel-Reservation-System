@@ -9,6 +9,17 @@
        __doPostBack('<%=rptTblCountry.UniqueID %>', '');
     }
     </script>
+    <script type="text/javascript">
+        function disableButton(btn) {
+            setTimeout(function () {
+                btn.disabled = true;
+                /*btn.value = "Processing...";*/
+                btn.style.pointerEvents = "none"; // Prevent further clicks
+                btn.style.opacity = "0.5"; // Optional: Make it look disabled
+            }, 100); // Delay prevents blocking onclick event
+            return true; // Ensures form submission
+        }
+</script>
     <div class="row">
         <div class="col-12">
             <div class="row justify-content-center align-items-stretch">
@@ -25,7 +36,7 @@
                                     <label for="txtCountryName">Country</label>
                                 </div>
                                 <div class="d-flex justify-content-between">
-                                    <asp:Button ID="btnAddCountry" runat="server" OnClick="btnAddCountry_Click" CssClass="btn btn-outline-dark" Text="Add" />
+                                    <asp:LinkButton ID="btnAddCountry" runat="server" OnClick="btnAddCountry_Click" OnClientClick="disableButton(this);"  CssClass="btn btn-outline-dark" Text="Add"></asp:LinkButton>
                                     <asp:Button ID="btnClear" runat="server" OnClick="btnClear_Click" CssClass="btn btn-outline-dark" Text="Clear" />
                                 </div>
                             </div>

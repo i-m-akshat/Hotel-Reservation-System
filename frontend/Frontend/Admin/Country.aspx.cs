@@ -45,38 +45,57 @@ namespace Frontend.Admin
 
         protected void btnAddCountry_Click(object sender, EventArgs e)
         {
-            if (btnAddCountry.Text == "Add")
+            if (ViewState["IsProcessing"] != null && (bool)ViewState["IsProcessing"])
             {
-                var count = new Frontend.Models.Country_Model
+                return; // Ignore duplicate clicks
+            }
+
+            ViewState["IsProcessing"] = true;
+            try
+            {
+                if (btnAddCountry.Text == "Add")
                 {
-                    CountryName = txtCountryName.Text.Trim().ToString(),
-                    IsActive= true, 
-                };
-                var encCount = _secure.Encrypt(JsonConvert.SerializeObject(count), ConfigurationManager.AppSettings["key"].ToString(), ConfigurationManager.AppSettings["iv"].ToString());
-                var res = _dao.Create(encCount).Result;
-                if (res != null)
+                    var count = new Frontend.Models.Country_Model
+                    {
+                        CountryName = txtCountryName.Text.Trim().ToString(),
+                        IsActive = true,
+                    };
+                    var encCount = _secure.Encrypt(JsonConvert.SerializeObject(count), ConfigurationManager.AppSettings["key"].ToString(), ConfigurationManager.AppSettings["iv"].ToString());
+                    var res = _dao.Create(encCount).Result;
+                    if (res != null)
+                    {
+                        Response.Write("<script>alert('Created Successfully')</script>");
+                        BindData();
+                    }
+                }
+                else if (btnAddCountry.Text == "Update" && ViewState["CountryID"] != null)
                 {
-                    Response.Write("<script>alert('Created Successfully')</script>");
-                    BindData();
+                    var count = new Frontend.Models.Country_Model
+                    {
+                        CountryName = txtCountryName.Text.Trim().ToString(),
+                    };
+                    var encCount = _secure.Encrypt(JsonConvert.SerializeObject(count), ConfigurationManager.AppSettings["key"].ToString(), ConfigurationManager.AppSettings["iv"].ToString());
+                    var enc_id = _secure.Encrypt(Convert.ToString(ViewState["CountryID"]), ConfigurationManager.AppSettings["key"].ToString(), ConfigurationManager.AppSettings["iv"].ToString());
+                    //var res = _dao.Update(enc_id,encCount).Result;
+                    var res = _dao.Update(enc_id, encCount).Result;
+                    if (res != null)
+                    {
+                        Response.Write("<script>alert('Updated Successfully')</script>");
+                        BindData();
+                        txtCountryName.Text = string.Empty;
+                    }
                 }
             }
-            else if(btnAddCountry.Text =="Update"&& ViewState["CountryID"] != null)
+            catch (Exception ex)
             {
-                var count = new Frontend.Models.Country_Model
-                {
-                    CountryName = txtCountryName.Text.Trim().ToString(),
-                };
-                var encCount = _secure.Encrypt(JsonConvert.SerializeObject(count), ConfigurationManager.AppSettings["key"].ToString(), ConfigurationManager.AppSettings["iv"].ToString());
-                var enc_id= _secure.Encrypt(Convert.ToString(ViewState["CountryID"]), ConfigurationManager.AppSettings["key"].ToString(), ConfigurationManager.AppSettings["iv"].ToString());
-                //var res = _dao.Update(enc_id,encCount).Result;
-                var res = _dao.Update(enc_id, encCount).Result;
-                if (res != null)
-                {
-                    Response.Write("<script>alert('Updated Successfully')</script>");
-                    BindData();
-                    txtCountryName.Text = string.Empty;
-                }
+
+                throw;
             }
+            finally
+            {
+                ViewState["IsProcessing"] = null;
+            }
+            
            
 
         }
